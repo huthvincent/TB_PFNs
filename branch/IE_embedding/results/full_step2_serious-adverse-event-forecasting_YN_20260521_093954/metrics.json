@@ -1,0 +1,85 @@
+{
+  "run_id": "full_step2_serious-adverse-event-forecasting_YN_20260521_093954",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_baseline_features": 101,
+  "n_virtual_cols": 2,
+  "n_base_params": 10718218,
+  "n_trainable_params": 373258,
+  "elapsed_train_s": 11.8,
+  "initial_metrics": {
+    "roc_auc": 0.842173118786698,
+    "pr_auc": 0.9352565550241091,
+    "log_loss": 0.4154456783409395,
+    "accuracy": 0.806875
+  },
+  "best_metrics": {
+    "epoch": 5,
+    "roc_auc": 0.8704976408245477,
+    "pr_auc": 0.9493538375902768,
+    "log_loss": 0.37827954528091473,
+    "accuracy": 0.82625
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.45098236203193665,
+      "roc_auc": 0.8542604175462516,
+      "pr_auc": 0.9413603767734925,
+      "log_loss": 0.4002152416465489,
+      "accuracy": 0.81375
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.42565715312957764,
+      "roc_auc": 0.8609723798323966,
+      "pr_auc": 0.9439859084319743,
+      "log_loss": 0.39455476895897845,
+      "accuracy": 0.815625
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.3882082998752594,
+      "roc_auc": 0.8651449590259312,
+      "pr_auc": 0.9464178997813519,
+      "log_loss": 0.3881146429575976,
+      "accuracy": 0.825
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4080284833908081,
+      "roc_auc": 0.868398994132439,
+      "pr_auc": 0.9482135893948692,
+      "log_loss": 0.38188207320928425,
+      "accuracy": 0.826875
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.41959142684936523,
+      "roc_auc": 0.8704976408245477,
+      "pr_auc": 0.9493538375902768,
+      "log_loss": 0.37827954528091473,
+      "accuracy": 0.82625
+    }
+  ],
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "n_bins": 10,
+    "epochs": 5,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 1,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

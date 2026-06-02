@@ -1,0 +1,135 @@
+{
+  "run_id": "fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_121745",
+  "subtask": "trial-duration-forecasting",
+  "target": "time_day",
+  "task_type": "regression",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet",
+    "data/emb_keyword_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 9,
+  "n_train": 10623,
+  "n_test": 2590,
+  "n_classes": 10,
+  "n_trainable_params": 5240650,
+  "elapsed_train_s": 116.4,
+  "initial_metrics": {
+    "mae": 572.0003662109375,
+    "rmse": 817.2537090769304,
+    "r2": -0.36652159690856934
+  },
+  "best_metrics": {
+    "epoch": 24,
+    "mae": 413.46978759765625,
+    "rmse": 565.6272513767349,
+    "r2": 0.3454189896583557
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 2.895967721939087,
+      "mae": 508.17132568359375,
+      "rmse": 645.9071140651727,
+      "r2": 0.14642274379730225
+    },
+    {
+      "epoch": 6,
+      "train_loss": 2.1277945041656494,
+      "mae": 441.12689208984375,
+      "rmse": 580.0351282465572,
+      "r2": 0.31164687871932983
+    },
+    {
+      "epoch": 9,
+      "train_loss": 2.114624500274658,
+      "mae": 426.3670959472656,
+      "rmse": 569.173468724606,
+      "r2": 0.33718544244766235
+    },
+    {
+      "epoch": 12,
+      "train_loss": 2.0418033599853516,
+      "mae": 421.0862121582031,
+      "rmse": 567.8411694743522,
+      "r2": 0.3402848243713379
+    },
+    {
+      "epoch": 15,
+      "train_loss": 2.0244643688201904,
+      "mae": 417.5861511230469,
+      "rmse": 566.9760246253804,
+      "r2": 0.34229350090026855
+    },
+    {
+      "epoch": 18,
+      "train_loss": 2.074770927429199,
+      "mae": 415.88323974609375,
+      "rmse": 566.4511232224719,
+      "r2": 0.34351080656051636
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.9834283590316772,
+      "mae": 414.41607666015625,
+      "rmse": 565.8671443015578,
+      "r2": 0.3448636531829834
+    },
+    {
+      "epoch": 24,
+      "train_loss": 2.029681921005249,
+      "mae": 413.46978759765625,
+      "rmse": 565.6272513767349,
+      "r2": 0.3454189896583557
+    },
+    {
+      "epoch": 27,
+      "train_loss": 2.000507354736328,
+      "mae": 412.9256896972656,
+      "rmse": 565.7390630847406,
+      "r2": 0.34516018629074097
+    },
+    {
+      "epoch": 30,
+      "train_loss": 1.9994784593582153,
+      "mae": 412.78533935546875,
+      "rmse": 566.243763762569,
+      "r2": 0.34399133920669556
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet,data/emb_keyword_qwen.parquet",
+    "subtask": "trial-duration-forecasting",
+    "target": "time_day",
+    "task_type": "regression",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

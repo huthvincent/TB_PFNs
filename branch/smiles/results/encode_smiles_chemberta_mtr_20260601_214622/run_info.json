@@ -1,0 +1,34 @@
+{
+  "run_id": "encode_smiles_chemberta_mtr_20260601_214622",
+  "model": "DeepChem/ChemBERTa-77M-MTR",
+  "model_short": "chemberta_mtr",
+  "pool_strategy": "cls_mean",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 17916,
+  "n_keys_with_smiles": 9612,
+  "n_unique_smiles": 50,
+  "n_pooled_groups": 29,
+  "embed_dim": 384,
+  "batch_size": 32,
+  "dtype_compute": "bf16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 2.73,
+  "elapsed_encode_s": 0.07,
+  "throughput_per_s": 721.1,
+  "norm_mean": 9.01242446899414,
+  "norm_std": 2.6804847717285156,
+  "args": {
+    "model": "chemberta_mtr",
+    "subtask": "serious-adverse-event-forecasting",
+    "batch_size": 32,
+    "device": "cuda",
+    "dtype": "bf16",
+    "limit": 50
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mtr.parquet",
+    "per_smiles_npy": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_chemberta_mtr_20260601_214622/per_smiles_embeddings.npy",
+    "per_smiles_meta": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_chemberta_mtr_20260601_214622/per_smiles_metadata.parquet"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "run_id": "fm_bench_trial-failure-reason-identification_failure_reason_20260523_173451",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "n_train": 16649,
+  "n_test": 4120,
+  "n_features_after_preprocess": 26,
+  "n_non_numeric_columns": 11,
+  "models": {
+    "tabpfn": {
+      "time_s": 2.7374578029848635,
+      "n_estimators": 2,
+      "accuracy": 0.4956310679611651,
+      "macro_f1": 0.27496493745648687,
+      "weighted_f1": 0.4471138273688406,
+      "log_loss": 1.0858848025880457
+    },
+    "tabicl": {
+      "time_s": 2.6417333700228482,
+      "n_estimators": 8,
+      "accuracy": 0.4980582524271845,
+      "macro_f1": 0.2801744573541895,
+      "weighted_f1": 0.4488083144252286,
+      "log_loss": 1.0831015637320545
+    },
+    "tabdpt": {
+      "time_s": 14.567845613928512,
+      "context_size": 2048,
+      "accuracy": 0.4878640776699029,
+      "macro_f1": 0.2630869535379648,
+      "weighted_f1": 0.4327388323348853,
+      "log_loss": 1.0930690889439663
+    }
+  },
+  "args": {
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phases": null,
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "tabdpt_compile": false,
+    "seed": 0
+  }
+}

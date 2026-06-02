@@ -1,0 +1,52 @@
+{
+  "run_id": "fm_bench_patient-dropout-event-forecasting_YN_20260523_173216",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "n_train": 30561,
+  "n_test": 7741,
+  "n_features_after_preprocess": 38,
+  "n_non_numeric_columns": 14,
+  "models": {
+    "tabpfn": {
+      "time_s": 4.935951485997066,
+      "n_estimators": 2,
+      "roc_auc": 0.8125559714311335,
+      "pr_auc": 0.9399367791816381,
+      "log_loss": 0.41361525868817145,
+      "accuracy": 0.8017052060457305
+    },
+    "tabicl": {
+      "time_s": 3.8727483570110053,
+      "n_estimators": 8,
+      "roc_auc": 0.8127744710881719,
+      "pr_auc": 0.9402949484134805,
+      "log_loss": 0.4136609687130827,
+      "accuracy": 0.8035137579124144
+    },
+    "tabdpt": {
+      "time_s": 30.27976886695251,
+      "context_size": 2048,
+      "roc_auc": 0.8018663257625603,
+      "pr_auc": 0.9358865610455624,
+      "log_loss": 0.4236190570592784,
+      "accuracy": 0.7940834517504198
+    }
+  },
+  "args": {
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": null,
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "tabdpt_compile": false,
+    "seed": 0
+  }
+}

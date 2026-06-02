@@ -1,0 +1,34 @@
+{
+  "run_id": "encode_smiles_chemberta_mlm_20260601_214937",
+  "model": "DeepChem/ChemBERTa-77M-MLM",
+  "model_short": "chemberta_mlm",
+  "pool_strategy": "cls_mean",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 17916,
+  "n_keys_with_smiles": 9612,
+  "n_unique_smiles": 14966,
+  "n_pooled_groups": 9612,
+  "embed_dim": 384,
+  "batch_size": 128,
+  "dtype_compute": "bf16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 3.63,
+  "elapsed_encode_s": 2.19,
+  "throughput_per_s": 6847.9,
+  "norm_mean": 3.395691156387329,
+  "norm_std": 0.44157013297080994,
+  "args": {
+    "model": "chemberta_mlm",
+    "subtask": "serious-adverse-event-forecasting",
+    "batch_size": 128,
+    "device": "cuda",
+    "dtype": "bf16",
+    "limit": null
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mlm.parquet",
+    "per_smiles_npy": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_chemberta_mlm_20260601_214937/per_smiles_embeddings.npy",
+    "per_smiles_meta": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_chemberta_mlm_20260601_214937/per_smiles_metadata.parquet"
+  }
+}

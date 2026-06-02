@@ -1,0 +1,151 @@
+{
+  "run_id": "fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_123218",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet",
+    "data/emb_keyword_qwen.parquet",
+    "data/emb_study_design_info_intervention_model_description_qwen.parquet",
+    "data/emb_study_design_info_masking_description_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 11,
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_trainable_params": 6813898,
+  "elapsed_train_s": 95.7,
+  "initial_metrics": {
+    "roc_auc": 0.8371787927529755,
+    "pr_auc": 0.9315382596663937,
+    "log_loss": 0.41468993448451613,
+    "accuracy": 0.808125
+  },
+  "best_metrics": {
+    "epoch": 3,
+    "roc_auc": 0.8839792318417634,
+    "pr_auc": 0.9554471704917947,
+    "log_loss": 0.35959554299721913,
+    "accuracy": 0.838125
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.4049782156944275,
+      "roc_auc": 0.8839792318417634,
+      "pr_auc": 0.9554471704917947,
+      "log_loss": 0.35959554299721913,
+      "accuracy": 0.838125
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.378288209438324,
+      "roc_auc": 0.8828279624591444,
+      "pr_auc": 0.9546087922939214,
+      "log_loss": 0.3627422923386882,
+      "accuracy": 0.845625
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3162517845630646,
+      "roc_auc": 0.8812483137713649,
+      "pr_auc": 0.9546264654861965,
+      "log_loss": 0.371698617143728,
+      "accuracy": 0.831875
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3169810473918915,
+      "roc_auc": 0.8817549546803528,
+      "pr_auc": 0.9557799032643738,
+      "log_loss": 0.3727800855736717,
+      "accuracy": 0.8325
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.31810232996940613,
+      "roc_auc": 0.8772096031106928,
+      "pr_auc": 0.953301072533979,
+      "log_loss": 0.3869378963234805,
+      "accuracy": 0.8325
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.2564423084259033,
+      "roc_auc": 0.8724685975314643,
+      "pr_auc": 0.9512936723793284,
+      "log_loss": 0.40337293889878156,
+      "accuracy": 0.82125
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.30328264832496643,
+      "roc_auc": 0.8694184544980856,
+      "pr_auc": 0.950546857928396,
+      "log_loss": 0.41319039781224587,
+      "accuracy": 0.820625
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.2719607353210449,
+      "roc_auc": 0.8628383012289131,
+      "pr_auc": 0.9482792353736507,
+      "log_loss": 0.43931499712303734,
+      "accuracy": 0.814375
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.24972496926784515,
+      "roc_auc": 0.8563425881112385,
+      "pr_auc": 0.9458059948649635,
+      "log_loss": 0.480542016705443,
+      "accuracy": 0.798125
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.2702842950820923,
+      "roc_auc": 0.861642752254655,
+      "pr_auc": 0.9470660646417168,
+      "log_loss": 0.44613810493607375,
+      "accuracy": 0.810625
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet,data/emb_keyword_qwen.parquet,data/emb_study_design_info_intervention_model_description_qwen.parquet,data/emb_study_design_info_masking_description_qwen.parquet",
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

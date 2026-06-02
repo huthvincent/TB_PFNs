@@ -1,0 +1,165 @@
+{
+  "run_id": "full_step2_mortality-event-prediction_YN_20260524_121322",
+  "subtask": "mortality-event-prediction",
+  "target": "Y/N",
+  "task_type": "binary",
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_baseline_features": 101,
+  "n_virtual_cols": 2,
+  "n_base_params": 10718218,
+  "n_trainable_params": 295296,
+  "elapsed_train_s": 53.3,
+  "initial_metrics": {
+    "roc_auc": 0.8471927682790996,
+    "pr_auc": 0.8101674359400473,
+    "log_loss": 0.48487561582857625,
+    "accuracy": 0.77375
+  },
+  "best_metrics": {
+    "epoch": 26,
+    "roc_auc": 0.9041114208582162,
+    "pr_auc": 0.8858372038785458,
+    "log_loss": 0.3948362197967122,
+    "accuracy": 0.83
+  },
+  "history": [
+    {
+      "epoch": 2,
+      "train_loss": 0.45916521549224854,
+      "roc_auc": 0.8853776642271459,
+      "pr_auc": 0.8639764555732127,
+      "log_loss": 0.42574307065018757,
+      "accuracy": 0.8125
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3830128610134125,
+      "roc_auc": 0.8929998552648968,
+      "pr_auc": 0.873329687141794,
+      "log_loss": 0.41242289838580143,
+      "accuracy": 0.820625
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3904672861099243,
+      "roc_auc": 0.8958835448773212,
+      "pr_auc": 0.8766763929562087,
+      "log_loss": 0.4078805774999188,
+      "accuracy": 0.82375
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4147452116012573,
+      "roc_auc": 0.8973544940249574,
+      "pr_auc": 0.8786021406605935,
+      "log_loss": 0.405519740054844,
+      "accuracy": 0.82375
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.4332371950149536,
+      "roc_auc": 0.8986209261788045,
+      "pr_auc": 0.8798848160975798,
+      "log_loss": 0.4029230852233001,
+      "accuracy": 0.8225
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4085773229598999,
+      "roc_auc": 0.8994547262304057,
+      "pr_auc": 0.8804643522955349,
+      "log_loss": 0.4015602809684301,
+      "accuracy": 0.8225
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.4082964062690735,
+      "roc_auc": 0.8999880436219017,
+      "pr_auc": 0.8807599472922696,
+      "log_loss": 0.4007524699385477,
+      "accuracy": 0.82375
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.3655521869659424,
+      "roc_auc": 0.9003593206260108,
+      "pr_auc": 0.8807366925678022,
+      "log_loss": 0.40008457975348355,
+      "accuracy": 0.8225
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.365501344203949,
+      "roc_auc": 0.9012576221910378,
+      "pr_auc": 0.8816636984737203,
+      "log_loss": 0.39886955328011625,
+      "accuracy": 0.823125
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.35308972001075745,
+      "roc_auc": 0.9020332135597913,
+      "pr_auc": 0.882763585481793,
+      "log_loss": 0.3976742138200173,
+      "accuracy": 0.823125
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.3446901738643646,
+      "roc_auc": 0.9030070290917558,
+      "pr_auc": 0.884325231427233,
+      "log_loss": 0.3961266665965864,
+      "accuracy": 0.825
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.3678429424762726,
+      "roc_auc": 0.9037448634770405,
+      "pr_auc": 0.8851523255760271,
+      "log_loss": 0.3950638432108508,
+      "accuracy": 0.82375
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.33685341477394104,
+      "roc_auc": 0.9041114208582162,
+      "pr_auc": 0.8858372038785458,
+      "log_loss": 0.3948362197967122,
+      "accuracy": 0.83
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.3922078311443329,
+      "roc_auc": 0.9032571691072362,
+      "pr_auc": 0.8848240553810724,
+      "log_loss": 0.39645333649436354,
+      "accuracy": 0.82875
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.3128863573074341,
+      "roc_auc": 0.9025665309512871,
+      "pr_auc": 0.8841212419858931,
+      "log_loss": 0.3982747526675604,
+      "accuracy": 0.830625
+    }
+  ],
+  "args": {
+    "subtask": "mortality-event-prediction",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 2,
+    "unfreeze_decoder": false,
+    "seed": 0
+  }
+}

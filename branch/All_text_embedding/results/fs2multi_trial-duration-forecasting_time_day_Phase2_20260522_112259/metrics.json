@@ -1,0 +1,125 @@
+{
+  "run_id": "fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_112259",
+  "subtask": "trial-duration-forecasting",
+  "target": "time_day",
+  "task_type": "regression",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096
+  ],
+  "n_virtual_cols": 4,
+  "n_train": 10623,
+  "n_test": 2590,
+  "n_classes": 10,
+  "n_trainable_params": 1307530,
+  "elapsed_train_s": 96.8,
+  "initial_metrics": {
+    "mae": 528.3126831054688,
+    "rmse": 749.9957083210543,
+    "r2": -0.15085411071777344
+  },
+  "best_metrics": {
+    "epoch": 30,
+    "mae": 445.8566589355469,
+    "rmse": 601.3678418821545,
+    "r2": 0.26008278131484985
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 2.2314252853393555,
+      "mae": 546.8594360351562,
+      "rmse": 674.5349092152311,
+      "r2": 0.06908166408538818
+    },
+    {
+      "epoch": 6,
+      "train_loss": 2.168077230453491,
+      "mae": 476.9066467285156,
+      "rmse": 627.9864897034012,
+      "r2": 0.19313043355941772
+    },
+    {
+      "epoch": 9,
+      "train_loss": 2.127620220184326,
+      "mae": 457.41583251953125,
+      "rmse": 626.1951572792623,
+      "r2": 0.1977270245552063
+    },
+    {
+      "epoch": 12,
+      "train_loss": 2.136322259902954,
+      "mae": 452.2461853027344,
+      "rmse": 619.8511414041278,
+      "r2": 0.21390050649642944
+    },
+    {
+      "epoch": 15,
+      "train_loss": 2.120598316192627,
+      "mae": 448.35223388671875,
+      "rmse": 620.8113642645405,
+      "r2": 0.2114630937576294
+    },
+    {
+      "epoch": 18,
+      "train_loss": 2.1505532264709473,
+      "mae": 446.90087890625,
+      "rmse": 612.0438607648965,
+      "r2": 0.23357826471328735
+    },
+    {
+      "epoch": 21,
+      "train_loss": 2.088610887527466,
+      "mae": 447.7857971191406,
+      "rmse": 604.9527615855638,
+      "r2": 0.25123482942581177
+    },
+    {
+      "epoch": 24,
+      "train_loss": 2.135930061340332,
+      "mae": 444.3548278808594,
+      "rmse": 604.4769433154585,
+      "r2": 0.25241219997406006
+    },
+    {
+      "epoch": 27,
+      "train_loss": 2.1015899181365967,
+      "mae": 445.60546875,
+      "rmse": 602.5729208983756,
+      "r2": 0.25711435079574585
+    },
+    {
+      "epoch": 30,
+      "train_loss": 2.0865328311920166,
+      "mae": 445.8566589355469,
+      "rmse": 601.3678418821545,
+      "r2": 0.26008278131484985
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet",
+    "subtask": "trial-duration-forecasting",
+    "target": "time_day",
+    "task_type": "regression",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

@@ -1,0 +1,39 @@
+=== ci_pairwise_association 2026-05-12T09:18:30.650945 ===
+RUN_ID = ci_pairwise_association_20260512_091830
+results -> /data2/zhu11/TB/results/ci_pairwise_association_20260512_091830
+Loading parquet files from /data2/zhu11/TB/dataset/TrialBench_joined
+  Phase1: shape=(19250, 81)
+  Phase2: shape=(28559, 81)
+  Phase3: shape=(19586, 81)
+  Phase4: shape=(14391, 81)
+concat shape: (81786, 81)
+Extracting features ...
+  original columns retained: 73
+  total sub-features:        84
+  sub-feature roles: {'num': 68, 'cat': 16}
+Computing 3486 sub-feature pairs (skipping within-original-column pairs) ...
+  progress: outer index 0/84, results so far 0
+  progress: outer index 20/84, results so far 1470
+  progress: outer index 40/84, results so far 2534
+  progress: outer index 60/84, results so far 3202
+  progress: outer index 80/84, results so far 3469
+Done. 3475 sub-feature pair entries (skipped 11 within-column).
+Wrote /data2/zhu11/TB/results/ci_pairwise_association_20260512_091830/pairwise_subfeatures.csv (3475 rows).
+Aggregated to 2628 original-column pairs; wrote /data2/zhu11/TB/results/ci_pairwise_association_20260512_091830/pairwise_all.csv.
+Associated pairs (effect>0.05 AND FDR-p<0.01): 1241 / 2628
+metrics.json:
+{
+  "run_id": "ci_pairwise_association_20260512_091830",
+  "data_rows": 81786,
+  "n_orig_cols": 73,
+  "n_sub_features": 84,
+  "n_orig_col_pairs": 2628,
+  "n_associated_pairs": 1241,
+  "effect_size_threshold": 0.05,
+  "p_adj_threshold": 0.01,
+  "files": {
+    "subfeatures": "/data2/zhu11/TB/results/ci_pairwise_association_20260512_091830/pairwise_subfeatures.csv",
+    "all_pairs": "/data2/zhu11/TB/results/ci_pairwise_association_20260512_091830/pairwise_all.csv",
+    "associated_pairs": "/data2/zhu11/TB/results/ci_pairwise_association_20260512_091830/pairwise_associated.csv"
+  }
+}

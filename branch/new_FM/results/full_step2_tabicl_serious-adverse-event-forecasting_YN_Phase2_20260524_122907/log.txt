@@ -1,0 +1,36 @@
+[run_id] full_step2_tabicl_serious-adverse-event-forecasting_YN_Phase2_20260524_122907
+[subtask] serious-adverse-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase2
+  train=(6516, 61)  test=(1600, 61)
+  after preprocess: train (6516, 41)  test (1600, 41)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  virt_train (6516, 2, 768)  virt_test (1600, 2, 768)
+  trials with any non-zero virt: train 6513/6516, test 1600/1600
+Initializing TabICL ...
+  underlying TabICL: embed_dim=128, col blocks=3, row blocks=3, icl blocks=12
+  base params: 27,552,258
+  trainable params: 196,864
+
+--- Initial eval (random-init projections) ---
+  predict 0.3s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=0.4234  test ROC-AUC=0.8296  LogLoss=0.4376
+  ep   4/30  train_loss=0.3930  test ROC-AUC=0.8445  LogLoss=0.4179
+  ep   6/30  train_loss=0.3664  test ROC-AUC=0.8524  LogLoss=0.4066
+  ep   8/30  train_loss=0.3963  test ROC-AUC=0.8562  LogLoss=0.4014
+  ep  10/30  train_loss=0.4066  test ROC-AUC=0.8582  LogLoss=0.3989
+  ep  12/30  train_loss=0.3776  test ROC-AUC=0.8610  LogLoss=0.3964
+  ep  14/30  train_loss=0.3840  test ROC-AUC=0.8621  LogLoss=0.3954
+  ep  16/30  train_loss=0.3611  test ROC-AUC=0.8639  LogLoss=0.3933
+  ep  18/30  train_loss=0.3784  test ROC-AUC=0.8658  LogLoss=0.3908
+  ep  20/30  train_loss=0.3532  test ROC-AUC=0.8648  LogLoss=0.3918
+  ep  22/30  train_loss=0.3871  test ROC-AUC=0.8644  LogLoss=0.3926
+  ep  24/30  train_loss=0.3756  test ROC-AUC=0.8632  LogLoss=0.3957
+  ep  26/30  train_loss=0.3636  test ROC-AUC=0.8623  LogLoss=0.3996
+  ep  28/30  train_loss=0.3823  test ROC-AUC=0.8630  LogLoss=0.4008
+  ep  30/30  train_loss=0.3797  test ROC-AUC=0.8638  LogLoss=0.4013
+
+=== Summary ===
+  Initial   ROC-AUC: 0.8071
+  Best      ROC-AUC: 0.8658  (at epoch 18)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_tabicl_serious-adverse-event-forecasting_YN_Phase2_20260524_122907/metrics.json

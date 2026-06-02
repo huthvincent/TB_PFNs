@@ -1,0 +1,145 @@
+{
+  "run_id": "fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_115631",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 8,
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_trainable_params": 4454026,
+  "elapsed_train_s": 88.8,
+  "initial_metrics": {
+    "roc_auc": 0.823927867515462,
+    "pr_auc": 0.9278628621458112,
+    "log_loss": 0.42844149951014754,
+    "accuracy": 0.8
+  },
+  "best_metrics": {
+    "epoch": 3,
+    "roc_auc": 0.8826343679654661,
+    "pr_auc": 0.9545251119188458,
+    "log_loss": 0.3629581709776265,
+    "accuracy": 0.824375
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.410434752702713,
+      "roc_auc": 0.8826343679654661,
+      "pr_auc": 0.9545251119188458,
+      "log_loss": 0.3629581709776265,
+      "accuracy": 0.824375
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3609409034252167,
+      "roc_auc": 0.881365706177106,
+      "pr_auc": 0.9541005179987561,
+      "log_loss": 0.367021852015541,
+      "accuracy": 0.83875
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3218230605125427,
+      "roc_auc": 0.8778315769095317,
+      "pr_auc": 0.9534969037324537,
+      "log_loss": 0.3729250662549194,
+      "accuracy": 0.83
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.31637024879455566,
+      "roc_auc": 0.8784308960335784,
+      "pr_auc": 0.9538543874968538,
+      "log_loss": 0.3725460187290419,
+      "accuracy": 0.8275
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.3305497169494629,
+      "roc_auc": 0.8744992801991964,
+      "pr_auc": 0.9523342690468606,
+      "log_loss": 0.3850085279221631,
+      "accuracy": 0.82125
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.26191869378089905,
+      "roc_auc": 0.8694060974027444,
+      "pr_auc": 0.9497389878723235,
+      "log_loss": 0.40242162901968526,
+      "accuracy": 0.82
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.31572771072387695,
+      "roc_auc": 0.8684381249343529,
+      "pr_auc": 0.9488995628959631,
+      "log_loss": 0.40375829976795674,
+      "accuracy": 0.823125
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.2891484498977661,
+      "roc_auc": 0.864728936816112,
+      "pr_auc": 0.947113028423527,
+      "log_loss": 0.41634119545915693,
+      "accuracy": 0.820625
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.28045693039894104,
+      "roc_auc": 0.8608838206491183,
+      "pr_auc": 0.9456461464898223,
+      "log_loss": 0.4314272295570491,
+      "accuracy": 0.809375
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.2629055082798004,
+      "roc_auc": 0.8577492374642417,
+      "pr_auc": 0.9442045088621973,
+      "log_loss": 0.44232693325667355,
+      "accuracy": 0.80375
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet",
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "run_id": "fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_121406",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet",
+    "data/emb_keyword_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 9,
+  "n_train": 9980,
+  "n_test": 2514,
+  "n_classes": 2,
+  "n_trainable_params": 5240650,
+  "elapsed_train_s": 99.8,
+  "initial_metrics": {
+    "roc_auc": 0.904057020526519,
+    "pr_auc": 0.8079906107083312,
+    "log_loss": 0.40053990762295066,
+    "accuracy": 0.799920445505171
+  },
+  "best_metrics": {
+    "epoch": 18,
+    "roc_auc": 0.9469387033420198,
+    "pr_auc": 0.8857228229230153,
+    "log_loss": 0.25526665947288163,
+    "accuracy": 0.8794749403341289
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.24697311222553253,
+      "roc_auc": 0.9405238261039872,
+      "pr_auc": 0.8763290061117429,
+      "log_loss": 0.2593004836412987,
+      "accuracy": 0.8727128082736675
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.23696637153625488,
+      "roc_auc": 0.9427448574894863,
+      "pr_auc": 0.8791678349434255,
+      "log_loss": 0.25893306251579423,
+      "accuracy": 0.8735083532219571
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.2603425085544586,
+      "roc_auc": 0.946534075762604,
+      "pr_auc": 0.8841200655007598,
+      "log_loss": 0.25253529212044257,
+      "accuracy": 0.8798727128082736
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.25707098841667175,
+      "roc_auc": 0.9463191811153848,
+      "pr_auc": 0.8828041897488499,
+      "log_loss": 0.25307750832155074,
+      "accuracy": 0.8770883054892601
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.21147263050079346,
+      "roc_auc": 0.9466932066089624,
+      "pr_auc": 0.8832964206682969,
+      "log_loss": 0.25406082764719684,
+      "accuracy": 0.8774860779634049
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.2412099987268448,
+      "roc_auc": 0.9469387033420198,
+      "pr_auc": 0.8857228229230153,
+      "log_loss": 0.25526665947288163,
+      "accuracy": 0.8794749403341289
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.2349727749824524,
+      "roc_auc": 0.9464844323789109,
+      "pr_auc": 0.8858574745076486,
+      "log_loss": 0.25674922710070114,
+      "accuracy": 0.8762927605409706
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.25619763135910034,
+      "roc_auc": 0.9451535816681265,
+      "pr_auc": 0.8839037250124558,
+      "log_loss": 0.26558223087689137,
+      "accuracy": 0.8643595863166269
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.23170535266399384,
+      "roc_auc": 0.9435751940852289,
+      "pr_auc": 0.8801539451454696,
+      "log_loss": 0.2646822299512339,
+      "accuracy": 0.8711217183770883
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.19992411136627197,
+      "roc_auc": 0.9425741658551448,
+      "pr_auc": 0.8769107439180223,
+      "log_loss": 0.2687945480491061,
+      "accuracy": 0.8683373110580748
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet,data/emb_keyword_qwen.parquet",
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

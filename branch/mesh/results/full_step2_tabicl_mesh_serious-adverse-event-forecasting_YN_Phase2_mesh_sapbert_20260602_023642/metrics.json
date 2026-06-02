@@ -1,0 +1,94 @@
+{
+  "run_id": "full_step2_tabicl_mesh_serious-adverse-event-forecasting_YN_Phase2_mesh_sapbert_20260602_023642",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase2",
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_baseline_features": 101,
+  "n_virtual_cols": 4,
+  "d_ie": 4096,
+  "d_mesh": 768,
+  "ie_emb_path": "/data2/zhu11/TB/branch/mesh/data/ie_embeddings_qwen3.parquet",
+  "mesh_emb_path": "data/mesh_embeddings_sapbert.parquet",
+  "interv_test_subset_size": 1041,
+  "interv_test_subset_frac": 0.650625,
+  "n_base_params": 27552258,
+  "n_trainable_params": 1245696,
+  "elapsed_train_s": 0.8,
+  "initial_metrics": {
+    "roc_auc": 0.8582445510358335,
+    "pr_auc": 0.9416366186502765,
+    "log_loss": 0.3977226866677321,
+    "accuracy": 0.824375
+  },
+  "initial_metrics_subset": {
+    "roc_auc": 0.8622372706842101,
+    "pr_auc": 0.9429703060177606,
+    "log_loss": 0.3897786301528948,
+    "accuracy": 0.829971181556196
+  },
+  "best_metrics": {
+    "roc_auc": 0.8582445510358335,
+    "pr_auc": 0.9416366186502765,
+    "log_loss": 0.3977226866677321,
+    "accuracy": 0.824375,
+    "epoch": -1
+  },
+  "best_metrics_subset": {
+    "epoch": 2,
+    "roc_auc": 0.8670636688546338,
+    "pr_auc": 0.9488667753207596,
+    "log_loss": 0.38211055831989793,
+    "accuracy": 0.8290105667627281
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4315745234489441,
+      "roc_auc": 0.8531462194496563,
+      "pr_auc": 0.9405163590569925,
+      "log_loss": 0.40419092650778876,
+      "accuracy": 0.815625,
+      "subset": {
+        "roc_auc": 0.8654251685526746,
+        "pr_auc": 0.9479497054180561,
+        "log_loss": 0.3874650558362149,
+        "accuracy": 0.8251681075888568
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.42473000288009644,
+      "roc_auc": 0.8563755403654816,
+      "pr_auc": 0.9420841390686048,
+      "log_loss": 0.3970597976300876,
+      "accuracy": 0.82125,
+      "subset": {
+        "roc_auc": 0.8670636688546338,
+        "pr_auc": 0.9488667753207596,
+        "log_loss": 0.38211055831989793,
+        "accuracy": 0.8290105667627281
+      }
+    }
+  ],
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase2",
+    "ie_emb": "/data2/zhu11/TB/branch/mesh/data/ie_embeddings_qwen3.parquet",
+    "mesh_emb": "data/mesh_embeddings_sapbert.parquet",
+    "report_subset_mesh": null,
+    "n_bins": 10,
+    "epochs": 2,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 1,
+    "seed": 0
+  }
+}

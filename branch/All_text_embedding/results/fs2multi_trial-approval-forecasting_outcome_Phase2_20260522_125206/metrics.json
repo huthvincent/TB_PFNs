@@ -1,0 +1,97 @@
+{
+  "run_id": "fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_125206",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_ZEROED.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096
+  ],
+  "n_virtual_cols": 4,
+  "n_train": 9980,
+  "n_test": 2514,
+  "n_classes": 2,
+  "n_trainable_params": 1307530,
+  "elapsed_train_s": 57.0,
+  "initial_metrics": {
+    "roc_auc": 0.8211920124475685,
+    "pr_auc": 0.6938840525840226,
+    "log_loss": 0.48867021929908705,
+    "accuracy": 0.7219570405727923
+  },
+  "best_metrics": {
+    "epoch": 30,
+    "roc_auc": 0.8360625860258635,
+    "pr_auc": 0.7112579662062053,
+    "log_loss": 0.46721175543532006,
+    "accuracy": 0.7498011137629276
+  },
+  "history": [
+    {
+      "epoch": 6,
+      "train_loss": 0.44643208384513855,
+      "roc_auc": 0.8318204568823411,
+      "pr_auc": 0.7099850002434913,
+      "log_loss": 0.46741758707062847,
+      "accuracy": 0.741447891805887
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4744516611099243,
+      "roc_auc": 0.8308874332874528,
+      "pr_auc": 0.707361539468438,
+      "log_loss": 0.4691574347249825,
+      "accuracy": 0.741447891805887
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.4576764404773712,
+      "roc_auc": 0.8325678278231444,
+      "pr_auc": 0.7079194025855773,
+      "log_loss": 0.46770530264991356,
+      "accuracy": 0.7442322991249005
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.48510393500328064,
+      "roc_auc": 0.8346283682695813,
+      "pr_auc": 0.7113496997808311,
+      "log_loss": 0.46890532759516074,
+      "accuracy": 0.7418456642800318
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.44956502318382263,
+      "roc_auc": 0.8360625860258635,
+      "pr_auc": 0.7112579662062053,
+      "log_loss": 0.46721175543532006,
+      "accuracy": 0.7498011137629276
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_ZEROED.parquet",
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 6,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

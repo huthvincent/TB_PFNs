@@ -1,0 +1,151 @@
+{
+  "run_id": "fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_123855",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet",
+    "data/emb_keyword_qwen.parquet",
+    "data/emb_study_design_info_intervention_model_description_qwen.parquet",
+    "data/emb_study_design_info_masking_description_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 11,
+  "n_train": 9980,
+  "n_test": 2514,
+  "n_classes": 2,
+  "n_trainable_params": 6813898,
+  "elapsed_train_s": 105.2,
+  "initial_metrics": {
+    "roc_auc": 0.9044786492647339,
+    "pr_auc": 0.7949019478291995,
+    "log_loss": 0.5464775717189914,
+    "accuracy": 0.7100238663484487
+  },
+  "best_metrics": {
+    "epoch": 3,
+    "roc_auc": 0.9401450402859458,
+    "pr_auc": 0.8753212133526924,
+    "log_loss": 0.2628787473883681,
+    "accuracy": 0.8723150357995226
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.24957755208015442,
+      "roc_auc": 0.9401450402859458,
+      "pr_auc": 0.8753212133526924,
+      "log_loss": 0.2628787473883681,
+      "accuracy": 0.8723150357995226
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.24893397092819214,
+      "roc_auc": 0.9378104411596693,
+      "pr_auc": 0.8681661164381704,
+      "log_loss": 0.26350438779369095,
+      "accuracy": 0.8723150357995226
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.2563816010951996,
+      "roc_auc": 0.9386135759013334,
+      "pr_auc": 0.8701939884199228,
+      "log_loss": 0.26192096013231964,
+      "accuracy": 0.8711217183770883
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.26217541098594666,
+      "roc_auc": 0.9385115689485395,
+      "pr_auc": 0.8697576692291894,
+      "log_loss": 0.2620916914122639,
+      "accuracy": 0.869928400954654
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.22522598505020142,
+      "roc_auc": 0.9382701524935939,
+      "pr_auc": 0.8688366049524858,
+      "log_loss": 0.262499337932568,
+      "accuracy": 0.8719172633253779
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.26849445700645447,
+      "roc_auc": 0.9299599860726506,
+      "pr_auc": 0.8364140537986957,
+      "log_loss": 0.2951985115674228,
+      "accuracy": 0.8667462211614956
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.23681728541851044,
+      "roc_auc": 0.9379287692249104,
+      "pr_auc": 0.8658234244565575,
+      "log_loss": 0.2637104691349757,
+      "accuracy": 0.8711217183770883
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.271182656288147,
+      "roc_auc": 0.9379593713107486,
+      "pr_auc": 0.8658633134748387,
+      "log_loss": 0.26398845340708965,
+      "accuracy": 0.8719172633253779
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.24570579826831818,
+      "roc_auc": 0.9385768533983275,
+      "pr_auc": 0.8688239421139501,
+      "log_loss": 0.2643748897699782,
+      "accuracy": 0.8719172633253779
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.2366991937160492,
+      "roc_auc": 0.938423842969137,
+      "pr_auc": 0.8687330957954267,
+      "log_loss": 0.2635133907072359,
+      "accuracy": 0.8727128082736675
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet,data/emb_keyword_qwen.parquet,data/emb_study_design_info_intervention_model_description_qwen.parquet,data/emb_study_design_info_masking_description_qwen.parquet",
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

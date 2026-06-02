@@ -1,0 +1,31 @@
+[run_id] fm_bench_ie_trial-failure-reason-identification_failure_reason_Phase2_20260524_004824
+[subtask] trial-failure-reason-identification  [target] failure_reason  [task-type] multiclass  [phase] Phase2
+[ie_features] /data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet
+  train=(7056, 45)  test=(1780, 45)
+  train target counts: {'Others': 3110, 'poor enrollment': 2554, 'efficacy': 950, 'safety': 442}
+  test  target counts: {'Others': 761, 'poor enrollment': 656, 'efficacy': 246, 'safety': 117}
+  after preprocess: train (7056, 26)  test (1780, 26)  non-numeric cols 11/26
+  +IE: 8 IE cols; NaN cells train=2365 test=582; shapes train (7056, 34)  test (1780, 34)
+  multiclass label set (4): ['Others', 'efficacy', 'poor enrollment', 'safety']
+
+=== TABPFN ===
+[tabpfn] baseline t=0.8s  accuracy=0.4489 macro_f1=0.2672 weighted_f1=0.4051 log_loss=1.1620
+[tabpfn] + IE     t=0.4s  accuracy=0.4612 macro_f1=0.2866 weighted_f1=0.4183 log_loss=1.1395
+[tabpfn] Δ accuracy=+0.0124(better)  macro_f1=+0.0194(better)  weighted_f1=+0.0132(better)  log_loss=-0.0225(better)
+
+=== TABICL ===
+[tabicl] baseline t=0.6s  accuracy=0.4444 macro_f1=0.2297 weighted_f1=0.3652 log_loss=1.1724
+[tabicl] + IE     t=0.6s  accuracy=0.4708 macro_f1=0.2936 weighted_f1=0.4254 log_loss=1.1349
+[tabicl] Δ accuracy=+0.0264(better)  macro_f1=+0.0639(better)  weighted_f1=+0.0602(better)  log_loss=-0.0375(better)
+
+=== TABDPT ===
+[tabdpt] baseline t=6.5s  accuracy=0.4517 macro_f1=0.2674 weighted_f1=0.4039 log_loss=1.1606
+[tabdpt] + IE     t=6.9s  accuracy=0.4742 macro_f1=0.2998 weighted_f1=0.4326 log_loss=1.1449
+[tabdpt] Δ accuracy=+0.0225(better)  macro_f1=+0.0324(better)  weighted_f1=+0.0287(better)  log_loss=-0.0157(better)
+
+=== MITRA ===
+[mitra] baseline t=1.8s  accuracy=0.4275 macro_f1=0.1497 weighted_f1=0.2561 log_loss=1.1827
+[mitra] + IE     t=1.9s  accuracy=0.4275 macro_f1=0.1497 weighted_f1=0.2561 log_loss=1.1791
+[mitra] Δ accuracy=+0.0000(better)  macro_f1=+0.0000(better)  weighted_f1=+0.0000(better)  log_loss=-0.0036(better)
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_ie_trial-failure-reason-identification_failure_reason_Phase2_20260524_004824/metrics.json

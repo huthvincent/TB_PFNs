@@ -1,0 +1,13 @@
+[run_id] full_step2_tabicl_serious-adverse-event-forecasting_YN_Phase2_20260524_122837
+[subtask] serious-adverse-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase2
+  train=(6516, 61)  test=(1600, 61)
+  after preprocess: train (6516, 41)  test (1600, 41)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  virt_train (6516, 2, 768)  virt_test (1600, 2, 768)
+  trials with any non-zero virt: train 6513/6516, test 1600/1600
+Initializing TabICL ...
+  underlying TabICL: embed_dim=128, col blocks=3, row blocks=3, icl blocks=12
+  base params: 27,552,258
+  trainable params: 196,864
+
+--- Initial eval (random-init projections) ---

@@ -1,0 +1,110 @@
+{
+  "run_id": "fm_bench_ie_trial-duration-forecasting_time_day_Phase2_20260524_004920",
+  "subtask": "trial-duration-forecasting",
+  "target": "time_day",
+  "task_type": "regression",
+  "phase": "Phase2",
+  "ie_features_path": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 10623,
+  "n_test": 2590,
+  "n_features_baseline": 36,
+  "n_features_with_ie": 44,
+  "n_non_numeric_baseline": 13,
+  "multiclass_classes": null,
+  "models": {
+    "tabpfn": {
+      "baseline": {
+        "time_s": 1.2699335190700367,
+        "mae": 466.93328857421875,
+        "rmse": 632.8031141279253,
+        "r2": 0.18070566654205322
+      },
+      "with_ie": {
+        "time_s": 1.0119190780678764,
+        "mae": 446.955078125,
+        "rmse": 610.9295683628351,
+        "r2": 0.23636645078659058
+      },
+      "delta": {
+        "mae": -19.97821044921875,
+        "rmse": -21.87354576509017,
+        "r2": 0.055660784244537354
+      }
+    },
+    "tabicl": {
+      "baseline": {
+        "time_s": 0.8973598799202591,
+        "mae": 468.9910583496094,
+        "rmse": 634.5884739340922,
+        "r2": 0.17607611417770386
+      },
+      "with_ie": {
+        "time_s": 0.9652697599958628,
+        "mae": 448.690673828125,
+        "rmse": 608.9908147911592,
+        "r2": 0.24120545387268066
+      },
+      "delta": {
+        "mae": -20.300384521484375,
+        "rmse": -25.597659142933026,
+        "r2": 0.0651293396949768
+      }
+    },
+    "tabdpt": {
+      "baseline": {
+        "time_s": 84.95959851401858,
+        "mae": 473.3877868652344,
+        "rmse": 632.2407571487305,
+        "r2": 0.18216121196746826
+      },
+      "with_ie": {
+        "time_s": 89.45215400797315,
+        "mae": 452.525390625,
+        "rmse": 609.1909080903949,
+        "r2": 0.24070674180984497
+      },
+      "delta": {
+        "mae": -20.862396240234375,
+        "rmse": -23.049849058335553,
+        "r2": 0.05854552984237671
+      }
+    },
+    "mitra": {
+      "baseline": {
+        "time_s": 7.44123994698748,
+        "mae": 497.2618103027344,
+        "rmse": 647.3639577162139,
+        "r2": 0.14256781339645386
+      },
+      "with_ie": {
+        "time_s": 4.502524301991798,
+        "mae": 467.8169250488281,
+        "rmse": 615.6331598443995,
+        "r2": 0.22456258535385132
+      },
+      "delta": {
+        "mae": -29.44488525390625,
+        "rmse": -31.73079787181439,
+        "r2": 0.08199477195739746
+      }
+    }
+  },
+  "args": {
+    "subtask": "trial-duration-forecasting",
+    "target": "time_day",
+    "task_type": "regression",
+    "phase": "Phase2",
+    "ie_features": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt",
+      "mitra"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "mitra_n_estimators": 1,
+    "seed": 0
+  }
+}

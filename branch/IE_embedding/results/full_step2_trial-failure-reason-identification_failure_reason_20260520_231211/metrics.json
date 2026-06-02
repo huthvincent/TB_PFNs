@@ -1,0 +1,123 @@
+{
+  "run_id": "full_step2_trial-failure-reason-identification_failure_reason_20260520_231211",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "n_train": 16649,
+  "n_test": 4120,
+  "n_classes": 4,
+  "n_baseline_features": 99,
+  "n_virtual_cols": 2,
+  "n_base_params": 10718218,
+  "n_trainable_params": 373258,
+  "elapsed_train_s": 192.6,
+  "initial_metrics": {
+    "accuracy": 0.49781553398058254,
+    "macro_f1": 0.2536251890584225,
+    "weighted_f1": 0.42925572814785107,
+    "log_loss": 1.086197282694392
+  },
+  "best_metrics": {
+    "epoch": 27,
+    "accuracy": 0.5143203883495145,
+    "macro_f1": 0.29049405806826323,
+    "weighted_f1": 0.46727691991748505,
+    "log_loss": 1.072048957519518
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 1.2257037162780762,
+      "accuracy": 0.44611650485436893,
+      "macro_f1": 0.2661274333526525,
+      "weighted_f1": 0.4078197949611904,
+      "log_loss": 1.1658002441402162
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1055935621261597,
+      "accuracy": 0.5060679611650486,
+      "macro_f1": 0.2741957849220068,
+      "weighted_f1": 0.45219968557411844,
+      "log_loss": 1.0809920602859566
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.0862822532653809,
+      "accuracy": 0.5026699029126214,
+      "macro_f1": 0.264674376644644,
+      "weighted_f1": 0.44144106424906004,
+      "log_loss": 1.0815852385893463
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.078945279121399,
+      "accuracy": 0.5053398058252427,
+      "macro_f1": 0.2679549349548815,
+      "weighted_f1": 0.44521163753492726,
+      "log_loss": 1.078249777020426
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.086031198501587,
+      "accuracy": 0.5046116504854369,
+      "macro_f1": 0.27279771444870854,
+      "weighted_f1": 0.4491629788685131,
+      "log_loss": 1.0754384697621584
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.1226632595062256,
+      "accuracy": 0.5053398058252427,
+      "macro_f1": 0.2755167503301843,
+      "weighted_f1": 0.4527468938468634,
+      "log_loss": 1.0747497846542362
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.0562858581542969,
+      "accuracy": 0.5087378640776699,
+      "macro_f1": 0.2830399254978306,
+      "weighted_f1": 0.4585697944781283,
+      "log_loss": 1.0740545725021498
+    },
+    {
+      "epoch": 24,
+      "train_loss": 1.0759938955307007,
+      "accuracy": 0.5143203883495145,
+      "macro_f1": 0.2898805119229441,
+      "weighted_f1": 0.4664312867561112,
+      "log_loss": 1.0730416256312731
+    },
+    {
+      "epoch": 27,
+      "train_loss": 1.0658283233642578,
+      "accuracy": 0.5143203883495145,
+      "macro_f1": 0.29049405806826323,
+      "weighted_f1": 0.46727691991748505,
+      "log_loss": 1.072048957519518
+    },
+    {
+      "epoch": 30,
+      "train_loss": 1.0495601892471313,
+      "accuracy": 0.5097087378640777,
+      "macro_f1": 0.2867807871887049,
+      "weighted_f1": 0.4632087561355675,
+      "log_loss": 1.0713291356179782
+    }
+  ],
+  "args": {
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 4000,
+    "qry_size": 1000,
+    "eval_every": 3,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "run_id": "fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_115108",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 7,
+  "n_train": 9980,
+  "n_test": 2514,
+  "n_classes": 2,
+  "n_trainable_params": 3667402,
+  "elapsed_train_s": 91.2,
+  "initial_metrics": {
+    "roc_auc": 0.878882384623336,
+    "pr_auc": 0.7626458815380809,
+    "log_loss": 0.40327747256670315,
+    "accuracy": 0.7859984089101034
+  },
+  "best_metrics": {
+    "epoch": 30,
+    "roc_auc": 0.9427938208268276,
+    "pr_auc": 0.8785512007150293,
+    "log_loss": 0.25955720595800774,
+    "accuracy": 0.8739061256961018
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.24200518429279327,
+      "roc_auc": 0.9385197295047629,
+      "pr_auc": 0.8709413309220922,
+      "log_loss": 0.2623728357227732,
+      "accuracy": 0.8778838504375497
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2526710033416748,
+      "roc_auc": 0.9389828410704473,
+      "pr_auc": 0.8731072081935047,
+      "log_loss": 0.26083464394064415,
+      "accuracy": 0.8774860779634049
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.25784558057785034,
+      "roc_auc": 0.9392711807236781,
+      "pr_auc": 0.8754002937523846,
+      "log_loss": 0.26091081367686303,
+      "accuracy": 0.8731105807478122
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.2603486180305481,
+      "roc_auc": 0.9422368628645729,
+      "pr_auc": 0.8785138423596167,
+      "log_loss": 0.2615270360303561,
+      "accuracy": 0.875497215592681
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.2250763326883316,
+      "roc_auc": 0.9422409431426846,
+      "pr_auc": 0.8768013506032252,
+      "log_loss": 0.26130120633502923,
+      "accuracy": 0.8750994431185362
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.2503521740436554,
+      "roc_auc": 0.9417730712525365,
+      "pr_auc": 0.8745931390302417,
+      "log_loss": 0.26196412226968824,
+      "accuracy": 0.8774860779634049
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.2373982071876526,
+      "roc_auc": 0.9413215204748356,
+      "pr_auc": 0.872886061221824,
+      "log_loss": 0.26208037240880544,
+      "accuracy": 0.875497215592681
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.26197829842567444,
+      "roc_auc": 0.9421042538259409,
+      "pr_auc": 0.8769781025661317,
+      "log_loss": 0.2602981250154489,
+      "accuracy": 0.8715194908512331
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.2502653896808624,
+      "roc_auc": 0.942770699250861,
+      "pr_auc": 0.8781250167572816,
+      "log_loss": 0.2596138611441867,
+      "accuracy": 0.8715194908512331
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.22484399378299713,
+      "roc_auc": 0.9427938208268276,
+      "pr_auc": 0.8785512007150293,
+      "log_loss": 0.25955720595800774,
+      "accuracy": 0.8739061256961018
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet",
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "criterion_head_20260520_155333",
+  "emb_run": "results/encode_medcpt_20260520_154921",
+  "n_criteria": 1579161,
+  "n_labeled_train_criteria": 590360,
+  "n_trials_with_features": 81742,
+  "elapsed_s": 49.93,
+  "args": {
+    "emb_run": "results/encode_medcpt_20260520_154921",
+    "folds": 5,
+    "epochs": 20,
+    "batch_size": 4096,
+    "eval_batch_size": 16384,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "device": "cuda"
+  }
+}

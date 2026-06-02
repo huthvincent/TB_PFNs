@@ -1,0 +1,37 @@
+{
+  "run_id": "ablate_ie_mortality-event-prediction_YN_20260520_184743",
+  "subtask": "mortality-event-prediction",
+  "target": "Y/N",
+  "ie_features_path": "results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 14368,
+  "n_test": 3548,
+  "n_features_baseline": 41,
+  "n_features_with_ie": 49,
+  "baseline": {
+    "time_s": 2.8518958589993417,
+    "roc_auc": 0.8575546568219821,
+    "pr_auc": 0.7990020797588633,
+    "log_loss": 0.4600480212651338,
+    "accuracy": 0.7877677564825254
+  },
+  "with_ie": {
+    "time_s": 1.9128806720254943,
+    "roc_auc": 0.886630768224667,
+    "pr_auc": 0.8505420378102907,
+    "log_loss": 0.4111349295907467,
+    "accuracy": 0.810879368658399
+  },
+  "delta": {
+    "roc_auc": 0.029076111402684957,
+    "pr_auc": 0.051539958051427415,
+    "log_loss": -0.048913091674387066,
+    "accuracy": 0.023111612175873653
+  },
+  "args": {
+    "ie_features": "results/criterion_head_20260520_155333/ie_features.parquet",
+    "subtask": "mortality-event-prediction",
+    "target": "Y/N",
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

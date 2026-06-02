@@ -1,0 +1,36 @@
+[run_id] full_step2_tabicl_trial-approval-forecasting_outcome_Phase2_20260524_123013
+[subtask] trial-approval-forecasting  [target] outcome  [task-type] binary  [phase] Phase2
+  train=(9980, 58)  test=(2514, 58)
+  after preprocess: train (9980, 37)  test (2514, 37)
+  preprocessed: train (9980, 78)  test (2514, 78)
+  virt_train (9980, 2, 768)  virt_test (2514, 2, 768)
+  trials with any non-zero virt: train 9976/9980, test 2513/2514
+Initializing TabICL ...
+  underlying TabICL: embed_dim=128, col blocks=3, row blocks=3, icl blocks=12
+  base params: 27,552,258
+  trainable params: 196,864
+
+--- Initial eval (random-init projections) ---
+  predict 0.4s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=0.5035  test ROC-AUC=0.7813  LogLoss=0.5853
+  ep   4/30  train_loss=0.4665  test ROC-AUC=0.7824  LogLoss=0.5618
+  ep   6/30  train_loss=0.4868  test ROC-AUC=0.7844  LogLoss=0.5559
+  ep   8/30  train_loss=0.4975  test ROC-AUC=0.7867  LogLoss=0.5535
+  ep  10/30  train_loss=0.4741  test ROC-AUC=0.7849  LogLoss=0.5582
+  ep  12/30  train_loss=0.4596  test ROC-AUC=0.7857  LogLoss=0.5598
+  ep  14/30  train_loss=0.4462  test ROC-AUC=0.7879  LogLoss=0.5588
+  ep  16/30  train_loss=0.4549  test ROC-AUC=0.7898  LogLoss=0.5596
+  ep  18/30  train_loss=0.4571  test ROC-AUC=0.7890  LogLoss=0.5636
+  ep  20/30  train_loss=0.4394  test ROC-AUC=0.7863  LogLoss=0.5702
+  ep  22/30  train_loss=0.4733  test ROC-AUC=0.7812  LogLoss=0.5830
+  ep  24/30  train_loss=0.4695  test ROC-AUC=0.7770  LogLoss=0.5909
+  ep  26/30  train_loss=0.5125  test ROC-AUC=0.7735  LogLoss=0.5971
+  ep  28/30  train_loss=0.4779  test ROC-AUC=0.7791  LogLoss=0.5812
+  ep  30/30  train_loss=0.4492  test ROC-AUC=0.7868  LogLoss=0.5652
+
+=== Summary ===
+  Initial   ROC-AUC: 0.7746
+  Best      ROC-AUC: 0.7898  (at epoch 16)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_tabicl_trial-approval-forecasting_outcome_Phase2_20260524_123013/metrics.json

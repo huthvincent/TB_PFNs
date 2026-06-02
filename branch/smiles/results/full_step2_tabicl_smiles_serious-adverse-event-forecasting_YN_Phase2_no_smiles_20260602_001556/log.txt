@@ -1,0 +1,36 @@
+[run_id] full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_no_smiles_20260602_001556
+[subtask] serious-adverse-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase2
+[ie-emb] /data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet
+[smiles-emb] None
+  train=(6516, 61)  test=(1600, 61)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  I/E d=4096  ie_train (6516, 2, 4096)  ie_test (1600, 2, 4096)
+  trials with non-zero I/E: train 6513/6516, test 1600/1600
+Initializing TabICL ...
+  base embed_dim=128  base params: 27,552,258
+  n_virt_cols=2  trainable params: 1,048,832
+
+--- Initial eval (random-init projections) ---
+  predict 0.4s
+
+--- Training: 30 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   2/30  loss=0.4129  test ROC-AUC=0.8641  LogLoss=0.3912
+  ep   4/30  loss=0.3859  test ROC-AUC=0.8715  LogLoss=0.3796
+  ep   6/30  loss=0.3326  test ROC-AUC=0.8720  LogLoss=0.3775
+  ep   8/30  loss=0.3607  test ROC-AUC=0.8703  LogLoss=0.3809
+  ep  10/30  loss=0.3549  test ROC-AUC=0.8688  LogLoss=0.3857
+  ep  12/30  loss=0.3478  test ROC-AUC=0.8689  LogLoss=0.3883
+  ep  14/30  loss=0.3549  test ROC-AUC=0.8687  LogLoss=0.3922
+  ep  16/30  loss=0.3392  test ROC-AUC=0.8681  LogLoss=0.3960
+  ep  18/30  loss=0.3279  test ROC-AUC=0.8679  LogLoss=0.3996
+  ep  20/30  loss=0.3029  test ROC-AUC=0.8668  LogLoss=0.4057
+  ep  22/30  loss=0.3316  test ROC-AUC=0.8639  LogLoss=0.4159
+  ep  24/30  loss=0.2928  test ROC-AUC=0.8615  LogLoss=0.4271
+  ep  26/30  loss=0.2789  test ROC-AUC=0.8614  LogLoss=0.4325
+  ep  28/30  loss=0.2878  test ROC-AUC=0.8608  LogLoss=0.4404
+  ep  30/30  loss=0.3060  test ROC-AUC=0.8599  LogLoss=0.4536
+
+=== Summary ===
+  Initial  ROC-AUC: 0.8311
+  Best     ROC-AUC: 0.8720  (epoch 6)
+  Saved: /data2/zhu11/TB/branch/smiles/results/full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_no_smiles_20260602_001556/metrics.json

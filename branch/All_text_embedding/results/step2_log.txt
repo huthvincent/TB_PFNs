@@ -1,0 +1,1874 @@
+##### ENCODE detailed_description/textblock (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] detailed_description/textblock
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 4 CSVs → 12992 unique (trial_id, phase)
+  empty cells: 4414 (34.0%)
+Encoding 12992 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 11341.12it/s]
+  embeddings: (12992, 4096)  (106.4 MB)  in 334.5s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_detailed_description_textblock_qwen.parquet  shape=(12992, 4098)
+##### ENCODE intervention/description (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] intervention/description
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 20 CSVs → 45950 unique (trial_id, phase)
+  empty cells: 5257 (11.4%)
+Encoding 45950 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 7671.29it/s]
+  embeddings: (45950, 4096)  (376.4 MB)  in 377.8s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_intervention_description_qwen.parquet  shape=(45950, 4098)
+##### ENCODE condition (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] condition
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 24 CSVs → 48145 unique (trial_id, phase)
+  empty cells: 0 (0.0%)
+Encoding 48145 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 12611.02it/s]
+  embeddings: (48145, 4096)  (394.4 MB)  in 125.2s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_condition_qwen.parquet  shape=(48145, 4098)
+##### ENCODE intervention/intervention_name (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] intervention/intervention_name
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 24 CSVs → 48145 unique (trial_id, phase)
+  empty cells: 0 (0.0%)
+Encoding 48145 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 15140.38it/s]
+  embeddings: (48145, 4096)  (394.4 MB)  in 148.5s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_intervention_intervention_name_qwen.parquet  shape=(48145, 4098)
+##### ENCODE brief_title (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] brief_title
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 24 CSVs → 48145 unique (trial_id, phase)
+  empty cells: 0 (0.0%)
+Encoding 48145 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 12312.08it/s]
+  embeddings: (48145, 4096)  (394.4 MB)  in 144.0s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_brief_title_qwen.parquet  shape=(48145, 4098)
+##### ENCODE keyword (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] keyword
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 24 CSVs → 48145 unique (trial_id, phase)
+  empty cells: 17103 (35.5%)
+Encoding 48145 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 12364.06it/s]
+  embeddings: (48145, 4096)  (394.4 MB)  in 148.2s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_keyword_qwen.parquet  shape=(48145, 4098)
+##### ENCODE study_design_info/intervention_model_description (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] study_design_info/intervention_model_description
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 20 CSVs → 44041 unique (trial_id, phase)
+  empty cells: 40270 (91.4%)
+Encoding 44041 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 12107.50it/s]
+  embeddings: (44041, 4096)  (360.8 MB)  in 111.2s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_study_design_info_intervention_model_description_qwen.parquet  shape=(44041, 4098)
+##### ENCODE study_design_info/masking_description (qwen) #####
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[column] study_design_info/masking_description
+[encoder] qwen  [phases] ['Phase2', 'Phase3']
+  scanned 16 CSVs → 37853 unique (trial_id, phase)
+  empty cells: 35604 (94.1%)
+Encoding 37853 texts with qwen ...
+  loading Qwen/Qwen3-Embedding-8B ... (dedicated embedding model, last-token pooling)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 11377.45it/s]
+  embeddings: (37853, 4096)  (310.1 MB)  in 80.6s
+Wrote: /data2/zhu11/TB/branch/All_text_embedding/data/emb_study_design_info_masking_description_qwen.parquet  shape=(37853, 4098)
+STEP2_ENCODE_DONE
+===== 4tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_111504
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 4:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  underlying: PerFeatureTransformer  trainable params: 1,307,530
+
+[initial] roc_auc=0.8325
+  ep   3/30  loss=0.4335  roc_auc=0.8602
+  ep   6/30  loss=0.4017  roc_auc=0.8733
+  ep   9/30  loss=0.3771  roc_auc=0.8739
+  ep  12/30  loss=0.3809  roc_auc=0.8710
+  ep  15/30  loss=0.3709  roc_auc=0.8684
+  ep  18/30  loss=0.3278  roc_auc=0.8647
+  ep  21/30  loss=0.3764  roc_auc=0.8629
+  ep  24/30  loss=0.3397  roc_auc=0.8623
+  ep  27/30  loss=0.3303  roc_auc=0.8613
+  ep  30/30  loss=0.3028  roc_auc=0.8567
+
+=== roc_auc: initial 0.8325 → best 0.8739 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_111504/metrics.json
+===== 4tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_111626
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 4:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  underlying: PerFeatureTransformer  trainable params: 1,307,530
+
+[initial] roc_auc=0.8611
+  ep   3/30  loss=0.4299  roc_auc=0.8960
+  ep   6/30  loss=0.3738  roc_auc=0.8996
+  ep   9/30  loss=0.3740  roc_auc=0.8987
+  ep  12/30  loss=0.3874  roc_auc=0.8977
+  ep  15/30  loss=0.3847  roc_auc=0.8981
+  ep  18/30  loss=0.3915  roc_auc=0.8972
+  ep  21/30  loss=0.3676  roc_auc=0.8971
+  ep  24/30  loss=0.3459  roc_auc=0.8922
+  ep  27/30  loss=0.3003  roc_auc=0.8888
+  ep  30/30  loss=0.3648  roc_auc=0.8856
+
+=== roc_auc: initial 0.8611 → best 0.8996 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_111626/metrics.json
+===== 4tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_111752
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 4:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  underlying: PerFeatureTransformer  trainable params: 1,307,530
+
+[initial] roc_auc=0.7740
+  ep   3/30  loss=0.4580  roc_auc=0.7754
+  ep   6/30  loss=0.4564  roc_auc=0.7783
+  ep   9/30  loss=0.4339  roc_auc=0.7776
+  ep  12/30  loss=0.4678  roc_auc=0.7751
+  ep  15/30  loss=0.4578  roc_auc=0.7716
+  ep  18/30  loss=0.4499  roc_auc=0.7714
+  ep  21/30  loss=0.4220  roc_auc=0.7726
+  ep  24/30  loss=0.4032  roc_auc=0.7725
+  ep  27/30  loss=0.4299  roc_auc=0.7717
+  ep  30/30  loss=0.4221  roc_auc=0.7691
+
+=== roc_auc: initial 0.7740 → best 0.7783 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_111752/metrics.json
+===== 4tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_112002
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 4:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  underlying: PerFeatureTransformer  trainable params: 1,307,530
+
+[initial] roc_auc=0.9065
+  ep   3/30  loss=0.2412  roc_auc=0.9362
+  ep   6/30  loss=0.2439  roc_auc=0.9301
+  ep   9/30  loss=0.2575  roc_auc=0.9330
+  ep  12/30  loss=0.2522  roc_auc=0.9373
+  ep  15/30  loss=0.2131  roc_auc=0.9369
+  ep  18/30  loss=0.2636  roc_auc=0.9370
+  ep  21/30  loss=0.2265  roc_auc=0.9373
+  ep  24/30  loss=0.2659  roc_auc=0.9372
+  ep  27/30  loss=0.2468  roc_auc=0.9376
+  ep  30/30  loss=0.2269  roc_auc=0.9369
+
+=== roc_auc: initial 0.9065 → best 0.9376 (epoch 27) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_112002/metrics.json
+===== 4tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_112132
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 4:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 1,307,530
+
+[initial] macro_f1=0.2653
+  ep   3/30  loss=1.2543  macro_f1=0.2916
+  ep   6/30  loss=1.1015  macro_f1=0.3024
+  ep   9/30  loss=1.0824  macro_f1=0.3132
+  ep  12/30  loss=1.0760  macro_f1=0.3196
+  ep  15/30  loss=1.0621  macro_f1=0.3221
+  ep  18/30  loss=1.0100  macro_f1=0.3215
+  ep  21/30  loss=1.0279  macro_f1=0.3297
+  ep  24/30  loss=1.0514  macro_f1=0.3268
+  ep  27/30  loss=1.0444  macro_f1=0.3286
+  ep  30/30  loss=1.1149  macro_f1=0.3284
+
+=== macro_f1: initial 0.2653 → best 0.3297 (epoch 21) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_112132/metrics.json
+===== 4tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_112259
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 4:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  underlying: PerFeatureTransformer  trainable params: 1,307,530
+
+[initial] r2=-0.1509
+  ep   3/30  loss=2.2314  r2=0.0691
+  ep   6/30  loss=2.1681  r2=0.1931
+  ep   9/30  loss=2.1276  r2=0.1977
+  ep  12/30  loss=2.1363  r2=0.2139
+  ep  15/30  loss=2.1206  r2=0.2115
+  ep  18/30  loss=2.1506  r2=0.2336
+  ep  21/30  loss=2.0886  r2=0.2512
+  ep  24/30  loss=2.1359  r2=0.2524
+  ep  27/30  loss=2.1016  r2=0.2571
+  ep  30/30  loss=2.0865  r2=0.2601
+
+=== r2: initial -0.1509 → best 0.2601 (epoch 30) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_112259/metrics.json
+===== 5tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_112446
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 5:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,094,154
+
+[initial] roc_auc=0.8455
+  ep   3/30  loss=0.4307  roc_auc=0.8709
+  ep   6/30  loss=0.4069  roc_auc=0.8775
+  ep   9/30  loss=0.3765  roc_auc=0.8786
+  ep  12/30  loss=0.3786  roc_auc=0.8804
+  ep  15/30  loss=0.3794  roc_auc=0.8829
+  ep  18/30  loss=0.3148  roc_auc=0.8767
+  ep  21/30  loss=0.3953  roc_auc=0.8743
+  ep  24/30  loss=0.3613  roc_auc=0.8722
+  ep  27/30  loss=0.3304  roc_auc=0.8696
+  ep  30/30  loss=0.3230  roc_auc=0.8620
+
+=== roc_auc: initial 0.8455 → best 0.8829 (epoch 15) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_112446/metrics.json
+===== 5tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_112615
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 5:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,094,154
+
+[initial] roc_auc=0.8646
+  ep   3/30  loss=0.4122  roc_auc=0.9021
+  ep   6/30  loss=0.3504  roc_auc=0.9053
+  ep   9/30  loss=0.3717  roc_auc=0.8987
+  ep  12/30  loss=0.3638  roc_auc=0.8931
+  ep  15/30  loss=0.3468  roc_auc=0.8935
+  ep  18/30  loss=0.3758  roc_auc=0.8939
+  ep  21/30  loss=0.3083  roc_auc=0.8940
+  ep  24/30  loss=0.3195  roc_auc=0.8927
+  ep  27/30  loss=0.2688  roc_auc=0.8909
+  ep  30/30  loss=0.3113  roc_auc=0.8889
+
+=== roc_auc: initial 0.8646 → best 0.9053 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_112615/metrics.json
+===== 5tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_112743
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 5:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,094,154
+
+[initial] roc_auc=0.7725
+  ep   3/30  loss=0.4506  roc_auc=0.7727
+  ep   6/30  loss=0.4617  roc_auc=0.7644
+  ep   9/30  loss=0.4309  roc_auc=0.7684
+  ep  12/30  loss=0.4474  roc_auc=0.7621
+  ep  15/30  loss=0.4421  roc_auc=0.7262
+  ep  18/30  loss=0.4491  roc_auc=0.7526
+  ep  21/30  loss=0.4259  roc_auc=0.7605
+  ep  24/30  loss=0.3932  roc_auc=0.7570
+  ep  27/30  loss=0.4440  roc_auc=0.7593
+  ep  30/30  loss=0.4209  roc_auc=0.7570
+
+=== roc_auc: initial 0.7725 → best 0.7727 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_112743/metrics.json
+===== 5tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_112957
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 5:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,094,154
+
+[initial] roc_auc=0.8666
+  ep   3/30  loss=0.2626  roc_auc=0.9359
+  ep   6/30  loss=0.2422  roc_auc=0.9380
+  ep   9/30  loss=0.2717  roc_auc=0.9385
+  ep  12/30  loss=0.2548  roc_auc=0.9380
+  ep  15/30  loss=0.2128  roc_auc=0.9360
+  ep  18/30  loss=0.2786  roc_auc=0.9362
+  ep  21/30  loss=0.2366  roc_auc=0.9363
+  ep  24/30  loss=0.2718  roc_auc=0.9352
+  ep  27/30  loss=0.2544  roc_auc=0.9361
+  ep  30/30  loss=0.2488  roc_auc=0.9369
+
+=== roc_auc: initial 0.8666 → best 0.9385 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_112957/metrics.json
+===== 5tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_113131
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 5:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  underlying: PerFeatureTransformer  trainable params: 2,094,154
+
+[initial] macro_f1=0.2963
+  ep   3/30  loss=1.0085  macro_f1=0.3444
+  ep   6/30  loss=0.9519  macro_f1=0.3584
+  ep   9/30  loss=0.8831  macro_f1=0.3778
+  ep  12/30  loss=0.9256  macro_f1=0.3906
+  ep  15/30  loss=0.8955  macro_f1=0.4085
+  ep  18/30  loss=0.8545  macro_f1=0.4116
+  ep  21/30  loss=0.9003  macro_f1=0.4232
+  ep  24/30  loss=0.9318  macro_f1=0.4194
+  ep  27/30  loss=0.8732  macro_f1=0.4138
+  ep  30/30  loss=0.9429  macro_f1=0.4101
+
+=== macro_f1: initial 0.2963 → best 0.4232 (epoch 21) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_113131/metrics.json
+===== 5tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_113300
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 5:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,094,154
+
+[initial] r2=0.0791
+  ep   3/30  loss=2.0892  r2=0.2696
+  ep   6/30  loss=2.0762  r2=0.3067
+  ep   9/30  loss=2.0881  r2=0.3159
+  ep  12/30  loss=2.0117  r2=0.3225
+  ep  15/30  loss=2.0069  r2=0.3248
+  ep  18/30  loss=2.0701  r2=0.3262
+  ep  21/30  loss=1.9833  r2=0.3278
+  ep  24/30  loss=2.0040  r2=0.3264
+  ep  27/30  loss=1.9689  r2=0.3256
+  ep  30/30  loss=1.9736  r2=0.3239
+
+=== r2: initial 0.0791 → best 0.3278 (epoch 21) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_113300/metrics.json
+===== 6tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_113453
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 6:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,880,778
+
+[initial] roc_auc=0.8480
+  ep   3/30  loss=0.3959  roc_auc=0.8726
+  ep   6/30  loss=0.3884  roc_auc=0.8761
+  ep   9/30  loss=0.3465  roc_auc=0.8776
+  ep  12/30  loss=0.3357  roc_auc=0.8717
+  ep  15/30  loss=0.3252  roc_auc=0.8687
+  ep  18/30  loss=0.2840  roc_auc=0.8651
+  ep  21/30  loss=0.3261  roc_auc=0.8621
+  ep  24/30  loss=0.2791  roc_auc=0.8597
+  ep  27/30  loss=0.2914  roc_auc=0.8545
+  ep  30/30  loss=0.2737  roc_auc=0.8545
+
+=== roc_auc: initial 0.8480 → best 0.8776 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_113453/metrics.json
+===== 6tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_113625
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 6:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,880,778
+
+[initial] roc_auc=0.8639
+  ep   3/30  loss=0.4089  roc_auc=0.9166
+  ep   6/30  loss=0.3446  roc_auc=0.9109
+  ep   9/30  loss=0.3492  roc_auc=0.9051
+  ep  12/30  loss=0.3786  roc_auc=0.9028
+  ep  15/30  loss=0.3571  roc_auc=0.9036
+  ep  18/30  loss=0.3657  roc_auc=0.9035
+  ep  21/30  loss=0.3238  roc_auc=0.9007
+  ep  24/30  loss=0.3118  roc_auc=0.8994
+  ep  27/30  loss=0.2740  roc_auc=0.8991
+  ep  30/30  loss=0.3247  roc_auc=0.8978
+
+=== roc_auc: initial 0.8639 → best 0.9166 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_113625/metrics.json
+===== 6tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_113758
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 6:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,880,778
+
+[initial] roc_auc=0.7725
+  ep   3/30  loss=0.4598  roc_auc=0.7771
+  ep   6/30  loss=0.4656  roc_auc=0.7763
+  ep   9/30  loss=0.4302  roc_auc=0.7723
+  ep  12/30  loss=0.4569  roc_auc=0.7707
+  ep  15/30  loss=0.4394  roc_auc=0.7696
+  ep  18/30  loss=0.4666  roc_auc=0.7703
+  ep  21/30  loss=0.4481  roc_auc=0.7691
+  ep  24/30  loss=0.4183  roc_auc=0.7700
+  ep  27/30  loss=0.4630  roc_auc=0.7702
+  ep  30/30  loss=0.4365  roc_auc=0.7716
+
+=== roc_auc: initial 0.7725 → best 0.7771 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_113758/metrics.json
+===== 6tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_114017
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 6:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,880,778
+
+[initial] roc_auc=0.8444
+  ep   3/30  loss=0.2637  roc_auc=0.9399
+  ep   6/30  loss=0.2494  roc_auc=0.9398
+  ep   9/30  loss=0.2598  roc_auc=0.9421
+  ep  12/30  loss=0.2635  roc_auc=0.9413
+  ep  15/30  loss=0.2352  roc_auc=0.9402
+  ep  18/30  loss=0.2644  roc_auc=0.9405
+  ep  21/30  loss=0.2500  roc_auc=0.9407
+  ep  24/30  loss=0.2770  roc_auc=0.9408
+  ep  27/30  loss=0.2507  roc_auc=0.9411
+  ep  30/30  loss=0.2315  roc_auc=0.9414
+
+=== roc_auc: initial 0.8444 → best 0.9421 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_114017/metrics.json
+===== 6tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_114156
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 6:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,880,778
+
+[initial] macro_f1=0.2752
+  ep   3/30  loss=0.9941  macro_f1=0.3499
+  ep   6/30  loss=0.9502  macro_f1=0.3719
+  ep   9/30  loss=0.8588  macro_f1=0.3826
+  ep  12/30  loss=0.9097  macro_f1=0.3936
+  ep  15/30  loss=0.8707  macro_f1=0.3771
+  ep  18/30  loss=0.8302  macro_f1=0.3874
+  ep  21/30  loss=0.9109  macro_f1=0.3930
+  ep  24/30  loss=0.9288  macro_f1=0.3854
+  ep  27/30  loss=0.8636  macro_f1=0.3948
+  ep  30/30  loss=0.9568  macro_f1=0.3868
+
+=== macro_f1: initial 0.2752 → best 0.3948 (epoch 27) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_114156/metrics.json
+===== 6tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_114329
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 6:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 2,880,778
+
+[initial] r2=-0.3385
+  ep   3/30  loss=2.2345  r2=0.2487
+  ep   6/30  loss=2.0531  r2=0.3199
+  ep   9/30  loss=2.1065  r2=0.3262
+  ep  12/30  loss=2.0407  r2=0.3255
+  ep  15/30  loss=2.0044  r2=0.3240
+  ep  18/30  loss=2.0860  r2=0.3212
+  ep  21/30  loss=1.9774  r2=0.3175
+  ep  24/30  loss=2.0285  r2=0.3130
+  ep  27/30  loss=1.9731  r2=0.3087
+  ep  30/30  loss=1.9862  r2=0.3064
+
+=== r2: initial -0.3385 → best 0.3262 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_114329/metrics.json
+===== 7tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_114527
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 7:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 3,667,402
+
+[initial] roc_auc=0.8288
+  ep   3/30  loss=0.4088  roc_auc=0.8781
+  ep   6/30  loss=0.3831  roc_auc=0.8769
+  ep   9/30  loss=0.3190  roc_auc=0.8759
+  ep  12/30  loss=0.3249  roc_auc=0.8716
+  ep  15/30  loss=0.3264  roc_auc=0.8622
+  ep  18/30  loss=0.2712  roc_auc=0.8541
+  ep  21/30  loss=0.3207  roc_auc=0.8505
+  ep  24/30  loss=0.2787  roc_auc=0.8517
+  ep  27/30  loss=0.2619  roc_auc=0.8460
+  ep  30/30  loss=0.2596  roc_auc=0.8442
+
+=== roc_auc: initial 0.8288 → best 0.8781 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_114527/metrics.json
+===== 7tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_114705
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 7:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 3,667,402
+
+[initial] roc_auc=0.8539
+  ep   3/30  loss=0.3973  roc_auc=0.9144
+  ep   6/30  loss=0.3429  roc_auc=0.9117
+  ep   9/30  loss=0.3550  roc_auc=0.9058
+  ep  12/30  loss=0.3519  roc_auc=0.9013
+  ep  15/30  loss=0.3220  roc_auc=0.8984
+  ep  18/30  loss=0.3440  roc_auc=0.8975
+  ep  21/30  loss=0.3076  roc_auc=0.8937
+  ep  24/30  loss=0.2973  roc_auc=0.8897
+  ep  27/30  loss=0.2519  roc_auc=0.8886
+  ep  30/30  loss=0.2825  roc_auc=0.8871
+
+=== roc_auc: initial 0.8539 → best 0.9144 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_114705/metrics.json
+===== 7tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_114841
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 7:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 3,667,402
+
+[initial] roc_auc=0.7725
+  ep   3/30  loss=0.4495  roc_auc=0.7780
+  ep   6/30  loss=0.4639  roc_auc=0.7731
+  ep   9/30  loss=0.4223  roc_auc=0.7685
+  ep  12/30  loss=0.4414  roc_auc=0.7648
+  ep  15/30  loss=0.4356  roc_auc=0.7647
+  ep  18/30  loss=0.4327  roc_auc=0.7656
+  ep  21/30  loss=0.4076  roc_auc=0.7643
+  ep  24/30  loss=0.3872  roc_auc=0.7648
+  ep  27/30  loss=0.4343  roc_auc=0.7659
+  ep  30/30  loss=0.3975  roc_auc=0.7649
+
+=== roc_auc: initial 0.7725 → best 0.7780 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_114841/metrics.json
+===== 7tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_115108
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 7:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 3,667,402
+
+[initial] roc_auc=0.8789
+  ep   3/30  loss=0.2420  roc_auc=0.9385
+  ep   6/30  loss=0.2527  roc_auc=0.9390
+  ep   9/30  loss=0.2578  roc_auc=0.9393
+  ep  12/30  loss=0.2603  roc_auc=0.9422
+  ep  15/30  loss=0.2251  roc_auc=0.9422
+  ep  18/30  loss=0.2504  roc_auc=0.9418
+  ep  21/30  loss=0.2374  roc_auc=0.9413
+  ep  24/30  loss=0.2620  roc_auc=0.9421
+  ep  27/30  loss=0.2503  roc_auc=0.9428
+  ep  30/30  loss=0.2248  roc_auc=0.9428
+
+=== roc_auc: initial 0.8789 → best 0.9428 (epoch 30) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_115108/metrics.json
+===== 7tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_115252
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 7:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 3,667,402
+
+[initial] macro_f1=0.3167
+  ep   3/30  loss=0.9801  macro_f1=0.3629
+  ep   6/30  loss=0.9277  macro_f1=0.3930
+  ep   9/30  loss=0.8485  macro_f1=0.3877
+  ep  12/30  loss=0.9064  macro_f1=0.3878
+  ep  15/30  loss=0.8687  macro_f1=0.3845
+  ep  18/30  loss=0.8343  macro_f1=0.3847
+  ep  21/30  loss=0.8686  macro_f1=0.4075
+  ep  24/30  loss=0.9212  macro_f1=0.4073
+  ep  27/30  loss=0.8385  macro_f1=0.4018
+  ep  30/30  loss=0.9236  macro_f1=0.3960
+
+=== macro_f1: initial 0.3167 → best 0.4075 (epoch 21) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_115252/metrics.json
+===== 7tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_115428
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 7:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 3,667,402
+
+[initial] r2=0.0141
+  ep   3/30  loss=2.3486  r2=0.0819
+  ep   6/30  loss=2.0544  r2=0.3122
+  ep   9/30  loss=2.0844  r2=0.3085
+  ep  12/30  loss=2.0455  r2=0.3070
+  ep  15/30  loss=2.0187  r2=0.3055
+  ep  18/30  loss=2.0768  r2=0.3056
+  ep  21/30  loss=1.9871  r2=0.3049
+  ep  24/30  loss=2.0321  r2=0.3034
+  ep  27/30  loss=1.9920  r2=0.3019
+  ep  30/30  loss=2.0048  r2=0.3011
+
+=== r2: initial 0.0141 → best 0.3122 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_115428/metrics.json
+===== 8tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_115631
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 8:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 4,454,026
+
+[initial] roc_auc=0.8239
+  ep   3/30  loss=0.4104  roc_auc=0.8826
+  ep   6/30  loss=0.3609  roc_auc=0.8814
+  ep   9/30  loss=0.3218  roc_auc=0.8778
+  ep  12/30  loss=0.3164  roc_auc=0.8784
+  ep  15/30  loss=0.3305  roc_auc=0.8745
+  ep  18/30  loss=0.2619  roc_auc=0.8694
+  ep  21/30  loss=0.3157  roc_auc=0.8684
+  ep  24/30  loss=0.2891  roc_auc=0.8647
+  ep  27/30  loss=0.2805  roc_auc=0.8609
+  ep  30/30  loss=0.2629  roc_auc=0.8577
+
+=== roc_auc: initial 0.8239 → best 0.8826 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_115631/metrics.json
+===== 8tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_115812
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 8:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 4,454,026
+
+[initial] roc_auc=0.8543
+  ep   3/30  loss=0.4199  roc_auc=0.9126
+  ep   6/30  loss=0.3463  roc_auc=0.9128
+  ep   9/30  loss=0.3571  roc_auc=0.9100
+  ep  12/30  loss=0.3519  roc_auc=0.9073
+  ep  15/30  loss=0.3404  roc_auc=0.9033
+  ep  18/30  loss=0.3448  roc_auc=0.8996
+  ep  21/30  loss=0.2793  roc_auc=0.8973
+  ep  24/30  loss=0.2738  roc_auc=0.8966
+  ep  27/30  loss=0.2163  roc_auc=0.8984
+  ep  30/30  loss=0.2626  roc_auc=0.8946
+
+=== roc_auc: initial 0.8543 → best 0.9128 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_115812/metrics.json
+===== 8tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_115952
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 8:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 4,454,026
+
+[initial] roc_auc=0.7724
+  ep   3/30  loss=0.4515  roc_auc=0.7796
+  ep   6/30  loss=0.4535  roc_auc=0.7757
+  ep   9/30  loss=0.4239  roc_auc=0.7701
+  ep  12/30  loss=0.4370  roc_auc=0.7652
+  ep  15/30  loss=0.4430  roc_auc=0.7670
+  ep  18/30  loss=0.4294  roc_auc=0.7648
+  ep  21/30  loss=0.4059  roc_auc=0.7641
+  ep  24/30  loss=0.3982  roc_auc=0.7607
+  ep  27/30  loss=0.4247  roc_auc=0.7611
+  ep  30/30  loss=0.3864  roc_auc=0.7576
+
+=== roc_auc: initial 0.7724 → best 0.7796 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_115952/metrics.json
+===== 8tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_120224
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 8:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 4,454,026
+
+[initial] roc_auc=0.8916
+  ep   3/30  loss=0.2238  roc_auc=0.9367
+  ep   6/30  loss=0.2500  roc_auc=0.9431
+  ep   9/30  loss=0.2648  roc_auc=0.9443
+  ep  12/30  loss=0.2563  roc_auc=0.9441
+  ep  15/30  loss=0.2151  roc_auc=0.9441
+  ep  18/30  loss=0.2556  roc_auc=0.9441
+  ep  21/30  loss=0.2345  roc_auc=0.9440
+  ep  24/30  loss=0.2707  roc_auc=0.9438
+  ep  27/30  loss=0.2469  roc_auc=0.9434
+  ep  30/30  loss=0.2084  roc_auc=0.9440
+
+=== roc_auc: initial 0.8916 → best 0.9443 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_120224/metrics.json
+===== 8tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_120413
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 8:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 4,454,026
+
+[initial] macro_f1=0.2637
+  ep   3/30  loss=0.9598  macro_f1=0.3689
+  ep   6/30  loss=0.9451  macro_f1=0.3791
+  ep   9/30  loss=0.8568  macro_f1=0.3869
+  ep  12/30  loss=0.8802  macro_f1=0.3792
+  ep  15/30  loss=0.8533  macro_f1=0.4010
+  ep  18/30  loss=0.8260  macro_f1=0.4033
+  ep  21/30  loss=0.8550  macro_f1=0.4067
+  ep  24/30  loss=0.9175  macro_f1=0.4158
+  ep  27/30  loss=0.8309  macro_f1=0.4156
+  ep  30/30  loss=0.9203  macro_f1=0.4029
+
+=== macro_f1: initial 0.2637 → best 0.4158 (epoch 24) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_120413/metrics.json
+===== 8tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_120554
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 8:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 4,454,026
+
+[initial] r2=-0.1386
+  ep   3/30  loss=2.7625  r2=-0.0137
+  ep   6/30  loss=2.2308  r2=0.2203
+  ep   9/30  loss=2.1478  r2=0.2584
+  ep  12/30  loss=2.0504  r2=0.2778
+  ep  15/30  loss=2.0200  r2=0.3024
+  ep  18/30  loss=2.0924  r2=0.3101
+  ep  21/30  loss=1.9967  r2=0.3132
+  ep  24/30  loss=2.0314  r2=0.3177
+  ep  27/30  loss=1.9888  r2=0.3173
+  ep  30/30  loss=2.0049  r2=0.3200
+
+=== r2: initial -0.1386 → best 0.3200 (epoch 30) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_120554/metrics.json
+===== 9tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_120800
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 9:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 5,240,650
+
+[initial] roc_auc=0.8443
+  ep   3/30  loss=0.4004  roc_auc=0.8814
+  ep   6/30  loss=0.3894  roc_auc=0.8786
+  ep   9/30  loss=0.3355  roc_auc=0.8768
+  ep  12/30  loss=0.3400  roc_auc=0.8678
+  ep  15/30  loss=0.3335  roc_auc=0.8650
+  ep  18/30  loss=0.3082  roc_auc=0.8646
+  ep  21/30  loss=0.3624  roc_auc=0.8672
+  ep  24/30  loss=0.2983  roc_auc=0.8642
+  ep  27/30  loss=0.2962  roc_auc=0.8595
+  ep  30/30  loss=0.2715  roc_auc=0.8589
+
+=== roc_auc: initial 0.8443 → best 0.8814 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_120800/metrics.json
+===== 9tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_120944
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 9:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 5,240,650
+
+[initial] roc_auc=0.8369
+  ep   3/30  loss=0.3943  roc_auc=0.9165
+  ep   6/30  loss=0.3382  roc_auc=0.9115
+  ep   9/30  loss=0.3486  roc_auc=0.9093
+  ep  12/30  loss=0.3424  roc_auc=0.9068
+  ep  15/30  loss=0.3422  roc_auc=0.9018
+  ep  18/30  loss=0.3811  roc_auc=0.9000
+  ep  21/30  loss=0.2881  roc_auc=0.9020
+  ep  24/30  loss=0.2672  roc_auc=0.9020
+  ep  27/30  loss=0.1997  roc_auc=0.8999
+  ep  30/30  loss=0.2586  roc_auc=0.8956
+
+=== roc_auc: initial 0.8369 → best 0.9165 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_120944/metrics.json
+===== 9tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_121127
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 9:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 5,240,650
+
+[initial] roc_auc=0.7727
+  ep   3/30  loss=0.4504  roc_auc=0.7636
+  ep   6/30  loss=0.4519  roc_auc=0.7713
+  ep   9/30  loss=0.4222  roc_auc=0.7739
+  ep  12/30  loss=0.4432  roc_auc=0.7654
+  ep  15/30  loss=0.4269  roc_auc=0.7602
+  ep  18/30  loss=0.4196  roc_auc=0.7583
+  ep  21/30  loss=0.4013  roc_auc=0.7584
+  ep  24/30  loss=0.3835  roc_auc=0.7557
+  ep  27/30  loss=0.4252  roc_auc=0.7540
+  ep  30/30  loss=0.3947  roc_auc=0.7562
+
+=== roc_auc: initial 0.7727 → best 0.7739 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_121127/metrics.json
+===== 9tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_121406
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 9:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 5,240,650
+
+[initial] roc_auc=0.9041
+  ep   3/30  loss=0.2470  roc_auc=0.9405
+  ep   6/30  loss=0.2370  roc_auc=0.9427
+  ep   9/30  loss=0.2603  roc_auc=0.9465
+  ep  12/30  loss=0.2571  roc_auc=0.9463
+  ep  15/30  loss=0.2115  roc_auc=0.9467
+  ep  18/30  loss=0.2412  roc_auc=0.9469
+  ep  21/30  loss=0.2350  roc_auc=0.9465
+  ep  24/30  loss=0.2562  roc_auc=0.9452
+  ep  27/30  loss=0.2317  roc_auc=0.9436
+  ep  30/30  loss=0.1999  roc_auc=0.9426
+
+=== roc_auc: initial 0.9041 → best 0.9469 (epoch 18) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_121406/metrics.json
+===== 9tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_121601
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 9:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 5,240,650
+
+[initial] macro_f1=0.2624
+  ep   3/30  loss=1.0920  macro_f1=0.3260
+  ep   6/30  loss=0.9523  macro_f1=0.3809
+  ep   9/30  loss=0.8464  macro_f1=0.3816
+  ep  12/30  loss=0.9015  macro_f1=0.3843
+  ep  15/30  loss=0.8767  macro_f1=0.3898
+  ep  18/30  loss=0.8283  macro_f1=0.3834
+  ep  21/30  loss=0.8593  macro_f1=0.3886
+  ep  24/30  loss=0.9149  macro_f1=0.3808
+  ep  27/30  loss=0.8100  macro_f1=0.3954
+  ep  30/30  loss=0.9101  macro_f1=0.3830
+
+=== macro_f1: initial 0.2624 → best 0.3954 (epoch 27) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_121601/metrics.json
+===== 9tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_121745
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 9:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 5,240,650
+
+[initial] r2=-0.3665
+  ep   3/30  loss=2.8960  r2=0.1464
+  ep   6/30  loss=2.1278  r2=0.3116
+  ep   9/30  loss=2.1146  r2=0.3372
+  ep  12/30  loss=2.0418  r2=0.3403
+  ep  15/30  loss=2.0245  r2=0.3423
+  ep  18/30  loss=2.0748  r2=0.3435
+  ep  21/30  loss=1.9834  r2=0.3449
+  ep  24/30  loss=2.0297  r2=0.3454
+  ep  27/30  loss=2.0005  r2=0.3452
+  ep  30/30  loss=1.9995  r2=0.3440
+
+=== r2: initial -0.3665 → best 0.3454 (epoch 24) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_121745/metrics.json
+===== 10tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_121957
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 10:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,027,274
+
+[initial] roc_auc=0.8495
+  ep   3/30  loss=0.4002  roc_auc=0.8821
+  ep   6/30  loss=0.3897  roc_auc=0.8845
+  ep   9/30  loss=0.3315  roc_auc=0.8814
+  ep  12/30  loss=0.3448  roc_auc=0.8778
+  ep  15/30  loss=0.3349  roc_auc=0.8749
+  ep  18/30  loss=0.2866  roc_auc=0.8729
+  ep  21/30  loss=0.3258  roc_auc=0.8698
+  ep  24/30  loss=0.2531  roc_auc=0.8686
+  ep  27/30  loss=0.2507  roc_auc=0.8643
+  ep  30/30  loss=0.2219  roc_auc=0.8647
+
+=== roc_auc: initial 0.8495 → best 0.8845 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_121957/metrics.json
+===== 10tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_122145
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 10:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,027,274
+
+[initial] roc_auc=0.8504
+  ep   3/30  loss=0.3775  roc_auc=0.9179
+  ep   6/30  loss=0.5594  roc_auc=0.8987
+  ep   9/30  loss=0.3495  roc_auc=0.9095
+  ep  12/30  loss=0.3575  roc_auc=0.9052
+  ep  15/30  loss=0.3514  roc_auc=0.9022
+  ep  18/30  loss=0.3655  roc_auc=0.9039
+  ep  21/30  loss=0.3214  roc_auc=0.9053
+  ep  24/30  loss=0.3021  roc_auc=0.9046
+  ep  27/30  loss=0.2496  roc_auc=0.9039
+  ep  30/30  loss=0.2907  roc_auc=0.9031
+
+=== roc_auc: initial 0.8504 → best 0.9179 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_122145/metrics.json
+===== 10tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_122332
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 10:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,027,274
+
+[initial] roc_auc=0.7716
+  ep   3/30  loss=0.4540  roc_auc=0.7769
+  ep   6/30  loss=0.4476  roc_auc=0.7752
+  ep   9/30  loss=0.4211  roc_auc=0.7734
+  ep  12/30  loss=0.4434  roc_auc=0.7695
+  ep  15/30  loss=0.4398  roc_auc=0.7719
+  ep  18/30  loss=0.4250  roc_auc=0.7708
+  ep  21/30  loss=0.4092  roc_auc=0.7686
+  ep  24/30  loss=0.3925  roc_auc=0.7666
+  ep  27/30  loss=0.4305  roc_auc=0.7663
+  ep  30/30  loss=0.3940  roc_auc=0.7655
+
+=== roc_auc: initial 0.7716 → best 0.7769 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_122332/metrics.json
+===== 10tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_122613
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 10:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 81%
+  underlying: PerFeatureTransformer  trainable params: 6,027,274
+
+[initial] roc_auc=0.8480
+  ep   3/30  loss=0.2472  roc_auc=0.9419
+  ep   6/30  loss=0.2479  roc_auc=0.9432
+  ep   9/30  loss=0.2611  roc_auc=0.9426
+  ep  12/30  loss=0.2671  roc_auc=0.9427
+  ep  15/30  loss=0.2282  roc_auc=0.9433
+  ep  18/30  loss=0.2708  roc_auc=0.9442
+  ep  21/30  loss=0.2456  roc_auc=0.9460
+  ep  24/30  loss=0.2676  roc_auc=0.9459
+  ep  27/30  loss=0.2470  roc_auc=0.9446
+  ep  30/30  loss=0.2293  roc_auc=0.9429
+
+=== roc_auc: initial 0.8480 → best 0.9460 (epoch 21) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_122613/metrics.json
+===== 10tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_122811
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 10:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,027,274
+
+[initial] macro_f1=0.3172
+  ep   3/30  loss=1.0187  macro_f1=0.3732
+  ep   6/30  loss=0.9568  macro_f1=0.3977
+  ep   9/30  loss=0.8568  macro_f1=0.3832
+  ep  12/30  loss=0.9060  macro_f1=0.3969
+  ep  15/30  loss=0.8707  macro_f1=0.3900
+  ep  18/30  loss=0.8137  macro_f1=0.3940
+  ep  21/30  loss=0.8741  macro_f1=0.3932
+  ep  24/30  loss=0.9047  macro_f1=0.3854
+  ep  27/30  loss=0.8223  macro_f1=0.3831
+  ep  30/30  loss=0.8977  macro_f1=0.3958
+
+=== macro_f1: initial 0.3172 → best 0.3977 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_122811/metrics.json
+===== 10tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_123000
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 10:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,027,274
+
+[initial] r2=-0.0782
+  ep   3/30  loss=3.1567  r2=0.1698
+  ep   6/30  loss=2.1012  r2=0.3258
+  ep   9/30  loss=2.0735  r2=0.3319
+  ep  12/30  loss=2.0329  r2=0.3352
+  ep  15/30  loss=1.9956  r2=0.3354
+  ep  18/30  loss=2.0703  r2=0.3342
+  ep  21/30  loss=1.9686  r2=0.3334
+  ep  24/30  loss=2.0358  r2=0.3312
+  ep  27/30  loss=1.9919  r2=0.3270
+  ep  30/30  loss=1.9802  r2=0.3226
+
+=== r2: initial -0.0782 → best 0.3354 (epoch 15) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_123000/metrics.json
+===== 11tok serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_123218
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 11:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  - emb_study_design_info_masking_description_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_masking_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,813,898
+
+[initial] roc_auc=0.8372
+  ep   3/30  loss=0.4050  roc_auc=0.8840
+  ep   6/30  loss=0.3783  roc_auc=0.8828
+  ep   9/30  loss=0.3163  roc_auc=0.8812
+  ep  12/30  loss=0.3170  roc_auc=0.8818
+  ep  15/30  loss=0.3181  roc_auc=0.8772
+  ep  18/30  loss=0.2564  roc_auc=0.8725
+  ep  21/30  loss=0.3033  roc_auc=0.8694
+  ep  24/30  loss=0.2720  roc_auc=0.8628
+  ep  27/30  loss=0.2497  roc_auc=0.8563
+  ep  30/30  loss=0.2703  roc_auc=0.8616
+
+=== roc_auc: initial 0.8372 → best 0.8840 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_123218/metrics.json
+===== 11tok mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_123408
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 11:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  - emb_study_design_info_masking_description_qwen.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_masking_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,813,898
+
+[initial] roc_auc=0.8564
+  ep   3/30  loss=0.3882  roc_auc=0.9184
+  ep   6/30  loss=0.3266  roc_auc=0.9148
+  ep   9/30  loss=0.3436  roc_auc=0.9059
+  ep  12/30  loss=0.3518  roc_auc=0.9015
+  ep  15/30  loss=0.2985  roc_auc=0.8973
+  ep  18/30  loss=0.3283  roc_auc=0.8963
+  ep  21/30  loss=0.2766  roc_auc=0.8956
+  ep  24/30  loss=0.2632  roc_auc=0.8946
+  ep  27/30  loss=0.2095  roc_auc=0.8957
+  ep  30/30  loss=0.2631  roc_auc=0.8952
+
+=== roc_auc: initial 0.8564 → best 0.9184 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_123408/metrics.json
+===== 11tok patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_123559
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 11:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  - emb_study_design_info_masking_description_qwen.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_masking_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,813,898
+
+[initial] roc_auc=0.7724
+  ep   3/30  loss=0.4475  roc_auc=0.7724
+  ep   6/30  loss=0.4553  roc_auc=0.7698
+  ep   9/30  loss=0.4384  roc_auc=0.7673
+  ep  12/30  loss=0.4628  roc_auc=0.7632
+  ep  15/30  loss=0.4472  roc_auc=0.7626
+  ep  18/30  loss=0.4151  roc_auc=0.7591
+  ep  21/30  loss=0.4154  roc_auc=0.7526
+  ep  24/30  loss=0.3982  roc_auc=0.7487
+  ep  27/30  loss=0.4364  roc_auc=0.7447
+  ep  30/30  loss=0.3805  roc_auc=0.7477
+
+=== roc_auc: initial 0.7724 → best 0.7724 (epoch -1) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_123559/metrics.json
+===== 11tok trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_123855
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 11:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  - emb_study_design_info_masking_description_qwen.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 49%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 81%
+  emb_study_design_info_masking_description_qwen.parquet: d=4096  coverage train 61%
+  underlying: PerFeatureTransformer  trainable params: 6,813,898
+
+[initial] roc_auc=0.9045
+  ep   3/30  loss=0.2496  roc_auc=0.9401
+  ep   6/30  loss=0.2489  roc_auc=0.9378
+  ep   9/30  loss=0.2564  roc_auc=0.9386
+  ep  12/30  loss=0.2622  roc_auc=0.9385
+  ep  15/30  loss=0.2252  roc_auc=0.9383
+  ep  18/30  loss=0.2685  roc_auc=0.9300
+  ep  21/30  loss=0.2368  roc_auc=0.9379
+  ep  24/30  loss=0.2712  roc_auc=0.9380
+  ep  27/30  loss=0.2457  roc_auc=0.9386
+  ep  30/30  loss=0.2367  roc_auc=0.9384
+
+=== roc_auc: initial 0.9045 → best 0.9401 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_123855/metrics.json
+===== 11tok trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_124057
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 11:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  - emb_study_design_info_masking_description_qwen.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 83%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_masking_description_qwen.parquet: d=4096  coverage train 54%
+  underlying: PerFeatureTransformer  trainable params: 6,813,898
+
+[initial] macro_f1=0.2827
+  ep   3/30  loss=0.9397  macro_f1=0.4139
+  ep   6/30  loss=0.9226  macro_f1=0.3870
+  ep   9/30  loss=0.8117  macro_f1=0.3753
+  ep  12/30  loss=0.8789  macro_f1=0.3859
+  ep  15/30  loss=0.8324  macro_f1=0.3891
+  ep  18/30  loss=0.7885  macro_f1=0.3939
+  ep  21/30  loss=0.8390  macro_f1=0.4003
+  ep  24/30  loss=0.8730  macro_f1=0.4108
+  ep  27/30  loss=0.7778  macro_f1=0.4086
+  ep  30/30  loss=0.8938  macro_f1=0.4093
+
+=== macro_f1: initial 0.2827 → best 0.4139 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_124057/metrics.json
+===== 11tok trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_124250
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 11:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  - emb_detailed_description_textblock_qwen.parquet
+  - emb_intervention_description_qwen.parquet
+  - emb_condition_qwen.parquet
+  - emb_intervention_intervention_name_qwen.parquet
+  - emb_brief_title_qwen.parquet
+  - emb_keyword_qwen.parquet
+  - emb_study_design_info_intervention_model_description_qwen.parquet
+  - emb_study_design_info_masking_description_qwen.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  emb_detailed_description_textblock_qwen.parquet: d=4096  coverage train 22%
+  emb_intervention_description_qwen.parquet: d=4096  coverage train 100%
+  emb_condition_qwen.parquet: d=4096  coverage train 100%
+  emb_intervention_intervention_name_qwen.parquet: d=4096  coverage train 100%
+  emb_brief_title_qwen.parquet: d=4096  coverage train 100%
+  emb_keyword_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_intervention_model_description_qwen.parquet: d=4096  coverage train 100%
+  emb_study_design_info_masking_description_qwen.parquet: d=4096  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 6,813,898
+
+[initial] r2=-0.0289
+  ep   3/30  loss=2.2790  r2=0.3190
+  ep   6/30  loss=2.0488  r2=0.3241
+  ep   9/30  loss=2.0570  r2=0.3182
+  ep  12/30  loss=2.0433  r2=0.3141
+  ep  15/30  loss=2.0144  r2=0.3129
+  ep  18/30  loss=2.0550  r2=0.3144
+  ep  21/30  loss=1.9533  r2=0.3154
+  ep  24/30  loss=2.0130  r2=0.3217
+  ep  27/30  loss=1.9535  r2=0.3251
+  ep  30/30  loss=1.9625  r2=0.3259
+
+=== r2: initial -0.0289 → best 0.3259 (epoch 30) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_124250/metrics.json
+STEP2_SWEEP_DONE

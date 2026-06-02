@@ -1,0 +1,145 @@
+{
+  "run_id": "fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_120413",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 8,
+  "n_train": 7056,
+  "n_test": 1780,
+  "n_classes": 4,
+  "n_trainable_params": 4454026,
+  "elapsed_train_s": 88.0,
+  "initial_metrics": {
+    "accuracy": 0.4786516853932584,
+    "macro_f1": 0.26373748447975065,
+    "weighted_f1": 0.41314347044619676,
+    "log_loss": 1.187362610917094
+  },
+  "best_metrics": {
+    "epoch": 24,
+    "accuracy": 0.5685393258426966,
+    "macro_f1": 0.41577753236978404,
+    "weighted_f1": 0.5470486832129143,
+    "log_loss": 1.0098942438215994
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.959784984588623,
+      "accuracy": 0.5651685393258427,
+      "macro_f1": 0.36894160664721465,
+      "weighted_f1": 0.5282651557432017,
+      "log_loss": 0.9664385268907627
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.9451242685317993,
+      "accuracy": 0.5679775280898877,
+      "macro_f1": 0.37910019624114466,
+      "weighted_f1": 0.532643438266975,
+      "log_loss": 0.9667107235916148
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.8567962646484375,
+      "accuracy": 0.5735955056179776,
+      "macro_f1": 0.38686003950081715,
+      "weighted_f1": 0.538267807287744,
+      "log_loss": 0.9662777598406393
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.8802043199539185,
+      "accuracy": 0.5646067415730337,
+      "macro_f1": 0.379243446448784,
+      "weighted_f1": 0.530187761378176,
+      "log_loss": 0.9786424258781933
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.853299081325531,
+      "accuracy": 0.5623595505617978,
+      "macro_f1": 0.4009918573948845,
+      "weighted_f1": 0.5347174886033884,
+      "log_loss": 0.9954616694311771
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.8260113000869751,
+      "accuracy": 0.5646067415730337,
+      "macro_f1": 0.4032699250846398,
+      "weighted_f1": 0.5382660016657251,
+      "log_loss": 0.9937886974809309
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.855019211769104,
+      "accuracy": 0.5617977528089888,
+      "macro_f1": 0.40669503946781593,
+      "weighted_f1": 0.5390832320384091,
+      "log_loss": 0.9971345317331548
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.9174505472183228,
+      "accuracy": 0.5685393258426966,
+      "macro_f1": 0.41577753236978404,
+      "weighted_f1": 0.5470486832129143,
+      "log_loss": 1.0098942438215994
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.830866813659668,
+      "accuracy": 0.5657303370786517,
+      "macro_f1": 0.4156061519815522,
+      "weighted_f1": 0.5451584700886496,
+      "log_loss": 1.0285242403478965
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.9202837944030762,
+      "accuracy": 0.5606741573033708,
+      "macro_f1": 0.40285526523242976,
+      "weighted_f1": 0.5385449404297893,
+      "log_loss": 1.0469702627091746
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet",
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

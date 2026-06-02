@@ -1,0 +1,31 @@
+{
+  "run_id": "encode_mesh_biolord_20260602_023429",
+  "model": "FremyCompany/BioLORD-2023",
+  "model_short": "biolord",
+  "pool_strategy": "mean",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 35832,
+  "n_terms_rows": 61703,
+  "n_pooled_groups": 28750,
+  "embed_dim": 768,
+  "max_len": 64,
+  "batch_size": 256,
+  "dtype_compute": "bfloat16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 5.19,
+  "elapsed_encode_s": 3.16,
+  "throughput_per_s": 19536.2,
+  "norm_mean": 8.774467468261719,
+  "norm_std": 0.5776464343070984,
+  "args": {
+    "model": "biolord",
+    "subtask": "serious-adverse-event-forecasting",
+    "batch_size": 256,
+    "device": "cuda",
+    "limit": null
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/mesh/data/mesh_embeddings_biolord.parquet"
+  }
+}

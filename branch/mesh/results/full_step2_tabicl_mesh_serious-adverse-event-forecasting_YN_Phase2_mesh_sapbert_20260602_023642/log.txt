@@ -1,0 +1,20 @@
+[run_id] full_step2_tabicl_mesh_serious-adverse-event-forecasting_YN_Phase2_mesh_sapbert_20260602_023642
+[subtask] serious-adverse-event-forecasting  [phase] Phase2  [ie] /data2/zhu11/TB/branch/mesh/data/ie_embeddings_qwen3.parquet  [mesh] data/mesh_embeddings_sapbert.parquet
+  train=(6516, 61)  test=(1600, 61)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  I/E d=4096  non-zero test 1600/1600
+  MeSH d=768  test condition non-empty 1531/1600  intervention non-empty 1041/1600
+Initializing TabICL ...
+  n_virt_cols=4  trainable params: 1,245,696
+
+--- Initial eval ---
+
+--- Training: 2 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   1/2  loss=0.4316  test ROC-AUC=0.8531  | subset=0.8654
+  ep   2/2  loss=0.4247  test ROC-AUC=0.8564  | subset=0.8671
+
+=== Summary ===
+  Initial  ROC-AUC: 0.8582
+  Best     ROC-AUC: 0.8582  (epoch -1)
+  Best (interv subset, n=1041)  ROC-AUC: 0.8671  (epoch 2)
+  Saved: /data2/zhu11/TB/branch/mesh/results/full_step2_tabicl_mesh_serious-adverse-event-forecasting_YN_Phase2_mesh_sapbert_20260602_023642/metrics.json

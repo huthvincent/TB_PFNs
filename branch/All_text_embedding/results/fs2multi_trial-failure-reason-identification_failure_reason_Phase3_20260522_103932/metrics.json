@@ -1,0 +1,135 @@
+{
+  "run_id": "fs2multi_trial-failure-reason-identification_failure_reason_Phase3_20260522_103932",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "phases": "Phase3",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768
+  ],
+  "n_virtual_cols": 3,
+  "n_train": 3341,
+  "n_test": 815,
+  "n_classes": 4,
+  "n_trainable_params": 520906,
+  "elapsed_train_s": 56.6,
+  "initial_metrics": {
+    "accuracy": 0.45521472392638035,
+    "macro_f1": 0.21965089550809308,
+    "weighted_f1": 0.3628865204012262,
+    "log_loss": 1.154769328740703
+  },
+  "best_metrics": {
+    "epoch": 18,
+    "accuracy": 0.5116564417177915,
+    "macro_f1": 0.37002334931101966,
+    "weighted_f1": 0.49065719783883166,
+    "log_loss": 1.1350181592999147
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 1.1028516292572021,
+      "accuracy": 0.5030674846625767,
+      "macro_f1": 0.3023063079242855,
+      "weighted_f1": 0.45291830478292183,
+      "log_loss": 1.1260203278710794
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1221318244934082,
+      "accuracy": 0.501840490797546,
+      "macro_f1": 0.29348299072058553,
+      "weighted_f1": 0.4479535728016967,
+      "log_loss": 1.1182338503819376
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.0958192348480225,
+      "accuracy": 0.505521472392638,
+      "macro_f1": 0.33334461296585916,
+      "weighted_f1": 0.4671005815257223,
+      "log_loss": 1.1091862764695077
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.081930160522461,
+      "accuracy": 0.5030674846625767,
+      "macro_f1": 0.34337347973377386,
+      "weighted_f1": 0.4715687039012553,
+      "log_loss": 1.1173496377995527
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.0082204341888428,
+      "accuracy": 0.5030674846625767,
+      "macro_f1": 0.350399834720692,
+      "weighted_f1": 0.4776427329025171,
+      "log_loss": 1.128815936322171
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.0480542182922363,
+      "accuracy": 0.5116564417177915,
+      "macro_f1": 0.37002334931101966,
+      "weighted_f1": 0.49065719783883166,
+      "log_loss": 1.1350181592999147
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.9967556595802307,
+      "accuracy": 0.50920245398773,
+      "macro_f1": 0.3639918523859232,
+      "weighted_f1": 0.48872641883350454,
+      "log_loss": 1.1499825852059828
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.98159259557724,
+      "accuracy": 0.47730061349693254,
+      "macro_f1": 0.359076917638249,
+      "weighted_f1": 0.46034245914869404,
+      "log_loss": 1.181535392487175
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.9631201028823853,
+      "accuracy": 0.4662576687116564,
+      "macro_f1": 0.35142365859049735,
+      "weighted_f1": 0.45021283900483366,
+      "log_loss": 1.223712633217413
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.9263016581535339,
+      "accuracy": 0.4601226993865031,
+      "macro_f1": 0.3485767990615195,
+      "weighted_f1": 0.44759531283764864,
+      "log_loss": 1.2844348077131296
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet",
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phases": "Phase3",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

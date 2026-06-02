@@ -1,0 +1,40 @@
+{
+  "run_id": "ablate_ie_trial-approval-forecasting_outcome_20260520_190210",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "ie_features_path": "results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 7248,
+  "n_test": 1913,
+  "n_features_baseline": 37,
+  "n_features_with_ie": 45,
+  "baseline": {
+    "time_s": 2.2711769989691675,
+    "roc_auc": 0.8107233984168398,
+    "pr_auc": 0.8229699331427482,
+    "log_loss": 0.5205403320686464,
+    "accuracy": 0.7386304234187141
+  },
+  "with_ie": {
+    "time_s": 1.1859840230317786,
+    "roc_auc": 0.8108888180737848,
+    "pr_auc": 0.8237323285996199,
+    "log_loss": 0.5197527121065141,
+    "accuracy": 0.7297438578149503
+  },
+  "delta": {
+    "roc_auc": 0.00016541965694494287,
+    "pr_auc": 0.0007623954568716229,
+    "log_loss": -0.0007876199621322799,
+    "accuracy": -0.008886565603763774
+  },
+  "args": {
+    "ie_features": "results/criterion_head_20260520_155333/ie_features.parquet",
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phases": "Phase3",
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

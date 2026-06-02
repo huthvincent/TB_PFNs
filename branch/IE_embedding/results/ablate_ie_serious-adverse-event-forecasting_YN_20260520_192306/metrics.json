@@ -1,0 +1,40 @@
+{
+  "run_id": "ablate_ie_serious-adverse-event-forecasting_YN_20260520_192306",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "ie_features_path": "results/step2_lite_pca_k64_20260520_192216/ie_features.parquet",
+  "n_train": 14368,
+  "n_test": 3548,
+  "n_features_baseline": 41,
+  "n_features_with_ie": 169,
+  "baseline": {
+    "time_s": 2.8585564360255376,
+    "roc_auc": 0.8851036222415796,
+    "pr_auc": 0.9395534404057273,
+    "log_loss": 0.3928625293287167,
+    "accuracy": 0.8246899661781285
+  },
+  "with_ie": {
+    "time_s": 4.856289068935439,
+    "roc_auc": 0.9151359247967479,
+    "pr_auc": 0.9575659044393464,
+    "log_loss": 0.3422317777484128,
+    "accuracy": 0.8432919954904171
+  },
+  "delta": {
+    "roc_auc": 0.03003230255516831,
+    "pr_auc": 0.018012464033619113,
+    "log_loss": -0.05063075158030389,
+    "accuracy": 0.018602029312288604
+  },
+  "args": {
+    "ie_features": "results/step2_lite_pca_k64_20260520_192216/ie_features.parquet",
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": null,
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

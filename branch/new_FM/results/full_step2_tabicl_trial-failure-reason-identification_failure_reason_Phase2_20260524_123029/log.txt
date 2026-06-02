@@ -1,0 +1,36 @@
+[run_id] full_step2_tabicl_trial-failure-reason-identification_failure_reason_Phase2_20260524_123029
+[subtask] trial-failure-reason-identification  [target] failure_reason  [task-type] multiclass  [phase] Phase2
+  train=(7056, 45)  test=(1780, 45)
+  after preprocess: train (7056, 26)  test (1780, 26)
+  preprocessed: train (7056, 95)  test (1780, 95)
+  virt_train (7056, 2, 768)  virt_test (1780, 2, 768)
+  trials with any non-zero virt: train 7051/7056, test 1780/1780
+Initializing TabICL ...
+  underlying TabICL: embed_dim=128, col blocks=3, row blocks=3, icl blocks=12
+  base params: 27,552,258
+  trainable params: 196,864
+
+--- Initial eval (random-init projections) ---
+  predict 0.3s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=1.1398  test macro-F1=0.2959  LogLoss=1.1438
+  ep   4/30  train_loss=1.1427  test macro-F1=0.2851  LogLoss=1.1380
+  ep   6/30  train_loss=1.1580  test macro-F1=0.2887  LogLoss=1.1360
+  ep   8/30  train_loss=1.1426  test macro-F1=0.2952  LogLoss=1.1329
+  ep  10/30  train_loss=1.1645  test macro-F1=0.2998  LogLoss=1.1297
+  ep  12/30  train_loss=1.1547  test macro-F1=0.3050  LogLoss=1.1276
+  ep  14/30  train_loss=1.1244  test macro-F1=0.3231  LogLoss=1.1258
+  ep  16/30  train_loss=1.1426  test macro-F1=0.3174  LogLoss=1.1256
+  ep  18/30  train_loss=1.1429  test macro-F1=0.3276  LogLoss=1.1259
+  ep  20/30  train_loss=1.1092  test macro-F1=0.3261  LogLoss=1.1256
+  ep  22/30  train_loss=1.1417  test macro-F1=0.3257  LogLoss=1.1255
+  ep  24/30  train_loss=1.1050  test macro-F1=0.3268  LogLoss=1.1256
+  ep  26/30  train_loss=1.0966  test macro-F1=0.3255  LogLoss=1.1279
+  ep  28/30  train_loss=1.0921  test macro-F1=0.3252  LogLoss=1.1307
+  ep  30/30  train_loss=1.1306  test macro-F1=0.3323  LogLoss=1.1344
+
+=== Summary ===
+  Initial   macro-F1: 0.2793
+  Best      macro-F1: 0.3323  (at epoch 30)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_tabicl_trial-failure-reason-identification_failure_reason_Phase2_20260524_123029/metrics.json

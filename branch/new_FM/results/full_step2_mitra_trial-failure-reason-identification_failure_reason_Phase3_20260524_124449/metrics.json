@@ -1,0 +1,164 @@
+{
+  "run_id": "full_step2_mitra_trial-failure-reason-identification_failure_reason_Phase3_20260524_124449",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "phase": "Phase3",
+  "n_train": 3341,
+  "n_test": 815,
+  "n_classes": 4,
+  "n_baseline_features": 96,
+  "n_virtual_cols": 2,
+  "n_base_params": 75670026,
+  "n_trainable_params": 787456,
+  "elapsed_train_s": 34.5,
+  "initial_metrics": {
+    "accuracy": 0.4503067484662577,
+    "macro_f1": 0.15524534686971236,
+    "weighted_f1": 0.28039404980640076,
+    "log_loss": 1.188644875930588
+  },
+  "best_metrics": {
+    "epoch": 30,
+    "accuracy": 0.5006134969325153,
+    "macro_f1": 0.2859190669442468,
+    "weighted_f1": 0.44064414618106634,
+    "log_loss": 1.149920801718342
+  },
+  "history": [
+    {
+      "epoch": 2,
+      "train_loss": 1.202242136001587,
+      "accuracy": 0.4539877300613497,
+      "macro_f1": 0.16270025059120508,
+      "weighted_f1": 0.290421257456359,
+      "log_loss": 1.1836775759825084
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.2326562404632568,
+      "accuracy": 0.4539877300613497,
+      "macro_f1": 0.170349536767494,
+      "weighted_f1": 0.3002096864151796,
+      "log_loss": 1.18063630280763
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1817500591278076,
+      "accuracy": 0.45153374233128835,
+      "macro_f1": 0.17411346694224472,
+      "weighted_f1": 0.3048870463829098,
+      "log_loss": 1.1776647424075926
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.2086328268051147,
+      "accuracy": 0.45766871165644174,
+      "macro_f1": 0.184107341175404,
+      "weighted_f1": 0.3186114648742728,
+      "log_loss": 1.1732678062822286
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.1976250410079956,
+      "accuracy": 0.4588957055214724,
+      "macro_f1": 0.187075963296587,
+      "weighted_f1": 0.32267441943360825,
+      "log_loss": 1.1704957069002344
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.1833515167236328,
+      "accuracy": 0.46503067484662575,
+      "macro_f1": 0.19631814705561018,
+      "weighted_f1": 0.33547535120403715,
+      "log_loss": 1.1681525050715778
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.1858203411102295,
+      "accuracy": 0.4638036809815951,
+      "macro_f1": 0.2002635999067756,
+      "weighted_f1": 0.34025833323349236,
+      "log_loss": 1.1654374957484357
+    },
+    {
+      "epoch": 16,
+      "train_loss": 1.1921679973602295,
+      "accuracy": 0.4687116564417178,
+      "macro_f1": 0.2091406793030466,
+      "weighted_f1": 0.35235484781785104,
+      "log_loss": 1.1630434503365084
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.1483945846557617,
+      "accuracy": 0.4687116564417178,
+      "macro_f1": 0.2137263863497867,
+      "weighted_f1": 0.35824773910865365,
+      "log_loss": 1.1614182303257903
+    },
+    {
+      "epoch": 20,
+      "train_loss": 1.1618554592132568,
+      "accuracy": 0.48098159509202454,
+      "macro_f1": 0.2288717076643202,
+      "weighted_f1": 0.379187057121742,
+      "log_loss": 1.1595566871779173
+    },
+    {
+      "epoch": 22,
+      "train_loss": 1.1590702533721924,
+      "accuracy": 0.4736196319018405,
+      "macro_f1": 0.22509325812028025,
+      "weighted_f1": 0.37326133540381334,
+      "log_loss": 1.1565056280269534
+    },
+    {
+      "epoch": 24,
+      "train_loss": 1.147699236869812,
+      "accuracy": 0.4785276073619632,
+      "macro_f1": 0.23231915640001985,
+      "weighted_f1": 0.3805244282109731,
+      "log_loss": 1.1564366010518778
+    },
+    {
+      "epoch": 26,
+      "train_loss": 1.1959062814712524,
+      "accuracy": 0.47730061349693254,
+      "macro_f1": 0.2396863497006218,
+      "weighted_f1": 0.3872034748611541,
+      "log_loss": 1.1547484541526267
+    },
+    {
+      "epoch": 28,
+      "train_loss": 1.1431132555007935,
+      "accuracy": 0.5006134969325153,
+      "macro_f1": 0.27163046881463715,
+      "weighted_f1": 0.4279657082198322,
+      "log_loss": 1.1501683647087217
+    },
+    {
+      "epoch": 30,
+      "train_loss": 1.1440937519073486,
+      "accuracy": 0.5006134969325153,
+      "macro_f1": 0.2859190669442468,
+      "weighted_f1": 0.44064414618106634,
+      "log_loss": 1.149920801718342
+    }
+  ],
+  "args": {
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phase": "Phase3",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 2,
+    "seed": 0
+  }
+}

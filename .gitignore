@@ -1,0 +1,44 @@
+# ============================================================
+# TB_PFNs .gitignore
+# Keep: code (*.py), docs (*.md), small results (metrics.json,
+#   summary.md, run_info.json, log.txt). Exclude all large binary
+#   artifacts (embeddings, weights, caches), the dataset, and the
+#   upstream TabPFN repo — these are regenerated/obtained separately.
+# ============================================================
+
+# ----- Large binary artifacts (regenerate via encode_*/train scripts) -----
+*.parquet
+*.npy
+*.npz
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+
+# ----- Read-only dataset (obtain from TrialBench; see dataset/README.md) -----
+dataset/
+!dataset/README.md
+
+# ----- Upstream repo (clone PriorLabs/TabPFN separately, editable install) -----
+TabPFN/
+
+# ----- Large parsed-text intermediates (regenerate from dataset) -----
+branch/IE_embedding/data/inclusion.json
+branch/IE_embedding/data/exclusion.json
+
+# ----- Python -----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+
+# ----- OS / editor -----
+.DS_Store
+*.swp
+
+# ----- Cloned upstream research repo (microsoft/ticl; weights unobtainable, see new_FM) -----
+branch/new_FM/data/mothernet/

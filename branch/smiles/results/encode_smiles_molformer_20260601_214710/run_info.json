@@ -1,0 +1,34 @@
+{
+  "run_id": "encode_smiles_molformer_20260601_214710",
+  "model": "ibm/MoLFormer-XL-both-10pct",
+  "model_short": "molformer",
+  "pool_strategy": "pooler",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 17916,
+  "n_keys_with_smiles": 9612,
+  "n_unique_smiles": 50,
+  "n_pooled_groups": 29,
+  "embed_dim": 768,
+  "batch_size": 32,
+  "dtype_compute": "bf16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 2.3,
+  "elapsed_encode_s": 0.07,
+  "throughput_per_s": 695.6,
+  "norm_mean": 15.988086700439453,
+  "norm_std": 1.1635148525238037,
+  "args": {
+    "model": "molformer",
+    "subtask": "serious-adverse-event-forecasting",
+    "batch_size": 32,
+    "device": "cuda",
+    "dtype": "bf16",
+    "limit": 50
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/smiles/data/smiles_embeddings_molformer.parquet",
+    "per_smiles_npy": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_molformer_20260601_214710/per_smiles_embeddings.npy",
+    "per_smiles_meta": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_molformer_20260601_214710/per_smiles_metadata.parquet"
+  }
+}

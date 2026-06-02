@@ -1,0 +1,93 @@
+{
+  "run_id": "full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_smi_chemberta_mlm_20260601_215225",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase2",
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_baseline_features": 101,
+  "n_virtual_cols": 3,
+  "d_ie": 4096,
+  "d_smiles": 384,
+  "ie_emb_path": "/data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet",
+  "smiles_emb_path": "/data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mlm.parquet",
+  "smiles_test_subset_size": 844,
+  "smiles_test_subset_frac": 0.5275,
+  "n_base_params": 27552258,
+  "n_trainable_params": 1098112,
+  "elapsed_train_s": 1.5,
+  "initial_metrics": {
+    "roc_auc": 0.8030608525160077,
+    "pr_auc": 0.9152059649517092,
+    "log_loss": 0.4590992571218401,
+    "accuracy": 0.794375
+  },
+  "initial_metrics_subset": {
+    "roc_auc": 0.8009345794392524,
+    "pr_auc": 0.9144106964082628,
+    "log_loss": 0.45854233345164935,
+    "accuracy": 0.7914691943127962
+  },
+  "best_metrics": {
+    "roc_auc": 0.8030608525160077,
+    "pr_auc": 0.9152059649517092,
+    "log_loss": 0.4590992571218401,
+    "accuracy": 0.794375,
+    "epoch": -1
+  },
+  "best_metrics_subset": {
+    "epoch": 1,
+    "roc_auc": 0.8010235870048954,
+    "pr_auc": 0.9123060069182438,
+    "log_loss": 0.45899083855208545,
+    "accuracy": 0.79739336492891
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4456736147403717,
+      "roc_auc": 0.8022380759178748,
+      "pr_auc": 0.913950719356729,
+      "log_loss": 0.4588875464673831,
+      "accuracy": 0.798125,
+      "subset": {
+        "roc_auc": 0.8010235870048954,
+        "pr_auc": 0.9123060069182438,
+        "log_loss": 0.45899083855208545,
+        "accuracy": 0.79739336492891
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.44270771741867065,
+      "roc_auc": 0.8027086752987842,
+      "pr_auc": 0.9140485776855304,
+      "log_loss": 0.45624498953357984,
+      "accuracy": 0.8,
+      "subset": {
+        "roc_auc": 0.8000927162142116,
+        "pr_auc": 0.9111380574762948,
+        "log_loss": 0.4580226621873084,
+        "accuracy": 0.7997630331753555
+      }
+    }
+  ],
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase2",
+    "ie_emb": "/data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet",
+    "smiles_emb": "/data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mlm.parquet",
+    "n_bins": 10,
+    "epochs": 2,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 1,
+    "seed": 0
+  }
+}

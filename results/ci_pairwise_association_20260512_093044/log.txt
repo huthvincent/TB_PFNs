@@ -1,0 +1,57 @@
+=== ci_pairwise_association 2026-05-12T09:30:44.546569 ===
+RUN_ID = ci_pairwise_association_20260512_093044
+results -> /data2/zhu11/TB/results/ci_pairwise_association_20260512_093044
+Loading parquet files from /data2/zhu11/TB/dataset/TrialBench_joined
+  Phase1: shape=(19250, 81)
+  Phase2: shape=(28559, 81)
+  Phase3: shape=(19586, 81)
+  Phase4: shape=(14391, 81)
+concat shape: (81786, 81)
+Extracting features (one sub-feature per retained original column) ...
+  retained columns: 71
+  role mix: {'num': 56, 'cat': 15}
+  excluded columns: 10 (['brief_summary/textblock', 'detailed_description/textblock', 'eligibility/criteria/textblock', 'eligibility/gender_description', 'intervention/description', 'keyword', 'regulatory_pass', 'study_design_info/intervention_model_description', 'study_design_info/masking_description', 'study_type'])
+Computing 2485 column pairs ...
+  progress: outer index 0/71, results so far 0
+  progress: outer index 10/71, results so far 655
+  progress: outer index 20/71, results so far 1210
+  progress: outer index 30/71, results so far 1665
+  progress: outer index 40/71, results so far 2020
+  progress: outer index 50/71, results so far 2275
+  progress: outer index 60/71, results so far 2430
+  progress: outer index 70/71, results so far 2485
+Done. 2485 pair entries.
+Wrote /data2/zhu11/TB/results/ci_pairwise_association_20260512_093044/pairwise_all.csv (2485 rows).
+Associated pairs (effect>0.05 AND FDR-p<0.01): 1169 / 2485
+metrics.json:
+{
+  "run_id": "ci_pairwise_association_20260512_093044",
+  "data_rows": 81786,
+  "n_columns_in_data": 81,
+  "n_excluded": 10,
+  "excluded": {
+    "brief_summary/textblock": "free-text trial summary",
+    "eligibility/criteria/textblock": "free-text eligibility criteria",
+    "intervention/description": "free-text intervention description",
+    "detailed_description/textblock": "free-text long description",
+    "study_design_info/intervention_model_description": "free-text annotation on intervention_model",
+    "study_design_info/masking_description": "free-text annotation on masking",
+    "eligibility/gender_description": "free-text annotation on eligibility/gender",
+    "keyword": "free-text keyword list with no fixed vocabulary",
+    "study_type": "constant 'Interventional' in all 81786 rows; zero variance, zero associated partners",
+    "regulatory_pass": "identical (|rho|=1.0) to approval_outcome on 30683 overlapping rows; merged into approval_outcome as a single node"
+  },
+  "n_retained": 71,
+  "role_mix": {
+    "num": 56,
+    "cat": 15
+  },
+  "n_pairs_tested": 2485,
+  "n_associated_pairs": 1169,
+  "effect_size_threshold": 0.05,
+  "p_adj_threshold": 0.01,
+  "files": {
+    "all_pairs": "/data2/zhu11/TB/results/ci_pairwise_association_20260512_093044/pairwise_all.csv",
+    "associated_pairs": "/data2/zhu11/TB/results/ci_pairwise_association_20260512_093044/pairwise_associated.csv"
+  }
+}

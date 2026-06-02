@@ -1,0 +1,337 @@
+===== serious-adverse-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_102655
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8377
+  ep   3/30  loss=0.4219  roc_auc=0.8726
+  ep   6/30  loss=0.4055  roc_auc=0.8745
+  ep   9/30  loss=0.3763  roc_auc=0.8777
+  ep  12/30  loss=0.3901  roc_auc=0.8781
+  ep  15/30  loss=0.3778  roc_auc=0.8757
+  ep  18/30  loss=0.3384  roc_auc=0.8729
+  ep  21/30  loss=0.4064  roc_auc=0.8696
+  ep  24/30  loss=0.3838  roc_auc=0.8685
+  ep  27/30  loss=0.3660  roc_auc=0.8692
+  ep  30/30  loss=0.3310  roc_auc=0.8683
+
+=== roc_auc: initial 0.8377 → best 0.8781 (epoch 12) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase2_20260522_102655/metrics.json
+===== serious-adverse-event-forecasting Phase3 (binary) =====
+[run_id] fs2multi_serious-adverse-event-forecasting_YN_Phase3_20260522_102812
+[subtask] serious-adverse-event-forecasting [target] Y/N [task] binary [phases] Phase3
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(3895, 61) test=(945, 61) n_classes=2
+  preprocessed: train (3895, 103) test (945, 103)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8948
+  ep   3/30  loss=0.2612  roc_auc=0.9035
+  ep   6/30  loss=0.2028  roc_auc=0.9035
+  ep   9/30  loss=0.2283  roc_auc=0.9016
+  ep  12/30  loss=0.2041  roc_auc=0.9034
+  ep  15/30  loss=0.2455  roc_auc=0.8997
+  ep  18/30  loss=0.1901  roc_auc=0.8995
+  ep  21/30  loss=0.1782  roc_auc=0.8981
+  ep  24/30  loss=0.2097  roc_auc=0.8965
+  ep  27/30  loss=0.1480  roc_auc=0.8951
+  ep  30/30  loss=0.1454  roc_auc=0.8946
+
+=== roc_auc: initial 0.8948 → best 0.9035 (epoch 3) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_serious-adverse-event-forecasting_YN_Phase3_20260522_102812/metrics.json
+===== mortality-event-prediction Phase2 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase2_20260522_102923
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(6516, 61) test=(1600, 61) n_classes=2
+  preprocessed: train (6516, 101) test (1600, 101)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8493
+  ep   3/30  loss=0.4266  roc_auc=0.8924
+  ep   6/30  loss=0.3509  roc_auc=0.9002
+  ep   9/30  loss=0.3656  roc_auc=0.9012
+  ep  12/30  loss=0.4000  roc_auc=0.9011
+  ep  15/30  loss=0.3809  roc_auc=0.9004
+  ep  18/30  loss=0.3962  roc_auc=0.8986
+  ep  21/30  loss=0.3654  roc_auc=0.8974
+  ep  24/30  loss=0.3555  roc_auc=0.8976
+  ep  27/30  loss=0.3154  roc_auc=0.8982
+  ep  30/30  loss=0.3688  roc_auc=0.8983
+
+=== roc_auc: initial 0.8493 → best 0.9012 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase2_20260522_102923/metrics.json
+===== mortality-event-prediction Phase3 (binary) =====
+[run_id] fs2multi_mortality-event-prediction_YN_Phase3_20260522_103044
+[subtask] mortality-event-prediction [target] Y/N [task] binary [phases] Phase3
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(3895, 61) test=(945, 61) n_classes=2
+  preprocessed: train (3895, 103) test (945, 103)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 95%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8475
+  ep   3/30  loss=0.3769  roc_auc=0.8736
+  ep   6/30  loss=0.3471  roc_auc=0.8740
+  ep   9/30  loss=0.3352  roc_auc=0.8761
+  ep  12/30  loss=0.3497  roc_auc=0.8759
+  ep  15/30  loss=0.2910  roc_auc=0.8736
+  ep  18/30  loss=0.3022  roc_auc=0.8676
+  ep  21/30  loss=0.2612  roc_auc=0.8630
+  ep  24/30  loss=0.2737  roc_auc=0.8623
+  ep  27/30  loss=0.2591  roc_auc=0.8609
+  ep  30/30  loss=0.2814  roc_auc=0.8617
+
+=== roc_auc: initial 0.8475 → best 0.8761 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_mortality-event-prediction_YN_Phase3_20260522_103044/metrics.json
+===== patient-dropout-event-forecasting Phase2 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_103156
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase2
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(12608, 61) test=(3162, 61) n_classes=2
+  preprocessed: train (12608, 95) test (3162, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.7725
+  ep   3/30  loss=0.4617  roc_auc=0.7760
+  ep   6/30  loss=0.4510  roc_auc=0.7764
+  ep   9/30  loss=0.4358  roc_auc=0.7779
+  ep  12/30  loss=0.4667  roc_auc=0.7783
+  ep  15/30  loss=0.4648  roc_auc=0.7768
+  ep  18/30  loss=0.4729  roc_auc=0.7754
+  ep  21/30  loss=0.4392  roc_auc=0.7752
+  ep  24/30  loss=0.4144  roc_auc=0.7754
+  ep  27/30  loss=0.4622  roc_auc=0.7753
+  ep  30/30  loss=0.4350  roc_auc=0.7746
+
+=== roc_auc: initial 0.7725 → best 0.7783 (epoch 12) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_103156/metrics.json
+===== patient-dropout-event-forecasting Phase3 (binary) =====
+[run_id] fs2multi_patient-dropout-event-forecasting_YN_Phase3_20260522_103401
+[subtask] patient-dropout-event-forecasting [target] Y/N [task] binary [phases] Phase3
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(9129, 61) test=(2332, 61) n_classes=2
+  preprocessed: train (9129, 96) test (2332, 96)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8499
+  ep   3/30  loss=0.1911  roc_auc=0.8504
+  ep   6/30  loss=0.2603  roc_auc=0.8517
+  ep   9/30  loss=0.2232  roc_auc=0.8532
+  ep  12/30  loss=0.2684  roc_auc=0.8519
+  ep  15/30  loss=0.2300  roc_auc=0.8506
+  ep  18/30  loss=0.2285  roc_auc=0.8484
+  ep  21/30  loss=0.2115  roc_auc=0.8456
+  ep  24/30  loss=0.2310  roc_auc=0.8423
+  ep  27/30  loss=0.2701  roc_auc=0.8387
+  ep  30/30  loss=0.1919  roc_auc=0.8352
+
+=== roc_auc: initial 0.8499 → best 0.8532 (epoch 9) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_patient-dropout-event-forecasting_YN_Phase3_20260522_103401/metrics.json
+===== trial-approval-forecasting Phase2 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_103535
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase2
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(9980, 58) test=(2514, 58) n_classes=2
+  preprocessed: train (9980, 78) test (2514, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 90%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8202
+  ep   3/30  loss=0.4748  roc_auc=0.8287
+  ep   6/30  loss=0.4575  roc_auc=0.8309
+  ep   9/30  loss=0.4631  roc_auc=0.8321
+  ep  12/30  loss=0.4786  roc_auc=0.8314
+  ep  15/30  loss=0.4590  roc_auc=0.8316
+  ep  18/30  loss=0.4456  roc_auc=0.8315
+  ep  21/30  loss=0.4687  roc_auc=0.8319
+  ep  24/30  loss=0.4854  roc_auc=0.8319
+  ep  27/30  loss=0.4840  roc_auc=0.8322
+  ep  30/30  loss=0.4395  roc_auc=0.8324
+
+=== roc_auc: initial 0.8202 → best 0.8324 (epoch 30) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase2_20260522_103535/metrics.json
+===== trial-approval-forecasting Phase3 (binary) =====
+[run_id] fs2multi_trial-approval-forecasting_outcome_Phase3_20260522_103700
+[subtask] trial-approval-forecasting [target] outcome [task] binary [phases] Phase3
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(7248, 58) test=(1913, 58) n_classes=2
+  preprocessed: train (7248, 78) test (1913, 78)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] roc_auc=0.8099
+  ep   3/30  loss=0.5129  roc_auc=0.8249
+  ep   6/30  loss=0.4852  roc_auc=0.8277
+  ep   9/30  loss=0.4767  roc_auc=0.8241
+  ep  12/30  loss=0.5013  roc_auc=0.8241
+  ep  15/30  loss=0.4511  roc_auc=0.8246
+  ep  18/30  loss=0.4002  roc_auc=0.8276
+  ep  21/30  loss=0.4399  roc_auc=0.8263
+  ep  24/30  loss=0.4558  roc_auc=0.8243
+  ep  27/30  loss=0.4161  roc_auc=0.8233
+  ep  30/30  loss=0.4072  roc_auc=0.8231
+
+=== roc_auc: initial 0.8099 → best 0.8277 (epoch 6) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-approval-forecasting_outcome_Phase3_20260522_103700/metrics.json
+===== trial-failure-reason-identification Phase2 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_103810
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase2
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(7056, 45) test=(1780, 45) n_classes=4
+  preprocessed: train (7056, 95) test (1780, 95)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 89%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] macro_f1=0.2627
+  ep   3/30  loss=1.1602  macro_f1=0.2918
+  ep   6/30  loss=1.1149  macro_f1=0.3130
+  ep   9/30  loss=1.0895  macro_f1=0.3201
+  ep  12/30  loss=1.0963  macro_f1=0.3198
+  ep  15/30  loss=1.0946  macro_f1=0.3245
+  ep  18/30  loss=1.0531  macro_f1=0.3239
+  ep  21/30  loss=1.0863  macro_f1=0.3266
+  ep  24/30  loss=1.0869  macro_f1=0.3275
+  ep  27/30  loss=1.1146  macro_f1=0.3318
+  ep  30/30  loss=1.1728  macro_f1=0.3276
+
+=== macro_f1: initial 0.2627 → best 0.3318 (epoch 27) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_103810/metrics.json
+===== trial-failure-reason-identification Phase3 (multiclass) =====
+[run_id] fs2multi_trial-failure-reason-identification_failure_reason_Phase3_20260522_103932
+[subtask] trial-failure-reason-identification [target] failure_reason [task] multiclass [phases] Phase3
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(3341, 45) test=(815, 45) n_classes=4
+  preprocessed: train (3341, 96) test (815, 96)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 92%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] macro_f1=0.2197
+  ep   3/30  loss=1.1029  macro_f1=0.3023
+  ep   6/30  loss=1.1221  macro_f1=0.2935
+  ep   9/30  loss=1.0958  macro_f1=0.3333
+  ep  12/30  loss=1.0819  macro_f1=0.3434
+  ep  15/30  loss=1.0082  macro_f1=0.3504
+  ep  18/30  loss=1.0481  macro_f1=0.3700
+  ep  21/30  loss=0.9968  macro_f1=0.3640
+  ep  24/30  loss=0.9816  macro_f1=0.3591
+  ep  27/30  loss=0.9631  macro_f1=0.3514
+  ep  30/30  loss=0.9263  macro_f1=0.3486
+
+=== macro_f1: initial 0.2197 → best 0.3700 (epoch 18) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-failure-reason-identification_failure_reason_Phase3_20260522_103932/metrics.json
+===== trial-duration-forecasting Phase2 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_104034
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase2
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(10623, 51) test=(2590, 51) n_classes=10
+  preprocessed: train (10623, 92) test (2590, 92)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] r2=-0.3016
+  ep   3/30  loss=2.3904  r2=0.2005
+  ep   6/30  loss=2.1956  r2=0.2205
+  ep   9/30  loss=2.1333  r2=0.2276
+  ep  12/30  loss=2.1389  r2=0.2312
+  ep  15/30  loss=2.1115  r2=0.2239
+  ep  18/30  loss=2.1485  r2=0.2197
+  ep  21/30  loss=2.1393  r2=0.1548
+  ep  24/30  loss=2.3193  r2=0.1625
+  ep  27/30  loss=2.1897  r2=0.1909
+  ep  30/30  loss=2.1531  r2=0.1744
+
+=== r2: initial -0.3016 → best 0.2312 (epoch 12) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase2_20260522_104034/metrics.json
+===== trial-duration-forecasting Phase3 (regression) =====
+[run_id] fs2multi_trial-duration-forecasting_time_day_Phase3_20260522_104218
+[subtask] trial-duration-forecasting [target] time_day [task] regression [phases] Phase3
+[virtual columns] 3:
+  - emb_inclusion_medcpt.parquet
+  - emb_exclusion_medcpt.parquet
+  - emb_brief_summary_textblock_medcpt.parquet
+  train=(7406, 51) test=(1698, 51) n_classes=10
+  preprocessed: train (7406, 93) test (1698, 93)
+  emb_inclusion_medcpt.parquet: d=768  coverage train 100%
+  emb_exclusion_medcpt.parquet: d=768  coverage train 94%
+  emb_brief_summary_textblock_medcpt.parquet: d=768  coverage train 100%
+  underlying: PerFeatureTransformer  trainable params: 520,906
+
+[initial] r2=-0.4111
+  ep   3/30  loss=2.1409  r2=0.1934
+  ep   6/30  loss=2.0691  r2=0.2106
+  ep   9/30  loss=2.0570  r2=0.2254
+  ep  12/30  loss=2.0255  r2=0.2328
+  ep  15/30  loss=2.0759  r2=0.2405
+  ep  18/30  loss=2.0119  r2=0.2452
+  ep  21/30  loss=1.9956  r2=0.2471
+  ep  24/30  loss=2.0023  r2=0.2477
+  ep  27/30  loss=2.0166  r2=0.2490
+  ep  30/30  loss=1.9614  r2=0.2457
+
+=== r2: initial -0.4111 → best 0.2490 (epoch 27) ===
+Saved: /data2/zhu11/TB/branch/All_text_embedding/results/fs2multi_trial-duration-forecasting_time_day_Phase3_20260522_104218/metrics.json
+STEP1_ALL_DONE

@@ -1,0 +1,166 @@
+{
+  "task": "trial-failure-reason-identification",
+  "type": "multiclass",
+  "target": "failure_reason",
+  "n_classes": 4,
+  "n_train_full": 7056,
+  "n_train_p": 5644,
+  "n_val": 1412,
+  "n_test": 1780,
+  "phase_a": [
+    {
+      "accuracy": 0.4461756373937677,
+      "log_loss": 1.145676140624501,
+      "f1_macro": 0.26057135320020147,
+      "ckpt": "default",
+      "n_estimators": 4,
+      "time_s": 1.9554144539870322
+    },
+    {
+      "accuracy": 0.45254957507082155,
+      "log_loss": 1.1452011044535928,
+      "f1_macro": 0.264638316045939,
+      "ckpt": "default",
+      "n_estimators": 8,
+      "time_s": 0.9606674150563776
+    },
+    {
+      "accuracy": 0.45042492917847027,
+      "log_loss": 1.1444465861005872,
+      "f1_macro": 0.26381458529299384,
+      "ckpt": "default",
+      "n_estimators": 16,
+      "time_s": 1.6259266729466617
+    },
+    {
+      "accuracy": 0.4475920679886686,
+      "log_loss": 1.1443140249622785,
+      "f1_macro": 0.26899957687628917,
+      "ckpt": "default",
+      "n_estimators": 32,
+      "time_s": 2.96563373808749
+    },
+    {
+      "accuracy": 0.4447592067988669,
+      "log_loss": 1.1456731423147797,
+      "f1_macro": 0.25819127460475233,
+      "ckpt": "default-2",
+      "n_estimators": 4,
+      "time_s": 0.651514841010794
+    },
+    {
+      "accuracy": 0.45538243626062325,
+      "log_loss": 1.1455283128124496,
+      "f1_macro": 0.26713392860262325,
+      "ckpt": "default-2",
+      "n_estimators": 8,
+      "time_s": 0.9550457568839192
+    },
+    {
+      "accuracy": 0.4497167138810198,
+      "log_loss": 1.1446814147421358,
+      "f1_macro": 0.2635010428842932,
+      "ckpt": "default-2",
+      "n_estimators": 16,
+      "time_s": 1.62263297685422
+    },
+    {
+      "accuracy": 0.4511331444759207,
+      "log_loss": 1.1442871527044636,
+      "f1_macro": 0.27183478621834783,
+      "ckpt": "default-2",
+      "n_estimators": 32,
+      "time_s": 2.958621629048139
+    }
+  ],
+  "phase_b": [
+    {
+      "accuracy": 0.4546742209631728,
+      "log_loss": 1.145207599948829,
+      "f1_macro": 0.26578972911457377,
+      "ckpt": "default",
+      "lr": 1e-05,
+      "n_estimators": 8,
+      "time_s": 10.56108664884232,
+      "best_ckpt_basename": "checkpoint_5K_best.pth"
+    },
+    {
+      "accuracy": 0.45254957507082155,
+      "log_loss": 1.1452011044535928,
+      "f1_macro": 0.264638316045939,
+      "ckpt": "default",
+      "lr": 2e-05,
+      "n_estimators": 8,
+      "time_s": 7.594392459839582,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.45254957507082155,
+      "log_loss": 1.1452011044535928,
+      "f1_macro": 0.264638316045939,
+      "ckpt": "default",
+      "lr": 5e-05,
+      "n_estimators": 8,
+      "time_s": 7.5909891640767455,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.45254957507082155,
+      "log_loss": 1.1466420315227022,
+      "f1_macro": 0.2650816658213841,
+      "ckpt": "default-2",
+      "lr": 1e-05,
+      "n_estimators": 8,
+      "time_s": 15.676272516138852,
+      "best_ckpt_basename": "checkpoint_5K_best.pth"
+    },
+    {
+      "accuracy": 0.4518413597733711,
+      "log_loss": 1.1473183553349715,
+      "f1_macro": 0.2665861818259713,
+      "ckpt": "default-2",
+      "lr": 2e-05,
+      "n_estimators": 8,
+      "time_s": 14.62539632502012,
+      "best_ckpt_basename": "checkpoint_5K_best.pth"
+    },
+    {
+      "accuracy": 0.4468838526912181,
+      "log_loss": 1.1484923208329043,
+      "f1_macro": 0.2714551842901133,
+      "ckpt": "default-2",
+      "lr": 5e-05,
+      "n_estimators": 8,
+      "time_s": 12.75811473489739,
+      "best_ckpt_basename": "checkpoint_5K_best.pth"
+    }
+  ],
+  "phase_c": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "test": {
+      "accuracy": 0.4567415730337079,
+      "log_loss": 1.1589955712319668,
+      "f1_macro": 0.26719969923410514
+    },
+    "refit_on": "full_train"
+  },
+  "test": {
+    "accuracy": 0.4567415730337079,
+    "log_loss": 1.1589955712319668,
+    "f1_macro": 0.26719969923410514
+  },
+  "best_on_val": {
+    "accuracy": 0.45538243626062325,
+    "log_loss": 1.1455283128124496,
+    "f1_macro": 0.26713392860262325,
+    "ckpt": "default-2",
+    "n_estimators": 8,
+    "time_s": 0.9550457568839192,
+    "phase": "A"
+  },
+  "phase": "Phase2"
+}

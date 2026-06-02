@@ -1,0 +1,21 @@
+[run_id] fm_bench_mortality-event-prediction_YN_20260523_172629
+[subtask] mortality-event-prediction  [target] Y/N  [task-type] binary
+  phases: ['Phase1', 'Phase2', 'Phase3', 'Phase4']
+Loading splits ...
+  train=(14368, 61)  test=(3548, 61)
+  train target counts: {0: 8755, 1: 5613}
+  test  target counts: {0: 2141, 1: 1407}
+  after preprocess: train (14368, 41)  test (3548, 41)
+  non-numeric columns (will be ordinal-encoded for ICL/DPT): 17 / 41
+  numeric array: train (14368, 41)  test (3548, 41)  NaN train=24609 test=6035
+
+--- TabPFN-v2.5 ---
+[tabpfn] time=2.9s  roc_auc=0.8576 pr_auc=0.7990 log_loss=0.4600 accuracy=0.7878
+
+--- TabICLv2 ---
+[tabicl] time=2.7s  roc_auc=0.8603 pr_auc=0.8051 log_loss=0.4559 accuracy=0.7897
+
+--- TabDPT-v1.1 ---
+[tabdpt] time=12.6s  roc_auc=0.8503 pr_auc=0.7855 log_loss=0.4758 accuracy=0.7759
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_mortality-event-prediction_YN_20260523_172629/metrics.json

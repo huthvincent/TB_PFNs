@@ -1,0 +1,85 @@
+[multiseed-mesh] multiseed_20260602_023755  cells=['Bprime', 'sapbert', 'biolord', 'medcpt', 'pubmedbert']  phases=['Phase2', 'Phase3']  seeds=[0, 1, 2, 3, 4]  epochs=30
+  total runs: 50
+  Bprime       Phase2 seed0  full=0.8688 (ep18)  subset=0.8678
+  Bprime       Phase2 seed1  full=0.8669 (ep4)  subset=0.8660
+  Bprime       Phase2 seed2  full=0.8743 (ep6)  subset=0.8774
+  Bprime       Phase2 seed3  full=0.8647 (ep4)  subset=0.8664
+  Bprime       Phase2 seed4  full=0.8684 (ep14)  subset=0.8714
+  sapbert      Phase2 seed0  full=0.8586 (ep12)  subset=0.8696
+  sapbert      Phase2 seed1  full=0.8702 (ep10)  subset=0.8787
+  sapbert      Phase2 seed2  full=0.8720 (ep12)  subset=0.8750
+  sapbert      Phase2 seed3  full=0.8628 (ep12)  subset=0.8649
+  sapbert      Phase2 seed4  full=0.8715 (ep6)  subset=0.8754
+  biolord      Phase2 seed0  full=0.8720 (ep6)  subset=0.8795
+  biolord      Phase2 seed1  full=0.8765 (ep8)  subset=0.8774
+  biolord      Phase2 seed2  full=0.8764 (ep8)  subset=0.8767
+  biolord      Phase2 seed3  full=0.8691 (ep2)  subset=0.8752
+  biolord      Phase2 seed4  full=0.8721 (ep4)  subset=0.8731
+  medcpt       Phase2 seed0  full=0.8762 (ep16)  subset=0.8805
+  medcpt       Phase2 seed1  full=0.8741 (ep14)  subset=0.8757
+  medcpt       Phase2 seed2  full=0.8735 (ep6)  subset=0.8807
+  medcpt       Phase2 seed3  full=0.8721 (ep16)  subset=0.8782
+  medcpt       Phase2 seed4  full=0.8643 (ep12)  subset=0.8679
+  pubmedbert   Phase2 seed0  full=0.8783 (ep6)  subset=0.8858
+  pubmedbert   Phase2 seed1  full=0.8725 (ep6)  subset=0.8784
+  pubmedbert   Phase2 seed2  full=0.8701 (ep8)  subset=0.8801
+  pubmedbert   Phase2 seed3  full=0.8685 (ep8)  subset=0.8724
+  pubmedbert   Phase2 seed4  full=0.8711 (ep4)  subset=0.8781
+  Bprime       Phase3 seed0  full=0.9137 (ep2)  subset=0.9283
+  Bprime       Phase3 seed1  full=0.9102 (ep8)  subset=0.9246
+  Bprime       Phase3 seed2  full=0.9083 (ep4)  subset=0.9259
+  Bprime       Phase3 seed3  full=0.9190 (ep2)  subset=0.9384
+  Bprime       Phase3 seed4  full=0.9185 (ep6)  subset=0.9326
+  sapbert      Phase3 seed0  full=0.9111 (ep2)  subset=0.9267
+  sapbert      Phase3 seed1  full=0.9094 (ep6)  subset=0.9304
+  sapbert      Phase3 seed2  full=0.9079 (ep6)  subset=0.9270
+  sapbert      Phase3 seed3  full=0.9003 (ep8)  subset=0.9203
+  sapbert      Phase3 seed4  full=0.9108 (ep8)  subset=0.9262
+  biolord      Phase3 seed0  full=0.9075 (ep8)  subset=0.9284
+  biolord      Phase3 seed1  full=0.9078 (ep8)  subset=0.9247
+  biolord      Phase3 seed2  full=0.9051 (ep6)  subset=0.9264
+  biolord      Phase3 seed3  full=0.9059 (ep8)  subset=0.9256
+  biolord      Phase3 seed4  full=0.9092 (ep8)  subset=0.9241
+  medcpt       Phase3 seed0  full=0.9017 (ep2)  subset=0.9243
+  medcpt       Phase3 seed1  full=0.9071 (ep2)  subset=0.9277
+  medcpt       Phase3 seed2  full=0.9104 (ep4)  subset=0.9323
+  medcpt       Phase3 seed3  full=0.9124 (ep4)  subset=0.9303
+  medcpt       Phase3 seed4  full=0.9123 (ep2)  subset=0.9338
+  pubmedbert   Phase3 seed0  full=0.9014 (ep6)  subset=0.9186
+  pubmedbert   Phase3 seed1  full=0.9102 (ep4)  subset=0.9261
+  pubmedbert   Phase3 seed2  full=0.9109 (ep6)  subset=0.9342
+  pubmedbert   Phase3 seed3  full=0.9166 (ep2)  subset=0.9361
+  pubmedbert   Phase3 seed4  full=0.9080 (ep4)  subset=0.9226
+
+DONE. Saved raw_runs.jsonl + summary.json to /data2/zhu11/TB/branch/mesh/results/multiseed_20260602_023755
+Run aggregate_robust_mesh.py for last5/best/final mean±std tables.
+[multiseed-mesh] multiseed_20260602_023755  cells=['Bprime', 'sapbert', 'biolord', 'medcpt', 'pubmedbert']  phases=['Phase2']  seeds=[5, 6, 7, 8, 9]  epochs=30
+  total runs: 25
+  Bprime       Phase2 seed5  full=0.8683 (ep2)  subset=0.8722
+  Bprime       Phase2 seed6  full=0.8731 (ep8)  subset=0.8766
+  Bprime       Phase2 seed7  full=0.8757 (ep12)  subset=0.8773
+  Bprime       Phase2 seed8  full=0.8694 (ep2)  subset=0.8735
+  Bprime       Phase2 seed9  full=0.8704 (ep20)  subset=0.8720
+  sapbert      Phase2 seed5  full=0.8580 (ep10)  subset=0.8655
+  sapbert      Phase2 seed6  full=0.8683 (ep2)  subset=0.8711
+  sapbert      Phase2 seed7  full=0.8628 (ep6)  subset=0.8663
+  sapbert      Phase2 seed8  full=0.8738 (ep14)  subset=0.8787
+  sapbert      Phase2 seed9  full=0.8761 (ep16)  subset=0.8771
+  biolord      Phase2 seed5  full=0.8665 (ep12)  subset=0.8691
+  biolord      Phase2 seed6  full=0.8734 (ep2)  subset=0.8815
+  biolord      Phase2 seed7  full=0.8729 (ep20)  subset=0.8731
+  biolord      Phase2 seed8  full=0.8682 (ep10)  subset=0.8755
+  biolord      Phase2 seed9  full=0.8702 (ep12)  subset=0.8692
+  medcpt       Phase2 seed5  full=0.8678 (ep8)  subset=0.8706
+  medcpt       Phase2 seed6  full=0.8644 (ep6)  subset=0.8709
+  medcpt       Phase2 seed7  full=0.8666 (ep16)  subset=0.8722
+  medcpt       Phase2 seed8  full=0.8695 (ep10)  subset=0.8791
+  medcpt       Phase2 seed9  full=0.8798 (ep20)  subset=0.8819
+  pubmedbert   Phase2 seed5  full=0.8730 (ep4)  subset=0.8772
+  pubmedbert   Phase2 seed6  full=0.8712 (ep2)  subset=0.8785
+  pubmedbert   Phase2 seed7  full=0.8713 (ep14)  subset=0.8736
+  pubmedbert   Phase2 seed8  full=0.8706 (ep12)  subset=0.8756
+  pubmedbert   Phase2 seed9  full=0.8751 (ep12)  subset=0.8760
+
+DONE. Saved raw_runs.jsonl + summary.json to results/multiseed_20260602_023755
+Run aggregate_robust_mesh.py for last5/best/final mean±std tables.

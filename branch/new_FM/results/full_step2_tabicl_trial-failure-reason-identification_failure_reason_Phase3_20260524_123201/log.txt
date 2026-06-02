@@ -1,0 +1,36 @@
+[run_id] full_step2_tabicl_trial-failure-reason-identification_failure_reason_Phase3_20260524_123201
+[subtask] trial-failure-reason-identification  [target] failure_reason  [task-type] multiclass  [phase] Phase3
+  train=(3341, 45)  test=(815, 45)
+  after preprocess: train (3341, 26)  test (815, 26)
+  preprocessed: train (3341, 96)  test (815, 96)
+  virt_train (3341, 2, 768)  virt_test (815, 2, 768)
+  trials with any non-zero virt: train 3337/3341, test 814/815
+Initializing TabICL ...
+  underlying TabICL: embed_dim=128, col blocks=3, row blocks=3, icl blocks=12
+  base params: 27,552,258
+  trainable params: 196,864
+
+--- Initial eval (random-init projections) ---
+  predict 0.3s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=1.1418  test macro-F1=0.3536  LogLoss=1.1496
+  ep   4/30  train_loss=1.1500  test macro-F1=0.3613  LogLoss=1.1425
+  ep   6/30  train_loss=1.0633  test macro-F1=0.3573  LogLoss=1.1300
+  ep   8/30  train_loss=1.0788  test macro-F1=0.3538  LogLoss=1.1267
+  ep  10/30  train_loss=1.0993  test macro-F1=0.3598  LogLoss=1.1318
+  ep  12/30  train_loss=1.0266  test macro-F1=0.3460  LogLoss=1.1497
+  ep  14/30  train_loss=1.0096  test macro-F1=0.3344  LogLoss=1.1712
+  ep  16/30  train_loss=0.9884  test macro-F1=0.3379  LogLoss=1.1886
+  ep  18/30  train_loss=0.9309  test macro-F1=0.3444  LogLoss=1.1981
+  ep  20/30  train_loss=0.9361  test macro-F1=0.3600  LogLoss=1.2088
+  ep  22/30  train_loss=0.9355  test macro-F1=0.3586  LogLoss=1.2256
+  ep  24/30  train_loss=0.8502  test macro-F1=0.3715  LogLoss=1.2460
+  ep  26/30  train_loss=0.9328  test macro-F1=0.3779  LogLoss=1.2703
+  ep  28/30  train_loss=0.8578  test macro-F1=0.3700  LogLoss=1.2823
+  ep  30/30  train_loss=0.8229  test macro-F1=0.3743  LogLoss=1.2922
+
+=== Summary ===
+  Initial   macro-F1: 0.3322
+  Best      macro-F1: 0.3779  (at epoch 26)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_tabicl_trial-failure-reason-identification_failure_reason_Phase3_20260524_123201/metrics.json

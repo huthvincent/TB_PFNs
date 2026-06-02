@@ -1,0 +1,21 @@
+[run_id] fm_bench_trial-failure-reason-identification_failure_reason_20260523_173451
+[subtask] trial-failure-reason-identification  [target] failure_reason  [task-type] multiclass
+  phases: ['Phase1', 'Phase2', 'Phase3', 'Phase4']
+Loading splits ...
+  train=(16649, 45)  test=(4120, 45)
+  train target counts: {'Others': 7946, 'poor enrollment': 5825, 'efficacy': 1769, 'safety': 1109}
+  test  target counts: {'Others': 1993, 'poor enrollment': 1404, 'efficacy': 448, 'safety': 275}
+  after preprocess: train (16649, 26)  test (4120, 26)
+  non-numeric columns (will be ordinal-encoded for ICL/DPT): 11 / 26
+  numeric array: train (16649, 26)  test (4120, 26)  NaN train=16163 test=3793
+
+--- TabPFN-v2.5 ---
+[tabpfn] time=2.7s  accuracy=0.4956 macro_f1=0.2750 weighted_f1=0.4471 log_loss=1.0859
+
+--- TabICLv2 ---
+[tabicl] time=2.6s  accuracy=0.4981 macro_f1=0.2802 weighted_f1=0.4488 log_loss=1.0831
+
+--- TabDPT-v1.1 ---
+[tabdpt] time=14.6s  accuracy=0.4879 macro_f1=0.2631 weighted_f1=0.4327 log_loss=1.0931
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_trial-failure-reason-identification_failure_reason_20260523_173451/metrics.json

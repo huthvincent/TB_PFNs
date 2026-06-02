@@ -1,0 +1,30 @@
+[run_id] fm_bench_ie_patient-dropout-event-forecasting_YN_Phase3_20260524_004625
+[subtask] patient-dropout-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase3
+[ie_features] /data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet
+  train=(9129, 61)  test=(2332, 61)
+  train target counts: {1: 8349, 0: 780}
+  test  target counts: {1: 2123, 0: 209}
+  after preprocess: train (9129, 38)  test (2332, 38)  non-numeric cols 14/38
+  +IE: 8 IE cols; NaN cells train=1655 test=372; shapes train (9129, 46)  test (2332, 46)
+
+=== TABPFN ===
+[tabpfn] baseline t=1.1s  roc_auc=0.8514 pr_auc=0.9825 log_loss=0.2297 accuracy=0.9155
+[tabpfn] + IE     t=0.7s  roc_auc=0.8570 pr_auc=0.9830 log_loss=0.2259 accuracy=0.9164
+[tabpfn] Δ roc_auc=+0.0057(better)  pr_auc=+0.0006(better)  log_loss=-0.0038(better)  accuracy=+0.0009(better)
+
+=== TABICL ===
+[tabicl] baseline t=0.8s  roc_auc=0.8592 pr_auc=0.9837 log_loss=0.2235 accuracy=0.9181
+[tabicl] + IE     t=0.9s  roc_auc=0.8627 pr_auc=0.9840 log_loss=0.2214 accuracy=0.9198
+[tabicl] Δ roc_auc=+0.0035(better)  pr_auc=+0.0003(better)  log_loss=-0.0021(better)  accuracy=+0.0017(better)
+
+=== TABDPT ===
+[tabdpt] baseline t=8.9s  roc_auc=0.8390 pr_auc=0.9806 log_loss=0.2354 accuracy=0.9147
+[tabdpt] + IE     t=9.3s  roc_auc=0.8456 pr_auc=0.9818 log_loss=0.2300 accuracy=0.9168
+[tabdpt] Δ roc_auc=+0.0066(better)  pr_auc=+0.0011(better)  log_loss=-0.0054(better)  accuracy=+0.0021(better)
+
+=== MITRA ===
+[mitra] baseline t=3.3s  roc_auc=0.8457 pr_auc=0.9814 log_loss=0.2341 accuracy=0.9112
+[mitra] + IE     t=3.7s  roc_auc=0.8477 pr_auc=0.9813 log_loss=0.2340 accuracy=0.9112
+[mitra] Δ roc_auc=+0.0020(better)  pr_auc=-0.0001(worse)  log_loss=-0.0001(better)  accuracy=+0.0000(better)
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_ie_patient-dropout-event-forecasting_YN_Phase3_20260524_004625/metrics.json

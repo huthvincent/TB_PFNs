@@ -1,0 +1,37 @@
+{
+  "run_id": "ablate_ie_trial-duration-forecasting_time_day_20260520_190259",
+  "subtask": "trial-duration-forecasting",
+  "target": "time_day",
+  "task_type": "regression",
+  "ie_features_path": "results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 10424,
+  "n_test": 3016,
+  "n_features_baseline": 37,
+  "n_features_with_ie": 45,
+  "baseline": {
+    "time_s": 1.8921097959391773,
+    "mae": 281.9571838378906,
+    "rmse": 451.9745740912867,
+    "r2": 0.442966103553772
+  },
+  "with_ie": {
+    "time_s": 1.5876098870066926,
+    "mae": 275.18341064453125,
+    "rmse": 441.5034859715153,
+    "r2": 0.4684772491455078
+  },
+  "delta": {
+    "mae": -6.773773193359375,
+    "rmse": -10.471088119771366,
+    "r2": 0.02551114559173584
+  },
+  "args": {
+    "ie_features": "results/criterion_head_20260520_155333/ie_features.parquet",
+    "subtask": "trial-duration-forecasting",
+    "target": "time_day",
+    "task_type": "regression",
+    "phases": "Phase1",
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "ablate_ie_trial-failure-reason-identification_failure_reason_20260520_190235",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "ie_features_path": "results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 7056,
+  "n_test": 1780,
+  "n_features_baseline": 26,
+  "n_features_with_ie": 34,
+  "baseline": {
+    "time_s": 2.177404994959943,
+    "accuracy": 0.449438202247191,
+    "macro_f1": 0.26756644923817485,
+    "weighted_f1": 0.40567269462379163,
+    "log_loss": 1.1620390378514218
+  },
+  "with_ie": {
+    "time_s": 1.7555306470021605,
+    "accuracy": 0.46179775280898877,
+    "macro_f1": 0.28707860663605644,
+    "weighted_f1": 0.419062809327353,
+    "log_loss": 1.1395377632015296
+  },
+  "delta": {
+    "accuracy": 0.012359550561797772,
+    "macro_f1": 0.01951215739788159,
+    "weighted_f1": 0.013390114703561384,
+    "log_loss": -0.022501274649892267
+  },
+  "args": {
+    "ie_features": "results/criterion_head_20260520_155333/ie_features.parquet",
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phases": "Phase2",
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

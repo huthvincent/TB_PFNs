@@ -1,0 +1,122 @@
+{
+  "run_id": "fm_bench_ie_trial-approval-forecasting_outcome_Phase2_20260524_004708",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "phase": "Phase2",
+  "ie_features_path": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 9980,
+  "n_test": 2514,
+  "n_features_baseline": 37,
+  "n_features_with_ie": 45,
+  "n_non_numeric_baseline": 13,
+  "multiclass_classes": null,
+  "models": {
+    "tabpfn": {
+      "baseline": {
+        "time_s": 1.0691029370063916,
+        "roc_auc": 0.819389889614876,
+        "pr_auc": 0.6870247703755645,
+        "log_loss": 0.4810541907154169,
+        "accuracy": 0.7390612569610183
+      },
+      "with_ie": {
+        "time_s": 0.8162274060305208,
+        "roc_auc": 0.829629007513152,
+        "pr_auc": 0.708600186488348,
+        "log_loss": 0.46739676396325913,
+        "accuracy": 0.7450278440731901
+      },
+      "delta": {
+        "roc_auc": 0.010239117898276029,
+        "pr_auc": 0.021575416112783463,
+        "log_loss": -0.013657426752157753,
+        "accuracy": 0.005966587112171795
+      }
+    },
+    "tabicl": {
+      "baseline": {
+        "time_s": 0.8818551020231098,
+        "roc_auc": 0.8165411754465184,
+        "pr_auc": 0.6850571022325769,
+        "log_loss": 0.48406627894826576,
+        "accuracy": 0.7390612569610183
+      },
+      "with_ie": {
+        "time_s": 0.9504750469932333,
+        "roc_auc": 0.833480450027474,
+        "pr_auc": 0.7164117073341626,
+        "log_loss": 0.46558326711802295,
+        "accuracy": 0.7398568019093079
+      },
+      "delta": {
+        "roc_auc": 0.016939274580955566,
+        "pr_auc": 0.03135460510158572,
+        "log_loss": -0.018483011830242813,
+        "accuracy": 0.0007955449482895949
+      }
+    },
+    "tabdpt": {
+      "baseline": {
+        "time_s": 9.43251421500463,
+        "roc_auc": 0.8167033665014607,
+        "pr_auc": 0.6840858481264473,
+        "log_loss": 0.48892236428968017,
+        "accuracy": 0.7307080350039777
+      },
+      "with_ie": {
+        "time_s": 9.940377344028093,
+        "roc_auc": 0.8284487870693267,
+        "pr_auc": 0.7059560997301078,
+        "log_loss": 0.47469942164066115,
+        "accuracy": 0.733890214797136
+      },
+      "delta": {
+        "roc_auc": 0.011745420567865983,
+        "pr_auc": 0.021870251603660407,
+        "log_loss": -0.014222942649019021,
+        "accuracy": 0.0031821797931582685
+      }
+    },
+    "mitra": {
+      "baseline": {
+        "time_s": 3.3762896599946544,
+        "roc_auc": 0.8062020907345044,
+        "pr_auc": 0.6582387218071512,
+        "log_loss": 0.49260414119305984,
+        "accuracy": 0.7231503579952268
+      },
+      "with_ie": {
+        "time_s": 3.79577652097214,
+        "roc_auc": 0.8199046847033093,
+        "pr_auc": 0.6808947105046239,
+        "log_loss": 0.48115505471455744,
+        "accuracy": 0.7370723945902944
+      },
+      "delta": {
+        "roc_auc": 0.01370259396880491,
+        "pr_auc": 0.022655988697472762,
+        "log_loss": -0.011449086478502402,
+        "accuracy": 0.013922036595067633
+      }
+    }
+  },
+  "args": {
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phase": "Phase2",
+    "ie_features": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt",
+      "mitra"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "mitra_n_estimators": 1,
+    "seed": 0
+  }
+}

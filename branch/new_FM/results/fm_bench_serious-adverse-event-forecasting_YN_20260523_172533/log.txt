@@ -1,0 +1,21 @@
+[run_id] fm_bench_serious-adverse-event-forecasting_YN_20260523_172533
+[subtask] serious-adverse-event-forecasting  [target] Y/N  [task-type] binary
+  phases: ['Phase2']
+Loading splits ...
+  train=(6516, 61)  test=(1600, 61)
+  train target counts: {1: 4674, 0: 1842}
+  test  target counts: {1: 1193, 0: 407}
+  after preprocess: train (6516, 41)  test (1600, 41)
+  non-numeric columns (will be ordinal-encoded for ICL/DPT): 17 / 41
+  numeric array: train (6516, 41)  test (1600, 41)  NaN train=12280 test=3050
+
+--- TabPFN-v2.5 ---
+[tabpfn] time=2.2s  roc_auc=0.8199 pr_auc=0.9258 log_loss=0.4319 accuracy=0.8013
+
+--- TabICLv2 ---
+[tabicl] time=1.9s  roc_auc=0.8231 pr_auc=0.9281 log_loss=0.4302 accuracy=0.7994
+
+--- TabDPT-v1.1 ---
+[tabdpt] time=5.7s  roc_auc=0.8149 pr_auc=0.9237 log_loss=0.4449 accuracy=0.7937
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_serious-adverse-event-forecasting_YN_20260523_172533/metrics.json

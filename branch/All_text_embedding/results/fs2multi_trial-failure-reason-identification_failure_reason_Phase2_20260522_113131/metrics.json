@@ -1,0 +1,139 @@
+{
+  "run_id": "fs2multi_trial-failure-reason-identification_failure_reason_Phase2_20260522_113131",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 5,
+  "n_train": 7056,
+  "n_test": 1780,
+  "n_classes": 4,
+  "n_trainable_params": 2094154,
+  "elapsed_train_s": 79.4,
+  "initial_metrics": {
+    "accuracy": 0.49325842696629213,
+    "macro_f1": 0.2962835273424498,
+    "weighted_f1": 0.4485137356454817,
+    "log_loss": 1.1306706377753877
+  },
+  "best_metrics": {
+    "epoch": 21,
+    "accuracy": 0.5820224719101124,
+    "macro_f1": 0.4232044072512354,
+    "weighted_f1": 0.5579532960052215,
+    "log_loss": 0.9873924353468411
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 1.0085499286651611,
+      "accuracy": 0.5337078651685393,
+      "macro_f1": 0.34439893854990977,
+      "weighted_f1": 0.49685163964183815,
+      "log_loss": 0.9868423827804854
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.9519121050834656,
+      "accuracy": 0.5460674157303371,
+      "macro_f1": 0.3584376915789421,
+      "weighted_f1": 0.5102839459958218,
+      "log_loss": 0.9755176286166334
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.8830794095993042,
+      "accuracy": 0.5612359550561797,
+      "macro_f1": 0.3778334240035121,
+      "weighted_f1": 0.5275200060282541,
+      "log_loss": 0.9761684610888347
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.9256241321563721,
+      "accuracy": 0.5640449438202247,
+      "macro_f1": 0.3905862928645383,
+      "weighted_f1": 0.5344076638752073,
+      "log_loss": 0.9783138043627662
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.8955377340316772,
+      "accuracy": 0.5780898876404494,
+      "macro_f1": 0.4085089065280164,
+      "weighted_f1": 0.5515255555675235,
+      "log_loss": 0.9809695799211348
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.8545008301734924,
+      "accuracy": 0.5775280898876405,
+      "macro_f1": 0.4115867351017903,
+      "weighted_f1": 0.55147005923136,
+      "log_loss": 0.9864436238067463
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.9003357887268066,
+      "accuracy": 0.5820224719101124,
+      "macro_f1": 0.4232044072512354,
+      "weighted_f1": 0.5579532960052215,
+      "log_loss": 0.9873924353468411
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.9317576289176941,
+      "accuracy": 0.5837078651685393,
+      "macro_f1": 0.4194393545471228,
+      "weighted_f1": 0.5589751015964608,
+      "log_loss": 0.9888057817806482
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.8732467889785767,
+      "accuracy": 0.5741573033707865,
+      "macro_f1": 0.41383278506797383,
+      "weighted_f1": 0.5510486886552706,
+      "log_loss": 1.0004801318779968
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.9429300427436829,
+      "accuracy": 0.5662921348314607,
+      "macro_f1": 0.41008352944813004,
+      "weighted_f1": 0.5444350333591101,
+      "log_loss": 1.0132437695974503
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet",
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

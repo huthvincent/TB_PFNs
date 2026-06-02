@@ -1,0 +1,29 @@
+{
+  "run_id": "sae_finetune_20260510_103801",
+  "device": "NVIDIA H200 NVL",
+  "pretrained_ckpt": "/data2/zhu11/TB/TabPFN/models/tabpfn-v2.5-classifier-v2.5_default.ckpt",
+  "args": {
+    "epochs": 1,
+    "lr": 2e-05,
+    "n_estimators": 2,
+    "seed": 0
+  },
+  "n_train": 14368,
+  "n_test": 3548,
+  "n_features": 41,
+  "baseline": {
+    "time_s": 3.1833834790159017,
+    "roc_auc": 0.8851036222415796,
+    "pr_auc": 0.9395534404057273,
+    "log_loss": 0.3928625293287167,
+    "accuracy": 0.8246899661781285
+  },
+  "finetuned": {
+    "time_s": 6.171593677951023,
+    "peak_vram_gb": 5.292265984,
+    "roc_auc": 0.8846916739256678,
+    "pr_auc": 0.939327343661811,
+    "log_loss": 0.39453120522103924,
+    "accuracy": 0.8241262683201804
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "generated": "2026-05-10T10:57:34",
+  "device": "NVIDIA H200 NVL",
+  "classifier_ckpt": "/data2/zhu11/TB/TabPFN/models/tabpfn-v2.5-classifier-v2.5_default.ckpt",
+  "args": {
+    "epochs": 10,
+    "lr": 2e-05,
+    "n_estimators": 2,
+    "seed": 0,
+    "only": null
+  },
+  "tasks": [
+    {
+      "name": "trial-approval-forecasting",
+      "type": "binary",
+      "target": "outcome",
+      "n_train": 24468,
+      "n_test": 6215,
+      "n_features": 37,
+      "n_classes": 2,
+      "baseline": {
+        "accuracy": 0.7459372485921159,
+        "log_loss": 0.4898436749020162,
+        "roc_auc": 0.8305150058792592,
+        "pr_auc": 0.764875280228941,
+        "time_s": 4.166994001949206
+      },
+      "finetuned": {
+        "accuracy": 0.7440064360418343,
+        "log_loss": 0.4900843278506669,
+        "roc_auc": 0.8303504728000703,
+        "pr_auc": 0.764861198495057,
+        "time_s": 51.95503226807341,
+        "peak_vram_gb": 5.659989504
+      }
+    },
+    {
+      "name": "trial-duration-forecasting",
+      "type": "regression",
+      "target": "time_day",
+      "n_train": 34188,
+      "n_test": 8667,
+      "n_features": 37,
+      "baseline": {
+        "mae": 401.6966552734375,
+        "rmse": 579.1372894228103,
+        "r2": 0.2681998610496521,
+        "time_s": 5.750955710886046
+      },
+      "finetuned": {
+        "mae": 404.06207275390625,
+        "rmse": 576.0957222979529,
+        "r2": 0.2758663296699524,
+        "time_s": 116.24007045803592,
+        "peak_vram_gb": 12.586820608
+      }
+    },
+    {
+      "name": "patient-dropout-event-forecasting",
+      "type": "binary",
+      "target": "Y/N",
+      "n_train": 30561,
+      "n_test": 7741,
+      "n_features": 38,
+      "n_classes": 2,
+      "baseline": {
+        "accuracy": 0.8011884769409637,
+        "log_loss": 0.41361525868817145,
+        "roc_auc": 0.8125559714311335,
+        "pr_auc": 0.9399367791816381,
+        "time_s": 4.657358332071453
+      },
+      "finetuned": {
+        "accuracy": 0.8029970288076476,
+        "log_loss": 0.4136579800469558,
+        "roc_auc": 0.8114875891418434,
+        "pr_auc": 0.9394547310203926,
+        "time_s": 85.22288184100762,
+        "peak_vram_gb": 7.001334272
+      }
+    },
+    {
+      "name": "serious-adverse-event-forecasting",
+      "type": "binary",
+      "target": "Y/N",
+      "n_train": 14368,
+      "n_test": 3548,
+      "n_features": 41,
+      "n_classes": 2,
+      "baseline": {
+        "accuracy": 0.8246899661781285,
+        "log_loss": 0.3928625293287167,
+        "roc_auc": 0.8851036222415796,
+        "pr_auc": 0.9395534404057273,
+        "time_s": 2.418444669106975
+      },
+      "finetuned": {
+        "accuracy": 0.822435174746336,
+        "log_loss": 0.39549724840710143,
+        "roc_auc": 0.8839909988385597,
+        "pr_auc": 0.9388530025560021,
+        "time_s": 33.33432060596533,
+        "peak_vram_gb": 5.292265984
+      }
+    },
+    {
+      "name": "mortality-event-prediction",
+      "type": "binary",
+      "target": "Y/N",
+      "n_train": 14368,
+      "n_test": 3548,
+      "n_features": 41,
+      "n_classes": 2,
+      "baseline": {
+        "accuracy": 0.7874859075535513,
+        "log_loss": 0.4600480212651338,
+        "roc_auc": 0.8575546568219821,
+        "pr_auc": 0.7990020797588633,
+        "time_s": 1.1121737419161946
+      },
+      "finetuned": {
+        "accuracy": 0.7877677564825254,
+        "log_loss": 0.46530134604645246,
+        "roc_auc": 0.8571626089210982,
+        "pr_auc": 0.7983011464135095,
+        "time_s": 31.811069000978023,
+        "peak_vram_gb": 5.292265984
+      }
+    },
+    {
+      "name": "trial-failure-reason-identification",
+      "type": "multiclass",
+      "target": "failure_reason",
+      "n_train": 16649,
+      "n_test": 4120,
+      "n_features": 26,
+      "n_classes": 4,
+      "baseline": {
+        "accuracy": 0.4956310679611651,
+        "log_loss": 1.0858848025880457,
+        "f1_macro": 0.27496493745648687,
+        "time_s": 2.2772984749171883
+      },
+      "finetuned": {
+        "accuracy": 0.49514563106796117,
+        "log_loss": 1.0846281761404057,
+        "f1_macro": 0.2685638470294298,
+        "time_s": 24.453458145959303,
+        "peak_vram_gb": 4.391914496
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[run_id] full_step2_tabicl_trial-duration-forecasting_time_day_Phase2_20260524_123044
+[subtask] trial-duration-forecasting  [target] time_day  [task-type] regression  [phase] Phase2
+  train=(10623, 51)  test=(2590, 51)
+  quantile bins (10): centers=[101.0, 263.5, 380.0, 502.0, 638.0, 787.0999755859375, 974.0999755859375, 1225.5, 1622.0, 2760.0]
+  after preprocess: train (10623, 36)  test (2590, 36)
+  preprocessed: train (10623, 92)  test (2590, 92)
+  virt_train (10623, 2, 768)  virt_test (2590, 2, 768)
+  trials with any non-zero virt: train 10618/10623, test 2588/2590
+Initializing TabICL ...
+  underlying TabICL: embed_dim=128, col blocks=3, row blocks=3, icl blocks=12
+  base params: 27,552,258
+  trainable params: 196,864
+
+--- Initial eval (random-init projections) ---
+  predict 0.3s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=2.1017  test R²=0.2421  MAE=446.0  RMSE=608.6
+  ep   4/30  train_loss=2.1753  test R²=0.2476  MAE=442.6  RMSE=606.4
+  ep   6/30  train_loss=2.0956  test R²=0.2495  MAE=441.8  RMSE=605.7
+  ep   8/30  train_loss=2.0834  test R²=0.2521  MAE=441.5  RMSE=604.6
+  ep  10/30  train_loss=2.0891  test R²=0.2547  MAE=441.6  RMSE=603.6
+  ep  12/30  train_loss=2.1258  test R²=0.2563  MAE=441.7  RMSE=602.9
+  ep  14/30  train_loss=2.1089  test R²=0.2576  MAE=441.6  RMSE=602.4
+  ep  16/30  train_loss=2.0777  test R²=0.2558  MAE=442.0  RMSE=603.1
+  ep  18/30  train_loss=2.0801  test R²=0.2535  MAE=442.3  RMSE=604.0
+  ep  20/30  train_loss=2.1224  test R²=0.2529  MAE=441.7  RMSE=604.3
+  ep  22/30  train_loss=2.0330  test R²=0.2520  MAE=441.3  RMSE=604.7
+  ep  24/30  train_loss=2.0499  test R²=0.2515  MAE=440.7  RMSE=604.9
+  ep  26/30  train_loss=2.0542  test R²=0.2515  MAE=440.2  RMSE=604.8
+  ep  28/30  train_loss=2.0832  test R²=0.2522  MAE=439.5  RMSE=604.5
+  ep  30/30  train_loss=2.0661  test R²=0.2542  MAE=438.4  RMSE=603.7
+
+=== Summary ===
+  Initial   R²: 0.2131
+  Best      R²: 0.2576  (at epoch 14)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_tabicl_trial-duration-forecasting_time_day_Phase2_20260524_123044/metrics.json

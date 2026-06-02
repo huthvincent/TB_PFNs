@@ -1,0 +1,52 @@
+{
+  "run_id": "fm_bench_serious-adverse-event-forecasting_YN_20260523_172556",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "n_train": 14368,
+  "n_test": 3548,
+  "n_features_after_preprocess": 41,
+  "n_non_numeric_columns": 17,
+  "models": {
+    "tabpfn": {
+      "time_s": 2.8751122140092775,
+      "n_estimators": 2,
+      "roc_auc": 0.8851036222415796,
+      "pr_auc": 0.9395534404057273,
+      "log_loss": 0.3928625293287167,
+      "accuracy": 0.8246899661781285
+    },
+    "tabicl": {
+      "time_s": 2.741921256063506,
+      "n_estimators": 8,
+      "roc_auc": 0.885353150406504,
+      "pr_auc": 0.9402450428047735,
+      "log_loss": 0.3938273553145328,
+      "accuracy": 0.8151071025930101
+    },
+    "tabdpt": {
+      "time_s": 12.517979582888074,
+      "context_size": 2048,
+      "roc_auc": 0.877208732578397,
+      "pr_auc": 0.9348128348960977,
+      "log_loss": 0.4096221565080595,
+      "accuracy": 0.8091882750845547
+    }
+  },
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": null,
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "tabdpt_compile": false,
+    "seed": 0
+  }
+}

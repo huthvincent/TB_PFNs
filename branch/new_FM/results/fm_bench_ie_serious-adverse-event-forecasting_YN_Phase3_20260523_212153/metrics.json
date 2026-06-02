@@ -1,0 +1,119 @@
+{
+  "run_id": "fm_bench_ie_serious-adverse-event-forecasting_YN_Phase3_20260523_212153",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "phase": "Phase3",
+  "ie_features_path": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 3895,
+  "n_test": 945,
+  "n_features_baseline": 41,
+  "n_features_with_ie": 49,
+  "n_non_numeric_baseline": 17,
+  "models": {
+    "tabpfn": {
+      "baseline": {
+        "time_s": 0.6803033539326862,
+        "roc_auc": 0.8934698275862067,
+        "pr_auc": 0.9780198404536788,
+        "log_loss": 0.2742964697575785,
+        "accuracy": 0.8772486772486773
+      },
+      "with_ie": {
+        "time_s": 0.35633732203859836,
+        "roc_auc": 0.9021637931034483,
+        "pr_auc": 0.9796779313678003,
+        "log_loss": 0.2668467541590061,
+        "accuracy": 0.8835978835978836
+      },
+      "delta": {
+        "roc_auc": 0.008693965517241553,
+        "pr_auc": 0.0016580909141215017,
+        "log_loss": -0.007449715598572382,
+        "accuracy": 0.006349206349206327
+      }
+    },
+    "tabicl": {
+      "baseline": {
+        "time_s": 0.5012580829206854,
+        "roc_auc": 0.896780172413793,
+        "pr_auc": 0.9784018267506184,
+        "log_loss": 0.27150619762486533,
+        "accuracy": 0.8857142857142857
+      },
+      "with_ie": {
+        "time_s": 0.5035624809097499,
+        "roc_auc": 0.9100474137931033,
+        "pr_auc": 0.9820998611367902,
+        "log_loss": 0.2608125849323048,
+        "accuracy": 0.8878306878306879
+      },
+      "delta": {
+        "roc_auc": 0.013267241379310235,
+        "pr_auc": 0.003698034386171778,
+        "log_loss": -0.010693612692560528,
+        "accuracy": 0.002116402116402183
+      }
+    },
+    "tabdpt": {
+      "baseline": {
+        "time_s": 3.4305192480096593,
+        "roc_auc": 0.888987068965517,
+        "pr_auc": 0.9754821167287508,
+        "log_loss": 0.27859249720297635,
+        "accuracy": 0.8846560846560847
+      },
+      "with_ie": {
+        "time_s": 3.4266142329433933,
+        "roc_auc": 0.9006637931034482,
+        "pr_auc": 0.9799398928266166,
+        "log_loss": 0.2722171238436858,
+        "accuracy": 0.8772486772486773
+      },
+      "delta": {
+        "roc_auc": 0.011676724137931194,
+        "pr_auc": 0.004457776097865795,
+        "log_loss": -0.006375373359290559,
+        "accuracy": -0.007407407407407418
+      }
+    },
+    "mitra": {
+      "baseline": {
+        "time_s": 1.1339327930472791,
+        "roc_auc": 0.889125,
+        "pr_auc": 0.9768953397700589,
+        "log_loss": 0.27956299424400366,
+        "accuracy": 0.8793650793650793
+      },
+      "with_ie": {
+        "time_s": 1.1007791210431606,
+        "roc_auc": 0.8972887931034482,
+        "pr_auc": 0.9791136846791129,
+        "log_loss": 0.2736882735562061,
+        "accuracy": 0.8846560846560847
+      },
+      "delta": {
+        "roc_auc": 0.00816379310344817,
+        "pr_auc": 0.0022183449090539265,
+        "log_loss": -0.005874720687797541,
+        "accuracy": 0.005291005291005346
+      }
+    }
+  },
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "phase": "Phase3",
+    "ie_features": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt",
+      "mitra"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "mitra_n_estimators": 1,
+    "seed": 0
+  }
+}

@@ -1,0 +1,15 @@
+[run_id] encode_mesh_biolord_20260602_023429
+[model] FremyCompany/BioLORD-2023  short=biolord  pool=mean
+[subtask] serious-adverse-event-forecasting
+Scanning train_x.csv / test_x.csv for condition + intervention MeSH ...
+  (trial,phase,type) keys: 35,832  (condition non-empty 16,214, intervention non-empty 12,536)
+  total (trial,phase,type,term) rows to encode: 61,703  (unique terms: 4,100)
+Loading FremyCompany/BioLORD-2023 (bf16) ...
+  params=109,486,464  embed_dim=768  pool=mean  batch_size=256
+  encode done in 3.2s (19536.2/s)
+Mean-pooling per (trial_id, phase, type) ...
+  mean-pooled groups: 28,750 → /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_biolord.parquet
+
+Done in 5.2s
+  pooled parquet: /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_biolord.parquet  (86.58 MB)
+  norms: mean=8.774  std=0.578

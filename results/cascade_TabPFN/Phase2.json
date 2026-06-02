@@ -1,0 +1,59 @@
+{
+  "phase": "Phase2",
+  "n_total": 28559,
+  "n_train_nct": 22847,
+  "n_test_nct": 5712,
+  "layers": {
+    "L1_execution": {
+      "label": "execution_pass = NOT (dropout_YN==1 OR failure_reason=='poor enrollment')",
+      "n_train": 16861,
+      "n_test": 4252,
+      "train_class_balance": {
+        "pos": 5281,
+        "neg": 11580
+      },
+      "fit_time_s": 204.4470161930003,
+      "roc_auc": 0.8102432423464788,
+      "pr_auc": 0.6461831983604389,
+      "log_loss": 0.48042816072739597,
+      "accuracy": 0.7742238946378175
+    },
+    "L2_biology": {
+      "label": "biology_pass per CASE expression (approval=1 \u21d2 TRUE, failure_reason=='efficacy' \u21d2 FALSE, failure_reason known and != 'efficacy' \u21d2 TRUE)",
+      "n_train": 3574,
+      "n_test": 905,
+      "train_class_balance": {
+        "pos": 2987,
+        "neg": 587
+      },
+      "fit_time_s": 44.473412429004384,
+      "roc_auc": 0.7019076923076923,
+      "pr_auc": 0.920981782385049,
+      "log_loss": 0.36283523348560637,
+      "accuracy": 0.8640883977900552
+    },
+    "L3_regulatory": {
+      "label": "regulatory_pass = (approval_outcome == 1)",
+      "n_train": 1277,
+      "n_test": 345,
+      "train_class_balance": {
+        "pos": 325,
+        "neg": 952
+      },
+      "fit_time_s": 27.174355315000867,
+      "roc_auc": 0.9899490870786517,
+      "pr_auc": 0.9643286955319833,
+      "log_loss": 0.10524282471925789,
+      "accuracy": 0.9507246376811594
+    }
+  },
+  "joint": {
+    "definition": "P(L1_pass) \u00d7 P(L2_pass) \u00d7 P(L3_pass) vs approval_outcome",
+    "n_test": 2528,
+    "test_pos_rate": 0.3872626582278481,
+    "roc_auc": 0.7493390905595951,
+    "pr_auc": 0.5997120553918155,
+    "log_loss": 1.2659884104737973,
+    "accuracy": 0.6131329113924051
+  }
+}

@@ -1,0 +1,15 @@
+
+[run_id] encode_ie_qwen3_20260601_230554  (FRESH)
+[run_dir] /data2/zhu11/TB/branch/smiles/results/encode_ie_qwen3_20260601_230554
+Loading criteria JSON ...
+  total criteria: 1,579,161
+Sorting by text length (descending) for tight batching ...
+Loading Qwen/Qwen3-Embedding-8B (bf16; first time downloads ~16 GB from HF) ...
+  params=7,567,295,488  device=cuda  dtype=bf16  batch_size=128  max_len=512  ckpt_every=50
+  encode done in 4080.3s (387.0/s overall)
+Mean-pooling per (trial_id, phase, type) ...
+  mean-pooled groups: 158,476 → /data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet
+
+Done in 4137.4s (encode 4080.3s @ 387.0/s)
+  norms: mean=131.71  std=2.38  nan_rows=0
+  pooled parquet: /data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet  (2583.0 MB)

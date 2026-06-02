@@ -1,0 +1,35 @@
+[run_id] full_step2_mitra_patient-dropout-event-forecasting_YN_Phase2_20260524_123614
+[subtask] patient-dropout-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase2
+  train=(12608, 61)  test=(3162, 61)
+  after preprocess: train (12608, 38)  test (3162, 38)
+  preprocessed: train (12608, 95)  test (3162, 95)
+  virt_train (12608, 2, 768)  virt_test (3162, 2, 768)
+Loading Tab2D from autogluon/mitra-classifier (HF) ...
+  Tab2D dim=512, n_layers=12, n_heads=4, task=classification, dim_output=10
+  base params: 75,670,026
+  trainable params: 787,456
+
+--- Initial eval (random-init projections) ---
+  predict 3.4s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=0.4192  test ROC-AUC=0.7490  LogLoss=0.4780
+  ep   4/30  train_loss=0.4784  test ROC-AUC=0.7490  LogLoss=0.4775
+  ep   6/30  train_loss=0.4520  test ROC-AUC=0.7507  LogLoss=0.4756
+  ep   8/30  train_loss=0.4402  test ROC-AUC=0.7519  LogLoss=0.4738
+  ep  10/30  train_loss=0.4717  test ROC-AUC=0.7513  LogLoss=0.4731
+  ep  12/30  train_loss=0.4762  test ROC-AUC=0.7515  LogLoss=0.4724
+  ep  14/30  train_loss=0.4500  test ROC-AUC=0.7529  LogLoss=0.4714
+  ep  16/30  train_loss=0.4785  test ROC-AUC=0.7534  LogLoss=0.4711
+  ep  18/30  train_loss=0.4784  test ROC-AUC=0.7524  LogLoss=0.4723
+  ep  20/30  train_loss=0.4643  test ROC-AUC=0.7522  LogLoss=0.4737
+  ep  22/30  train_loss=0.4536  test ROC-AUC=0.7562  LogLoss=0.4711
+  ep  24/30  train_loss=0.4611  test ROC-AUC=0.7562  LogLoss=0.4728
+  ep  26/30  train_loss=0.4696  test ROC-AUC=0.7560  LogLoss=0.4693
+  ep  28/30  train_loss=0.4553  test ROC-AUC=0.7540  LogLoss=0.4704
+  ep  30/30  train_loss=0.4929  test ROC-AUC=0.7534  LogLoss=0.4707
+
+=== Summary ===
+  Initial   ROC-AUC: 0.7552
+  Best      ROC-AUC: 0.7562  (at epoch 22)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_mitra_patient-dropout-event-forecasting_YN_Phase2_20260524_123614/metrics.json

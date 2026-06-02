@@ -1,0 +1,253 @@
+{
+  "task": "trial-duration-forecasting",
+  "type": "regression",
+  "target": "time_day",
+  "n_train_full": 34188,
+  "n_train_p": 27350,
+  "n_val": 6838,
+  "n_test": 8667,
+  "phase_a": [
+    {
+      "mae": 388.5019026870928,
+      "rmse": 552.643468536187,
+      "r2": 0.29345338251303354,
+      "ckpt": "default",
+      "n_estimators": 4,
+      "y_log": false,
+      "time_s": 7.1940374709665775
+    },
+    {
+      "mae": 387.9302379929486,
+      "rmse": 552.3795179361974,
+      "r2": 0.2941281353264963,
+      "ckpt": "default",
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 11.935778262093663
+    },
+    {
+      "mae": 387.768205584682,
+      "rmse": 552.4818745849207,
+      "r2": 0.29386651312573586,
+      "ckpt": "default",
+      "n_estimators": 16,
+      "y_log": false,
+      "time_s": 23.341850453056395
+    },
+    {
+      "mae": 387.77145940039236,
+      "rmse": 552.5327457877385,
+      "r2": 0.29373646899115347,
+      "ckpt": "default",
+      "n_estimators": 32,
+      "y_log": false,
+      "time_s": 45.314098396804184
+    },
+    {
+      "mae": 382.59360003408614,
+      "rmse": 577.5235310515594,
+      "r2": 0.2284037529856453,
+      "ckpt": "default",
+      "n_estimators": 4,
+      "y_log": true,
+      "time_s": 6.033703556051478
+    },
+    {
+      "mae": 382.18183609950466,
+      "rmse": 577.3146830145066,
+      "r2": 0.2289617119795042,
+      "ckpt": "default",
+      "n_estimators": 8,
+      "y_log": true,
+      "time_s": 11.70614457805641
+    },
+    {
+      "mae": 382.28925493691673,
+      "rmse": 577.42732715993,
+      "r2": 0.2286607966386699,
+      "ckpt": "default",
+      "n_estimators": 16,
+      "y_log": true,
+      "time_s": 23.187016437994316
+    },
+    {
+      "mae": 382.3518018711377,
+      "rmse": 577.6655023491408,
+      "r2": 0.22802434685222484,
+      "ckpt": "default",
+      "n_estimators": 32,
+      "y_log": true,
+      "time_s": 45.4321775350254
+    },
+    {
+      "mae": 390.8221448361089,
+      "rmse": 553.7408687327729,
+      "r2": 0.29064457621051265,
+      "ckpt": "real",
+      "n_estimators": 4,
+      "y_log": false,
+      "time_s": 6.076129914959893
+    },
+    {
+      "mae": 390.1232433280041,
+      "rmse": 552.9364257089669,
+      "r2": 0.29270410101930566,
+      "ckpt": "real",
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 11.746954214060679
+    },
+    {
+      "mae": 390.30488490528376,
+      "rmse": 553.2445117403838,
+      "r2": 0.2919156968426737,
+      "ckpt": "real",
+      "n_estimators": 16,
+      "y_log": false,
+      "time_s": 22.88172251195647
+    },
+    {
+      "mae": 390.0755739493759,
+      "rmse": 553.2817857073243,
+      "r2": 0.2918202815265025,
+      "ckpt": "real",
+      "n_estimators": 32,
+      "y_log": false,
+      "time_s": 45.38325868709944
+    },
+    {
+      "mae": 383.4381660911625,
+      "rmse": 576.9183366976912,
+      "r2": 0.23002003698925866,
+      "ckpt": "real",
+      "n_estimators": 4,
+      "y_log": true,
+      "time_s": 6.052540040109307
+    },
+    {
+      "mae": 383.28235217861766,
+      "rmse": 577.1929376511678,
+      "r2": 0.22928687411895898,
+      "ckpt": "real",
+      "n_estimators": 8,
+      "y_log": true,
+      "time_s": 11.650946145877242
+    },
+    {
+      "mae": 383.33182018087007,
+      "rmse": 577.4861201253459,
+      "r2": 0.2285037149569379,
+      "ckpt": "real",
+      "n_estimators": 16,
+      "y_log": true,
+      "time_s": 22.796657548984513
+    },
+    {
+      "mae": 383.2593150076095,
+      "rmse": 577.2075035098682,
+      "r2": 0.22924797468202218,
+      "ckpt": "real",
+      "n_estimators": 32,
+      "y_log": true,
+      "time_s": 44.98137583397329
+    }
+  ],
+  "phase_b": [
+    {
+      "mae": 391.39362774525654,
+      "rmse": 551.8771456306408,
+      "r2": 0.2954114892919276,
+      "ckpt": "default",
+      "lr": 1e-05,
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 129.66054635983892,
+      "best_ckpt_basename": "checkpoint_27K_best.pth"
+    },
+    {
+      "mae": 391.86625331589687,
+      "rmse": 551.7669706753634,
+      "r2": 0.2956927847199756,
+      "ckpt": "default",
+      "lr": 2e-05,
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 120.9050822199788,
+      "best_ckpt_basename": "checkpoint_27K_best.pth"
+    },
+    {
+      "mae": 392.949653479327,
+      "rmse": 551.8133506085146,
+      "r2": 0.29557437569518186,
+      "ckpt": "default",
+      "lr": 5e-05,
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 112.16837466997094,
+      "best_ckpt_basename": "checkpoint_27K_best.pth"
+    },
+    {
+      "mae": 394.2953345585232,
+      "rmse": 552.3557325806277,
+      "r2": 0.29418892343057446,
+      "ckpt": "real",
+      "lr": 1e-05,
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 130.13212036597542,
+      "best_ckpt_basename": "checkpoint_27K_best.pth"
+    },
+    {
+      "mae": 395.5414929843221,
+      "rmse": 552.7477590846527,
+      "r2": 0.2931866894597903,
+      "ckpt": "real",
+      "lr": 2e-05,
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 120.3109639340546,
+      "best_ckpt_basename": "checkpoint_27K_best.pth"
+    },
+    {
+      "mae": 395.12523479411465,
+      "rmse": 552.5383004665382,
+      "r2": 0.29372226861366557,
+      "ckpt": "real",
+      "lr": 5e-05,
+      "n_estimators": 8,
+      "y_log": false,
+      "time_s": 110.92075338982977,
+      "best_ckpt_basename": "checkpoint_27K_best.pth"
+    }
+  ],
+  "phase_c": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "test": {
+      "mae": 404.63522882616695,
+      "rmse": 574.2396746049067,
+      "r2": 0.2805247780588884
+    },
+    "refit_on": "full_train"
+  },
+  "test": {
+    "mae": 404.63522882616695,
+    "rmse": 574.2396746049067,
+    "r2": 0.2805247780588884
+  },
+  "best_on_val": {
+    "mae": 391.86625331589687,
+    "rmse": 551.7669706753634,
+    "r2": 0.2956927847199756,
+    "ckpt": "default",
+    "lr": 2e-05,
+    "n_estimators": 8,
+    "y_log": false,
+    "time_s": 120.9050822199788,
+    "best_ckpt_basename": "checkpoint_27K_best.pth",
+    "phase": "B"
+  }
+}

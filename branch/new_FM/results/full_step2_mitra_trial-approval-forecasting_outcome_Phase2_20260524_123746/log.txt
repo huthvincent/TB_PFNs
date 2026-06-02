@@ -1,0 +1,35 @@
+[run_id] full_step2_mitra_trial-approval-forecasting_outcome_Phase2_20260524_123746
+[subtask] trial-approval-forecasting  [target] outcome  [task-type] binary  [phase] Phase2
+  train=(9980, 58)  test=(2514, 58)
+  after preprocess: train (9980, 37)  test (2514, 37)
+  preprocessed: train (9980, 78)  test (2514, 78)
+  virt_train (9980, 2, 768)  virt_test (2514, 2, 768)
+Loading Tab2D from autogluon/mitra-classifier (HF) ...
+  Tab2D dim=512, n_layers=12, n_heads=4, task=classification, dim_output=10
+  base params: 75,670,026
+  trainable params: 787,456
+
+--- Initial eval (random-init projections) ---
+  predict 2.1s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=0.5229  test ROC-AUC=0.8026  LogLoss=0.5070
+  ep   4/30  train_loss=0.5089  test ROC-AUC=0.8035  LogLoss=0.5067
+  ep   6/30  train_loss=0.5164  test ROC-AUC=0.8041  LogLoss=0.5061
+  ep   8/30  train_loss=0.5285  test ROC-AUC=0.8044  LogLoss=0.5057
+  ep  10/30  train_loss=0.5147  test ROC-AUC=0.8047  LogLoss=0.5052
+  ep  12/30  train_loss=0.5017  test ROC-AUC=0.8051  LogLoss=0.5046
+  ep  14/30  train_loss=0.4944  test ROC-AUC=0.8057  LogLoss=0.5040
+  ep  16/30  train_loss=0.4960  test ROC-AUC=0.8062  LogLoss=0.5033
+  ep  18/30  train_loss=0.4995  test ROC-AUC=0.8070  LogLoss=0.5026
+  ep  20/30  train_loss=0.4770  test ROC-AUC=0.8069  LogLoss=0.5023
+  ep  22/30  train_loss=0.5162  test ROC-AUC=0.8076  LogLoss=0.5014
+  ep  24/30  train_loss=0.5199  test ROC-AUC=0.8079  LogLoss=0.5009
+  ep  26/30  train_loss=0.5283  test ROC-AUC=0.8076  LogLoss=0.5006
+  ep  28/30  train_loss=0.5354  test ROC-AUC=0.8075  LogLoss=0.5004
+  ep  30/30  train_loss=0.4887  test ROC-AUC=0.8081  LogLoss=0.4997
+
+=== Summary ===
+  Initial   ROC-AUC: 0.7893
+  Best      ROC-AUC: 0.8081  (at epoch 30)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_mitra_trial-approval-forecasting_outcome_Phase2_20260524_123746/metrics.json

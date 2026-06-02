@@ -1,0 +1,15 @@
+[run_id] encode_mesh_medcpt_20260602_023413
+[model] ncbi/MedCPT-Article-Encoder  short=medcpt  pool=cls
+[subtask] serious-adverse-event-forecasting
+Scanning train_x.csv / test_x.csv for condition + intervention MeSH ...
+  (trial,phase,type) keys: 35,832  (condition non-empty 16,214, intervention non-empty 12,536)
+  total (trial,phase,type,term) rows to encode: 61,703  (unique terms: 4,100)
+Loading ncbi/MedCPT-Article-Encoder (bf16) ...
+  params=109,482,240  embed_dim=768  pool=cls  batch_size=256
+  encode done in 3.1s (20197.6/s)
+Mean-pooling per (trial_id, phase, type) ...
+  mean-pooled groups: 28,750 → /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_medcpt.parquet
+
+Done in 5.3s
+  pooled parquet: /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_medcpt.parquet  (68.56 MB)
+  norms: mean=8.480  std=0.110

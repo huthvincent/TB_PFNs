@@ -1,0 +1,38 @@
+[run_id] full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_smi_mol2vec_20260602_001717
+[subtask] serious-adverse-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase2
+[ie-emb] /data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet
+[smiles-emb] /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_mol2vec.parquet
+  train=(6516, 61)  test=(1600, 61)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  I/E d=4096  ie_train (6516, 2, 4096)  ie_test (1600, 2, 4096)
+  trials with non-zero I/E: train 6513/6516, test 1600/1600
+  SMILES d=300  sm_train (6516, 300)  (3535/6516 non-zero), sm_test (844/1600 non-zero)
+Initializing TabICL ...
+  base embed_dim=128  base params: 27,552,258
+  n_virt_cols=3  trainable params: 1,087,360
+
+--- Initial eval (random-init projections) ---
+  predict 0.4s
+
+--- Training: 30 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   2/30  loss=0.3965  test ROC-AUC=0.8695  LogLoss=0.3801  | subset ROC-AUC=0.8690
+  ep   4/30  loss=0.3883  test ROC-AUC=0.8701  LogLoss=0.3792  | subset ROC-AUC=0.8718
+  ep   6/30  loss=0.3383  test ROC-AUC=0.8737  LogLoss=0.3762  | subset ROC-AUC=0.8769
+  ep   8/30  loss=0.3546  test ROC-AUC=0.8749  LogLoss=0.3751  | subset ROC-AUC=0.8791
+  ep  10/30  loss=0.3623  test ROC-AUC=0.8750  LogLoss=0.3765  | subset ROC-AUC=0.8803
+  ep  12/30  loss=0.3624  test ROC-AUC=0.8761  LogLoss=0.3764  | subset ROC-AUC=0.8825
+  ep  14/30  loss=0.3604  test ROC-AUC=0.8773  LogLoss=0.3769  | subset ROC-AUC=0.8834
+  ep  16/30  loss=0.3331  test ROC-AUC=0.8772  LogLoss=0.3794  | subset ROC-AUC=0.8838
+  ep  18/30  loss=0.3451  test ROC-AUC=0.8766  LogLoss=0.3832  | subset ROC-AUC=0.8834
+  ep  20/30  loss=0.2949  test ROC-AUC=0.8757  LogLoss=0.3899  | subset ROC-AUC=0.8829
+  ep  22/30  loss=0.3361  test ROC-AUC=0.8737  LogLoss=0.3997  | subset ROC-AUC=0.8813
+  ep  24/30  loss=0.3060  test ROC-AUC=0.8718  LogLoss=0.4098  | subset ROC-AUC=0.8800
+  ep  26/30  loss=0.2913  test ROC-AUC=0.8706  LogLoss=0.4167  | subset ROC-AUC=0.8793
+  ep  28/30  loss=0.3039  test ROC-AUC=0.8698  LogLoss=0.4224  | subset ROC-AUC=0.8783
+  ep  30/30  loss=0.3239  test ROC-AUC=0.8681  LogLoss=0.4307  | subset ROC-AUC=0.8770
+
+=== Summary ===
+  Initial  ROC-AUC: 0.8528
+  Best     ROC-AUC: 0.8773  (epoch 14)
+  Best (SMILES subset, n=844)  ROC-AUC: 0.8838  (epoch 16)
+  Saved: /data2/zhu11/TB/branch/smiles/results/full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_smi_mol2vec_20260602_001717/metrics.json

@@ -1,0 +1,122 @@
+{
+  "run_id": "fm_bench_ie_mortality-event-prediction_YN_Phase3_20260524_004513",
+  "subtask": "mortality-event-prediction",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase3",
+  "ie_features_path": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 3895,
+  "n_test": 945,
+  "n_features_baseline": 41,
+  "n_features_with_ie": 49,
+  "n_non_numeric_baseline": 17,
+  "multiclass_classes": null,
+  "models": {
+    "tabpfn": {
+      "baseline": {
+        "time_s": 0.6764745790278539,
+        "roc_auc": 0.8239690467437211,
+        "pr_auc": 0.829683598535866,
+        "log_loss": 0.5212451524853772,
+        "accuracy": 0.7365079365079366
+      },
+      "with_ie": {
+        "time_s": 0.3585743309231475,
+        "roc_auc": 0.8455251383122764,
+        "pr_auc": 0.859638212335961,
+        "log_loss": 0.4880598026250401,
+        "accuracy": 0.7502645502645503
+      },
+      "delta": {
+        "roc_auc": 0.021556091568555313,
+        "pr_auc": 0.02995461380009501,
+        "log_loss": -0.033185349860337054,
+        "accuracy": 0.013756613756613745
+      }
+    },
+    "tabicl": {
+      "baseline": {
+        "time_s": 0.49739287595730275,
+        "roc_auc": 0.8256234140042861,
+        "pr_auc": 0.8364461589672451,
+        "log_loss": 0.5241513730934411,
+        "accuracy": 0.7534391534391535
+      },
+      "with_ie": {
+        "time_s": 0.5061281609814614,
+        "roc_auc": 0.8477892452677922,
+        "pr_auc": 0.8642576186547353,
+        "log_loss": 0.4887702578512298,
+        "accuracy": 0.7587301587301587
+      },
+      "delta": {
+        "roc_auc": 0.02216583126350613,
+        "pr_auc": 0.027811459687490214,
+        "log_loss": -0.03538111524221127,
+        "accuracy": 0.005291005291005235
+      }
+    },
+    "tabdpt": {
+      "baseline": {
+        "time_s": 3.4393992500845343,
+        "roc_auc": 0.8123481254987761,
+        "pr_auc": 0.804026225201529,
+        "log_loss": 0.5453366625040746,
+        "accuracy": 0.726984126984127
+      },
+      "with_ie": {
+        "time_s": 3.441664700047113,
+        "roc_auc": 0.8394703334738125,
+        "pr_auc": 0.8562736194830789,
+        "log_loss": 0.4991075037027959,
+        "accuracy": 0.7587301587301587
+      },
+      "delta": {
+        "roc_auc": 0.027122207975036394,
+        "pr_auc": 0.0522473942815499,
+        "log_loss": -0.04622915880127876,
+        "accuracy": 0.031746031746031744
+      }
+    },
+    "mitra": {
+      "baseline": {
+        "time_s": 1.1374519319506362,
+        "roc_auc": 0.806965827676802,
+        "pr_auc": 0.8130468572817353,
+        "log_loss": 0.5308495909664802,
+        "accuracy": 0.7248677248677249
+      },
+      "with_ie": {
+        "time_s": 1.1063312989426777,
+        "roc_auc": 0.8439671637240748,
+        "pr_auc": 0.8560633402825368,
+        "log_loss": 0.48392345424470307,
+        "accuracy": 0.764021164021164
+      },
+      "delta": {
+        "roc_auc": 0.03700133604727274,
+        "pr_auc": 0.04301648300080152,
+        "log_loss": -0.046926136721777145,
+        "accuracy": 0.03915343915343916
+      }
+    }
+  },
+  "args": {
+    "subtask": "mortality-event-prediction",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase3",
+    "ie_features": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt",
+      "mitra"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "mitra_n_estimators": 1,
+    "seed": 0
+  }
+}

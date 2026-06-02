@@ -1,0 +1,143 @@
+{
+  "run_id": "fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_114841",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 7,
+  "n_train": 12608,
+  "n_test": 3162,
+  "n_classes": 2,
+  "n_trainable_params": 3667402,
+  "elapsed_train_s": 130.6,
+  "initial_metrics": {
+    "roc_auc": 0.7724837724279411,
+    "pr_auc": 0.9192130326277084,
+    "log_loss": 0.45229384943956985,
+    "accuracy": 0.7795698924731183
+  },
+  "best_metrics": {
+    "epoch": 3,
+    "roc_auc": 0.7779628224752995,
+    "pr_auc": 0.9215067090937292,
+    "log_loss": 0.44816736925323714,
+    "accuracy": 0.7836812144212524
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.4495004415512085,
+      "roc_auc": 0.7779628224752995,
+      "pr_auc": 0.9215067090937292,
+      "log_loss": 0.44816736925323714,
+      "accuracy": 0.7836812144212524
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4639088809490204,
+      "roc_auc": 0.7731074566030283,
+      "pr_auc": 0.9212937651268623,
+      "log_loss": 0.4522984242420186,
+      "accuracy": 0.7685009487666035
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4222676753997803,
+      "roc_auc": 0.768536017129852,
+      "pr_auc": 0.9187712452725663,
+      "log_loss": 0.458583170377234,
+      "accuracy": 0.7741935483870968
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4414079487323761,
+      "roc_auc": 0.7647894231244025,
+      "pr_auc": 0.9172897720248494,
+      "log_loss": 0.4676805526951206,
+      "accuracy": 0.7688172043010753
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.4356294572353363,
+      "roc_auc": 0.7646699046994868,
+      "pr_auc": 0.9174500679299059,
+      "log_loss": 0.47052515886095536,
+      "accuracy": 0.7662871600253004
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.4327186644077301,
+      "roc_auc": 0.7656030462048131,
+      "pr_auc": 0.9181412679669134,
+      "log_loss": 0.46275202485320066,
+      "accuracy": 0.7716635041113219
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.4075733721256256,
+      "roc_auc": 0.7642625320399159,
+      "pr_auc": 0.9179071111923879,
+      "log_loss": 0.46721783055289384,
+      "accuracy": 0.7643896268184693
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.38720402121543884,
+      "roc_auc": 0.7648009260714013,
+      "pr_auc": 0.9178962695992527,
+      "log_loss": 0.4702656477556847,
+      "accuracy": 0.7621758380771664
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.43431556224823,
+      "roc_auc": 0.7659352288693669,
+      "pr_auc": 0.9181499425399887,
+      "log_loss": 0.4741811445831951,
+      "accuracy": 0.7643896268184693
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.3975011706352234,
+      "roc_auc": 0.7648994025200994,
+      "pr_auc": 0.9174287654839831,
+      "log_loss": 0.47792891307160956,
+      "accuracy": 0.7656546489563567
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet",
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

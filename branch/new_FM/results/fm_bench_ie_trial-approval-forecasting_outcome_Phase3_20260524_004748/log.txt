@@ -1,0 +1,30 @@
+[run_id] fm_bench_ie_trial-approval-forecasting_outcome_Phase3_20260524_004748
+[subtask] trial-approval-forecasting  [target] outcome  [task-type] binary  [phase] Phase3
+[ie_features] /data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet
+  train=(7248, 58)  test=(1913, 58)
+  train target counts: {1: 4084, 0: 3164}
+  test  target counts: {1: 1062, 0: 851}
+  after preprocess: train (7248, 37)  test (1913, 37)  non-numeric cols 13/37
+  +IE: 8 IE cols; NaN cells train=1733 test=449; shapes train (7248, 45)  test (1913, 45)
+
+=== TABPFN ===
+[tabpfn] baseline t=0.9s  roc_auc=0.8106 pr_auc=0.8230 log_loss=0.5207 accuracy=0.7365
+[tabpfn] + IE     t=0.6s  roc_auc=0.8110 pr_auc=0.8239 log_loss=0.5197 accuracy=0.7303
+[tabpfn] Δ roc_auc=+0.0003(better)  pr_auc=+0.0009(better)  log_loss=-0.0010(better)  accuracy=-0.0063(worse)
+
+=== TABICL ===
+[tabicl] baseline t=0.7s  roc_auc=0.8121 pr_auc=0.8242 log_loss=0.5192 accuracy=0.7402
+[tabicl] + IE     t=0.7s  roc_auc=0.8261 pr_auc=0.8429 log_loss=0.5030 accuracy=0.7496
+[tabicl] Δ roc_auc=+0.0140(better)  pr_auc=+0.0187(better)  log_loss=-0.0161(better)  accuracy=+0.0094(better)
+
+=== TABDPT ===
+[tabdpt] baseline t=7.4s  roc_auc=0.8050 pr_auc=0.8211 log_loss=0.5328 accuracy=0.7360
+[tabdpt] + IE     t=7.7s  roc_auc=0.8130 pr_auc=0.8295 log_loss=0.5232 accuracy=0.7433
+[tabdpt] Δ roc_auc=+0.0080(better)  pr_auc=+0.0084(better)  log_loss=-0.0096(better)  accuracy=+0.0073(better)
+
+=== MITRA ===
+[mitra] baseline t=2.3s  roc_auc=0.7921 pr_auc=0.8034 log_loss=0.5385 accuracy=0.7256
+[mitra] + IE     t=2.5s  roc_auc=0.7899 pr_auc=0.8018 log_loss=0.5384 accuracy=0.7167
+[mitra] Δ roc_auc=-0.0021(worse)  pr_auc=-0.0016(worse)  log_loss=-0.0000(better)  accuracy=-0.0089(worse)
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_ie_trial-approval-forecasting_outcome_Phase3_20260524_004748/metrics.json

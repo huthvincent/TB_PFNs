@@ -1,0 +1,151 @@
+{
+  "run_id": "fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_123559",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet",
+    "data/emb_condition_qwen.parquet",
+    "data/emb_intervention_intervention_name_qwen.parquet",
+    "data/emb_brief_title_qwen.parquet",
+    "data/emb_keyword_qwen.parquet",
+    "data/emb_study_design_info_intervention_model_description_qwen.parquet",
+    "data/emb_study_design_info_masking_description_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 11,
+  "n_train": 12608,
+  "n_test": 3162,
+  "n_classes": 2,
+  "n_trainable_params": 6813898,
+  "elapsed_train_s": 155.6,
+  "initial_metrics": {
+    "roc_auc": 0.7724487024675786,
+    "pr_auc": 0.9195704606505997,
+    "log_loss": 0.45201212411149344,
+    "accuracy": 0.7817836812144212
+  },
+  "best_metrics": {
+    "epoch": -1,
+    "roc_auc": 0.7724487024675786,
+    "pr_auc": 0.9195704606505997,
+    "log_loss": 0.45201212411149344,
+    "accuracy": 0.7817836812144212
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.44752782583236694,
+      "roc_auc": 0.7723872598970234,
+      "pr_auc": 0.9193281891882649,
+      "log_loss": 0.4523079535818225,
+      "accuracy": 0.7811511701454775
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.45527440309524536,
+      "roc_auc": 0.7697671130184183,
+      "pr_auc": 0.9191228781171313,
+      "log_loss": 0.45857508041435524,
+      "accuracy": 0.7710309930423782
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.43836894631385803,
+      "roc_auc": 0.7673279271352835,
+      "pr_auc": 0.9177792055130294,
+      "log_loss": 0.4597235503308011,
+      "accuracy": 0.7688172043010753
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.46280327439308167,
+      "roc_auc": 0.7631969663642607,
+      "pr_auc": 0.9154534838820371,
+      "log_loss": 0.4651343957837463,
+      "accuracy": 0.7653383934218849
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.4472290873527527,
+      "roc_auc": 0.7625951658444398,
+      "pr_auc": 0.915641913893419,
+      "log_loss": 0.4646153953271698,
+      "accuracy": 0.7741935483870968
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.41508129239082336,
+      "roc_auc": 0.7591238008879153,
+      "pr_auc": 0.9147475150503618,
+      "log_loss": 0.4661125127197302,
+      "accuracy": 0.7681846932321316
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.4154399335384369,
+      "roc_auc": 0.7526294053481409,
+      "pr_auc": 0.9125553365338887,
+      "log_loss": 0.47687635872110884,
+      "accuracy": 0.7621758380771664
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.3981757164001465,
+      "roc_auc": 0.7487447759787045,
+      "pr_auc": 0.9111415079607617,
+      "log_loss": 0.4803865751562171,
+      "accuracy": 0.7618595825426945
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.43635469675064087,
+      "roc_auc": 0.7447063999030386,
+      "pr_auc": 0.909331361714727,
+      "log_loss": 0.49331682650766207,
+      "accuracy": 0.756483238456673
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.38048404455184937,
+      "roc_auc": 0.7476943605259261,
+      "pr_auc": 0.9104680491564541,
+      "log_loss": 0.49244257039270345,
+      "accuracy": 0.7647058823529411
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet,data/emb_condition_qwen.parquet,data/emb_intervention_intervention_name_qwen.parquet,data/emb_brief_title_qwen.parquet,data/emb_keyword_qwen.parquet,data/emb_study_design_info_intervention_model_description_qwen.parquet,data/emb_study_design_info_masking_description_qwen.parquet",
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

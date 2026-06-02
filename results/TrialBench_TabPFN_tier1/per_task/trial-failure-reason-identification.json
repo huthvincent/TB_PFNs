@@ -1,0 +1,165 @@
+{
+  "task": "trial-failure-reason-identification",
+  "type": "multiclass",
+  "target": "failure_reason",
+  "n_classes": 4,
+  "n_train_full": 16649,
+  "n_train_p": 13319,
+  "n_val": 3330,
+  "n_test": 4120,
+  "phase_a": [
+    {
+      "accuracy": 0.5021021021021022,
+      "log_loss": 1.08086895286692,
+      "f1_macro": 0.2767728753360468,
+      "ckpt": "default",
+      "n_estimators": 4,
+      "time_s": 2.7748095681890845
+    },
+    {
+      "accuracy": 0.4966966966966967,
+      "log_loss": 1.0799231853367317,
+      "f1_macro": 0.2766277947100432,
+      "ckpt": "default",
+      "n_estimators": 8,
+      "time_s": 2.6731569189578295
+    },
+    {
+      "accuracy": 0.4963963963963964,
+      "log_loss": 1.0797734379427615,
+      "f1_macro": 0.2758542917775409,
+      "ckpt": "default",
+      "n_estimators": 16,
+      "time_s": 5.1149844960309565
+    },
+    {
+      "accuracy": 0.4984984984984985,
+      "log_loss": 1.0794037893177046,
+      "f1_macro": 0.27648103486136993,
+      "ckpt": "default",
+      "n_estimators": 32,
+      "time_s": 10.015699189854786
+    },
+    {
+      "accuracy": 0.5,
+      "log_loss": 1.080745253107125,
+      "f1_macro": 0.27245676959914816,
+      "ckpt": "default-2",
+      "n_estimators": 4,
+      "time_s": 1.5362281899433583
+    },
+    {
+      "accuracy": 0.4981981981981982,
+      "log_loss": 1.0797717499077266,
+      "f1_macro": 0.2783412517692634,
+      "ckpt": "default-2",
+      "n_estimators": 8,
+      "time_s": 2.7377460040152073
+    },
+    {
+      "accuracy": 0.4963963963963964,
+      "log_loss": 1.0800497674994731,
+      "f1_macro": 0.27568387014659995,
+      "ckpt": "default-2",
+      "n_estimators": 16,
+      "time_s": 5.132071129977703
+    },
+    {
+      "accuracy": 0.4993993993993994,
+      "log_loss": 1.0798237748797308,
+      "f1_macro": 0.27820615071048327,
+      "ckpt": "default-2",
+      "n_estimators": 32,
+      "time_s": 10.052464216947556
+    }
+  ],
+  "phase_b": [
+    {
+      "accuracy": 0.5021021021021022,
+      "log_loss": 1.08086895286692,
+      "f1_macro": 0.2767728753360468,
+      "ckpt": "default",
+      "lr": 1e-05,
+      "n_estimators": 4,
+      "time_s": 19.647460690001026,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.5021021021021022,
+      "log_loss": 1.08086895286692,
+      "f1_macro": 0.2767728753360468,
+      "ckpt": "default",
+      "lr": 2e-05,
+      "n_estimators": 4,
+      "time_s": 19.67278458806686,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.5021021021021022,
+      "log_loss": 1.08086895286692,
+      "f1_macro": 0.2767728753360468,
+      "ckpt": "default",
+      "lr": 5e-05,
+      "n_estimators": 4,
+      "time_s": 19.754876020131633,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.5,
+      "log_loss": 1.080745253107125,
+      "f1_macro": 0.27245676959914816,
+      "ckpt": "default-2",
+      "lr": 1e-05,
+      "n_estimators": 4,
+      "time_s": 19.752586666028947,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.5,
+      "log_loss": 1.080745253107125,
+      "f1_macro": 0.27245676959914816,
+      "ckpt": "default-2",
+      "lr": 2e-05,
+      "n_estimators": 4,
+      "time_s": 19.682863062014803,
+      "no_improvement": true
+    },
+    {
+      "accuracy": 0.5,
+      "log_loss": 1.080745253107125,
+      "f1_macro": 0.27245676959914816,
+      "ckpt": "default-2",
+      "lr": 5e-05,
+      "n_estimators": 4,
+      "time_s": 19.631826382130384,
+      "no_improvement": true
+    }
+  ],
+  "phase_c": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "test": {
+      "accuracy": 0.49223300970873785,
+      "log_loss": 1.085752693844651,
+      "f1_macro": 0.2688700903944066
+    },
+    "refit_on": "full_train"
+  },
+  "test": {
+    "accuracy": 0.49223300970873785,
+    "log_loss": 1.085752693844651,
+    "f1_macro": 0.2688700903944066
+  },
+  "best_on_val": {
+    "accuracy": 0.5021021021021022,
+    "log_loss": 1.08086895286692,
+    "f1_macro": 0.2767728753360468,
+    "ckpt": "default",
+    "n_estimators": 4,
+    "time_s": 2.7748095681890845,
+    "phase": "A"
+  }
+}

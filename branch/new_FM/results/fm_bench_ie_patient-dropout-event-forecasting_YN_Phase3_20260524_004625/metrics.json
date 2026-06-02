@@ -1,0 +1,122 @@
+{
+  "run_id": "fm_bench_ie_patient-dropout-event-forecasting_YN_Phase3_20260524_004625",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase3",
+  "ie_features_path": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 9129,
+  "n_test": 2332,
+  "n_features_baseline": 38,
+  "n_features_with_ie": 46,
+  "n_non_numeric_baseline": 14,
+  "multiclass_classes": null,
+  "models": {
+    "tabpfn": {
+      "baseline": {
+        "time_s": 1.070754159009084,
+        "roc_auc": 0.851353483267111,
+        "pr_auc": 0.9824774722948143,
+        "log_loss": 0.22970568341584516,
+        "accuracy": 0.9155231560891939
+      },
+      "with_ie": {
+        "time_s": 0.7265521340304986,
+        "roc_auc": 0.8570092425857604,
+        "pr_auc": 0.9830300151981142,
+        "log_loss": 0.22586358087778788,
+        "accuracy": 0.9163807890222985
+      },
+      "delta": {
+        "roc_auc": 0.005655759318649367,
+        "pr_auc": 0.0005525429032998685,
+        "log_loss": -0.0038421025380572793,
+        "accuracy": 0.0008576329331045907
+      }
+    },
+    "tabicl": {
+      "baseline": {
+        "time_s": 0.7879741510841995,
+        "roc_auc": 0.8591762131316386,
+        "pr_auc": 0.9837020028845156,
+        "log_loss": 0.22351959636114271,
+        "accuracy": 0.9180960548885078
+      },
+      "with_ie": {
+        "time_s": 0.8618669649586082,
+        "roc_auc": 0.8627145841737904,
+        "pr_auc": 0.9839763796783314,
+        "log_loss": 0.22143020487213913,
+        "accuracy": 0.9198113207547169
+      },
+      "delta": {
+        "roc_auc": 0.003538371042151822,
+        "pr_auc": 0.0002743767938158115,
+        "log_loss": -0.0020893914890035836,
+        "accuracy": 0.0017152658662091813
+      }
+    },
+    "tabdpt": {
+      "baseline": {
+        "time_s": 8.868589752004482,
+        "roc_auc": 0.839026654977271,
+        "pr_auc": 0.9806400168458602,
+        "log_loss": 0.23535527661614047,
+        "accuracy": 0.9146655231560892
+      },
+      "with_ie": {
+        "time_s": 9.310773725970648,
+        "roc_auc": 0.8456278580234253,
+        "pr_auc": 0.9817611462125871,
+        "log_loss": 0.2299914896194075,
+        "accuracy": 0.9168096054888508
+      },
+      "delta": {
+        "roc_auc": 0.0066012030461543025,
+        "pr_auc": 0.001121129366726925,
+        "log_loss": -0.005363786996732983,
+        "accuracy": 0.002144082332761643
+      }
+    },
+    "mitra": {
+      "baseline": {
+        "time_s": 3.3098034630529583,
+        "roc_auc": 0.8457236419529104,
+        "pr_auc": 0.9814265330765448,
+        "log_loss": 0.2340639240981592,
+        "accuracy": 0.9112349914236707
+      },
+      "with_ie": {
+        "time_s": 3.6958197840722278,
+        "roc_auc": 0.847720455165233,
+        "pr_auc": 0.9812870093529416,
+        "log_loss": 0.23398563280577,
+        "accuracy": 0.9112349914236707
+      },
+      "delta": {
+        "roc_auc": 0.00199681321232259,
+        "pr_auc": -0.00013952372360326315,
+        "log_loss": -7.829129238920429e-05,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "args": {
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase3",
+    "ie_features": "/data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet",
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt",
+      "mitra"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "mitra_n_estimators": 1,
+    "seed": 0
+  }
+}

@@ -1,0 +1,17 @@
+[run_id] encode_smiles_molformer_20260601_214951
+[model] ibm/MoLFormer-XL-both-10pct  short=molformer  pool=pooler
+[subtask] serious-adverse-event-forecasting
+Scanning train_x.csv / test_x.csv for `smiless` column ...
+  17,916 (trial_id, phase) pairs  (9,612 non-empty, 53.7%)
+  total unique (trial_id, phase, smiles) triples to encode: 14,966
+  encoding 14,966 SMILES strings
+Loading ibm/MoLFormer-XL-both-10pct ...
+  params=44,375,040  dtype=bf16  batch_size=128
+  embed_dim (detected): 768
+  encode done in 4.3s (3520.0/s)
+Mean-pooling per (trial_id, phase) ...
+  mean-pooled groups: 9,612 → /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_molformer.parquet
+
+Done in 6.6s
+  pooled parquet: /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_molformer.parquet  (24.67 MB)
+  norms: mean=16.562  std=1.472

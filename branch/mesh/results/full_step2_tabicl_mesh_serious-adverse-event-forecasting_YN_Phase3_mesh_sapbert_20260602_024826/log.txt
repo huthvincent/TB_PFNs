@@ -1,0 +1,33 @@
+[run_id] full_step2_tabicl_mesh_serious-adverse-event-forecasting_YN_Phase3_mesh_sapbert_20260602_024826
+[subtask] serious-adverse-event-forecasting  [phase] Phase3  [ie] /data2/zhu11/TB/branch/mesh/data/ie_embeddings_qwen3.parquet  [mesh] /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_sapbert.parquet
+  train=(3895, 61)  test=(945, 61)
+  preprocessed: train (3895, 103)  test (945, 103)
+  I/E d=4096  non-zero test 945/945
+  MeSH d=768  test condition non-empty 882/945  intervention non-empty 675/945
+Initializing TabICL ...
+  n_virt_cols=4  trainable params: 1,245,696
+
+--- Initial eval ---
+
+--- Training: 30 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   2/30  loss=0.2922  test ROC-AUC=0.9111  | subset=0.9267
+  ep   4/30  loss=0.2339  test ROC-AUC=0.9054  | subset=0.9196
+  ep   6/30  loss=0.2345  test ROC-AUC=0.9034  | subset=0.9176
+  ep   8/30  loss=0.1693  test ROC-AUC=0.9009  | subset=0.9149
+  ep  10/30  loss=0.1786  test ROC-AUC=0.9016  | subset=0.9151
+  ep  12/30  loss=0.1543  test ROC-AUC=0.9012  | subset=0.9140
+  ep  14/30  loss=0.1500  test ROC-AUC=0.8994  | subset=0.9111
+  ep  16/30  loss=0.1276  test ROC-AUC=0.8979  | subset=0.9089
+  ep  18/30  loss=0.1344  test ROC-AUC=0.8959  | subset=0.9080
+  ep  20/30  loss=0.0983  test ROC-AUC=0.8933  | subset=0.9068
+  ep  22/30  loss=0.1080  test ROC-AUC=0.8890  | subset=0.9028
+  ep  24/30  loss=0.1054  test ROC-AUC=0.8844  | subset=0.8993
+  ep  26/30  loss=0.0476  test ROC-AUC=0.8811  | subset=0.8963
+  ep  28/30  loss=0.0770  test ROC-AUC=0.8798  | subset=0.8953
+  ep  30/30  loss=0.0450  test ROC-AUC=0.8802  | subset=0.8954
+
+=== Summary ===
+  Initial  ROC-AUC: 0.9001
+  Best     ROC-AUC: 0.9111  (epoch 2)
+  Best (interv subset, n=675)  ROC-AUC: 0.9267  (epoch 2)
+  Saved: /data2/zhu11/TB/branch/mesh/results/full_step2_tabicl_mesh_serious-adverse-event-forecasting_YN_Phase3_mesh_sapbert_20260602_024826/metrics.json

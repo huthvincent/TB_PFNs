@@ -1,0 +1,30 @@
+{
+  "run_id": "encode_ie_qwen3_20260601_230523",
+  "model": "Qwen/Qwen3-Embedding-8B",
+  "n_criteria": 300,
+  "n_pooled_groups": 58,
+  "embed_dim": 4096,
+  "max_len": 512,
+  "batch_size": 50,
+  "dtype_compute": "bfloat16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 1.91,
+  "elapsed_encode_s": 0.0,
+  "throughput_per_s": null,
+  "norm_mean": 131.66761779785156,
+  "norm_std": 2.3960330486297607,
+  "n_nan_rows": 0,
+  "args": {
+    "batch_size": 50,
+    "device": "cuda",
+    "limit": 300,
+    "resume": "results/encode_ie_qwen3_20260601_230523/",
+    "checkpoint_every": 50
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet",
+    "per_criterion_npy": "results/encode_ie_qwen3_20260601_230523/per_criterion_embeddings.npy",
+    "per_criterion_meta": "results/encode_ie_qwen3_20260601_230523/per_criterion_metadata.parquet"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "ablate_ie_patient-dropout-event-forecasting_YN_20260520_190146",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "ie_features_path": "results/criterion_head_20260520_155333/ie_features.parquet",
+  "n_train": 5503,
+  "n_test": 1364,
+  "n_features_baseline": 39,
+  "n_features_with_ie": 47,
+  "baseline": {
+    "time_s": 2.210644209990278,
+    "roc_auc": 0.7405385725683803,
+    "pr_auc": 0.8772263812550688,
+    "log_loss": 0.5259867658980824,
+    "accuracy": 0.7294721407624634
+  },
+  "with_ie": {
+    "time_s": 1.742676417925395,
+    "roc_auc": 0.7624489068717191,
+    "pr_auc": 0.8848904422276259,
+    "log_loss": 0.5123770780655292,
+    "accuracy": 0.7338709677419355
+  },
+  "delta": {
+    "roc_auc": 0.021910334303338774,
+    "pr_auc": 0.0076640609725571185,
+    "log_loss": -0.013609687832553119,
+    "accuracy": 0.004398826979472137
+  },
+  "args": {
+    "ie_features": "results/criterion_head_20260520_155333/ie_features.parquet",
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase4",
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

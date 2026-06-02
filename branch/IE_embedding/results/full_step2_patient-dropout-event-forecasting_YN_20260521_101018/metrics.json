@@ -1,0 +1,125 @@
+{
+  "run_id": "full_step2_patient-dropout-event-forecasting_YN_20260521_101018",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "n_train": 9129,
+  "n_test": 2332,
+  "n_classes": 2,
+  "n_baseline_features": 96,
+  "n_virtual_cols": 2,
+  "n_base_params": 10718218,
+  "n_trainable_params": 373258,
+  "elapsed_train_s": 83.0,
+  "initial_metrics": {
+    "roc_auc": 0.8493870955382719,
+    "pr_auc": 0.9823791787112677,
+    "log_loss": 0.2306523748531641,
+    "accuracy": 0.9129502572898799
+  },
+  "best_metrics": {
+    "roc_auc": 0.8493870955382719,
+    "pr_auc": 0.9823791787112677,
+    "log_loss": 0.2306523748531641,
+    "accuracy": 0.9129502572898799,
+    "epoch": -1
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.1799585074186325,
+      "roc_auc": 0.84597380703933,
+      "pr_auc": 0.9817998396467553,
+      "log_loss": 0.23152124203983102,
+      "accuracy": 0.9129502572898799
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.26099711656570435,
+      "roc_auc": 0.847786940480993,
+      "pr_auc": 0.982126396326175,
+      "log_loss": 0.23114107507355344,
+      "accuracy": 0.9112349914236707
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.21678464114665985,
+      "roc_auc": 0.8454362901644554,
+      "pr_auc": 0.9814604206650641,
+      "log_loss": 0.23201100402439204,
+      "accuracy": 0.9120926243567753
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.2730974853038788,
+      "roc_auc": 0.8441426436815285,
+      "pr_auc": 0.9806530521323562,
+      "log_loss": 0.23195998864590395,
+      "accuracy": 0.9116638078902229
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.23012252151966095,
+      "roc_auc": 0.8470116540870438,
+      "pr_auc": 0.9806477281511686,
+      "log_loss": 0.2304372905247219,
+      "accuracy": 0.910377358490566
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.22436968982219696,
+      "roc_auc": 0.8474883199949516,
+      "pr_auc": 0.9806187778185109,
+      "log_loss": 0.23041523103052025,
+      "accuracy": 0.9120926243567753
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.2153882086277008,
+      "roc_auc": 0.8459884563461924,
+      "pr_auc": 0.9804783561475714,
+      "log_loss": 0.23145296617715852,
+      "accuracy": 0.9129502572898799
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.23445776104927063,
+      "roc_auc": 0.8441291212444247,
+      "pr_auc": 0.979909104366177,
+      "log_loss": 0.23258251702257446,
+      "accuracy": 0.9116638078902229
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.26733946800231934,
+      "roc_auc": 0.8427227877856333,
+      "pr_auc": 0.9797097805382107,
+      "log_loss": 0.2341326343989331,
+      "accuracy": 0.9108061749571184
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.20399941504001617,
+      "roc_auc": 0.8400881662899164,
+      "pr_auc": 0.9795841771904841,
+      "log_loss": 0.23596881265527736,
+      "accuracy": 0.9099485420240138
+    }
+  ],
+  "args": {
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase3",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

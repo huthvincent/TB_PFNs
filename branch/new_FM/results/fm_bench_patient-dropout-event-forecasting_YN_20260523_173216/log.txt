@@ -1,0 +1,21 @@
+[run_id] fm_bench_patient-dropout-event-forecasting_YN_20260523_173216
+[subtask] patient-dropout-event-forecasting  [target] Y/N  [task-type] binary
+  phases: ['Phase1', 'Phase2', 'Phase3', 'Phase4']
+Loading splits ...
+  train=(30561, 61)  test=(7741, 61)
+  train target counts: {1: 24057, 0: 6504}
+  test  target counts: {1: 6033, 0: 1708}
+  after preprocess: train (30561, 38)  test (7741, 38)
+  non-numeric columns (will be ordinal-encoded for ICL/DPT): 14 / 38
+  numeric array: train (30561, 38)  test (7741, 38)  NaN train=16648 test=4274
+
+--- TabPFN-v2.5 ---
+[tabpfn] time=4.9s  roc_auc=0.8126 pr_auc=0.9399 log_loss=0.4136 accuracy=0.8017
+
+--- TabICLv2 ---
+[tabicl] time=3.9s  roc_auc=0.8128 pr_auc=0.9403 log_loss=0.4137 accuracy=0.8035
+
+--- TabDPT-v1.1 ---
+[tabdpt] time=30.3s  roc_auc=0.8019 pr_auc=0.9359 log_loss=0.4236 accuracy=0.7941
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_patient-dropout-event-forecasting_YN_20260523_173216/metrics.json

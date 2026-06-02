@@ -1,0 +1,31 @@
+{
+  "run_id": "encode_mesh_sapbert_20260602_023323",
+  "model": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+  "model_short": "sapbert",
+  "pool_strategy": "cls",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 35832,
+  "n_terms_rows": 100,
+  "n_pooled_groups": 49,
+  "embed_dim": 768,
+  "max_len": 64,
+  "batch_size": 64,
+  "dtype_compute": "bfloat16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 8.79,
+  "elapsed_encode_s": 0.04,
+  "throughput_per_s": 2233.2,
+  "norm_mean": 15.724797248840332,
+  "norm_std": 0.18956470489501953,
+  "args": {
+    "model": "sapbert",
+    "subtask": "serious-adverse-event-forecasting",
+    "batch_size": 64,
+    "device": "cuda",
+    "limit": 100
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/mesh/data/mesh_embeddings_sapbert.parquet"
+  }
+}

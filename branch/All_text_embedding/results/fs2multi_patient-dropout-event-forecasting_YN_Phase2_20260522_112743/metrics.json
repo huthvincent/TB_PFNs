@@ -1,0 +1,139 @@
+{
+  "run_id": "fs2multi_patient-dropout-event-forecasting_YN_Phase2_20260522_112743",
+  "subtask": "patient-dropout-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phases": "Phase2",
+  "virt_embs": [
+    "data/emb_inclusion_medcpt.parquet",
+    "data/emb_exclusion_medcpt.parquet",
+    "data/emb_brief_summary_textblock_medcpt.parquet",
+    "data/emb_detailed_description_textblock_qwen.parquet",
+    "data/emb_intervention_description_qwen.parquet"
+  ],
+  "emb_dims": [
+    768,
+    768,
+    768,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 5,
+  "n_train": 12608,
+  "n_test": 3162,
+  "n_classes": 2,
+  "n_trainable_params": 2094154,
+  "elapsed_train_s": 120.1,
+  "initial_metrics": {
+    "roc_auc": 0.772515195112426,
+    "pr_auc": 0.9192740326626628,
+    "log_loss": 0.45227478067106,
+    "accuracy": 0.7802024035420619
+  },
+  "best_metrics": {
+    "epoch": 3,
+    "roc_auc": 0.7726624889459485,
+    "pr_auc": 0.919265311826245,
+    "log_loss": 0.4508951530722789,
+    "accuracy": 0.7868437697659709
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 0.4506252706050873,
+      "roc_auc": 0.7726624889459485,
+      "pr_auc": 0.919265311826245,
+      "log_loss": 0.4508951530722789,
+      "accuracy": 0.7868437697659709
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.46171092987060547,
+      "roc_auc": 0.7644300261706072,
+      "pr_auc": 0.916438795462427,
+      "log_loss": 0.45904370219271123,
+      "accuracy": 0.7703984819734345
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4309121072292328,
+      "roc_auc": 0.7684114486306444,
+      "pr_auc": 0.9165860311513603,
+      "log_loss": 0.45785352656018635,
+      "accuracy": 0.7691334598355472
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4473778009414673,
+      "roc_auc": 0.7621347674048006,
+      "pr_auc": 0.9133286565082595,
+      "log_loss": 0.46678385277889756,
+      "accuracy": 0.7694497153700189
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.44213083386421204,
+      "roc_auc": 0.7261541103115783,
+      "pr_auc": 0.9003608420123755,
+      "log_loss": 0.5119891052647629,
+      "accuracy": 0.7185325743200506
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.4490596354007721,
+      "roc_auc": 0.7526041549766799,
+      "pr_auc": 0.9107359644446802,
+      "log_loss": 0.4693461945122291,
+      "accuracy": 0.7643896268184693
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.425900399684906,
+      "roc_auc": 0.7605016294906383,
+      "pr_auc": 0.9150322954216799,
+      "log_loss": 0.4659643215702762,
+      "accuracy": 0.767235926628716
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.39323267340660095,
+      "roc_auc": 0.7570159559902859,
+      "pr_auc": 0.9142615436629109,
+      "log_loss": 0.46977719381657473,
+      "accuracy": 0.7716635041113219
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.4439772963523865,
+      "roc_auc": 0.7593291705757983,
+      "pr_auc": 0.9150386917806189,
+      "log_loss": 0.4698043682148425,
+      "accuracy": 0.7707147375079064
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.42089179158210754,
+      "roc_auc": 0.7569601246133888,
+      "pr_auc": 0.914139775211546,
+      "log_loss": 0.472991895995598,
+      "accuracy": 0.7669196710942442
+    }
+  ],
+  "args": {
+    "virt_embs": "data/emb_inclusion_medcpt.parquet,data/emb_exclusion_medcpt.parquet,data/emb_brief_summary_textblock_medcpt.parquet,data/emb_detailed_description_textblock_qwen.parquet,data/emb_intervention_description_qwen.parquet",
+    "subtask": "patient-dropout-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phases": "Phase2",
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "n_bins": 10,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

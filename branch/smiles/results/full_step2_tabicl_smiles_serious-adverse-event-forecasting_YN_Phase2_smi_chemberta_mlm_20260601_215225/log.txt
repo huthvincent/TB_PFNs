@@ -1,0 +1,25 @@
+[run_id] full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_smi_chemberta_mlm_20260601_215225
+[subtask] serious-adverse-event-forecasting  [target] Y/N  [task-type] binary  [phase] Phase2
+[ie-emb] /data2/zhu11/TB/branch/smiles/data/ie_embeddings_qwen3.parquet
+[smiles-emb] /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mlm.parquet
+  train=(6516, 61)  test=(1600, 61)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  I/E d=4096  ie_train (6516, 2, 4096)  ie_test (1600, 2, 4096)
+  trials with non-zero I/E: train 6/6516, test 1/1600
+  SMILES d=384  sm_train (6516, 384)  (3535/6516 non-zero), sm_test (844/1600 non-zero)
+Initializing TabICL ...
+  base embed_dim=128  base params: 27,552,258
+  n_virt_cols=3  trainable params: 1,098,112
+
+--- Initial eval (random-init projections) ---
+  predict 0.6s
+
+--- Training: 2 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   1/2  loss=0.4457  test ROC-AUC=0.8022  LogLoss=0.4589  | subset ROC-AUC=0.8010
+  ep   2/2  loss=0.4427  test ROC-AUC=0.8027  LogLoss=0.4562  | subset ROC-AUC=0.8001
+
+=== Summary ===
+  Initial  ROC-AUC: 0.8031
+  Best     ROC-AUC: 0.8031  (epoch -1)
+  Best (SMILES subset, n=844)  ROC-AUC: 0.8010  (epoch 1)
+  Saved: /data2/zhu11/TB/branch/smiles/results/full_step2_tabicl_smiles_serious-adverse-event-forecasting_YN_Phase2_smi_chemberta_mlm_20260601_215225/metrics.json

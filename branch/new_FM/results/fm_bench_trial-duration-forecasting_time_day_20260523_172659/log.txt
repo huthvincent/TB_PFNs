@@ -1,0 +1,21 @@
+[run_id] fm_bench_trial-duration-forecasting_time_day_20260523_172659
+[subtask] trial-duration-forecasting  [target] time_day  [task-type] regression
+  phases: ['Phase1', 'Phase2', 'Phase3', 'Phase4']
+Loading splits ...
+  train=(34188, 51)  test=(8667, 51)
+  train target mean=752.9 std=670.5
+  test  target mean=783.7 std=677.0
+  after preprocess: train (34188, 37)  test (8667, 37)
+  non-numeric columns (will be ordinal-encoded for ICL/DPT): 14 / 37
+  numeric array: train (34188, 37)  test (8667, 37)  NaN train=29995 test=6316
+
+--- TabPFN-v2.5 ---
+[tabpfn] time=5.7s  mae=401.6903 rmse=579.1644 r2=0.2681
+
+--- TabICLv2 ---
+[tabicl] time=4.1s  mae=400.9830 rmse=571.8046 r2=0.2866
+
+--- TabDPT-v1.1 ---
+[tabdpt] time=288.9s  mae=407.7870 rmse=576.6371 r2=0.2745
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_trial-duration-forecasting_time_day_20260523_172659/metrics.json

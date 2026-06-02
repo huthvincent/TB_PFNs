@@ -1,0 +1,30 @@
+[run_id] fm_bench_ie_trial-duration-forecasting_time_day_Phase3_20260524_005238
+[subtask] trial-duration-forecasting  [target] time_day  [task-type] regression  [phase] Phase3
+[ie_features] /data2/zhu11/TB/branch/IE_embedding/results/criterion_head_20260520_155333/ie_features.parquet
+  train=(7406, 51)  test=(1698, 51)
+  train target mean=852.7 std=673.0
+  test  target mean=924.8 std=692.2
+  after preprocess: train (7406, 36)  test (1698, 36)  non-numeric cols 13/36
+  +IE: 8 IE cols; NaN cells train=1384 test=165; shapes train (7406, 44)  test (1698, 44)
+
+=== TABPFN ===
+[tabpfn] baseline t=1.0s  mae=490.6362 rmse=661.8716 r2=0.0852
+[tabpfn] + IE     t=0.7s  mae=461.6485 rmse=628.4081 r2=0.1753
+[tabpfn] Δ mae=-28.9877(better)  rmse=-33.4635(better)  r2=+0.0902(better)
+
+=== TABICL ===
+[tabicl] baseline t=0.7s  mae=488.7477 rmse=655.9822 r2=0.1014
+[tabicl] + IE     t=0.7s  mae=459.3704 rmse=624.8434 r2=0.1847
+[tabicl] Δ mae=-29.3773(better)  rmse=-31.1388(better)  r2=+0.0833(better)
+
+=== TABDPT ===
+[tabdpt] baseline t=57.0s  mae=494.1894 rmse=660.4215 r2=0.0892
+[tabdpt] + IE     t=58.3s  mae=465.5732 rmse=627.5784 r2=0.1775
+[tabdpt] Δ mae=-28.6162(better)  rmse=-32.8431(better)  r2=+0.0883(better)
+
+=== MITRA ===
+[mitra] baseline t=2.4s  mae=514.7686 rmse=679.3990 r2=0.0361
+[mitra] + IE     t=2.7s  mae=481.7345 rmse=642.8308 r2=0.1371
+[mitra] Δ mae=-33.0341(better)  rmse=-36.5682(better)  r2=+0.1010(better)
+
+Saved: /data2/zhu11/TB/branch/new_FM/results/fm_bench_ie_trial-duration-forecasting_time_day_Phase3_20260524_005238/metrics.json

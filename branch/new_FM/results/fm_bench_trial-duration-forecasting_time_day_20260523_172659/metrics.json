@@ -1,0 +1,49 @@
+{
+  "run_id": "fm_bench_trial-duration-forecasting_time_day_20260523_172659",
+  "subtask": "trial-duration-forecasting",
+  "target": "time_day",
+  "task_type": "regression",
+  "n_train": 34188,
+  "n_test": 8667,
+  "n_features_after_preprocess": 37,
+  "n_non_numeric_columns": 14,
+  "models": {
+    "tabpfn": {
+      "time_s": 5.7157009890070185,
+      "n_estimators": 2,
+      "mae": 401.6902770996094,
+      "rmse": 579.164376494273,
+      "r2": 0.26813143491744995
+    },
+    "tabicl": {
+      "time_s": 4.1092503510881215,
+      "n_estimators": 8,
+      "mae": 400.9830322265625,
+      "rmse": 571.8046268175871,
+      "r2": 0.28661370277404785
+    },
+    "tabdpt": {
+      "time_s": 288.91351272398606,
+      "context_size": 2048,
+      "mae": 407.7869873046875,
+      "rmse": 576.6371259292971,
+      "r2": 0.2745046019554138
+    }
+  },
+  "args": {
+    "subtask": "trial-duration-forecasting",
+    "target": "time_day",
+    "task_type": "regression",
+    "phases": null,
+    "models": [
+      "tabpfn",
+      "tabicl",
+      "tabdpt"
+    ],
+    "tabpfn_n_estimators": 2,
+    "tabicl_n_estimators": 8,
+    "tabdpt_context_size": 2048,
+    "tabdpt_compile": false,
+    "seed": 0
+  }
+}

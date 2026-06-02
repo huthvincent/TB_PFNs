@@ -1,0 +1,31 @@
+{
+  "run_id": "encode_mesh_pubmedbert_20260602_023438",
+  "model": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+  "model_short": "pubmedbert",
+  "pool_strategy": "mean",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 35832,
+  "n_terms_rows": 61703,
+  "n_pooled_groups": 28750,
+  "embed_dim": 768,
+  "max_len": 64,
+  "batch_size": 256,
+  "dtype_compute": "bfloat16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 5.4,
+  "elapsed_encode_s": 3.05,
+  "throughput_per_s": 20245.5,
+  "norm_mean": 14.197078704833984,
+  "norm_std": 0.1865549087524414,
+  "args": {
+    "model": "pubmedbert",
+    "subtask": "serious-adverse-event-forecasting",
+    "batch_size": 256,
+    "device": "cuda",
+    "limit": null
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/mesh/data/mesh_embeddings_pubmedbert.parquet"
+  }
+}

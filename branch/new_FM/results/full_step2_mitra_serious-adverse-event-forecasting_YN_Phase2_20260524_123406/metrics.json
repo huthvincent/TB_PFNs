@@ -1,0 +1,164 @@
+{
+  "run_id": "full_step2_mitra_serious-adverse-event-forecasting_YN_Phase2_20260524_123406",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase2",
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_baseline_features": 101,
+  "n_virtual_cols": 2,
+  "n_base_params": 75670026,
+  "n_trainable_params": 787456,
+  "elapsed_train_s": 43.0,
+  "initial_metrics": {
+    "roc_auc": 0.7996935440355389,
+    "pr_auc": 0.9136806506687748,
+    "log_loss": 0.4654229993183736,
+    "accuracy": 0.793125
+  },
+  "best_metrics": {
+    "epoch": 30,
+    "roc_auc": 0.866748292146448,
+    "pr_auc": 0.9452926619009855,
+    "log_loss": 0.38488580831645025,
+    "accuracy": 0.821875
+  },
+  "history": [
+    {
+      "epoch": 2,
+      "train_loss": 0.46800389885902405,
+      "roc_auc": 0.8043531987371049,
+      "pr_auc": 0.9155900051639234,
+      "log_loss": 0.4566761092463203,
+      "accuracy": 0.78375
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.47218748927116394,
+      "roc_auc": 0.8011496217699069,
+      "pr_auc": 0.9148712398312815,
+      "log_loss": 0.46474419049806664,
+      "accuracy": 0.78625
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.463682621717453,
+      "roc_auc": 0.8040226464367286,
+      "pr_auc": 0.9157783774388535,
+      "log_loss": 0.462411520325736,
+      "accuracy": 0.785
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.48716992139816284,
+      "roc_auc": 0.816202623411341,
+      "pr_auc": 0.9218412507338,
+      "log_loss": 0.45001973124625266,
+      "accuracy": 0.7875
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.4672177731990814,
+      "roc_auc": 0.8367843954600032,
+      "pr_auc": 0.9308215946523417,
+      "log_loss": 0.4292439099942081,
+      "accuracy": 0.80875
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4697529375553131,
+      "roc_auc": 0.8356413641409451,
+      "pr_auc": 0.931265142560568,
+      "log_loss": 0.44106835731060556,
+      "accuracy": 0.810625
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.49506932497024536,
+      "roc_auc": 0.8348319743960984,
+      "pr_auc": 0.9305564805345261,
+      "log_loss": 0.4376698130022473,
+      "accuracy": 0.80375
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.43182373046875,
+      "roc_auc": 0.8526467868462838,
+      "pr_auc": 0.9371783647524102,
+      "log_loss": 0.4186183032184516,
+      "accuracy": 0.813125
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.4408217668533325,
+      "roc_auc": 0.8618013349782,
+      "pr_auc": 0.9428137086391976,
+      "log_loss": 0.4027653383302757,
+      "accuracy": 0.8225
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.3965761661529541,
+      "roc_auc": 0.8631657642554541,
+      "pr_auc": 0.942625273745886,
+      "log_loss": 0.3946533287648061,
+      "accuracy": 0.824375
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.4206823706626892,
+      "roc_auc": 0.8644303070120337,
+      "pr_auc": 0.9428486467443327,
+      "log_loss": 0.39358306512928076,
+      "accuracy": 0.8275
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.42291760444641113,
+      "roc_auc": 0.8655311182553429,
+      "pr_auc": 0.9433552041278573,
+      "log_loss": 0.3907182729879064,
+      "accuracy": 0.820625
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.40547314286231995,
+      "roc_auc": 0.865732950812582,
+      "pr_auc": 0.944126049782107,
+      "log_loss": 0.38889841891275173,
+      "accuracy": 0.81875
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.4092825949192047,
+      "roc_auc": 0.8659739141717349,
+      "pr_auc": 0.944392016419804,
+      "log_loss": 0.38715957139207646,
+      "accuracy": 0.823125
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.43795037269592285,
+      "roc_auc": 0.866748292146448,
+      "pr_auc": 0.9452926619009855,
+      "log_loss": 0.38488580831645025,
+      "accuracy": 0.821875
+    }
+  ],
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase2",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 2,
+    "seed": 0
+  }
+}

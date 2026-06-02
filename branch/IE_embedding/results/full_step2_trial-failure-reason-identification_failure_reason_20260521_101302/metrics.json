@@ -1,0 +1,125 @@
+{
+  "run_id": "full_step2_trial-failure-reason-identification_failure_reason_20260521_101302",
+  "subtask": "trial-failure-reason-identification",
+  "target": "failure_reason",
+  "task_type": "multiclass",
+  "n_train": 3341,
+  "n_test": 815,
+  "n_classes": 4,
+  "n_baseline_features": 96,
+  "n_virtual_cols": 2,
+  "n_base_params": 10718218,
+  "n_trainable_params": 373258,
+  "elapsed_train_s": 55.0,
+  "initial_metrics": {
+    "accuracy": 0.3619631901840491,
+    "macro_f1": 0.19156887106039464,
+    "weighted_f1": 0.2700834655506601,
+    "log_loss": 1.3507716418678493
+  },
+  "best_metrics": {
+    "epoch": 30,
+    "accuracy": 0.49693251533742333,
+    "macro_f1": 0.33196790215434285,
+    "weighted_f1": 0.4567492321480468,
+    "log_loss": 1.1837951690032025
+  },
+  "history": [
+    {
+      "epoch": 3,
+      "train_loss": 1.1084173917770386,
+      "accuracy": 0.4822085889570552,
+      "macro_f1": 0.25416407317865713,
+      "weighted_f1": 0.4074810488190683,
+      "log_loss": 1.1480980825320792
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1702104806900024,
+      "accuracy": 0.47730061349693254,
+      "macro_f1": 0.2547961160205837,
+      "weighted_f1": 0.40750061373154134,
+      "log_loss": 1.1498400468610859
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.089997410774231,
+      "accuracy": 0.49447852760736194,
+      "macro_f1": 0.2849414170451542,
+      "weighted_f1": 0.4292524649048588,
+      "log_loss": 1.1524953226730141
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.1588847637176514,
+      "accuracy": 0.4883435582822086,
+      "macro_f1": 0.28071869443786623,
+      "weighted_f1": 0.42499039908467695,
+      "log_loss": 1.1600118321687076
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.052844762802124,
+      "accuracy": 0.49570552147239266,
+      "macro_f1": 0.28626832016331033,
+      "weighted_f1": 0.4341074545816814,
+      "log_loss": 1.1621212543061086
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.1331291198730469,
+      "accuracy": 0.47730061349693254,
+      "macro_f1": 0.29328052936717386,
+      "weighted_f1": 0.4265238840191723,
+      "log_loss": 1.1662702098895954
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.1685490608215332,
+      "accuracy": 0.4699386503067485,
+      "macro_f1": 0.3034654221180777,
+      "weighted_f1": 0.42679293188786493,
+      "log_loss": 1.1730639484913779
+    },
+    {
+      "epoch": 24,
+      "train_loss": 1.1020877361297607,
+      "accuracy": 0.4834355828220859,
+      "macro_f1": 0.3122078334933383,
+      "weighted_f1": 0.43850768878523705,
+      "log_loss": 1.168384424680109
+    },
+    {
+      "epoch": 27,
+      "train_loss": 1.0650465488433838,
+      "accuracy": 0.48466257668711654,
+      "macro_f1": 0.314028151805759,
+      "weighted_f1": 0.44013378067884934,
+      "log_loss": 1.1744734890125725
+    },
+    {
+      "epoch": 30,
+      "train_loss": 1.0745434761047363,
+      "accuracy": 0.49693251533742333,
+      "macro_f1": 0.33196790215434285,
+      "weighted_f1": 0.4567492321480468,
+      "log_loss": 1.1837951690032025
+    }
+  ],
+  "args": {
+    "subtask": "trial-failure-reason-identification",
+    "target": "failure_reason",
+    "task_type": "multiclass",
+    "phases": "Phase3",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "lr_base": 2e-05,
+    "weight_decay": 0.0001,
+    "ctx_size": 3000,
+    "qry_size": 500,
+    "eval_every": 3,
+    "unfreeze_decoder": true,
+    "seed": 0
+  }
+}

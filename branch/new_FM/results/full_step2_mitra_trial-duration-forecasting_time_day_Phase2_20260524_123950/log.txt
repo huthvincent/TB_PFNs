@@ -1,0 +1,36 @@
+[run_id] full_step2_mitra_trial-duration-forecasting_time_day_Phase2_20260524_123950
+[subtask] trial-duration-forecasting  [target] time_day  [task-type] regression  [phase] Phase2
+  train=(10623, 51)  test=(2590, 51)
+  quantile bins (10): centers=[101.0, 263.5, 380.0, 502.0, 638.0, 787.0999755859375, 974.0999755859375, 1225.5, 1622.0, 2760.0]
+  after preprocess: train (10623, 36)  test (2590, 36)
+  preprocessed: train (10623, 92)  test (2590, 92)
+  virt_train (10623, 2, 768)  virt_test (2590, 2, 768)
+Loading Tab2D from autogluon/mitra-classifier (HF) ...
+  Tab2D dim=512, n_layers=12, n_heads=4, task=classification, dim_output=10
+  base params: 75,670,026
+  trainable params: 787,456
+
+--- Initial eval (random-init projections) ---
+  predict 2.6s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=2.2761  test R²=0.0441  MAE=543.3  RMSE=683.5
+  ep   4/30  train_loss=2.2875  test R²=0.0485  MAE=542.0  RMSE=681.9
+  ep   6/30  train_loss=2.2816  test R²=0.0555  MAE=539.0  RMSE=679.4
+  ep   8/30  train_loss=2.2778  test R²=0.0647  MAE=534.2  RMSE=676.1
+  ep  10/30  train_loss=2.2625  test R²=0.0726  MAE=529.1  RMSE=673.3
+  ep  12/30  train_loss=2.2671  test R²=0.0788  MAE=525.7  RMSE=671.0
+  ep  14/30  train_loss=2.2655  test R²=0.0894  MAE=522.8  RMSE=667.1
+  ep  16/30  train_loss=2.2432  test R²=0.0975  MAE=520.0  RMSE=664.2
+  ep  18/30  train_loss=2.2397  test R²=0.1059  MAE=519.6  RMSE=661.1
+  ep  20/30  train_loss=2.2404  test R²=0.1136  MAE=517.9  RMSE=658.2
+  ep  22/30  train_loss=2.2406  test R²=0.1204  MAE=515.2  RMSE=655.7
+  ep  24/30  train_loss=2.2082  test R²=0.1272  MAE=514.6  RMSE=653.1
+  ep  26/30  train_loss=2.2354  test R²=0.1329  MAE=514.2  RMSE=651.0
+  ep  28/30  train_loss=2.2167  test R²=0.1407  MAE=510.5  RMSE=648.1
+  ep  30/30  train_loss=2.2350  test R²=0.1490  MAE=508.1  RMSE=644.9
+
+=== Summary ===
+  Initial   R²: 0.0337
+  Best      R²: 0.1490  (at epoch 30)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_mitra_trial-duration-forecasting_time_day_Phase2_20260524_123950/metrics.json

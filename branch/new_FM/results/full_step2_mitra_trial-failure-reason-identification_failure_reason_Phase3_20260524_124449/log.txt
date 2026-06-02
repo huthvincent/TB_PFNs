@@ -1,0 +1,35 @@
+[run_id] full_step2_mitra_trial-failure-reason-identification_failure_reason_Phase3_20260524_124449
+[subtask] trial-failure-reason-identification  [target] failure_reason  [task-type] multiclass  [phase] Phase3
+  train=(3341, 45)  test=(815, 45)
+  after preprocess: train (3341, 26)  test (815, 26)
+  preprocessed: train (3341, 96)  test (815, 96)
+  virt_train (3341, 2, 768)  virt_test (815, 2, 768)
+Loading Tab2D from autogluon/mitra-classifier (HF) ...
+  Tab2D dim=512, n_layers=12, n_heads=4, task=classification, dim_output=10
+  base params: 75,670,026
+  trainable params: 787,456
+
+--- Initial eval (random-init projections) ---
+  predict 0.9s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=1.2022  test macro-F1=0.1627  LogLoss=1.1837
+  ep   4/30  train_loss=1.2327  test macro-F1=0.1703  LogLoss=1.1806
+  ep   6/30  train_loss=1.1818  test macro-F1=0.1741  LogLoss=1.1777
+  ep   8/30  train_loss=1.2086  test macro-F1=0.1841  LogLoss=1.1733
+  ep  10/30  train_loss=1.1976  test macro-F1=0.1871  LogLoss=1.1705
+  ep  12/30  train_loss=1.1834  test macro-F1=0.1963  LogLoss=1.1682
+  ep  14/30  train_loss=1.1858  test macro-F1=0.2003  LogLoss=1.1654
+  ep  16/30  train_loss=1.1922  test macro-F1=0.2091  LogLoss=1.1630
+  ep  18/30  train_loss=1.1484  test macro-F1=0.2137  LogLoss=1.1614
+  ep  20/30  train_loss=1.1619  test macro-F1=0.2289  LogLoss=1.1596
+  ep  22/30  train_loss=1.1591  test macro-F1=0.2251  LogLoss=1.1565
+  ep  24/30  train_loss=1.1477  test macro-F1=0.2323  LogLoss=1.1564
+  ep  26/30  train_loss=1.1959  test macro-F1=0.2397  LogLoss=1.1547
+  ep  28/30  train_loss=1.1431  test macro-F1=0.2716  LogLoss=1.1502
+  ep  30/30  train_loss=1.1441  test macro-F1=0.2859  LogLoss=1.1499
+
+=== Summary ===
+  Initial   macro-F1: 0.1552
+  Best      macro-F1: 0.2859  (at epoch 30)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_mitra_trial-failure-reason-identification_failure_reason_Phase3_20260524_124449/metrics.json

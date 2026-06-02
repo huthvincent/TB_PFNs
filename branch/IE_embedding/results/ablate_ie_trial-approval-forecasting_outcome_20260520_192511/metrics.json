@@ -1,0 +1,40 @@
+{
+  "run_id": "ablate_ie_trial-approval-forecasting_outcome_20260520_192511",
+  "subtask": "trial-approval-forecasting",
+  "target": "outcome",
+  "task_type": "binary",
+  "ie_features_path": "results/combined_stack8_pca32_20260520.parquet",
+  "n_train": 24468,
+  "n_test": 6215,
+  "n_features_baseline": 37,
+  "n_features_with_ie": 109,
+  "baseline": {
+    "time_s": 3.896496744011529,
+    "roc_auc": 0.8305150058792592,
+    "pr_auc": 0.764875280228941,
+    "log_loss": 0.4898436749020162,
+    "accuracy": 0.7459372485921159
+  },
+  "with_ie": {
+    "time_s": 6.8444693490164354,
+    "roc_auc": 0.8459948833417903,
+    "pr_auc": 0.787621037840567,
+    "log_loss": 0.47179406763845827,
+    "accuracy": 0.7559131134352374
+  },
+  "delta": {
+    "roc_auc": 0.0154798774625311,
+    "pr_auc": 0.022745757611626005,
+    "log_loss": -0.01804960726355792,
+    "accuracy": 0.009975864843121518
+  },
+  "args": {
+    "ie_features": "results/combined_stack8_pca32_20260520.parquet",
+    "subtask": "trial-approval-forecasting",
+    "target": "outcome",
+    "task_type": "binary",
+    "phases": null,
+    "n_estimators": 2,
+    "seed": 0
+  }
+}

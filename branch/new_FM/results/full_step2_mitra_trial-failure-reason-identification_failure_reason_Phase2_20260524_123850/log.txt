@@ -1,0 +1,35 @@
+[run_id] full_step2_mitra_trial-failure-reason-identification_failure_reason_Phase2_20260524_123850
+[subtask] trial-failure-reason-identification  [target] failure_reason  [task-type] multiclass  [phase] Phase2
+  train=(7056, 45)  test=(1780, 45)
+  after preprocess: train (7056, 26)  test (1780, 26)
+  preprocessed: train (7056, 95)  test (1780, 95)
+  virt_train (7056, 2, 768)  virt_test (1780, 2, 768)
+Loading Tab2D from autogluon/mitra-classifier (HF) ...
+  Tab2D dim=512, n_layers=12, n_heads=4, task=classification, dim_output=10
+  base params: 75,670,026
+  trainable params: 787,456
+
+--- Initial eval (random-init projections) ---
+  predict 1.6s
+
+--- Training: 30 epochs, lr=0.001, ctx_size=2000, qry_size=500 ---
+  ep   2/30  train_loss=1.1918  test macro-F1=0.2403  LogLoss=1.1806
+  ep   4/30  train_loss=1.1868  test macro-F1=0.2437  LogLoss=1.1751
+  ep   6/30  train_loss=1.1956  test macro-F1=0.2430  LogLoss=1.1770
+  ep   8/30  train_loss=1.1876  test macro-F1=0.2441  LogLoss=1.1748
+  ep  10/30  train_loss=1.2071  test macro-F1=0.2435  LogLoss=1.1728
+  ep  12/30  train_loss=1.1851  test macro-F1=0.2354  LogLoss=1.1710
+  ep  14/30  train_loss=1.1694  test macro-F1=0.2296  LogLoss=1.1690
+  ep  16/30  train_loss=1.1843  test macro-F1=0.2258  LogLoss=1.1662
+  ep  18/30  train_loss=1.1649  test macro-F1=0.2293  LogLoss=1.1637
+  ep  20/30  train_loss=1.1539  test macro-F1=0.2387  LogLoss=1.1606
+  ep  22/30  train_loss=1.1968  test macro-F1=0.2518  LogLoss=1.1562
+  ep  24/30  train_loss=1.1653  test macro-F1=0.2610  LogLoss=1.1510
+  ep  26/30  train_loss=1.1491  test macro-F1=0.2623  LogLoss=1.1491
+  ep  28/30  train_loss=1.1483  test macro-F1=0.2623  LogLoss=1.1462
+  ep  30/30  train_loss=1.1638  test macro-F1=0.2675  LogLoss=1.1401
+
+=== Summary ===
+  Initial   macro-F1: 0.1507
+  Best      macro-F1: 0.2675  (at epoch 30)
+  Saved: /data2/zhu11/TB/branch/new_FM/results/full_step2_mitra_trial-failure-reason-identification_failure_reason_Phase2_20260524_123850/metrics.json

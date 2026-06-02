@@ -1,0 +1,23 @@
+{
+  "run_id": "encode_medcpt_20260520_154921",
+  "model": "ncbi/MedCPT-Article-Encoder",
+  "n_criteria": 1579161,
+  "embed_dim": 768,
+  "max_len": 512,
+  "batch_size": 512,
+  "dtype_compute": "bf16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 201.13,
+  "elapsed_encode_s": 190.14,
+  "throughput_per_s": 8305.3,
+  "norm_mean": 8.493234634399414,
+  "norm_std": 0.13185136020183563,
+  "n_nan_rows": 0,
+  "args": {
+    "batch_size": 512,
+    "device": "cuda",
+    "dtype": "bf16",
+    "limit": null
+  }
+}

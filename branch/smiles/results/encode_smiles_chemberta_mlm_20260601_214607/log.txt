@@ -1,0 +1,17 @@
+[run_id] encode_smiles_chemberta_mlm_20260601_214607
+[model] DeepChem/ChemBERTa-77M-MLM  short=chemberta_mlm  pool=cls_mean
+[subtask] serious-adverse-event-forecasting
+Scanning train_x.csv / test_x.csv for `smiless` column ...
+  17,916 (trial_id, phase) pairs  (9,612 non-empty, 53.7%)
+  total unique (trial_id, phase, smiles) triples to encode: 14,966
+  encoding 50 SMILES strings
+Loading DeepChem/ChemBERTa-77M-MLM ...
+  params=3,427,440  dtype=bf16  batch_size=32
+  embed_dim (detected): 384
+  encode done in 0.1s (747.6/s)
+Mean-pooling per (trial_id, phase) ...
+  mean-pooled groups: 29 → /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mlm.parquet
+
+Done in 3.0s
+  pooled parquet: /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_chemberta_mlm.parquet  (0.06 MB)
+  norms: mean=3.256  std=0.337

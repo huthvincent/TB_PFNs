@@ -1,0 +1,26 @@
+{
+  "run_id": "step2_lite_pca_k16_20260520_192210",
+  "emb_run": "/data2/zhu11/TB/branch/IE_embedding/results/encode_medcpt_20260520_154921",
+  "k": 16,
+  "n_groups_pooled": 158476,
+  "n_trials_in_wide": 81742,
+  "explained_variance_ratio_sum": 0.5129851698875427,
+  "explained_variance_ratio_top10": [
+    0.09149324148893356,
+    0.06626021862030029,
+    0.05744827911257744,
+    0.04810091480612755,
+    0.03785077482461929,
+    0.029701968654990196,
+    0.026009315624833107,
+    0.02407749742269516,
+    0.022799111902713776,
+    0.021141430363059044
+  ],
+  "elapsed_s": 4.8,
+  "args": {
+    "emb_run": "/data2/zhu11/TB/branch/IE_embedding/results/encode_medcpt_20260520_154921",
+    "k": 16,
+    "seed": 0
+  }
+}
