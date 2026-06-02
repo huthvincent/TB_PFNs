@@ -1,0 +1,108 @@
+[aggregate-multiseed] multiseed_20260602_033240  cells=['Bprime', 'text', 'all']  phases=['Phase2', 'Phase3']  seeds=[0, 1, 2, 3, 4]  epochs=30
+  cell Bprime: 2 tokens
+  cell text: 11 tokens
+  cell all: 12 tokens
+  Bprime  Phase2 s0  last5=0.8634 best=0.8718 (2tok)
+  Bprime  Phase2 s1  last5=0.8612 best=0.8671 (2tok)
+  Bprime  Phase2 s2  last5=0.8460 best=0.8585 (2tok)
+  Bprime  Phase2 s3  last5=0.8599 best=0.8712 (2tok)
+  Bprime  Phase2 s4  last5=0.8561 best=0.8750 (2tok)
+  text    Phase2 s0  last5=0.8506 best=0.8769 (11tok)
+  text    Phase2 s1  last5=0.8559 best=0.8837 (11tok)
+  text    Phase2 s2  last5=0.8511 best=0.8740 (11tok)
+  text    Phase2 s3  last5=0.8542 best=0.8755 (11tok)
+  text    Phase2 s4  last5=0.8427 best=0.8716 (11tok)
+  all     Phase2 s0  last5=0.8572 best=0.8770 (12tok)
+  all     Phase2 s1  last5=0.8477 best=0.8687 (12tok)
+  all     Phase2 s2  last5=0.8505 best=0.8787 (12tok)
+  all     Phase2 s3  last5=0.8596 best=0.8696 (12tok)
+  all     Phase2 s4  last5=0.8609 best=0.8757 (12tok)
+  Bprime  Phase3 s0  last5=0.8782 best=0.9170 (2tok)
+  Bprime  Phase3 s1  last5=0.8777 best=0.9080 (2tok)
+  Bprime  Phase3 s2  last5=0.8848 best=0.9096 (2tok)
+  Bprime  Phase3 s3  last5=0.8714 best=0.9150 (2tok)
+  Bprime  Phase3 s4  last5=0.8824 best=0.9122 (2tok)
+  text    Phase3 s0  last5=0.8902 best=0.9145 (11tok)
+  text    Phase3 s1  last5=0.8726 best=0.9077 (11tok)
+  text    Phase3 s2  last5=0.8915 best=0.9094 (11tok)
+  text    Phase3 s3  last5=0.8858 best=0.9218 (11tok)
+  text    Phase3 s4  last5=0.8901 best=0.9152 (11tok)
+  all     Phase3 s0  last5=0.9004 best=0.9133 (12tok)
+  all     Phase3 s1  last5=0.8770 best=0.9223 (12tok)
+  all     Phase3 s2  last5=0.8911 best=0.9105 (12tok)
+  all     Phase3 s3  last5=0.8752 best=0.9012 (12tok)
+  all     Phase3 s4  last5=0.8993 best=0.9207 (12tok)
+
+# Aggregate branch — multiseed (last5 ROC-AUC, mean±std, paired t vs B')
+
+## Phase2
+
+| Cell | tokens | last5 ROC-AUC | Δ vs B' | paired t | p |
+|---|---|---|---|---|---|
+| B' (I+E) | 2 | 0.8573 ± 0.0069 (n=5) | — | — | — |
+| +all text (I+E+9text) | 11 | 0.8509 ± 0.0051 (n=5) | -0.0064 | -1.92 | 0.128  |
+| ALL (+SMILES) | 12 | 0.8552 ± 0.0058 (n=5) | -0.0021 | -0.62 | 0.570  |
+
+## Phase3
+
+| Cell | tokens | last5 ROC-AUC | Δ vs B' | paired t | p |
+|---|---|---|---|---|---|
+| B' (I+E) | 2 | 0.8789 ± 0.0051 (n=5) | — | — | — |
+| +all text (I+E+9text) | 11 | 0.8861 ± 0.0078 (n=5) | +0.0072 | +2.13 | 0.100 * |
+| ALL (+SMILES) | 12 | 0.8886 ± 0.0120 (n=5) | +0.0097 | +2.28 | 0.085 * |
+
+Saved: /data2/zhu11/TB/branch/aggregate/results/multiseed_20260602_033240/summary.md
+[aggregate-multiseed] multiseed_20260602_033240  cells=['Bprime', 'text', 'all']  phases=['Phase2', 'Phase3']  seeds=[5, 6, 7, 8, 9]  epochs=30
+  cell Bprime: 2 tokens
+  cell text: 11 tokens
+  cell all: 12 tokens
+  Bprime  Phase2 s5  last5=0.8537 best=0.8559 (2tok)
+  Bprime  Phase2 s6  last5=0.8582 best=0.8684 (2tok)
+  Bprime  Phase2 s7  last5=0.8609 best=0.8749 (2tok)
+  Bprime  Phase2 s8  last5=0.8619 best=0.8680 (2tok)
+  Bprime  Phase2 s9  last5=0.8636 best=0.8694 (2tok)
+  text    Phase2 s5  last5=0.8594 best=0.8806 (11tok)
+  text    Phase2 s6  last5=0.8467 best=0.8672 (11tok)
+  text    Phase2 s7  last5=0.8625 best=0.8795 (11tok)
+  text    Phase2 s8  last5=0.8612 best=0.8737 (11tok)
+  text    Phase2 s9  last5=0.8477 best=0.8675 (11tok)
+  all     Phase2 s5  last5=0.8462 best=0.8769 (12tok)
+  all     Phase2 s6  last5=0.8633 best=0.8803 (12tok)
+  all     Phase2 s7  last5=0.8600 best=0.8772 (12tok)
+  all     Phase2 s8  last5=0.8627 best=0.8743 (12tok)
+  all     Phase2 s9  last5=0.8625 best=0.8789 (12tok)
+  Bprime  Phase3 s5  last5=0.8993 best=0.9141 (2tok)
+  Bprime  Phase3 s6  last5=0.8881 best=0.9187 (2tok)
+  Bprime  Phase3 s7  last5=0.8883 best=0.9143 (2tok)
+  Bprime  Phase3 s8  last5=0.8801 best=0.9085 (2tok)
+  Bprime  Phase3 s9  last5=0.9010 best=0.9172 (2tok)
+  text    Phase3 s5  last5=0.8789 best=0.9162 (11tok)
+  text    Phase3 s6  last5=0.8931 best=0.9182 (11tok)
+  text    Phase3 s7  last5=0.8827 best=0.9098 (11tok)
+  text    Phase3 s8  last5=0.8759 best=0.9204 (11tok)
+  text    Phase3 s9  last5=0.8929 best=0.9072 (11tok)
+  all     Phase3 s5  last5=0.8831 best=0.9099 (12tok)
+  all     Phase3 s6  last5=0.8773 best=0.9064 (12tok)
+  all     Phase3 s7  last5=0.8935 best=0.9172 (12tok)
+  all     Phase3 s8  last5=0.8813 best=0.9127 (12tok)
+  all     Phase3 s9  last5=0.8995 best=0.9186 (12tok)
+
+# Aggregate branch — multiseed (last5 ROC-AUC, mean±std, paired t vs B')
+
+## Phase2
+
+| Cell | tokens | last5 ROC-AUC | Δ vs B' | paired t | p |
+|---|---|---|---|---|---|
+| B' (I+E) | 2 | 0.8585 ± 0.0054 (n=10) | — | — | — |
+| +all text (I+E+9text) | 11 | 0.8532 ± 0.0066 (n=10) | -0.0053 | -2.10 | 0.065 * |
+| ALL (+SMILES) | 12 | 0.8571 ± 0.0065 (n=10) | -0.0014 | -0.75 | 0.471  |
+
+## Phase3
+
+| Cell | tokens | last5 ROC-AUC | Δ vs B' | paired t | p |
+|---|---|---|---|---|---|
+| B' (I+E) | 2 | 0.8851 ± 0.0094 (n=10) | — | — | — |
+| +all text (I+E+9text) | 11 | 0.8854 ± 0.0075 (n=10) | +0.0002 | +0.07 | 0.945  |
+| ALL (+SMILES) | 12 | 0.8878 ± 0.0101 (n=10) | +0.0026 | +0.73 | 0.485  |
+
+Saved: /data2/zhu11/TB/branch/aggregate/results/multiseed_20260602_033240/summary.md

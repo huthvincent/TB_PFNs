@@ -1,0 +1,29 @@
+[run_id] fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase2_text_20260602_033052
+[subtask] serious-adverse-event-forecasting  [phase] Phase2  [tag] text  [n_tokens] 11
+  train=(6516, 61)  test=(1600, 61)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  token[0] ie_embeddings_qwen3@I                                   d= 4096  test cov 100%
+  token[1] ie_embeddings_qwen3@E                                   d= 4096  test cov 95%
+  token[2] emb_brief_summary_textblock_qwen                        d= 4096  test cov 100%
+  token[3] emb_brief_title_qwen                                    d= 4096  test cov 100%
+  token[4] emb_condition_qwen                                      d= 4096  test cov 100%
+  token[5] emb_detailed_description_textblock_qwen                 d= 4096  test cov 20%
+  token[6] emb_intervention_description_qwen                       d= 4096  test cov 100%
+  token[7] emb_intervention_intervention_name_qwen                 d= 4096  test cov 100%
+  token[8] emb_keyword_qwen                                        d= 4096  test cov 100%
+  token[9] emb_study_design_info_intervention_model_description_qwen d= 4096  test cov 100%
+  token[10] emb_study_design_info_masking_description_qwen          d= 4096  test cov 100%
+Initializing TabICL ...
+  n_virt=11  base=27,552,258  trainable=5,768,576
+
+--- Initial eval ---
+
+--- Training: 30 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   2/30  loss=0.3816  test ROC-AUC=0.8723
+  ep   4/30  loss=0.3742  test ROC-AUC=0.8765
+  ep   6/30  loss=0.3227  test ROC-AUC=0.8733
+  ep   8/30  loss=0.3285  test ROC-AUC=0.8754
+  ep  10/30  loss=0.3044  test ROC-AUC=0.8726
+  ep  12/30  loss=0.2800  test ROC-AUC=0.8699
+  ep  14/30  loss=0.3413  test ROC-AUC=0.8676
+  ep  16/30  loss=0.2470  test ROC-AUC=0.8668

@@ -1,0 +1,9 @@
+[aggregate-multiseed] multiseed_20260602_032840  cells=['Bprime', 'text', 'all']  phases=['Phase2', 'Phase3']  seeds=[0, 1, 2, 3, 4]  epochs=30
+  cell Bprime: 2 tokens
+  cell text: 11 tokens
+  cell all: 12 tokens
+  Bprime  Phase2 s0  last5=0.8667 best=0.8763 (2tok)
+  Bprime  Phase2 s1  last5=0.8587 best=0.8684 (2tok)
+  Bprime  Phase2 s2  last5=0.8572 best=0.8706 (2tok)
+  Bprime  Phase2 s3  last5=0.8619 best=0.8671 (2tok)
+  Bprime  Phase2 s4  last5=0.8572 best=0.8693 (2tok)

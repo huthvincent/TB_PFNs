@@ -15,6 +15,7 @@
 | [`new_FM/`](new_FM/) | TabPFN 的 commercial-friendly 替代调研（5 个候选 FM × 6 子任务 × Phase2/3 × baseline+IE） | 已落地 → **TabICLv2 (BSD-3)** | [`new_FM/final_readme.md`](new_FM/final_readme.md) |
 | [`mesh/`](mesh/) | 在 new_FM 的 TabICLv2+I+E 基础上加 condition/intervention MeSH 作 2 个 virtual token，SAE Phase2/3 | 已收尾 → **MedCPT MeSH Phase2 小幅显著正 (p<0.05)**，唯一稳健正信号 | [`mesh/final_readme.md`](mesh/final_readme.md) |
 | [`smiles/`](smiles/) | 在 new_FM 的 TabICLv2+I+E 基础上加 SMILES 分子结构 virtual token，SAE Phase2/3 | 已收尾 → **SMILES 无稳健增益**（多-seed 验证） | [`smiles/final_readme.md`](smiles/final_readme.md) |
+| [`aggregate/`](aggregate/) | 把 I+E+SMILES+9 个文本列(Qwen3) 全作 virtual token（共 12 个）塞进 TabICLv2，SAE Phase2/3 | 已收尾 → **全堆 12 token 不如只用 I+E**（n=10 多-seed；I+E 是甜点位） | [`aggregate/final_readme.md`](aggregate/final_readme.md) |
 
 ---
 

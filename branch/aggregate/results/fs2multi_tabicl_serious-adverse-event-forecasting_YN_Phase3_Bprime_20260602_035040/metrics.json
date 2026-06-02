@@ -1,0 +1,178 @@
+{
+  "run_id": "fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase3_Bprime_20260602_035040",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase3",
+  "tag": "Bprime",
+  "virt_specs": [
+    "/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@I",
+    "/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@E"
+  ],
+  "token_names": [
+    "ie_embeddings_qwen3@I",
+    "ie_embeddings_qwen3@E"
+  ],
+  "emb_dims": [
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 2,
+  "n_train": 3895,
+  "n_test": 945,
+  "n_classes": 2,
+  "n_base_params": 27552258,
+  "n_trainable_params": 1048832,
+  "elapsed_train_s": 5.9,
+  "initial_metrics": {
+    "roc_auc": 0.8918318965517241,
+    "pr_auc": 0.9767736430677085,
+    "log_loss": 0.2730065209150529,
+    "accuracy": 0.8835978835978836
+  },
+  "best_metrics": {
+    "epoch": 4,
+    "roc_auc": 0.9141163793103448,
+    "pr_auc": 0.9822984611941366,
+    "log_loss": 0.25203325489435535,
+    "accuracy": 0.8846560846560847
+  },
+  "history": [
+    {
+      "epoch": 2,
+      "train_loss": 0.2692161798477173,
+      "roc_auc": 0.9112068965517242,
+      "pr_auc": 0.9813930312787047,
+      "log_loss": 0.2537072884342535,
+      "accuracy": 0.8899470899470899
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2469833493232727,
+      "roc_auc": 0.9141163793103448,
+      "pr_auc": 0.9822984611941366,
+      "log_loss": 0.25203325489435535,
+      "accuracy": 0.8846560846560847
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.19729329645633698,
+      "roc_auc": 0.9124827586206895,
+      "pr_auc": 0.9821007540566928,
+      "log_loss": 0.25969588223167994,
+      "accuracy": 0.8835978835978836
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1821923553943634,
+      "roc_auc": 0.9106551724137931,
+      "pr_auc": 0.9817411574515658,
+      "log_loss": 0.2680558867339794,
+      "accuracy": 0.8783068783068783
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.1664726883172989,
+      "roc_auc": 0.9088879310344827,
+      "pr_auc": 0.9813386179246937,
+      "log_loss": 0.2818262961597493,
+      "accuracy": 0.8804232804232804
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.15413369238376617,
+      "roc_auc": 0.9058922413793103,
+      "pr_auc": 0.9805430526044301,
+      "log_loss": 0.29939072821017876,
+      "accuracy": 0.8793650793650793
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.12374559044837952,
+      "roc_auc": 0.9048448275862069,
+      "pr_auc": 0.9801785242288439,
+      "log_loss": 0.3050605387120889,
+      "accuracy": 0.8857142857142857
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.12205366045236588,
+      "roc_auc": 0.9082456896551724,
+      "pr_auc": 0.9809764402392467,
+      "log_loss": 0.2984102273812259,
+      "accuracy": 0.8899470899470899
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.14350099861621857,
+      "roc_auc": 0.9095603448275862,
+      "pr_auc": 0.9813034875704509,
+      "log_loss": 0.301229261628895,
+      "accuracy": 0.8899470899470899
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.12147444486618042,
+      "roc_auc": 0.9081982758620689,
+      "pr_auc": 0.9810208538600269,
+      "log_loss": 0.3168675682851617,
+      "accuracy": 0.8941798941798942
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.0954458937048912,
+      "roc_auc": 0.905125,
+      "pr_auc": 0.9803325731643828,
+      "log_loss": 0.33725696425603857,
+      "accuracy": 0.8973544973544973
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.10552717745304108,
+      "roc_auc": 0.902125,
+      "pr_auc": 0.9796772255418239,
+      "log_loss": 0.3571113022405205,
+      "accuracy": 0.8941798941798942
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.11041814088821411,
+      "roc_auc": 0.899814655172414,
+      "pr_auc": 0.9788192502727483,
+      "log_loss": 0.3719775445680848,
+      "accuracy": 0.8931216931216931
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.0683574229478836,
+      "roc_auc": 0.8969094827586208,
+      "pr_auc": 0.9777116028549588,
+      "log_loss": 0.3881606756930493,
+      "accuracy": 0.8878306878306879
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.05353459715843201,
+      "roc_auc": 0.892293103448276,
+      "pr_auc": 0.9759946888432011,
+      "log_loss": 0.4139114295325748,
+      "accuracy": 0.8867724867724868
+    }
+  ],
+  "args": {
+    "virt_embs": "/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@I,/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@E",
+    "tag": "Bprime",
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase3",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 2,
+    "seed": 5
+  }
+}

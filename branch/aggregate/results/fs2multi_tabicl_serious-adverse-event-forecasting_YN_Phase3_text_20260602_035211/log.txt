@@ -1,0 +1,39 @@
+[run_id] fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase3_text_20260602_035211
+[subtask] serious-adverse-event-forecasting  [phase] Phase3  [tag] text  [n_tokens] 11
+  train=(3895, 61)  test=(945, 61)
+  preprocessed: train (3895, 103)  test (945, 103)
+  token[0] ie_embeddings_qwen3@I                                   d= 4096  test cov 100%
+  token[1] ie_embeddings_qwen3@E                                   d= 4096  test cov 94%
+  token[2] emb_brief_summary_textblock_qwen                        d= 4096  test cov 100%
+  token[3] emb_brief_title_qwen                                    d= 4096  test cov 100%
+  token[4] emb_condition_qwen                                      d= 4096  test cov 100%
+  token[5] emb_detailed_description_textblock_qwen                 d= 4096  test cov 14%
+  token[6] emb_intervention_description_qwen                       d= 4096  test cov 100%
+  token[7] emb_intervention_intervention_name_qwen                 d= 4096  test cov 100%
+  token[8] emb_keyword_qwen                                        d= 4096  test cov 100%
+  token[9] emb_study_design_info_intervention_model_description_qwen d= 4096  test cov 100%
+  token[10] emb_study_design_info_masking_description_qwen          d= 4096  test cov 100%
+Initializing TabICL ...
+  n_virt=11  base=27,552,258  trainable=5,768,576
+
+--- Initial eval ---
+
+--- Training: 30 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   2/30  loss=0.2661  test ROC-AUC=0.9103
+  ep   4/30  loss=0.1832  test ROC-AUC=0.9127
+  ep   6/30  loss=0.1810  test ROC-AUC=0.9144
+  ep   8/30  loss=0.1476  test ROC-AUC=0.9182
+  ep  10/30  loss=0.1246  test ROC-AUC=0.9134
+  ep  12/30  loss=0.0926  test ROC-AUC=0.9015
+  ep  14/30  loss=0.0692  test ROC-AUC=0.8964
+  ep  16/30  loss=0.0566  test ROC-AUC=0.8993
+  ep  18/30  loss=0.0552  test ROC-AUC=0.8983
+  ep  20/30  loss=0.0652  test ROC-AUC=0.8979
+  ep  22/30  loss=0.0267  test ROC-AUC=0.8953
+  ep  24/30  loss=0.0307  test ROC-AUC=0.8934
+  ep  26/30  loss=0.0293  test ROC-AUC=0.8924
+  ep  28/30  loss=0.0236  test ROC-AUC=0.8915
+  ep  30/30  loss=0.0169  test ROC-AUC=0.8926
+
+=== ROC-AUC: initial 0.9044 → best 0.9182 (epoch 8) ===
+Saved: /data2/zhu11/TB/branch/aggregate/results/fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase3_text_20260602_035211/metrics.json

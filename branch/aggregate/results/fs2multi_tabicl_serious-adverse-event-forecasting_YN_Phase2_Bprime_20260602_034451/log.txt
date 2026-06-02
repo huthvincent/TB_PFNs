@@ -1,0 +1,30 @@
+[run_id] fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase2_Bprime_20260602_034451
+[subtask] serious-adverse-event-forecasting  [phase] Phase2  [tag] Bprime  [n_tokens] 2
+  train=(6516, 61)  test=(1600, 61)
+  preprocessed: train (6516, 101)  test (1600, 101)
+  token[0] ie_embeddings_qwen3@I                                   d= 4096  test cov 100%
+  token[1] ie_embeddings_qwen3@E                                   d= 4096  test cov 95%
+Initializing TabICL ...
+  n_virt=2  base=27,552,258  trainable=1,048,832
+
+--- Initial eval ---
+
+--- Training: 30 epochs, lr=0.001, ctx=2000, qry=500 ---
+  ep   2/30  loss=0.4076  test ROC-AUC=0.8684
+  ep   4/30  loss=0.4310  test ROC-AUC=0.8673
+  ep   6/30  loss=0.3655  test ROC-AUC=0.8673
+  ep   8/30  loss=0.3340  test ROC-AUC=0.8679
+  ep  10/30  loss=0.3490  test ROC-AUC=0.8668
+  ep  12/30  loss=0.3714  test ROC-AUC=0.8670
+  ep  14/30  loss=0.3614  test ROC-AUC=0.8666
+  ep  16/30  loss=0.3150  test ROC-AUC=0.8655
+  ep  18/30  loss=0.3249  test ROC-AUC=0.8647
+  ep  20/30  loss=0.3304  test ROC-AUC=0.8631
+  ep  22/30  loss=0.3130  test ROC-AUC=0.8619
+  ep  24/30  loss=0.2958  test ROC-AUC=0.8598
+  ep  26/30  loss=0.2702  test ROC-AUC=0.8576
+  ep  28/30  loss=0.2841  test ROC-AUC=0.8561
+  ep  30/30  loss=0.2816  test ROC-AUC=0.8556
+
+=== ROC-AUC: initial 0.8351 → best 0.8684 (epoch 2) ===
+Saved: /data2/zhu11/TB/branch/aggregate/results/fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase2_Bprime_20260602_034451/metrics.json

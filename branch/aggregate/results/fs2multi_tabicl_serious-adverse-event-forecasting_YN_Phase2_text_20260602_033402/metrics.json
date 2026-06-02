@@ -1,0 +1,205 @@
+{
+  "run_id": "fs2multi_tabicl_serious-adverse-event-forecasting_YN_Phase2_text_20260602_033402",
+  "subtask": "serious-adverse-event-forecasting",
+  "target": "Y/N",
+  "task_type": "binary",
+  "phase": "Phase2",
+  "tag": "text",
+  "virt_specs": [
+    "/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@I",
+    "/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@E",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_brief_summary_textblock_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_brief_title_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_condition_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_detailed_description_textblock_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_intervention_description_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_intervention_intervention_name_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_keyword_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_study_design_info_intervention_model_description_qwen.parquet",
+    "/data2/zhu11/TB/branch/aggregate/data/emb_study_design_info_masking_description_qwen.parquet"
+  ],
+  "token_names": [
+    "ie_embeddings_qwen3@I",
+    "ie_embeddings_qwen3@E",
+    "emb_brief_summary_textblock_qwen",
+    "emb_brief_title_qwen",
+    "emb_condition_qwen",
+    "emb_detailed_description_textblock_qwen",
+    "emb_intervention_description_qwen",
+    "emb_intervention_intervention_name_qwen",
+    "emb_keyword_qwen",
+    "emb_study_design_info_intervention_model_description_qwen",
+    "emb_study_design_info_masking_description_qwen"
+  ],
+  "emb_dims": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+  ],
+  "n_virtual_cols": 11,
+  "n_train": 6516,
+  "n_test": 1600,
+  "n_classes": 2,
+  "n_base_params": 27552258,
+  "n_trainable_params": 5768576,
+  "elapsed_train_s": 17.9,
+  "initial_metrics": {
+    "roc_auc": 0.8374733035252733,
+    "pr_auc": 0.9340252010080362,
+    "log_loss": 0.4220387903564785,
+    "accuracy": 0.8
+  },
+  "best_metrics": {
+    "epoch": 6,
+    "roc_auc": 0.8769006757271637,
+    "pr_auc": 0.9517455711828402,
+    "log_loss": 0.37727797215080483,
+    "accuracy": 0.834375
+  },
+  "history": [
+    {
+      "epoch": 2,
+      "train_loss": 0.402285635471344,
+      "roc_auc": 0.867065457593538,
+      "pr_auc": 0.9478291389129083,
+      "log_loss": 0.3858761425538896,
+      "accuracy": 0.82625
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3630293607711792,
+      "roc_auc": 0.8753817827581448,
+      "pr_auc": 0.9513377801964885,
+      "log_loss": 0.3754943993241035,
+      "accuracy": 0.8325
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.30711448192596436,
+      "roc_auc": 0.8769006757271637,
+      "pr_auc": 0.9517455711828402,
+      "log_loss": 0.37727797215080483,
+      "accuracy": 0.834375
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.30357205867767334,
+      "roc_auc": 0.8702010705363598,
+      "pr_auc": 0.9487470421305362,
+      "log_loss": 0.39987459461593283,
+      "accuracy": 0.82875
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3104662597179413,
+      "roc_auc": 0.8643664620194378,
+      "pr_auc": 0.9456218155742122,
+      "log_loss": 0.4144048916199276,
+      "accuracy": 0.82875
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.25515857338905334,
+      "roc_auc": 0.863892773364693,
+      "pr_auc": 0.9449359076630769,
+      "log_loss": 0.42399307112328943,
+      "accuracy": 0.82375
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.3280421793460846,
+      "roc_auc": 0.8590457027171192,
+      "pr_auc": 0.9428632211924577,
+      "log_loss": 0.44158287640220145,
+      "accuracy": 0.819375
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.26025450229644775,
+      "roc_auc": 0.8587934120205705,
+      "pr_auc": 0.9429820385165744,
+      "log_loss": 0.45249929619784734,
+      "accuracy": 0.814375
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.23996509611606598,
+      "roc_auc": 0.8574331017750967,
+      "pr_auc": 0.941843880147239,
+      "log_loss": 0.463990937923325,
+      "accuracy": 0.8125
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.20109863579273224,
+      "roc_auc": 0.8547104217682593,
+      "pr_auc": 0.9405572181297046,
+      "log_loss": 0.4846714587793026,
+      "accuracy": 0.81
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.23566266894340515,
+      "roc_auc": 0.8542923400425496,
+      "pr_auc": 0.940427816364062,
+      "log_loss": 0.5051528978800907,
+      "accuracy": 0.810625
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.17316162586212158,
+      "roc_auc": 0.8512844170849201,
+      "pr_auc": 0.9390965009175167,
+      "log_loss": 0.5411160431392449,
+      "accuracy": 0.806875
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.17451485991477966,
+      "roc_auc": 0.8481745480907258,
+      "pr_auc": 0.9370040838343264,
+      "log_loss": 0.5681004341747422,
+      "accuracy": 0.809375
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.15289165079593658,
+      "roc_auc": 0.8481076138242944,
+      "pr_auc": 0.9369712629346907,
+      "log_loss": 0.5806089038976366,
+      "accuracy": 0.80625
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.15501023828983307,
+      "roc_auc": 0.8511206855716495,
+      "pr_auc": 0.9377238473153426,
+      "log_loss": 0.5893741427591604,
+      "accuracy": 0.80875
+    }
+  ],
+  "args": {
+    "virt_embs": "/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@I,/data2/zhu11/TB/branch/aggregate/data/ie_embeddings_qwen3.parquet@E,/data2/zhu11/TB/branch/aggregate/data/emb_brief_summary_textblock_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_brief_title_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_condition_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_detailed_description_textblock_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_intervention_description_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_intervention_intervention_name_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_keyword_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_study_design_info_intervention_model_description_qwen.parquet,/data2/zhu11/TB/branch/aggregate/data/emb_study_design_info_masking_description_qwen.parquet",
+    "tag": "text",
+    "subtask": "serious-adverse-event-forecasting",
+    "target": "Y/N",
+    "task_type": "binary",
+    "phase": "Phase2",
+    "n_bins": 10,
+    "epochs": 30,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "ctx_size": 2000,
+    "qry_size": 500,
+    "eval_every": 2,
+    "seed": 0
+  }
+}
