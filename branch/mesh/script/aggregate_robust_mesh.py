@@ -18,9 +18,9 @@ from pathlib import Path
 import numpy as np
 
 RESULTS_ROOT = Path("/data2/zhu11/TB/branch/mesh/results")
-CELL_ORDER = ["Bprime", "sapbert", "biolord", "medcpt", "pubmedbert"]
+CELL_ORDER = ["Bprime", "sapbert", "biolord", "medcpt", "pubmedbert", "qwen3"]
 CELL_LABEL = {"Bprime": "B' (+I+E)", "sapbert": "C: SapBERT", "biolord": "C: BioLORD-2023",
-              "medcpt": "C: MedCPT", "pubmedbert": "C: PubMedBERT"}
+              "medcpt": "C: MedCPT", "pubmedbert": "C: PubMedBERT", "qwen3": "C: Qwen3-8B"}
 LAST_K = 5
 
 

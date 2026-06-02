@@ -77,11 +77,40 @@ python script/run_multiseed_aggregate.py --phases Phase2 --seed-start 5 --seeds 
     --append-to results/multiseed_<时间戳>
 ```
 
-## 7. 关键产物
+## 7. Token 特征选择（哪些 virtual token 加进去最好）
+
+`script/ablation_search.py` —— in-process feature selection（加载所有候选 token + bootstrap TabICL 一次，每个子集只训 8s）。候选池 12 个：mesh_cond/mesh_interv (MedCPT)、9 个文本列 (Qwen3)、SMILES。基础固定 I+E。
+
+**单 token 边际增益（marginal，在 I+E 之上）**：
+- **`brief_title` 最有价值**：Phase3 marginal +0.0105 (p=0.027, n=5) / Phase2 +0.0047 (p=0.067, n=10)，两 phase 一致正。trial 标题紧凑编码"病+药+设计"。
+- **`keyword` 显著有害**：P2 −0.0078 (p=0.032)、P3 −0.0147 (p=0.004)。噪声大、不对口，注进去拖累。
+- mesh_interv / summary 弱正（n.s.）；SMILES / detail / condition / interv_* 噪声内或负。
+
+**最优组合（fixed 确认, n=10, last5, 配对 t vs I+E）**：
+
+| 子集（I+E 之上） | token | Phase2 Δ (p) | Phase3 Δ (p) |
+|---|---|---|---|
+| **+ title + intervention_MeSH** | **4** | **+0.0067 (0.007 ✦✦✦)** | +0.0056 (0.13) |
+| + title | 3 | +0.0047 (0.067) | +0.0062 (0.10) |
+| + title + summary | 4 | +0.0004 (0.89) | +0.0035 (0.18) |
+| + mesh_cond + mesh_interv | 4 | +0.0009 (0.64) | +0.0004 (0.88) |
+| + title+mesh_interv+summary+mesh_cond | 6 | −0.0001 (0.98) | +0.0034 (0.22) |
+
+**结论**：
+1. **最优 token 子集 = `I + E + brief_title + intervention_MeSH`（4 token）** —— Phase2 +0.0067 (p=0.007 显著)，Phase3 +0.0056（正, n.s.）。是搜出来的最强组合，胜过任何单 token、胜过 mesh branch 的 cond+interv 组合、远胜全堆 12 token。
+2. **token 不是越多越好**：精选 2 个 (title+mesh_interv) > 堆 6 个（稀释回 0）> 全堆 12 个（§5，反而略负）。冻结 base 上每多一个随机初始化投影都是过拟合风险。
+3. **title 是甜点 token，keyword 必须排除**。
+4. **未验证的可能更优**：ablation 里 mesh token 用 MedCPT；§mesh branch 后续发现 **Qwen3-MeSH > MedCPT-MeSH**，故 `title + intervention_MeSH(Qwen3)` 可能更高，待测。
+
+结果：`results/ablation_marginal_Phase{2,3}_*/summary.md`、`results/ablation_fixed_Phase{2,3}_*/summary.md`。
+
+## 8. 关键产物
 
 | 产物 | 路径 |
 |---|---|
 | 多-token TabICL 训练脚本 | `script/full_step2_tabicl_multi.py`（`--virt-embs` 任意 N 源, `path@TYPE` 语法）|
 | 多-seed driver + 配对 t | `script/run_multiseed_aggregate.py` |
-| 源 embedding（symlink） | `data/{ie_embeddings_qwen3,smiles_embeddings_molformer,emb_*_qwen}.parquet` |
-| 结果 | `results/multiseed_*/summary.md` + `raw_runs.jsonl` |
+| **Token 特征选择** | `script/ablation_search.py`（marginal / greedy / fixed 模式，in-process）|
+| SAE 子集 + fp16 预切 | `script/subset_sae.py` |
+| 源 embedding（symlink/子集） | `data/{ie_embeddings_qwen3,smiles_embeddings_molformer,emb_*_qwen}.parquet` |
+| 结果 | `results/multiseed_*/` + `results/ablation_*/` |

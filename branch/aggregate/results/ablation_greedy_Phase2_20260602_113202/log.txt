@@ -1,0 +1,8 @@
+[ablation] mode=greedy phase=Phase2 seeds=5 epochs=30
+Preparing phase data (load tokens + bootstrap once) ...
+  [Phase2] train=(6516, 101) test=(1600, 101) pos_rate=0.746
+Setup done in 9s. base=['I', 'E']
+
+BASE (I+E) last5 = 0.8576 ± 0.0088 (n=5)
+
+=== Forward greedy from I+E ===

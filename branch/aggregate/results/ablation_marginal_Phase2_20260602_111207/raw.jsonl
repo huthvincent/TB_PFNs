@@ -1,0 +1,26 @@
+{"names": ["I", "E"], "seed": 0, "last5": 0.8604729472290243}
+{"names": ["I", "E"], "seed": 1, "last5": 0.8617667351112447}
+{"names": ["I", "E", "mesh_cond"], "seed": 0, "last5": 0.8622824378901495}
+{"names": ["I", "E", "mesh_cond"], "seed": 1, "last5": 0.8720138564229092}
+{"names": ["I", "E", "mesh_interv"], "seed": 0, "last5": 0.8612592703959008}
+{"names": ["I", "E", "mesh_interv"], "seed": 1, "last5": 0.8611148983319982}
+{"names": ["I", "E", "summary"], "seed": 0, "last5": 0.8617512887420684}
+{"names": ["I", "E", "summary"], "seed": 1, "last5": 0.8533142759462962}
+{"names": ["I", "E", "title"], "seed": 0, "last5": 0.8618826858558627}
+{"names": ["I", "E", "title"], "seed": 1, "last5": 0.8673161006773746}
+{"names": ["I", "E", "condition"], "seed": 0, "last5": 0.8661551515700718}
+{"names": ["I", "E", "condition"], "seed": 1, "last5": 0.8567458413225386}
+{"names": ["I", "E", "detail"], "seed": 0, "last5": 0.8547180419770528}
+{"names": ["I", "E", "detail"], "seed": 1, "last5": 0.8531285076130004}
+{"names": ["I", "E", "interv_desc"], "seed": 0, "last5": 0.8501514773937238}
+{"names": ["I", "E", "interv_desc"], "seed": 1, "last5": 0.8618793906304385}
+{"names": ["I", "E", "interv_name"], "seed": 0, "last5": 0.8612469133005595}
+{"names": ["I", "E", "interv_name"], "seed": 1, "last5": 0.8607188534263136}
+{"names": ["I", "E", "keyword"], "seed": 0, "last5": 0.865047337972736}
+{"names": ["I", "E", "keyword"], "seed": 1, "last5": 0.8605479136074274}
+{"names": ["I", "E", "sd_interv_model"], "seed": 0, "last5": 0.8520046297917212}
+{"names": ["I", "E", "sd_interv_model"], "seed": 1, "last5": 0.8584105480165833}
+{"names": ["I", "E", "sd_masking"], "seed": 0, "last5": 0.8492306678392177}
+{"names": ["I", "E", "sd_masking"], "seed": 1, "last5": 0.860110266480761}
+{"names": ["I", "E", "smiles"], "seed": 0, "last5": 0.865131778124234}
+{"names": ["I", "E", "smiles"], "seed": 1, "last5": 0.8560118298592734}

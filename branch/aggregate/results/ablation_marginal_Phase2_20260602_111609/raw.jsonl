@@ -1,0 +1,65 @@
+{"names": ["I", "E"], "seed": 0, "last5": 0.8567736447870564}
+{"names": ["I", "E"], "seed": 1, "last5": 0.866271514217868}
+{"names": ["I", "E"], "seed": 2, "last5": 0.8557370904395212}
+{"names": ["I", "E"], "seed": 3, "last5": 0.8564859304171961}
+{"names": ["I", "E"], "seed": 4, "last5": 0.8623872672489604}
+{"names": ["I", "E", "mesh_cond"], "seed": 0, "last5": 0.8654077532535203}
+{"names": ["I", "E", "mesh_cond"], "seed": 1, "last5": 0.8625411130859579}
+{"names": ["I", "E", "mesh_cond"], "seed": 2, "last5": 0.8551766961657993}
+{"names": ["I", "E", "mesh_cond"], "seed": 3, "last5": 0.8583979849696531}
+{"names": ["I", "E", "mesh_cond"], "seed": 4, "last5": 0.8648728969768366}
+{"names": ["I", "E", "mesh_interv"], "seed": 0, "last5": 0.8607075260889175}
+{"names": ["I", "E", "mesh_interv"], "seed": 1, "last5": 0.8660146925863608}
+{"names": ["I", "E", "mesh_interv"], "seed": 2, "last5": 0.861039726002006}
+{"names": ["I", "E", "mesh_interv"], "seed": 3, "last5": 0.8521442649690764}
+{"names": ["I", "E", "mesh_interv"], "seed": 4, "last5": 0.8610456985980874}
+{"names": ["I", "E", "summary"], "seed": 0, "last5": 0.8592640114014799}
+{"names": ["I", "E", "summary"], "seed": 1, "last5": 0.8605631540250149}
+{"names": ["I", "E", "summary"], "seed": 2, "last5": 0.8659218084197129}
+{"names": ["I", "E", "summary"], "seed": 3, "last5": 0.8602873848473178}
+{"names": ["I", "E", "summary"], "seed": 4, "last5": 0.8634481238839999}
+{"names": ["I", "E", "title"], "seed": 0, "last5": 0.8609699084133282}
+{"names": ["I", "E", "title"], "seed": 1, "last5": 0.8638973042996513}
+{"names": ["I", "E", "title"], "seed": 2, "last5": 0.8646245193604791}
+{"names": ["I", "E", "title"], "seed": 3, "last5": 0.8692942656899069}
+{"names": ["I", "E", "title"], "seed": 4, "last5": 0.8598485020111172}
+{"names": ["I", "E", "condition"], "seed": 0, "last5": 0.8585229975841878}
+{"names": ["I", "E", "condition"], "seed": 1, "last5": 0.8510560167726975}
+{"names": ["I", "E", "condition"], "seed": 2, "last5": 0.8640116074315574}
+{"names": ["I", "E", "condition"], "seed": 3, "last5": 0.8625205179270561}
+{"names": ["I", "E", "condition"], "seed": 4, "last5": 0.8600188239752363}
+{"names": ["I", "E", "detail"], "seed": 0, "last5": 0.8549948409126952}
+{"names": ["I", "E", "detail"], "seed": 1, "last5": 0.8390136154595501}
+{"names": ["I", "E", "detail"], "seed": 2, "last5": 0.8626428531709337}
+{"names": ["I", "E", "detail"], "seed": 3, "last5": 0.850934093431998}
+{"names": ["I", "E", "detail"], "seed": 4, "last5": 0.8574230101472347}
+{"names": ["I", "E", "interv_desc"], "seed": 0, "last5": 0.8521366447602826}
+{"names": ["I", "E", "interv_desc"], "seed": 1, "last5": 0.855395622704927}
+{"names": ["I", "E", "interv_desc"], "seed": 2, "last5": 0.8583112793506759}
+{"names": ["I", "E", "interv_desc"], "seed": 3, "last5": 0.8605946646181348}
+{"names": ["I", "E", "interv_desc"], "seed": 4, "last5": 0.8430447059114284}
+{"names": ["I", "E", "interv_name"], "seed": 0, "last5": 0.8606904321070289}
+{"names": ["I", "E", "interv_name"], "seed": 1, "last5": 0.8527314329493709}
+{"names": ["I", "E", "interv_name"], "seed": 2, "last5": 0.8537012589820636}
+{"names": ["I", "E", "interv_name"], "seed": 3, "last5": 0.8565030243990848}
+{"names": ["I", "E", "interv_name"], "seed": 4, "last5": 0.8529660118092641}
+{"names": ["I", "E", "keyword"], "seed": 0, "last5": 0.8562758597963963}
+{"names": ["I", "E", "keyword"], "seed": 1, "last5": 0.8521974004790434}
+{"names": ["I", "E", "keyword"], "seed": 2, "last5": 0.8513719465102533}
+{"names": ["I", "E", "keyword"], "seed": 3, "last5": 0.8477467866403323}
+{"names": ["I", "E", "keyword"], "seed": 4, "last5": 0.8512755611665922}
+{"names": ["I", "E", "sd_interv_model"], "seed": 0, "last5": 0.8549036043587595}
+{"names": ["I", "E", "sd_interv_model"], "seed": 1, "last5": 0.8662527726232672}
+{"names": ["I", "E", "sd_interv_model"], "seed": 2, "last5": 0.8501065799473176}
+{"names": ["I", "E", "sd_interv_model"], "seed": 3, "last5": 0.8551556891037192}
+{"names": ["I", "E", "sd_interv_model"], "seed": 4, "last5": 0.8663724304964875}
+{"names": ["I", "E", "sd_masking"], "seed": 0, "last5": 0.8634104347432092}
+{"names": ["I", "E", "sd_masking"], "seed": 1, "last5": 0.857900405930582}
+{"names": ["I", "E", "sd_masking"], "seed": 2, "last5": 0.8573045879835487}
+{"names": ["I", "E", "sd_masking"], "seed": 3, "last5": 0.8507273180366223}
+{"names": ["I", "E", "sd_masking"], "seed": 4, "last5": 0.8632053069605459}
+{"names": ["I", "E", "smiles"], "seed": 0, "last5": 0.8634878725406805}
+{"names": ["I", "E", "smiles"], "seed": 1, "last5": 0.8499129854536391}
+{"names": ["I", "E", "smiles"], "seed": 2, "last5": 0.8438180541281965}
+{"names": ["I", "E", "smiles"], "seed": 3, "last5": 0.857150742146551}
+{"names": ["I", "E", "smiles"], "seed": 4, "last5": 0.8540946265170909}

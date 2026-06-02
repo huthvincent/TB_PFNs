@@ -32,6 +32,7 @@ ENCODERS = {
     "biolord":    DATA / "mesh_embeddings_biolord.parquet",
     "medcpt":     DATA / "mesh_embeddings_medcpt.parquet",
     "pubmedbert": DATA / "mesh_embeddings_pubmedbert.parquet",
+    "qwen3":      DATA / "mesh_embeddings_qwen3.parquet",
 }
 
 
@@ -79,7 +80,7 @@ def main(args):
         line = " ".join(str(p) for p in parts)
         print(line, flush=True); print(line, file=log_f, flush=True)
 
-    cells  = ["Bprime"] + list(ENCODERS.keys())
+    cells  = args.cells.split(",") if args.cells else (["Bprime"] + list(ENCODERS.keys()))
     phases = args.phases.split(",")
     seeds  = list(range(args.seed_start, args.seed_start + args.seeds))
     echo(f"[multiseed-mesh] {run_id}  cells={cells}  phases={phases}  seeds={seeds}  epochs={args.epochs}")
@@ -125,6 +126,7 @@ if __name__ == "__main__":
     p.add_argument("--seeds", type=int, default=5)
     p.add_argument("--seed-start", type=int, default=0, help="First seed (seeds = start..start+seeds-1)")
     p.add_argument("--append-to", default=None, help="Existing multiseed dir to append raw_runs.jsonl into")
+    p.add_argument("--cells", default=None, help="comma-list of cells to run (default: Bprime + all encoders)")
     p.add_argument("--epochs", type=int, default=30)
     args = p.parse_args()
     main(args)

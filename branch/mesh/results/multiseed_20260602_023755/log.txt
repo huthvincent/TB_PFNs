@@ -83,3 +83,28 @@ Run aggregate_robust_mesh.py for last5/best/final mean±std tables.
 
 DONE. Saved raw_runs.jsonl + summary.json to results/multiseed_20260602_023755
 Run aggregate_robust_mesh.py for last5/best/final mean±std tables.
+[multiseed-mesh] multiseed_20260602_023755  cells=['qwen3']  phases=['Phase2']  seeds=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  epochs=30
+  total runs: 10
+  qwen3        Phase2 seed0  full=0.8745 (ep6)  subset=0.8805
+  qwen3        Phase2 seed1  full=0.8657 (ep6)  subset=0.8766
+  qwen3        Phase2 seed2  full=0.8707 (ep6)  subset=0.8791
+  qwen3        Phase2 seed3  full=0.8776 (ep18)  subset=0.8827
+  qwen3        Phase2 seed4  full=0.8713 (ep8)  subset=0.8779
+  qwen3        Phase2 seed5  full=0.8707 (ep10)  subset=0.8711
+  qwen3        Phase2 seed6  full=0.8735 (ep8)  subset=0.8804
+  qwen3        Phase2 seed7  full=0.8804 (ep6)  subset=0.8864
+  qwen3        Phase2 seed8  full=0.8746 (ep2)  subset=0.8756
+  qwen3        Phase2 seed9  full=0.8766 (ep12)  subset=0.8811
+
+DONE. Saved raw_runs.jsonl + summary.json to results/multiseed_20260602_023755
+Run aggregate_robust_mesh.py for last5/best/final mean±std tables.
+[multiseed-mesh] multiseed_20260602_023755  cells=['qwen3']  phases=['Phase3']  seeds=[0, 1, 2, 3, 4]  epochs=30
+  total runs: 5
+  qwen3        Phase3 seed0  full=0.9018 (ep6)  subset=0.9206
+  qwen3        Phase3 seed1  full=0.9212 (ep2)  subset=0.9401
+  qwen3        Phase3 seed2  full=0.9074 (ep4)  subset=0.9277
+  qwen3        Phase3 seed3  full=0.9032 (ep2)  subset=0.9217
+  qwen3        Phase3 seed4  full=0.9139 (ep4)  subset=0.9319
+
+DONE. Saved raw_runs.jsonl + summary.json to results/multiseed_20260602_023755
+Run aggregate_robust_mesh.py for last5/best/final mean±std tables.

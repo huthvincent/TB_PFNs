@@ -7,11 +7,11 @@
 
 ## 1. TL;DR
 
-**在 TabICLv2 + I/E 之上，把 condition + intervention MeSH 术语作 2 个额外 virtual token（共 4 token），在 SAE 上：MedCPT 编码的 MeSH 在 Phase2 给出小幅但统计显著的正增益（full +0.0046 p=0.039，intervention 子集 +0.0073 p=0.015，n=10 配对 t）；Phase3 无效；其余 3 个 encoder 不显著。**
+**在 TabICLv2 + I/E 之上，把 condition + intervention MeSH 术语作 2 个额外 virtual token（共 4 token），在 SAE 上：Qwen3-8B 和 MedCPT 编码的 MeSH 都在 Phase2 给出小幅但统计显著的正增益（Qwen3 full +0.0058 p=0.049 / 子集 +0.0086 p=0.019；MedCPT full +0.0046 p=0.039 / 子集 +0.0073 p=0.015；n=10 配对 t）；Phase3 全部无效；SapBERT/PubMedBERT 不显著。**
 
 - **这是 SMILES + MeSH 两条 branch 里唯一稳健显著的正信号。**
-- **反直觉**：通用文献 encoder **MedCPT** 打败了实体专用的 SapBERT / BioLORD —— 对 SAE 有用的是疾病-药物的**文献共现语义**而非实体规范化语义。
-- 增益绝对量小（~+0.005）且不跨 phase 稳定 → 纳不纳入最终方案见 §7 取舍。
+- **5 个 encoder 里 Qwen3-Embedding-8B (4096-d) 最强**，略胜生物医学专用的 MedCPT (768-d)。即通用强 embedding 在 MeSH 受控术语上不输甚至优于领域专用 encoder——之前"专用打败通用"的猜测被推翻（注：Qwen3 是 2026-06-02 补测的，初版只测了 4 个生物医学 encoder）。
+- 增益绝对量小（~+0.006）且不跨 phase 稳定 → 纳不纳入最终方案见 §7 取舍。
 
 ---
 
@@ -24,16 +24,33 @@ condition（疾病）和 intervention（药物）语义正交，分 2 个独立 
 
 ### 2.2 MeSH encoder（4 个全测，last5, n=10 Phase2, 配对 t vs B'）
 
-| Encoder | HF | pool | Phase2 full Δ (p) | Phase2 interv-subset Δ (p) | 判定 |
+| Encoder | HF | dim/pool | Phase2 full Δ (p) | Phase2 interv-subset Δ (p) | 判定 |
 |---|---|---|---|---|---|
-| **MedCPT** | `ncbi/MedCPT-Article-Encoder` | CLS | **+0.0046 (0.039**)** | **+0.0073 (0.015**)** | **唯一显著正** |
-| BioLORD-2023 | `FremyCompany/BioLORD-2023` | mean | +0.0031 (0.096) | +0.0016 (0.47) | 边际 |
-| PubMedBERT | `microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext` | mean | +0.0016 (0.52) | +0.0037 (0.27) | 不显著 |
-| SapBERT | `cambridgeltl/SapBERT-from-PubMedBERT-fulltext` | CLS | −0.0001 (0.97) | +0.0022 (0.63) | 不显著 |
+| **Qwen3-8B** | `Qwen/Qwen3-Embedding-8B` | 4096/last-tok | **+0.0058 (0.049**)** | **+0.0086 (0.019**)** | **最强** |
+| **MedCPT** | `ncbi/MedCPT-Article-Encoder` | 768/CLS | **+0.0046 (0.039**)** | **+0.0073 (0.015**)** | **显著正** |
+| BioLORD-2023 | `FremyCompany/BioLORD-2023` | 768/mean | +0.0031 (0.096) | +0.0016 (0.47) | 边际 |
+| PubMedBERT | `microsoft/BiomedNLP-BiomedBERT-...` | 768/mean | +0.0016 (0.52) | +0.0037 (0.27) | 不显著 |
+| SapBERT | `cambridgeltl/SapBERT-from-PubMedBERT` | 768/CLS | −0.0001 (0.97) | +0.0022 (0.63) | 不显著 |
 
-Phase3（n=5）：全部不显著（最小 p=0.34），平。
+Phase3（n=5）：全部不显著（最小 p=0.34），平。Qwen3 也是 full −0.0006 (p=0.91)。
 
-**为什么 MedCPT 赢**：MeSH term 是受控词表实体，但对 SAE 有用的是"这个病/这个药在文献里跟什么不良事件共现"——MedCPT（PubMed query-article 对比学习）抓的正是文献语义；SapBERT（UMLS 同义词对比）和 BioLORD（概念定义对比）优化的是实体规范化/同义判定，跟本任务不对口。
+**为什么 Qwen3 / MedCPT 赢、SapBERT / BioLORD 不行**：对 SAE 有用的是"这个病/这个药在文献里跟什么不良事件共现"。Qwen3（大规模通用语义）和 MedCPT（PubMed query-article 对比）都抓得住这种文献/语义共现；SapBERT（UMLS 同义词对比）和 BioLORD（概念定义对比）优化的是实体规范化/同义判定，跟本任务不对口。通用强 embedding (Qwen3) 在 MeSH 受控术语上**不输领域专用**，且跟项目统一 Qwen3 栈。
+
+#### SAE Phase 2 — MeSH 2-token performance vs baseline (English summary)
+
+Architecture: frozen TabICLv2. **Baseline = tabular + I/E (2 virtual tokens).** Each MeSH
+row adds condition + intervention MeSH as **2 extra virtual tokens** (4 total), encoded by
+the listed embedding model. Metric: last5 test ROC-AUC (mean of last-5 eval epochs),
+mean ± std over **n=10 seeds**; Δ = paired t-test vs baseline.
+
+| MeSH embedding (condition + intervention, 2 virtual tokens) | Dim | Phase 2 ROC-AUC | Δ vs baseline (p) |
+|---|---|---|---|
+| **Baseline (tabular + I/E, no MeSH)** | — | 0.8594 ± 0.0060 | — |
+| Qwen3-Embedding-8B | 4096 | **0.8652 ± 0.0058** | **+0.0058 (p=0.049)** |
+| MedCPT-Article-Encoder | 768 | 0.8640 ± 0.0052 | +0.0046 (p=0.039) |
+| BioLORD-2023 | 768 | 0.8625 ± 0.0060 | +0.0031 (p=0.096) |
+| PubMedBERT | 768 | 0.8610 ± 0.0055 | +0.0016 (p=0.524) |
+| SapBERT | 768 | 0.8593 ± 0.0068 | −0.0001 (p=0.970) |
 
 ### 2.3 vs SMILES branch
 

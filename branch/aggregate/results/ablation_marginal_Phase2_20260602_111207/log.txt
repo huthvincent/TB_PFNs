@@ -1,0 +1,42 @@
+[ablation] mode=marginal phase=Phase2 seeds=2 epochs=30
+Preparing phase data (load tokens + bootstrap once) ...
+  [Phase2] train=(6516, 101) test=(1600, 101) pos_rate=0.746
+Setup done in 9s. base=['I', 'E']
+
+BASE (I+E) last5 = 0.8611 ± 0.0009 (n=2)
+
+=== Marginal gain of each candidate over I+E ===
+  +mesh_cond        0.8671 ± 0.0069  Δ=+0.0060  p=0.389
+  +mesh_interv      0.8612 ± 0.0001  Δ=+0.0001  p=0.941
+  +summary          0.8575 ± 0.0060  Δ=-0.0036  p=0.596
+  +title            0.8646 ± 0.0038  Δ=+0.0035  p=0.342
+  +condition        0.8615 ± 0.0067  Δ=+0.0003  p=0.961
+  +detail           0.8539 ± 0.0011  Δ=-0.0072  p=0.126
+  +interv_desc      0.8560 ± 0.0083  Δ=-0.0051  p=0.507
+  +interv_name      0.8610 ± 0.0004  Δ=-0.0001  p=0.905
+  +keyword          0.8628 ± 0.0032  Δ=+0.0017  p=0.666
+  +sd_interv_model  0.8552 ± 0.0045  Δ=-0.0059  p=0.260
+  +sd_masking       0.8547 ± 0.0077  Δ=-0.0064  p=0.407
+  +smiles           0.8606 ± 0.0064  Δ=-0.0005  p=0.933
+
+# Ablation (marginal, Phase2) — last5 ROC-AUC, n=2 seeds
+
+BASE (I+E): 0.8611 ± 0.0009
+
+| + token | last5 | Δ vs I+E | paired t | p |
+|---|---|---|---|---|
+| mesh_cond | 0.8671 ± 0.0069 | +0.0060 | +1.43 | 0.389  |
+| title | 0.8646 ± 0.0038 | +0.0035 | +1.68 | 0.342  |
+| keyword | 0.8628 ± 0.0032 | +0.0017 | +0.58 | 0.666  |
+| condition | 0.8615 ± 0.0067 | +0.0003 | +0.06 | 0.961  |
+| mesh_interv | 0.8612 ± 0.0001 | +0.0001 | +0.09 | 0.941  |
+| interv_name | 0.8610 ± 0.0004 | -0.0001 | -0.15 | 0.905  |
+| smiles | 0.8606 ± 0.0064 | -0.0005 | -0.11 | 0.933  |
+| summary | 0.8575 ± 0.0060 | -0.0036 | -0.74 | 0.596  |
+| interv_desc | 0.8560 ± 0.0083 | -0.0051 | -0.98 | 0.507  |
+| sd_interv_model | 0.8552 ± 0.0045 | -0.0059 | -2.31 | 0.260  |
+| sd_masking | 0.8547 ± 0.0077 | -0.0064 | -1.35 | 0.407  |
+| detail | 0.8539 ± 0.0011 | -0.0072 | -4.99 | 0.126  |
+
+
+Saved: /data2/zhu11/TB/branch/aggregate/results/ablation_marginal_Phase2_20260602_111207/summary.md

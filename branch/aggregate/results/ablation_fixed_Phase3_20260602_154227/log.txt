@@ -1,0 +1,28 @@
+[ablation] mode=fixed phase=Phase3 seeds=10 epochs=30
+Preparing phase data (load tokens + bootstrap once) ...
+  [Phase3] train=(3895, 103) test=(945, 103) pos_rate=0.847
+Setup done in 8s. base=['I', 'E']
+
+BASE (I+E) last5 = 0.8912 ± 0.0077 (n=10)
+
+=== Fixed subsets vs I+E ===
+  title                                    0.8974 ± 0.0077  Δ=+0.0062  p=0.101 
+  title+mesh_interv                        0.8968 ± 0.0061  Δ=+0.0056  p=0.131 
+  title+summary                            0.8946 ± 0.0037  Δ=+0.0035  p=0.176 
+  mesh_cond+mesh_interv                    0.8916 ± 0.0057  Δ=+0.0004  p=0.879 
+  title+mesh_interv+summary+mesh_cond      0.8946 ± 0.0040  Δ=+0.0034  p=0.215 
+
+# Ablation (fixed, Phase3) — last5 ROC-AUC, n=10 seeds
+
+BASE (I+E): 0.8912 ± 0.0077
+
+| subset (on top of I+E) | size | last5 | Δ vs I+E | paired t | p |
+|---|---|---|---|---|---|
+| title | 3 | 0.8974 ± 0.0077 | +0.0062 | +1.83 | 0.101  |
+| title+mesh_interv | 4 | 0.8968 ± 0.0061 | +0.0056 | +1.66 | 0.131  |
+| title+summary | 4 | 0.8946 ± 0.0037 | +0.0035 | +1.47 | 0.176  |
+| mesh_cond+mesh_interv | 4 | 0.8916 ± 0.0057 | +0.0004 | +0.16 | 0.879  |
+| title+mesh_interv+summary+mesh_cond | 6 | 0.8946 ± 0.0040 | +0.0034 | +1.33 | 0.215  |
+
+
+Saved: /data2/zhu11/TB/branch/aggregate/results/ablation_fixed_Phase3_20260602_154227/summary.md

@@ -7,9 +7,15 @@
 
 ## 1. TL;DR
 
-**把所有非 tabular 信号源（I + E + 9 个文本列 Qwen3 + SMILES = 12 个 virtual token）一次性塞进冻结的 TabICLv2，在 SAE 上不如只用 I+E（2 token）。** 堆 token 没有稳健增益：Phase2 加文本反而略负（p=0.065），Phase3 全在噪声内。**I+E 是甜点位**——eligibility criteria 已把 SAE 的可提取文本信号吃满，其余 9 文本列 + SMILES 边际信息为零甚至负（11 个随机初始化投影稀释冻结 base，5.87M 可训练参数是 B' 的 5.6× 却没换来增益）。
+**两个结论：**
 
-又一次验证多-seed 教训：n=5 时 Phase3 看着边际正（+0.007~+0.010, p≈0.09），**n=10 塌回 ~0**。
+**(a) 无脑全堆没用** —— 把所有信号源（I+E + 9 文本列 Qwen3 + SMILES = 12 token）一次性塞进冻结 TabICLv2，在 SAE 上**不如只用 I+E（2 token）**：Phase2 加文本反而略负 (p=0.065)，Phase3 噪声内。5.87M 可训练参数（B' 的 5.6×）没换来增益。
+
+**(b) 但精选 2 个 token 有显著正增益** —— 特征选择（§7）找到最优子集 **`I + E + brief_title + intervention_MeSH`（4 token）**：Phase2 **+0.0067, p=0.007 显著**，Phase3 +0.0056 (n.s.)。`brief_title` 是最有价值的单 token，`keyword` 显著有害。
+
+**主旨：token 不是越多越好。** 精选 2 个 (title+mesh_interv) > 堆 6 个（稀释回 0）> 全堆 12 个（略负）。eligibility criteria (I+E) 已吃满大部分信号，只有 brief_title + intervention MeSH 还能再榨一点；其余文本列/SMILES 边际为零甚至负（随机初始化投影稀释冻结 base）。
+
+又一次验证多-seed 教训：n=5 时 Phase3 全堆看着边际正（+0.007~+0.010, p≈0.09），**n=10 塌回 ~0**。
 
 ---
 
@@ -74,11 +80,17 @@ data/emb_condition_qwen.parquet,...(9 text)...,data/smiles_embeddings_molformer.
 
 ---
 
-## 7. 下一步建议
+## 7. Token 特征选择（哪些 token 最好）+ 下一步
 
-- **默认方案就用 I+E**（2 token），简洁且性价比最高。不建议为 SAE 堆 all-text/SMILES。
-- 若要再榨 SAE：把 **MedCPT-MeSH（mesh branch 的 winner）** 并进这个多-token 框架单独验证（本 branch 没含），或转向**结构化药物属性**（ATC/给药途径）而非高维文本 embedding。
-- all-text 对**其他 subtask**可能有用：[`../All_text_embedding/`](../All_text_embedding/) Step1 单次发现 brief_summary 明显帮 patient-dropout / failure-reason。本 branch 的"无用"结论是 **SAE-specific**。值得把这个多-token + 多-seed 框架扩到那些 subtask 复跑（它们的单次结论也该补误差棒）。
+`script/ablation_search.py`（in-process: 加载所有候选 token + bootstrap 一次，每子集训 8s）。marginal（单 token 边际增益）+ greedy + fixed（指定子集 n=10 确认）三模式。详见 [`README.md`](README.md) §7。
+
+**最优子集 = `I + E + brief_title + intervention_MeSH`（4 token）**：Phase2 +0.0067 (p=0.007 ✦✦✦)，Phase3 +0.0056 (n.s.)。
+- `brief_title` 最有价值（两 phase 一致正）；`keyword` 显著有害（两 phase 都负，p<0.05）；其余噪声。
+- **token 越多越差**：title+mesh_interv (4) ≫ 6-token（稀释回 0）≫ 12-token（§5 略负）。
+
+下一步：
+- **SAE 默认就用 I+E**（性价比）；要榨极致用 `I+E+title+intervention_MeSH`，且把 mesh token 从 MedCPT 换 **Qwen3-MeSH**（mesh branch 后续发现 Qwen3-MeSH > MedCPT，title+mesh_interv 可能再高，待测）。
+- all-text 对**其他 subtask**可能有用：[`../All_text_embedding/`](../All_text_embedding/) Step1 发现 brief_summary 明显帮 patient-dropout / failure-reason。本 branch 的"无用"结论是 **SAE-specific**；值得把此 ablation 框架扩到其它 subtask。
 
 ---
 
@@ -89,6 +101,8 @@ data/emb_condition_qwen.parquet,...(9 text)...,data/smiles_embeddings_molformer.
 | 多-token TabICL 训练 | `script/full_step2_tabicl_multi.py` | 任意 N 源, `path@TYPE`, 统一 loader |
 | SAE 子集构建 | `script/subset_sae.py` | 源 parquet → SAE-only fp16 本地副本 |
 | 多-seed + 配对 t | `script/run_multiseed_aggregate.py` | `--cells/--seed-start/--append-to` |
+| **Token 特征选择** | `script/ablation_search.py` | marginal / greedy / fixed, in-process |
 | 源 embedding（子集, git-ignored） | `data/{ie_embeddings_qwen3,smiles_embeddings_molformer,emb_*_qwen}.parquet` | 由 subset_sae.py 重建 |
-| 结果 | `results/multiseed_20260602_033240/` | summary.md + raw_runs.jsonl (60 行) |
-| 进度日志 | `README.md` §5 | 结果 + caveat |
+| 结果（全堆） | `results/multiseed_20260602_033240/` | summary.md + raw_runs.jsonl (60 行) |
+| 结果（特征选择） | `results/ablation_{marginal,fixed}_Phase{2,3}_*/` | summary.md |
+| 进度日志 | `README.md` §5 (全堆) + §7 (特征选择) | 结果 + caveat |

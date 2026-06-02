@@ -1,0 +1,8 @@
+[run_id] encode_mesh_qwen3_20260602_153850  [model] Qwen/Qwen3-Embedding-8B  [subtask] serious-adverse-event-forecasting
+Scanning condition + intervention MeSH ...
+  rows to encode: 61,703  (unique terms: 4,100)
+Loading Qwen/Qwen3-Embedding-8B (bf16) ...
+  params=7,567,295,488  batch=128
+  encode done in 43.7s
+  mean-pooled groups: 28,750 → /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_qwen3.parquet  (403.0 MB)
+Done in 49.4s

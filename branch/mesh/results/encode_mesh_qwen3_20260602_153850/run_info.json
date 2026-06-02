@@ -1,0 +1,12 @@
+{
+  "run_id": "encode_mesh_qwen3_20260602_153850",
+  "model": "Qwen/Qwen3-Embedding-8B",
+  "embed_dim": 4096,
+  "max_len": 64,
+  "n_terms_rows": 61703,
+  "n_pooled_groups": 28750,
+  "elapsed_total_s": 49.4,
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/mesh/data/mesh_embeddings_qwen3.parquet"
+  }
+}
