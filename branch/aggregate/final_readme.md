@@ -7,27 +7,49 @@
 
 ## 1. TL;DR
 
-**两个结论：**
+**SAE Phase 2 的完整 picture（同进程配对, n=10, 见 §2）：**
 
-**(a) 无脑全堆没用** —— 把所有信号源（I+E + 9 文本列 Qwen3 + SMILES = 12 token）一次性塞进冻结 TabICLv2，在 SAE 上**不如只用 I+E（2 token）**：Phase2 加文本反而略负 (p=0.065)，Phase3 噪声内。5.87M 可训练参数（B' 的 5.6×）没换来增益。
+| 配置 | ROC-AUC | vs tabular | vs tabular+I/E |
+|---|---|---|---|
+| tabular only | 0.7810 | — | |
+| tabular + I/E | 0.8566 | **+0.0756** | — |
+| **+ title + intervention_MeSH（最优）** | **0.8658** | **+0.0848** | **+0.0092 (p=0.001)** |
+| 全堆 12 token | 0.8530 | +0.0720 | **−0.0036 (p=0.045, 更差)** |
 
-**(b) 但精选 2 个 token 有显著正增益** —— 特征选择（§7）找到最优子集 **`I + E + brief_title + intervention_MeSH`（4 token）**：Phase2 **+0.0067, p=0.007 显著**，Phase3 +0.0056 (n.s.)。`brief_title` 是最有价值的单 token，`keyword` 显著有害。
+**三个结论：**
+1. **I/E 是绝对主力**：tabular→+I/E **+0.0756**，占全部可榨增益的 ~90%。
+2. **最优 = `tabular + I/E + brief_title + intervention_MeSH`（4 token）**：在 I+E 上再 +0.0092 (p=0.001)，对 tabular 共 +0.0848。`brief_title` 是最有价值的额外 token；`keyword` 显著有害。
+3. **token 不是越多越好**：精选 4 token（最优）> 堆 11 文本 token（稀释回 0）> 全堆 12 token（比 baseline **显著更差**）。冻结 base 上每多一个随机初始化投影都是过拟合风险。
 
-**主旨：token 不是越多越好。** 精选 2 个 (title+mesh_interv) > 堆 6 个（稀释回 0）> 全堆 12 个（略负）。eligibility criteria (I+E) 已吃满大部分信号，只有 brief_title + intervention MeSH 还能再榨一点；其余文本列/SMILES 边际为零甚至负（随机初始化投影稀释冻结 base）。
-
-又一次验证多-seed 教训：n=5 时 Phase3 全堆看着边际正（+0.007~+0.010, p≈0.09），**n=10 塌回 ~0**。
+方法论：又一次验证多-seed 必要性（n=5 时 Phase3 全堆看着边际正 p≈0.09，n=10 塌回 0）。zero-shot 确定性（std=0）。
 
 ---
 
-## 2. 结果（last5 ROC-AUC, mean±std, n=10 seed, 配对 t vs B'）
+## 2. 结果：SAE Phase 2 — 最优 vs suboptimal vs baselines
 
-| | Phase2 Δ vs B' (p) | Phase3 Δ vs B' (p) |
-|---|---|---|
-| B' (I+E, 2 tok) | 0.8585 ± 0.0054 | 0.8851 ± 0.0094 |
-| +all text (11 tok) | −0.0053 (0.065) | +0.0002 (0.945) |
-| ALL +SMILES (12 tok) | −0.0014 (0.471) | +0.0026 (0.485) |
+**所有配置在同一进程、同样 10 个 seed、共享同一个 base 上评估**（TabICL CUDA 非确定性 → 跨 run 绝对值不可比；只有同进程配对才干净）。last5 test ROC-AUC，mean ± std (n=10)。`Δ vs tabular+I/E` 的 p 是配对 t 检验。
+数据：[`results/comparison_Phase2_*/summary.md`](results/) + `raw.jsonl`。脚本 `script/comparison_table.py`。
 
-数据：[`results/multiseed_20260602_033240/`](results/multiseed_20260602_033240/)（`summary.md` + `raw_runs.jsonl` 60 行）。
+| 配置 | tokens | Phase 2 ROC-AUC | Δ vs tabular | Δ vs tabular+I/E (p) |
+|---|---|---|---|---|
+| tabular only (zero-shot) | 0 | 0.7810 ± 0.0000 | — | — |
+| **tabular + I/E** (baseline) | 2 | 0.8566 ± 0.0052 | **+0.0756** | — |
+| + brief_title | 3 | 0.8652 ± 0.0050 | +0.0842 | +0.0086 (p=0.005) *** |
+| **+ title + intervention_MeSH（最优）** | 4 | **0.8658 ± 0.0045** | **+0.0848** | **+0.0092 (p=0.001)** *** |
+| + condition + intervention MeSH | 4 | 0.8611 ± 0.0027 | +0.0800 | +0.0045 (p=0.050) ** |
+| + 全部 9 文本列 | 11 | 0.8551 ± 0.0044 | +0.0740 | −0.0015 (p=0.441) |
+| + 9 文本 + SMILES（全堆 12） | 12 | 0.8530 ± 0.0060 | +0.0720 | **−0.0036 (p=0.045) ** 显著更差** |
+
+**读这张表**：
+1. **I/E 是绝对主力**：tabular 0.781 → +I/E 0.857，**+0.0756**。其余所有 token 加起来的空间不到这个的 1/8。
+2. **最优 = `tabular + I/E + brief_title + intervention_MeSH`（4 token）**：比 tabular+I/E 再 **+0.0092 (p=0.001)**，比纯 tabular **+0.0848**。
+3. **brief_title 一个就拿到大部分增量**（+0.0086），再加 intervention_MeSH 只多榨 +0.0006。
+4. **suboptimal 们**：condition+intervention MeSH (mesh branch 组合) 只 +0.0045；**全堆 11/12 token 反而把增益稀释掉**——12-token 比 baseline **显著更差 −0.0036 (p=0.045)**。
+5. zero-shot std=0.0000：不训练 → 无 CUDA 累加噪声 → 确定性。
+
+> **MeSH encoder 注**：上表 intervention_MeSH 用 MedCPT。换 Qwen3-MeSH（`title+mesh_interv_q3`）增益相当且**跨 phase 更稳**（Phase2 +0.0076 p=0.001、Phase3 +0.0070 p=0.018 都显著；MedCPT 版 Phase3 p=0.14 不显著）。详见 [`../mesh/final_readme.md`](../mesh/final_readme.md)。
+
+> Phase3 全堆主实验（B' vs +text vs ALL，n=10）：+text Δ=+0.0002 (p=0.945)、ALL Δ=+0.0026 (p=0.485)，均不显著；见 `results/multiseed_20260602_033240/`。
 
 ---
 

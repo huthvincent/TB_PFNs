@@ -114,7 +114,15 @@ def train_eval(pd_: PhaseData, names, seed, epochs=30, ctx=2000, qry=500,
     virt_tr = [pd_.tok[n][0] for n in names]
     virt_te = [pd_.tok[n][1] for n in names]
     wrap = TabICLVirtualMulti(pd_.base, emb_dims).to(DEVICE)
-    opt = torch.optim.AdamW([p for p in wrap.parameters() if p.requires_grad], lr=lr, weight_decay=wd)
+    trainable = [p for p in wrap.parameters() if p.requires_grad and p.numel() > 0]
+    if not trainable:  # 0-token => zero-shot tabular; nothing to train, eval once
+        wrap.eval()
+        with torch.no_grad():
+            proba = predict_full(wrap, pd_.X_tr, pd_.y_tr_t, pd_.X_te, virt_tr, virt_te, 2)
+        auc = metrics_binary(pd_.y_te_int, proba)["roc_auc"]
+        del wrap; torch.cuda.empty_cache()
+        return auc
+    opt = torch.optim.AdamW(trainable, lr=lr, weight_decay=wd)
     rng = np.random.RandomState(seed)
     n_train = pd_.X_tr.shape[0]
     hist = []

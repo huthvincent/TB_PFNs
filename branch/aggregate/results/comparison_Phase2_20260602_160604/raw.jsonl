@@ -1,0 +1,70 @@
+{"label": "tabular only (zero-shot)", "names": [], "seed": 0, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 1, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 2, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 3, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 4, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 5, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 6, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 7, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 8, "last5": 0.7810333003124286}
+{"label": "tabular only (zero-shot)", "names": [], "seed": 9, "last5": 0.7810333003124286}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 0, "last5": 0.854403141997442}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 1, "last5": 0.853745538573703}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 2, "last5": 0.846623732625409}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 3, "last5": 0.8602216862904204}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 4, "last5": 0.8593552479554155}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 5, "last5": 0.8585308237445706}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 6, "last5": 0.8532465178735087}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 7, "last5": 0.8619220226093656}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 8, "last5": 0.8538275073061327}
+{"label": "tabular + I/E", "names": ["I", "E"], "seed": 9, "last5": 0.8642303280190958}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 0, "last5": 0.8678495152929353}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 1, "last5": 0.8679053281735595}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 2, "last5": 0.8625046596547016}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 3, "last5": 0.8632364056504878}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 4, "last5": 0.8749888271262958}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 5, "last5": 0.856127368700713}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 6, "last5": 0.8675428533768852}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 7, "last5": 0.8654878684216488}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 8, "last5": 0.8648588922687834}
+{"label": "+ brief_title", "names": ["I", "E", "title"], "seed": 9, "last5": 0.861800305220255}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 0, "last5": 0.867149485841858}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 1, "last5": 0.8703847793537651}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 2, "last5": 0.8669612460894942}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 3, "last5": 0.8653875699977963}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 4, "last5": 0.8638651758517645}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 5, "last5": 0.865752928116717}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 6, "last5": 0.8627752800426732}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 7, "last5": 0.8735045340242322}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 8, "last5": 0.8564492710343508}
+{"label": "+ title + intervention_MeSH  (BEST)", "names": ["I", "E", "title", "mesh_interv"], "seed": 9, "last5": 0.8659891545893224}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 0, "last5": 0.8606327656621033}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 1, "last5": 0.8616036214527414}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 2, "last5": 0.8605899277315874}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 3, "last5": 0.854465545328915}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 4, "last5": 0.8632998387399058}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 5, "last5": 0.8637368680118052}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 6, "last5": 0.863461098834108}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 7, "last5": 0.8592561852410971}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 8, "last5": 0.8615476026205281}
+{"label": "+ condition + intervention MeSH", "names": ["I", "E", "mesh_cond", "mesh_interv"], "seed": 9, "last5": 0.8620587744644743}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 0, "last5": 0.8606329716136925}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 1, "last5": 0.8527670625742712}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 2, "last5": 0.8545644020916441}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 3, "last5": 0.8545959126847643}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 4, "last5": 0.8625180465079877}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 5, "last5": 0.8560215095839572}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 6, "last5": 0.8481887587503681}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 7, "last5": 0.8503864681567951}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 8, "last5": 0.8533078914470364}
+{"label": "+ all 9 text columns", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking"], "seed": 9, "last5": 0.8577407934490919}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 0, "last5": 0.8482972952377814}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 1, "last5": 0.8453303566463667}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 2, "last5": 0.851389246443731}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 3, "last5": 0.8594586356531033}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 4, "last5": 0.8543032554767676}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 5, "last5": 0.854499115437925}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 6, "last5": 0.8542637127716759}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 7, "last5": 0.86280534897467}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 8, "last5": 0.8437305247028635}
+{"label": "+ all 9 text + SMILES (12 tokens)", "names": ["I", "E", "summary", "title", "condition", "detail", "interv_desc", "interv_name", "keyword", "sd_interv_model", "sd_masking", "smiles"], "seed": 9, "last5": 0.8561533186009296}

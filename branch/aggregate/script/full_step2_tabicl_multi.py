@@ -123,17 +123,21 @@ class TabICLVirtualMulti(nn.Module):
             p.requires_grad = False
 
     def forward(self, X_BTH, y_train_BT, virt_list):
-        """virt_list: list of (T, d_i) tensors, one per source."""
+        """virt_list: list of (T, d_i) tensors, one per source. Empty list =>
+        zero-shot (tabular only): no virtual columns concatenated."""
         col_out = self.base.col_embedder(X_BTH, y_train=y_train_BT, d=None, embed_with_test=False)
-        proj_dtype = self.projs[0].weight.dtype
-        toks = []
-        for i, v in enumerate(virt_list):
-            vd = v.to(col_out.device).to(proj_dtype)        # (T, d_i) fp32
-            toks.append(self.projs[i](vd) + self.virt_col_emb[i])  # (T, E)
-        virt_tne = torch.stack(toks, dim=1).to(col_out.dtype)      # (T, n_virt, E)
-        B = col_out.shape[0]
-        virt_btne = virt_tne.unsqueeze(0).expand(B, -1, -1, -1).contiguous()
-        col_aug = torch.cat([col_out, virt_btne], dim=2)
+        if virt_list:
+            proj_dtype = self.projs[0].weight.dtype
+            toks = []
+            for i, v in enumerate(virt_list):
+                vd = v.to(col_out.device).to(proj_dtype)        # (T, d_i) fp32
+                toks.append(self.projs[i](vd) + self.virt_col_emb[i])  # (T, E)
+            virt_tne = torch.stack(toks, dim=1).to(col_out.dtype)      # (T, n_virt, E)
+            B = col_out.shape[0]
+            virt_btne = virt_tne.unsqueeze(0).expand(B, -1, -1, -1).contiguous()
+            col_aug = torch.cat([col_out, virt_btne], dim=2)
+        else:
+            col_aug = col_out
         repr_ = self.base.row_interactor(col_aug, d=None)
         return self.base.icl_predictor(repr_, y_train=y_train_BT)
 

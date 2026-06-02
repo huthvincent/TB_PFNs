@@ -1,0 +1,50 @@
+{"names": ["I", "E"], "seed": 0, "last5": 0.8822362068965518}
+{"names": ["I", "E"], "seed": 1, "last5": 0.8816491379310344}
+{"names": ["I", "E"], "seed": 2, "last5": 0.8886327586206896}
+{"names": ["I", "E"], "seed": 3, "last5": 0.8826551724137932}
+{"names": ["I", "E"], "seed": 4, "last5": 0.8973862068965518}
+{"names": ["I", "E"], "seed": 5, "last5": 0.8871258620689655}
+{"names": ["I", "E"], "seed": 6, "last5": 0.903293103448276}
+{"names": ["I", "E"], "seed": 7, "last5": 0.8922172413793102}
+{"names": ["I", "E"], "seed": 8, "last5": 0.8955724137931034}
+{"names": ["I", "E"], "seed": 9, "last5": 0.8960750000000001}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 0, "last5": 0.8933362068965518}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 1, "last5": 0.8971758620689656}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 2, "last5": 0.8978387931034483}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 3, "last5": 0.8999077586206896}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 4, "last5": 0.9011051724137931}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 5, "last5": 0.8945879310344826}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 6, "last5": 0.8940017241379312}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 7, "last5": 0.9012844827586207}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 8, "last5": 0.9017784482758622}
+{"names": ["I", "E", "title", "mesh_interv_q3"], "seed": 9, "last5": 0.8959043103448276}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 0, "last5": 0.893096551724138}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 1, "last5": 0.897669827586207}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 2, "last5": 0.8987206896551724}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 3, "last5": 0.9063948275862069}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 4, "last5": 0.8994991379310344}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 5, "last5": 0.9030560344827586}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 6, "last5": 0.8795293103448276}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 7, "last5": 0.9036620689655173}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 8, "last5": 0.8991060344827586}
+{"names": ["I", "E", "title", "mesh_interv"], "seed": 9, "last5": 0.8932913793103449}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 0, "last5": 0.8857525862068965}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 1, "last5": 0.8866198275862069}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 2, "last5": 0.898673275862069}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 3, "last5": 0.8880543103448275}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 4, "last5": 0.8745155172413794}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 5, "last5": 0.8882999999999999}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 6, "last5": 0.9023146551724137}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 7, "last5": 0.8905810344827586}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 8, "last5": 0.8932172413793105}
+{"names": ["I", "E", "mesh_cond_q3", "mesh_interv_q3"], "seed": 9, "last5": 0.8924750000000001}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 0, "last5": 0.8959482758620689}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 1, "last5": 0.8866396551724138}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 2, "last5": 0.8941327586206895}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 3, "last5": 0.8872646551724138}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 4, "last5": 0.8971836206896551}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 5, "last5": 0.8988629310344827}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 6, "last5": 0.8897181034482757}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 7, "last5": 0.8899448275862069}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 8, "last5": 0.888198275862069}
+{"names": ["I", "E", "title", "mesh_cond_q3", "mesh_interv_q3"], "seed": 9, "last5": 0.8828077586206895}
