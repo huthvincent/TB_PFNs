@@ -1,0 +1,9 @@
+[smiles_grid] 20260604_111207  tasks=2 phases=['Phase2'] encoders=['molformer', 'mol2vec'] seed=0
+Loading I/E + SMILES lookups once ...
+  molformer: d=768  keys=39,642
+  mol2vec: d=300  keys=39,638
+  I/E d=4096  setup 13s
+  serious-adverse-event-forecasting/Phase2 [ROC-AUC] base=0.8713  cov=53%  molformer:-0.0079  mol2vec:-0.0025
+  trial-duration-forecasting/Phase2 [R²] base=0.2310  cov=44%  molformer:+0.0114  mol2vec:+0.0062
+
+Done in 34s. Saved /data2/zhu11/TB/branch/smiles/results/smiles_grid_20260604_111207/grid.json

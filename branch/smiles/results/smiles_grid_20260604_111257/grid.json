@@ -1,0 +1,302 @@
+{
+  "serious-adverse-event-forecasting/Phase1": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 1595,
+    "n_test": 419,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.4797136038186158,
+      "chemberta_mtr": 0.4797136038186158,
+      "molformer": 0.4797136038186158,
+      "mol2vec": 0.4797136038186158
+    },
+    "cells": {
+      "baseline": 0.88067881485603,
+      "chemberta_mlm": 0.8797213335188019,
+      "chemberta_mtr": 0.8762924838874205,
+      "molformer": 0.8833820188250568,
+      "mol2vec": 0.876589233551259
+    }
+  },
+  "serious-adverse-event-forecasting/Phase2": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 6516,
+    "n_test": 1600,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.5275,
+      "chemberta_mtr": 0.5275,
+      "molformer": 0.5275,
+      "mol2vec": 0.5275
+    },
+    "cells": {
+      "baseline": 0.8600513643263014,
+      "chemberta_mlm": 0.8579018475917051,
+      "chemberta_mtr": 0.8646070134754126,
+      "molformer": 0.8600219132490716,
+      "mol2vec": 0.8615819965358943
+    }
+  },
+  "serious-adverse-event-forecasting/Phase3": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase3",
+    "metric": "ROC-AUC",
+    "n_train": 3895,
+    "n_test": 945,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.4973544973544973,
+      "chemberta_mtr": 0.4973544973544973,
+      "molformer": 0.4973544973544973,
+      "mol2vec": 0.4973544973544973
+    },
+    "cells": {
+      "baseline": 0.8874172413793102,
+      "chemberta_mlm": 0.8924784482758621,
+      "chemberta_mtr": 0.891353448275862,
+      "molformer": 0.8834844827586206,
+      "mol2vec": 0.8889422413793104
+    }
+  },
+  "mortality-event-prediction/Phase1": {
+    "task": "mortality-event-prediction",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 1595,
+    "n_test": 419,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.4797136038186158,
+      "chemberta_mtr": 0.4797136038186158,
+      "molformer": 0.4797136038186158,
+      "mol2vec": 0.4797136038186158
+    },
+    "cells": {
+      "baseline": 0.9288304702411938,
+      "chemberta_mlm": 0.9154606975533577,
+      "chemberta_mtr": 0.9239371854936664,
+      "molformer": 0.9247527329515878,
+      "mol2vec": 0.9330325640580716
+    }
+  },
+  "mortality-event-prediction/Phase2": {
+    "task": "mortality-event-prediction",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 6516,
+    "n_test": 1600,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.5275,
+      "chemberta_mtr": 0.5275,
+      "molformer": 0.5275,
+      "mol2vec": 0.5275
+    },
+    "cells": {
+      "baseline": 0.8935525231104202,
+      "chemberta_mlm": 0.9049364109470082,
+      "chemberta_mtr": 0.8956341914656631,
+      "molformer": 0.8914167364122054,
+      "mol2vec": 0.8902857574365527
+    }
+  },
+  "mortality-event-prediction/Phase3": {
+    "task": "mortality-event-prediction",
+    "phase": "Phase3",
+    "metric": "ROC-AUC",
+    "n_train": 3895,
+    "n_test": 945,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.4973544973544973,
+      "chemberta_mtr": 0.4973544973544973,
+      "molformer": 0.4973544973544973,
+      "mol2vec": 0.4973544973544973
+    },
+    "cells": {
+      "baseline": 0.8746971476735741,
+      "chemberta_mlm": 0.8713830330963119,
+      "chemberta_mtr": 0.8812110506352949,
+      "molformer": 0.8738063000457303,
+      "mol2vec": 0.86911623611273
+    }
+  },
+  "patient-dropout-event-forecasting/Phase1": {
+    "task": "patient-dropout-event-forecasting",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 3321,
+    "n_test": 883,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.47678369195922987,
+      "chemberta_mtr": 0.47678369195922987,
+      "molformer": 0.47678369195922987,
+      "mol2vec": 0.47678369195922987
+    },
+    "cells": {
+      "baseline": 0.7048801179202766,
+      "chemberta_mlm": 0.7273242065301535,
+      "chemberta_mtr": 0.7105046606080528,
+      "molformer": 0.6998769896395584,
+      "mol2vec": 0.7154293167622825
+    }
+  },
+  "patient-dropout-event-forecasting/Phase2": {
+    "task": "patient-dropout-event-forecasting",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 12608,
+    "n_test": 3162,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.5762175838077166,
+      "chemberta_mtr": 0.5762175838077166,
+      "molformer": 0.5762175838077166,
+      "mol2vec": 0.5762175838077166
+    },
+    "cells": {
+      "baseline": 0.7690268843510543,
+      "chemberta_mlm": 0.7698728279069349,
+      "chemberta_mtr": 0.7569236518546119,
+      "molformer": 0.7525309288994428,
+      "mol2vec": 0.7626617707131603
+    }
+  },
+  "patient-dropout-event-forecasting/Phase3": {
+    "task": "patient-dropout-event-forecasting",
+    "phase": "Phase3",
+    "metric": "ROC-AUC",
+    "n_train": 9129,
+    "n_test": 2332,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.5424528301886793,
+      "chemberta_mtr": 0.5424528301886793,
+      "molformer": 0.5424528301886793,
+      "mol2vec": 0.5424528301886793
+    },
+    "cells": {
+      "baseline": 0.8428235299420563,
+      "chemberta_mlm": 0.8336521623503799,
+      "chemberta_mtr": 0.8352901802315491,
+      "molformer": 0.8332539265776739,
+      "mol2vec": 0.8352940115887286
+    }
+  },
+  "trial-duration-forecasting/Phase1": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase1",
+    "metric": "R\u00b2",
+    "n_train": 10424,
+    "n_test": 3016,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.34416445623342173,
+      "chemberta_mtr": 0.34416445623342173,
+      "molformer": 0.34416445623342173,
+      "mol2vec": 0.34416445623342173
+    },
+    "cells": {
+      "baseline": 0.49066996574401855,
+      "chemberta_mlm": 0.48391989469528196,
+      "chemberta_mtr": 0.48066850900650027,
+      "molformer": 0.46940600872039795,
+      "mol2vec": 0.4762037992477417
+    }
+  },
+  "trial-duration-forecasting/Phase2": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase2",
+    "metric": "R\u00b2",
+    "n_train": 10623,
+    "n_test": 2590,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.4409266409266409,
+      "chemberta_mtr": 0.4409266409266409,
+      "molformer": 0.4409266409266409,
+      "mol2vec": 0.44054054054054054
+    },
+    "cells": {
+      "baseline": 0.24576567411422728,
+      "chemberta_mlm": 0.2539305448532104,
+      "chemberta_mtr": 0.260692822933197,
+      "molformer": 0.25274465084075926,
+      "mol2vec": 0.2481442928314209
+    }
+  },
+  "trial-duration-forecasting/Phase3": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase3",
+    "metric": "R\u00b2",
+    "n_train": 7406,
+    "n_test": 1698,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.44228504122497053,
+      "chemberta_mtr": 0.44228504122497053,
+      "molformer": 0.44228504122497053,
+      "mol2vec": 0.44228504122497053
+    },
+    "cells": {
+      "baseline": 0.24194120168685912,
+      "chemberta_mlm": 0.21813597679138183,
+      "chemberta_mtr": 0.24991838932037352,
+      "molformer": 0.21922193765640258,
+      "mol2vec": 0.19671223163604737
+    }
+  },
+  "trial-failure-reason-identification/Phase1": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase1",
+    "metric": "macro-F1",
+    "n_train": 3474,
+    "n_test": 842,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.4323040380047506,
+      "chemberta_mtr": 0.4323040380047506,
+      "molformer": 0.4323040380047506,
+      "mol2vec": 0.4311163895486936
+    },
+    "cells": {
+      "baseline": 0.3293368952335959,
+      "chemberta_mlm": 0.3283471844037845,
+      "chemberta_mtr": 0.31784072392784574,
+      "molformer": 0.32145793495626274,
+      "mol2vec": 0.317320032055192
+    }
+  },
+  "trial-failure-reason-identification/Phase2": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase2",
+    "metric": "macro-F1",
+    "n_train": 7056,
+    "n_test": 1780,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.5837078651685393,
+      "chemberta_mtr": 0.5837078651685393,
+      "molformer": 0.5837078651685393,
+      "mol2vec": 0.5831460674157304
+    },
+    "cells": {
+      "baseline": 0.3445015029960457,
+      "chemberta_mlm": 0.36109123513300195,
+      "chemberta_mtr": 0.36309415303744746,
+      "molformer": 0.3480180728790093,
+      "mol2vec": 0.35419521227115813
+    }
+  },
+  "trial-failure-reason-identification/Phase3": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase3",
+    "metric": "macro-F1",
+    "n_train": 3341,
+    "n_test": 815,
+    "smiles_test_cov": {
+      "chemberta_mlm": 0.5533742331288344,
+      "chemberta_mtr": 0.5533742331288344,
+      "molformer": 0.5533742331288344,
+      "mol2vec": 0.5533742331288344
+    },
+    "cells": {
+      "baseline": 0.3378426716354014,
+      "chemberta_mlm": 0.34919332038566664,
+      "chemberta_mtr": 0.3769284844654511,
+      "molformer": 0.3570032961227875,
+      "mol2vec": 0.3764070180156357
+    }
+  }
+}

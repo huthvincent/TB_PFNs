@@ -133,9 +133,13 @@ def main(args):
 
     t_start = time.time()
 
-    # ---- 1. Collect SMILES ----
-    echo("Scanning train_x.csv / test_x.csv for `smiless` column ...")
-    corpus = collect_smiles_corpus(args.subtask)
+    # ---- 1. Collect SMILES (union over one or more subtasks) ----
+    subtasks = [s.strip() for s in args.subtasks.split(",")] if args.subtasks else [args.subtask]
+    echo(f"Scanning `smiless` over subtasks: {subtasks}")
+    corpus = {}
+    for st in subtasks:
+        for k, smis in collect_smiles_corpus(st).items():
+            corpus.setdefault(k, set()).update(smis)
     n_keys = len(corpus)
     n_keys_with_smiles = sum(1 for s in corpus.values() if s)
     echo(f"  {n_keys:,} (trial_id, phase) pairs  "
@@ -261,6 +265,7 @@ def main(args):
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--subtask", default="serious-adverse-event-forecasting")
+    p.add_argument("--subtasks", default=None, help="comma-list of subtasks (union); overrides --subtask")
     p.add_argument("--limit", type=int, default=None)
     args = p.parse_args()
     main(args)

@@ -1,0 +1,27 @@
+{
+  "run_id": "encode_smiles_mol2vec_20260604_111139",
+  "model": "mol2vec (gensim word2vec, Morgan radius=1)",
+  "model_short": "mol2vec",
+  "pretrained_pkl": "/data2/zhu11/TB/branch/smiles/data/model_300dim.pkl",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 75568,
+  "n_keys_with_smiles": 39642,
+  "n_unique_smiles": 59449,
+  "n_rdkit_valid": 59444,
+  "n_pooled_groups": 39638,
+  "embed_dim": 300,
+  "radius": 1,
+  "elapsed_total_s": 17.47,
+  "norm_mean": 119.14366149902344,
+  "norm_std": 98.40413665771484,
+  "args": {
+    "subtask": "serious-adverse-event-forecasting",
+    "subtasks": "serious-adverse-event-forecasting,mortality-event-prediction,patient-dropout-event-forecasting,trial-duration-forecasting,trial-failure-reason-identification",
+    "limit": null
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/smiles/data/smiles_embeddings_mol2vec.parquet",
+    "per_smiles_npy": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_mol2vec_20260604_111139/per_smiles_embeddings.npy",
+    "per_smiles_meta": "/data2/zhu11/TB/branch/smiles/results/encode_smiles_mol2vec_20260604_111139/per_smiles_metadata.parquet"
+  }
+}

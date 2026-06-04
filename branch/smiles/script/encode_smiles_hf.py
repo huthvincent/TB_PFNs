@@ -145,9 +145,13 @@ def main(args):
 
     t_start = time.time()
 
-    # ---- 1. Collect SMILES corpus ----
-    echo("Scanning train_x.csv / test_x.csv for `smiless` column ...")
-    corpus = collect_smiles_corpus(args.subtask)
+    # ---- 1. Collect SMILES corpus (union over one or more subtasks) ----
+    subtasks = [s.strip() for s in args.subtasks.split(",")] if args.subtasks else [args.subtask]
+    echo(f"Scanning `smiless` over subtasks: {subtasks}")
+    corpus: dict = {}
+    for st in subtasks:
+        for k, smis in collect_smiles_corpus(st).items():
+            corpus.setdefault(k, set()).update(smis)
     n_keys = len(corpus)
     n_keys_with_smiles = sum(1 for s in corpus.values() if s)
     n_unique_smiles_total = sum(len(s) for s in corpus.values())
@@ -275,6 +279,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--model", required=True, choices=list(MODEL_REGISTRY))
     p.add_argument("--subtask", default="serious-adverse-event-forecasting")
+    p.add_argument("--subtasks", default=None, help="comma-list of subtasks (union); overrides --subtask")
     p.add_argument("--batch-size", type=int, default=128)
     p.add_argument("--device", default="cuda")
     p.add_argument("--dtype", choices=["bf16", "fp16"], default="bf16")

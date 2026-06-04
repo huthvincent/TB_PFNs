@@ -7,19 +7,91 @@
 
 ## 1. TL;DR
 
-**结论：在 SAE（serious-adverse-event-forecasting）上，把 SMILES 药物结构作为第 3 个 virtual feature token 加到 TabICLv2 + I/E 之上，没有稳健增益 —— Phase 2 ≈ 0，Phase 3 轻微为负。这条线不纳入 SAE 最终方案。**
+固定 TabICLv2，baseline = **tabular + I/E**（Qwen3 编 I/E）。把药物 **SMILES 作 1 个额外 virtual token**（共 3 token），4 个化学 encoder × **5 task × Phase 1–3** 全面评估（**§2 主结果**）。
 
-- 测了 4 个化学 encoder（ChemBERTa-MLM / ChemBERTa-MTR / MolFormer-XL / Mol2Vec），全部在噪声内或略负。
-- **关键方法论结论**：TabICL 的 Full-Step-2 训练是 **CUDA 非确定性**的，best-epoch ROC-AUC 单次 run 噪声底 ≈ **±0.009**。任何单次 run 的 Δ<0.01 都不可信，必须多-seed。本 branch 的负结论建立在 **5 config × 2 phase × 5 seed = 50 run** 的 mean±std 上。
-- **附带正向结论**：用 **Qwen3-Embedding-8B (4096-d)** 重编 I/E embedding，在 I+E（不加 SMILES）上跟旧 MedCPT (768-d) 持平或略好（Phase3 +0.007），可作为项目统一的 I/E encoder。
+- **SMILES 整体很弱、多数在噪声内甚至净负**：跨 15 个 task×phase，最好的 **ChemBERTa-MTR** 平均才 +0.0035（win 60%），**MolFormer 净负**（−0.0041, win 27%）。**远弱于 MeSH**（最强 BioLORD +0.0105 / win 80%，见 [`../mesh/final_readme.md`](../mesh/final_readme.md)）。
+- **唯一一致正的格子：trial-failure-reason Phase2/3**（ChemBERTa-MTR +0.039 P3、Mol2Vec +0.039 P3）。trial-duration Phase3 反而多为负（跟 MeSH 相反）。
+- **覆盖率只 ~50%**（很多 trial 无药物 SMILES）严重稀释信号；SAE/mortality/Phase1 多在噪声内。
+- **要药物信息，MeSH（药物受控术语）比 SMILES（分子结构）有效得多**。SMILES 不建议作为默认增强（除 failure-reason 外）。
 
-SAE 最终方案仍是 [`../new_FM/final_readme.md`](../new_FM/final_readme.md) 的 **TabICLv2 + I+E (Full Step 2)**；I/E 建议用 Qwen3 版（`data/ie_embeddings_qwen3.parquet`）。
+> 方法论（来自 SAE 专项 §3）：TabICL Full-Step-2 是 **CUDA 非确定性**的（单次噪声底 ±0.005–0.01）。本 grid 是单 seed 点估计（用户要求不做多-seed），|Δ|<~0.01 在噪声内 —— 看跨 task/phase 的**模式**，确有信号的格子（failure-reason P2/3）建议补多-seed 坐实。SAE 专项的多-seed + 配对 t 详见 §3。
+>
+> **附带**：用 **Qwen3-Embedding-8B** 编 I/E（`data/ie_embeddings_qwen3.parquet`，全 trial）是项目统一 baseline；SAE 最终方案仍是 [`../new_FM/final_readme.md`](../new_FM/final_readme.md) 的 **TabICLv2 + I/E**。
 
 ---
 
-## 2. 候选对比（pk 掉了什么）
+## 2. 全面 SMILES 评估（5 任务 × Phase 1–3）★ 主结果
 
-### 2.1 SMILES encoder（4 个全测，无显著差异）
+固定 TabICLv2，**baseline = tabular + I/E**（Qwen3-Embedding-8B, 2 virtual token）。每个 SMILES 列把药物 **SMILES 作 1 个额外 virtual token**（共 3 token；mean-pool 一个 trial 的多条 SMILES），用对应化学 encoder 编码。5 个 task × Phase 1–3，**单 seed**（seed=0），指标 = 末 5 eval-epoch primary metric 均值。Δ = SMILES − baseline（同 cell）。粗体 = 该行最佳 encoder。
+数据：`results/smiles_grid_20260604_111257/grid.json`；脚本 `script/smiles_eval_grid.py` + `script/render_grid_smiles.py`。
+
+> ⚠️ **单 seed 点估计**，噪声底 ~±0.005–0.010，|Δ|<~0.01 在噪声内 —— 看跨 phase/task 的**模式**。SMILES 覆盖率只 ~50%（很多 trial 无药物 SMILES）→ 信号被稀释，见 cov 列。
+
+### serious-adverse-event (binary, ROC-AUC)
+
+| Phase | baseline (tab+I/E) | SMILES cov | +ChemBERTa-MLM Δ | +ChemBERTa-MTR Δ | +MolFormer Δ | +Mol2Vec Δ |
+|---|---|---|---|---|---|---|
+| Phase1 | 0.8807 | 48% | -0.0010 | -0.0044 | **+0.0027** | -0.0041 |
+| Phase2 | 0.8601 | 53% | -0.0021 | **+0.0046** | -0.0000 | +0.0015 |
+| Phase3 | 0.8874 | 50% | **+0.0051** | +0.0039 | -0.0039 | +0.0015 |
+
+### mortality-event (binary, ROC-AUC)
+
+| Phase | baseline (tab+I/E) | SMILES cov | +ChemBERTa-MLM Δ | +ChemBERTa-MTR Δ | +MolFormer Δ | +Mol2Vec Δ |
+|---|---|---|---|---|---|---|
+| Phase1 | 0.9288 | 48% | -0.0134 | -0.0049 | -0.0041 | **+0.0042** |
+| Phase2 | 0.8936 | 53% | **+0.0114** | +0.0021 | -0.0021 | -0.0033 |
+| Phase3 | 0.8747 | 50% | -0.0033 | **+0.0065** | -0.0009 | -0.0056 |
+
+### patient-dropout (binary, ROC-AUC)
+
+| Phase | baseline (tab+I/E) | SMILES cov | +ChemBERTa-MLM Δ | +ChemBERTa-MTR Δ | +MolFormer Δ | +Mol2Vec Δ |
+|---|---|---|---|---|---|---|
+| Phase1 | 0.7049 | 48% | **+0.0224** | +0.0056 | -0.0050 | +0.0105 |
+| Phase2 | 0.7690 | 58% | **+0.0008** | -0.0121 | -0.0165 | -0.0064 |
+| Phase3 | 0.8428 | 54% | -0.0092 | -0.0075 | -0.0096 | -0.0075 |
+
+### trial-duration (regression, R²)
+
+| Phase | baseline (tab+I/E) | SMILES cov | +ChemBERTa-MLM Δ | +ChemBERTa-MTR Δ | +MolFormer Δ | +Mol2Vec Δ |
+|---|---|---|---|---|---|---|
+| Phase1 | 0.4907 | 34% | -0.0068 | -0.0100 | -0.0213 | -0.0145 |
+| Phase2 | 0.2458 | 44% | +0.0082 | **+0.0149** | +0.0070 | +0.0024 |
+| Phase3 | 0.2419 | 44% | -0.0238 | **+0.0080** | -0.0227 | -0.0452 |
+
+### trial-failure-reason (multiclass, macro-F1)
+
+| Phase | baseline (tab+I/E) | SMILES cov | +ChemBERTa-MLM Δ | +ChemBERTa-MTR Δ | +MolFormer Δ | +Mol2Vec Δ |
+|---|---|---|---|---|---|---|
+| Phase1 | 0.3293 | 43% | -0.0010 | -0.0115 | -0.0079 | -0.0120 |
+| Phase2 | 0.3445 | 58% | +0.0166 | **+0.0186** | +0.0035 | +0.0097 |
+| Phase3 | 0.3378 | 55% | +0.0114 | **+0.0391** | +0.0192 | +0.0386 |
+
+### 全局汇总（15 个 task×phase cell）
+
+| Encoder | mean Δ | median Δ | win-rate (Δ>0) | #cells Δ>+0.01 | #cells Δ<−0.01 |
+|---|---|---|---|---|---|
+| ChemBERTa-MLM | +0.0010 | -0.0010 | 47% (7/15) | 4 | 2 |
+| **ChemBERTa-MTR** | **+0.0035** | **+0.0039** | **60% (9/15)** | 3 | 3 |
+| MolFormer | −0.0041 | −0.0039 | 27% (4/15) | 1 | 3 |
+| Mol2Vec | −0.0020 | −0.0033 | 47% (7/15) | 2 | 3 |
+
+### 结论（全面 grid）
+
+1. **SMILES 整体很弱、不稳**：最好的 **ChemBERTa-MTR** 平均才 +0.0035（win-rate 60%），**MolFormer 净负**（−0.0041, 27% win，多数 cell 拖累）。远弱于 MeSH（最强 BioLORD +0.0105 / 80%，见 [`../mesh/final_readme.md`](../mesh/final_readme.md) §2）。
+2. **唯一一致正的格子：trial-failure-reason Phase2/3**（ChemBERTa-MTR +0.019 P2 / **+0.039 P3**、Mol2Vec +0.039 P3、MolFormer +0.019 P3）。分子结构可能跟"安全性失败"类别相关。
+3. **trial-duration Phase3 多为负**（MolFormer −0.023、Mol2Vec −0.045）——跟 MeSH 相反（MeSH 在 duration P3 是大赢家）。SMILES 抓不到试验时长信号。
+4. **Phase1 普遍负**（小数据 + SMILES 覆盖更低，duration P1 只 34%）。
+5. **覆盖率只 ~50%**（vs MeSH condition 95% / intervention 67%）严重稀释信号——~一半 trial 没有药物 SMILES 喂的是零向量。
+6. **结论：SMILES 不是有用的额外信号源**（除 failure-reason 外）。要药物信息，MeSH（药物受控术语）比 SMILES（分子结构）有效得多——印证 SAE 专项的发现：缺的是**药物身份/适应症语义**而非**分子结构**。
+
+> 单 seed caveat：点估计，|Δ|<~0.01 在噪声内。failure-reason P2/3 是值得补多-seed 坐实的格子。
+
+---
+
+## 3. 候选对比（pk 掉了什么）
+
+### 3.1 SMILES encoder（4 个全测，无显著差异）
 
 | Encoder | HF / 来源 | d | Phase2 Δ vs B'(last5) | Phase3 Δ vs B'(last5) | 砍掉原因 |
 |---|---|---|---|---|---|
@@ -30,13 +102,13 @@ SAE 最终方案仍是 [`../new_FM/final_readme.md`](../new_FM/final_readme.md) 
 
 > 噪声底 std≈0.0033–0.0039（last5, n=5）。所有 |Δ| 要么小于各 cell 自身 std，要么（Phase3 ChemBERTa-MLM）为显著负。**没有任何 encoder 给出稳健正增益**。换 encoder 救不了——问题在信号本身。
 
-### 2.2 为什么 SMILES 在 SAE 上没用
+### 3.2 为什么 SMILES 在 SAE 上没用
 
 - **Cell D（仅 SMILES 非空子集，剔除 ~46% 缺失）也没翻盘**：C 在子集上仍 ≈ B' 或更差。→ 不是"缺失稀释"问题，是 SMILES 对 SAE 真没有 tabular+I/E 之外的增量信号。
 - 严重不良事件率主要由 **试验设计 / 人群 / 给药方式**驱动，这些已被 tabular 列 + I/E 文本吃掉；分子结构的边际贡献被淹没。
 - 印证 [`../new_FM/README.md`](../new_FM/README.md) patient-dropout 的发现：base 冻结、信号已满时，多加一个随机初始化的 trainable projection 只会扰动表征、轻微跑偏。
 
-### 2.3 I/E encoder：Qwen3 vs 旧 MedCPT
+### 3.3 I/E encoder：Qwen3 vs 旧 MedCPT
 
 | Phase | 旧 MedCPT +IE (768-d, §3) | Qwen3 B' best (4096-d, multiseed) | 判定 |
 |---|---|---|---|
@@ -47,7 +119,7 @@ SAE 最终方案仍是 [`../new_FM/final_readme.md`](../new_FM/final_readme.md) 
 
 ---
 
-## 3. 接入方式（代码层面怎么用）
+## 4. 接入方式（代码层面怎么用）
 
 **基础架构**：fork 自 [`../new_FM/script/full_step2_tabicl.py`](../new_FM/script/full_step2_tabicl.py)，扩成 2 or 3 virtual feature column 注入 TabICL（在 `col_embedder` 与 `row_interactor` 之间 cat 虚拟列）。冻结 27.6M base，只训 projection + col_emb（2 token ~1.05M，3 token ~1.1M）。
 
@@ -70,7 +142,7 @@ python script/full_step2_tabicl_smiles.py --phase Phase2 --epochs 30 --seed 0 \
 
 ---
 
-## 4. 已知坑
+## 5. 已知坑
 
 1. **CUDA 非确定性**（最重要）：TabICL Full-Step-2 同配置同 seed 跑 3 次 → 0.8655/0.8724/0.8748。噪声底 best≈±0.009、last5≈±0.004。**结论必须建立在多-seed mean±std 上**，单次 Δ<0.01 是噪声。
 2. **best-epoch 指标有 max-噪声偏置**：best (取 ~15 个含噪 eval 的 max) 比 last5 收敛值系统性高 ~0.011。报数优先用 **last5**（末 5 epoch 均值）；引用 §3 旧表时才用 best 对齐。
@@ -83,7 +155,7 @@ python script/full_step2_tabicl_smiles.py --phase Phase2 --epochs 30 --seed 0 \
 
 ---
 
-## 5. 关键实验数据
+## 6. 关键实验数据
 
 完整 mean±std 表（last5 / best / final 三套指标）：
 - [`results/multiseed_20260602_002504/robust_summary.md`](results/multiseed_20260602_002504/robust_summary.md)
@@ -94,7 +166,7 @@ python script/full_step2_tabicl_smiles.py --phase Phase2 --epochs 30 --seed 0 \
 
 ---
 
-## 6. 复现命令
+## 7. 复现命令
 
 ```bash
 source /data2/zhu11/miniconda3/etc/profile.d/conda.sh && conda activate tabpfn
@@ -103,13 +175,18 @@ cd /data2/zhu11/TB/branch/smiles
 # 1. I/E embedding（Qwen3, ~68 min；可 --resume <run_dir> 续跑）
 python script/encode_ie_qwen3.py --batch-size 128 --checkpoint-every 50
 
-# 2. SMILES embedding（4 个 encoder；HF 3 个 + mol2vec CPU）
-python script/encode_smiles_hf.py --model chemberta_mlm
-python script/encode_smiles_hf.py --model chemberta_mtr
-python script/encode_smiles_hf.py --model molformer
-python script/encode_smiles_mol2vec.py   # 需先下 data/model_300dim.pkl
+# === 全面 grid（§2 主结果）: 5 task × Phase1-3 × 5 cell ===
+TASKS="serious-adverse-event-forecasting,mortality-event-prediction,patient-dropout-event-forecasting,trial-duration-forecasting,trial-failure-reason-identification"
+# 2a. SMILES embedding 覆盖 5 个 task（--subtasks union；3 HF encoder + mol2vec）
+for M in chemberta_mlm chemberta_mtr molformer; do python script/encode_smiles_hf.py --model $M --subtasks "$TASKS"; done
+python script/encode_smiles_mol2vec.py --subtasks "$TASKS"   # 需先下 data/model_300dim.pkl
+# 2b. 跑 grid（单 seed, ~17 min）+ 渲染
+python script/smiles_eval_grid.py
+python script/render_grid_smiles.py        # 输出 §2 的 markdown 表
 
-# 3. 多-seed 实验（50 run，~1 h）+ 稳健聚合
+# === SAE 专项（§3）: 多-seed + 配对 t（只 SAE）===
+for M in chemberta_mlm chemberta_mtr molformer; do python script/encode_smiles_hf.py --model $M; done   # SAE-only
+python script/encode_smiles_mol2vec.py
 python script/run_multiseed.py --phases Phase2,Phase3 --seeds 5 --epochs 30
 python script/aggregate_robust.py   # 默认取最新 multiseed_* dir
 ```
@@ -118,7 +195,7 @@ env：`torch 2.9.1 / transformers 4.57.6 / tabicl 2.1.1 / rdkit 2026.3.2 / gensi
 
 ---
 
-## 7. 下一步建议
+## 8. 下一步建议
 
 - **不建议**在 SMILES 上继续调参（lr / epoch / pooling / 多 SMILES 拆 token）——信号本身不足，调参空间是噪声。
 - 若仍想榨药物信息，方向是 **结构化药物属性**而非 raw SMILES：ATC 类、给药途径、是否生物制剂、剂量——这些更可能跟 SAE 因果相关，且能做成稳定 tabular 列而非高维 embedding。
@@ -127,17 +204,17 @@ env：`torch 2.9.1 / transformers 4.57.6 / tabicl 2.1.1 / rdkit 2026.3.2 / gensi
 
 ---
 
-## 8. 关键产物索引
+## 9. 关键产物索引
 
 | 产物 | 路径 | 说明 |
 |---|---|---|
 | I/E Qwen3 embedding | `data/ie_embeddings_qwen3.parquet` | d=4096, 158K groups, 覆盖全 4 phase |
-| SMILES embedding ×4 | `data/smiles_embeddings_{chemberta_mlm,chemberta_mtr,molformer,mol2vec}.parquet` | d=384/384/768/300 |
+| SMILES embedding ×4 | `data/smiles_embeddings_{chemberta_mlm,chemberta_mtr,molformer,mol2vec}.parquet` | d=384/384/768/300; 覆盖 5 task, 39,642 non-empty |
 | mol2vec 预训练权重 | `data/model_300dim.pkl` | 74 MB, gensim w2v |
-| I/E encoding 脚本 | `script/encode_ie_qwen3.py` | resumable, Qwen3-Embedding-8B |
-| SMILES encoding 脚本 | `script/encode_smiles_hf.py`（3 HF）/ `script/encode_smiles_mol2vec.py` | |
+| SMILES encoding 脚本 | `script/encode_smiles_hf.py`（3 HF, `--subtasks`）/ `script/encode_smiles_mol2vec.py`（`--subtasks`） | |
+| **全面 grid（§2 主结果）** | `script/smiles_eval_grid.py` + `render_grid_smiles.py` | in-process, 5 task×3 phase×5 cell, 单 seed |
+| 全面 grid 结果 | `results/smiles_grid_20260604_111257/grid.json` | 75 cell raw |
 | 训练脚本 | `script/full_step2_tabicl_smiles.py` | 2 or 3 virt token; `--smiles-emb` / `--report-subset-emb` |
-| 多-seed driver | `script/run_multiseed.py` | 5 cfg × N phase × N seed |
-| 稳健聚合 | `script/aggregate_robust.py` | last5/best/final mean±std + Δ vs B' |
-| 最终结果 | `results/multiseed_20260602_002504/` | summary.md / robust_summary.md / raw_runs.jsonl |
+| SAE 多-seed driver / 聚合（§3） | `script/run_multiseed.py` / `aggregate_robust.py` | last5/best/final mean±std + Δ vs B' |
+| SAE 多-seed 结果（§3） | `results/multiseed_20260602_002504/` | summary / robust_summary / raw_runs.jsonl |
 | 进度日志 | `README.md` §11 | 完整心路 + 踩坑 |

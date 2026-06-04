@@ -1,0 +1,24 @@
+[smiles_grid] 20260604_111257  tasks=5 phases=['Phase1', 'Phase2', 'Phase3'] encoders=['chemberta_mlm', 'chemberta_mtr', 'molformer', 'mol2vec'] seed=0
+Loading I/E + SMILES lookups once ...
+  chemberta_mlm: d=384  keys=39,642
+  chemberta_mtr: d=384  keys=39,642
+  molformer: d=768  keys=39,642
+  mol2vec: d=300  keys=39,638
+  I/E d=4096  setup 13s
+  serious-adverse-event-forecasting/Phase1 [ROC-AUC] base=0.8807  cov=48%  chemberta_mlm:-0.0010  chemberta_mtr:-0.0044  molformer:+0.0027  mol2vec:-0.0041
+  serious-adverse-event-forecasting/Phase2 [ROC-AUC] base=0.8601  cov=53%  chemberta_mlm:-0.0021  chemberta_mtr:+0.0046  molformer:-0.0000  mol2vec:+0.0015
+  serious-adverse-event-forecasting/Phase3 [ROC-AUC] base=0.8874  cov=50%  chemberta_mlm:+0.0051  chemberta_mtr:+0.0039  molformer:-0.0039  mol2vec:+0.0015
+  mortality-event-prediction/Phase1 [ROC-AUC] base=0.9288  cov=48%  chemberta_mlm:-0.0134  chemberta_mtr:-0.0049  molformer:-0.0041  mol2vec:+0.0042
+  mortality-event-prediction/Phase2 [ROC-AUC] base=0.8936  cov=53%  chemberta_mlm:+0.0114  chemberta_mtr:+0.0021  molformer:-0.0021  mol2vec:-0.0033
+  mortality-event-prediction/Phase3 [ROC-AUC] base=0.8747  cov=50%  chemberta_mlm:-0.0033  chemberta_mtr:+0.0065  molformer:-0.0009  mol2vec:-0.0056
+  patient-dropout-event-forecasting/Phase1 [ROC-AUC] base=0.7049  cov=48%  chemberta_mlm:+0.0224  chemberta_mtr:+0.0056  molformer:-0.0050  mol2vec:+0.0105
+  patient-dropout-event-forecasting/Phase2 [ROC-AUC] base=0.7690  cov=58%  chemberta_mlm:+0.0008  chemberta_mtr:-0.0121  molformer:-0.0165  mol2vec:-0.0064
+  patient-dropout-event-forecasting/Phase3 [ROC-AUC] base=0.8428  cov=54%  chemberta_mlm:-0.0092  chemberta_mtr:-0.0075  molformer:-0.0096  mol2vec:-0.0075
+  trial-duration-forecasting/Phase1 [R²] base=0.4907  cov=34%  chemberta_mlm:-0.0068  chemberta_mtr:-0.0100  molformer:-0.0213  mol2vec:-0.0145
+  trial-duration-forecasting/Phase2 [R²] base=0.2458  cov=44%  chemberta_mlm:+0.0082  chemberta_mtr:+0.0149  molformer:+0.0070  mol2vec:+0.0024
+  trial-duration-forecasting/Phase3 [R²] base=0.2419  cov=44%  chemberta_mlm:-0.0238  chemberta_mtr:+0.0080  molformer:-0.0227  mol2vec:-0.0452
+  trial-failure-reason-identification/Phase1 [macro-F1] base=0.3293  cov=43%  chemberta_mlm:-0.0010  chemberta_mtr:-0.0115  molformer:-0.0079  mol2vec:-0.0120
+  trial-failure-reason-identification/Phase2 [macro-F1] base=0.3445  cov=58%  chemberta_mlm:+0.0166  chemberta_mtr:+0.0186  molformer:+0.0035  mol2vec:+0.0097
+  trial-failure-reason-identification/Phase3 [macro-F1] base=0.3378  cov=55%  chemberta_mlm:+0.0114  chemberta_mtr:+0.0391  molformer:+0.0192  mol2vec:+0.0386
+
+Done in 995s. Saved /data2/zhu11/TB/branch/smiles/results/smiles_grid_20260604_111257/grid.json

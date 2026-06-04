@@ -1,0 +1,17 @@
+[run_id] encode_smiles_mol2vec_20260604_111139
+[subtask] serious-adverse-event-forecasting  [radius] 1  [embed_dim] 300
+Scanning `smiless` over subtasks: ['serious-adverse-event-forecasting', 'mortality-event-prediction', 'patient-dropout-event-forecasting', 'trial-duration-forecasting', 'trial-failure-reason-identification']
+  75,568 (trial_id, phase) pairs  (39,642 non-empty, 52.5%)
+  encoding 59,449 SMILES strings
+Loading mol2vec model: /data2/zhu11/TB/branch/smiles/data/model_300dim.pkl ...
+  vector_size=300  vocab=21,003
+Converting SMILES → RDKit Mol → Morgan substructure sentences ...
+  RDKit-valid SMILES: 59,444/59,449 (100.0%)
+Vectorizing sentences (mean of substructure word vectors) ...
+  done
+Mean-pooling per (trial_id, phase) over valid SMILES ...
+  mean-pooled groups: 39,638 → /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_mol2vec.parquet
+
+Done in 17.5s
+  pooled parquet: /data2/zhu11/TB/branch/smiles/data/smiles_embeddings_mol2vec.parquet  (48.14 MB)
+  norms (valid): mean=119.144  std=98.404

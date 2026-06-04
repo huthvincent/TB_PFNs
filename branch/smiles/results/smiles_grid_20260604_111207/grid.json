@@ -1,0 +1,34 @@
+{
+  "serious-adverse-event-forecasting/Phase2": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 6516,
+    "n_test": 1600,
+    "smiles_test_cov": {
+      "molformer": 0.5275,
+      "mol2vec": 0.5275
+    },
+    "cells": {
+      "baseline": 0.8713176714014935,
+      "molformer": 0.8634441421532788,
+      "mol2vec": 0.8688675339974585
+    }
+  },
+  "trial-duration-forecasting/Phase2": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase2",
+    "metric": "R\u00b2",
+    "n_train": 10623,
+    "n_test": 2590,
+    "smiles_test_cov": {
+      "molformer": 0.4409266409266409,
+      "mol2vec": 0.44054054054054054
+    },
+    "cells": {
+      "baseline": 0.23101907968521118,
+      "molformer": 0.24240684509277344,
+      "mol2vec": 0.23720022042592367
+    }
+  }
+}
