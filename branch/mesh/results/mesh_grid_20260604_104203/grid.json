@@ -1,0 +1,44 @@
+{
+  "serious-adverse-event-forecasting/Phase1": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 1595,
+    "n_test": 419,
+    "ctx": 1197,
+    "qry": 398,
+    "cells": {
+      "baseline": 0.9150090415913201,
+      "medcpt": 0.9059713141991622,
+      "qwen3": 0.9042132269980371
+    }
+  },
+  "trial-duration-forecasting/Phase1": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase1",
+    "metric": "R\u00b2",
+    "n_train": 10424,
+    "n_test": 3016,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.4849766691525777,
+      "medcpt": 0.47814375162124634,
+      "qwen3": 0.48171844085057575
+    }
+  },
+  "trial-failure-reason-identification/Phase1": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase1",
+    "metric": "macro-F1",
+    "n_train": 3474,
+    "n_test": 842,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.2620420348415807,
+      "medcpt": 0.2680524896016048,
+      "qwen3": 0.28533573355041303
+    }
+  }
+}

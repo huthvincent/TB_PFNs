@@ -1,0 +1,32 @@
+{
+  "run_id": "encode_mesh_medcpt_20260604_103543",
+  "model": "ncbi/MedCPT-Article-Encoder",
+  "model_short": "medcpt",
+  "pool_strategy": "cls",
+  "subtask": "serious-adverse-event-forecasting",
+  "n_keys": 151136,
+  "n_terms_rows": 241499,
+  "n_pooled_groups": 116581,
+  "embed_dim": 768,
+  "max_len": 64,
+  "batch_size": 256,
+  "dtype_compute": "bfloat16",
+  "dtype_storage": "float16",
+  "device": "cuda",
+  "elapsed_total_s": 28.1,
+  "elapsed_encode_s": 18.96,
+  "throughput_per_s": 12738.6,
+  "norm_mean": 8.477546691894531,
+  "norm_std": 0.10928802937269211,
+  "args": {
+    "model": "medcpt",
+    "subtask": "serious-adverse-event-forecasting",
+    "subtasks": "serious-adverse-event-forecasting,mortality-event-prediction,patient-dropout-event-forecasting,trial-duration-forecasting,trial-failure-reason-identification",
+    "batch_size": 256,
+    "device": "cuda",
+    "limit": null
+  },
+  "outputs": {
+    "pooled_parquet": "/data2/zhu11/TB/branch/mesh/data/mesh_embeddings_medcpt.parquet"
+  }
+}

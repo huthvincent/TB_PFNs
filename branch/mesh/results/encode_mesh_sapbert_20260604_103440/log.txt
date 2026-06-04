@@ -1,0 +1,15 @@
+[run_id] encode_mesh_sapbert_20260604_103440
+[model] cambridgeltl/SapBERT-from-PubMedBERT-fulltext  short=sapbert  pool=cls
+[subtask] serious-adverse-event-forecasting
+Scanning condition + intervention MeSH over subtasks: ['serious-adverse-event-forecasting', 'mortality-event-prediction', 'patient-dropout-event-forecasting', 'trial-duration-forecasting', 'trial-failure-reason-identification']
+  (trial,phase,type) keys: 151,136  (condition non-empty 65,348, intervention non-empty 51,233)
+  total (trial,phase,type,term) rows to encode: 241,499  (unique terms: 5,998)
+Loading cambridgeltl/SapBERT-from-PubMedBERT-fulltext (bf16) ...
+  params=109,482,240  embed_dim=768  pool=cls  batch_size=256
+  encode done in 18.8s (12868.1/s)
+Mean-pooling per (trial_id, phase, type) ...
+  mean-pooled groups: 116,581 → /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_sapbert.parquet
+
+Done in 28.6s
+  pooled parquet: /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_sapbert.parquet  (301.29 MB)
+  norms: mean=15.595  std=0.200

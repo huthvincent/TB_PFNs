@@ -68,7 +68,12 @@ def main(args):
     t0 = time.time()
 
     echo("Scanning condition + intervention MeSH ...")
-    corpus = collect_mesh_corpus(args.subtask)
+    subtasks = [s.strip() for s in args.subtasks.split(",")] if args.subtasks else [args.subtask]
+    echo(f"  subtasks: {subtasks}")
+    corpus = {}
+    for st in subtasks:
+        for k, terms in collect_mesh_corpus(st).items():
+            corpus.setdefault(k, set()).update(terms)
     rows = []
     for (tid, ph, ty), terms in corpus.items():
         for t in terms:
@@ -127,6 +132,7 @@ def main(args):
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--subtask", default="serious-adverse-event-forecasting")
+    p.add_argument("--subtasks", default=None, help="comma-list of subtasks (union); overrides --subtask")
     p.add_argument("--batch-size", type=int, default=128)
     p.add_argument("--device", default="cuda")
     p.add_argument("--limit", type=int, default=None)

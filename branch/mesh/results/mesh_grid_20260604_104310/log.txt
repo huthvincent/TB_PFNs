@@ -1,0 +1,25 @@
+[mesh_grid] 20260604_104310  tasks=5 phases=['Phase1', 'Phase2', 'Phase3'] encoders=['sapbert', 'biolord', 'medcpt', 'pubmedbert', 'qwen3'] seed=0
+Loading I/E + MeSH lookups once ...
+  sapbert: d=768  cond_keys=65,348 interv_keys=51,233
+  biolord: d=768  cond_keys=65,348 interv_keys=51,233
+  medcpt: d=768  cond_keys=65,348 interv_keys=51,233
+  pubmedbert: d=768  cond_keys=65,348 interv_keys=51,233
+  qwen3: d=4096  cond_keys=65,348 interv_keys=51,233
+  I/E d=4096  setup 29s
+  serious-adverse-event-forecasting/Phase1 [ROC-AUC] base=0.8889  sapbert:-0.0113  biolord:+0.0056  medcpt:-0.0122  pubmedbert:-0.0120  qwen3:-0.0002
+  serious-adverse-event-forecasting/Phase2 [ROC-AUC] base=0.8652  sapbert:-0.0080  biolord:-0.0114  medcpt:+0.0009  pubmedbert:+0.0013  qwen3:+0.0026
+  serious-adverse-event-forecasting/Phase3 [ROC-AUC] base=0.8793  sapbert:+0.0068  biolord:+0.0192  medcpt:+0.0041  pubmedbert:-0.0004  qwen3:+0.0061
+  mortality-event-prediction/Phase1 [ROC-AUC] base=0.9187  sapbert:+0.0119  biolord:+0.0016  medcpt:+0.0094  pubmedbert:+0.0001  qwen3:-0.0171
+  mortality-event-prediction/Phase2 [ROC-AUC] base=0.8966  sapbert:-0.0083  biolord:+0.0028  medcpt:-0.0012  pubmedbert:+0.0003  qwen3:-0.0074
+  mortality-event-prediction/Phase3 [ROC-AUC] base=0.8723  sapbert:+0.0063  biolord:-0.0050  medcpt:+0.0114  pubmedbert:+0.0050  qwen3:+0.0024
+  patient-dropout-event-forecasting/Phase1 [ROC-AUC] base=0.7102  sapbert:+0.0086  biolord:+0.0044  medcpt:+0.0008  pubmedbert:-0.0092  qwen3:+0.0166
+  patient-dropout-event-forecasting/Phase2 [ROC-AUC] base=0.7631  sapbert:+0.0105  biolord:+0.0054  medcpt:-0.0048  pubmedbert:-0.0010  qwen3:-0.0009
+  patient-dropout-event-forecasting/Phase3 [ROC-AUC] base=0.8313  sapbert:-0.0038  biolord:+0.0095  medcpt:+0.0119  pubmedbert:-0.0036  qwen3:-0.0134
+  trial-duration-forecasting/Phase1 [R²] base=0.4786  sapbert:-0.0047  biolord:+0.0136  medcpt:-0.0079  pubmedbert:+0.0086  qwen3:-0.0119
+  trial-duration-forecasting/Phase2 [R²] base=0.2557  sapbert:+0.0034  biolord:+0.0081  medcpt:-0.0113  pubmedbert:-0.0005  qwen3:-0.0091
+  trial-duration-forecasting/Phase3 [R²] base=0.2264  sapbert:+0.0240  biolord:+0.0523  medcpt:+0.0283  pubmedbert:+0.0275  qwen3:+0.0406
+  trial-failure-reason-identification/Phase1 [macro-F1] base=0.3347  sapbert:-0.0039  biolord:-0.0043  medcpt:-0.0143  pubmedbert:-0.0088  qwen3:-0.0208
+  trial-failure-reason-identification/Phase2 [macro-F1] base=0.3438  sapbert:-0.0044  biolord:+0.0219  medcpt:+0.0295  pubmedbert:+0.0203  qwen3:+0.0195
+  trial-failure-reason-identification/Phase3 [macro-F1] base=0.3493  sapbert:+0.0416  biolord:+0.0341  medcpt:+0.0238  pubmedbert:+0.0016  qwen3:+0.0203
+
+Done in 1224s. Saved /data2/zhu11/TB/branch/mesh/results/mesh_grid_20260604_104310/grid.json

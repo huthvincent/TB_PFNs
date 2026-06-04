@@ -146,9 +146,13 @@ def main(args):
 
     t_start = time.time()
 
-    # ---- 1. Collect MeSH corpus ----
-    echo("Scanning train_x.csv / test_x.csv for condition + intervention MeSH ...")
-    corpus = collect_mesh_corpus(args.subtask)
+    # ---- 1. Collect MeSH corpus (union over one or more subtasks) ----
+    subtasks = [s.strip() for s in args.subtasks.split(",")] if args.subtasks else [args.subtask]
+    echo(f"Scanning condition + intervention MeSH over subtasks: {subtasks}")
+    corpus: dict = {}
+    for st in subtasks:
+        for k, terms in collect_mesh_corpus(st).items():
+            corpus.setdefault(k, set()).update(terms)
     by_type = {"condition": 0, "intervention": 0}
     for (tid, ph, ty), terms in corpus.items():
         if terms:
@@ -249,6 +253,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--model", required=True, choices=list(MODEL_REGISTRY))
     p.add_argument("--subtask", default="serious-adverse-event-forecasting")
+    p.add_argument("--subtasks", default=None, help="comma-list of subtasks (union); overrides --subtask")
     p.add_argument("--batch-size", type=int, default=256)
     p.add_argument("--device", default="cuda")
     p.add_argument("--limit", type=int, default=None, help="Encode only first N terms (smoke)")

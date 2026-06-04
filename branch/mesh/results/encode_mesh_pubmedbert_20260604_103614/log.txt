@@ -1,0 +1,15 @@
+[run_id] encode_mesh_pubmedbert_20260604_103614
+[model] microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext  short=pubmedbert  pool=mean
+[subtask] serious-adverse-event-forecasting
+Scanning condition + intervention MeSH over subtasks: ['serious-adverse-event-forecasting', 'mortality-event-prediction', 'patient-dropout-event-forecasting', 'trial-duration-forecasting', 'trial-failure-reason-identification']
+  (trial,phase,type) keys: 151,136  (condition non-empty 65,348, intervention non-empty 51,233)
+  total (trial,phase,type,term) rows to encode: 241,499  (unique terms: 5,998)
+Loading microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext (bf16) ...
+  params=109,482,240  embed_dim=768  pool=mean  batch_size=256
+  encode done in 18.8s (12819.5/s)
+Mean-pooling per (trial_id, phase, type) ...
+  mean-pooled groups: 116,581 → /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_pubmedbert.parquet
+
+Done in 28.2s
+  pooled parquet: /data2/zhu11/TB/branch/mesh/data/mesh_embeddings_pubmedbert.parquet  (356.06 MB)
+  norms: mean=14.197  std=0.185

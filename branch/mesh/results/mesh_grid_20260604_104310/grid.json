@@ -1,0 +1,257 @@
+{
+  "serious-adverse-event-forecasting/Phase1": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 1595,
+    "n_test": 419,
+    "ctx": 1197,
+    "qry": 398,
+    "cells": {
+      "baseline": 0.8889043446005471,
+      "sapbert": 0.8776324940881903,
+      "biolord": 0.8944962210784995,
+      "medcpt": 0.8767468818101729,
+      "pubmedbert": 0.876879028144851,
+      "qwen3": 0.8886632354986785
+    }
+  },
+  "serious-adverse-event-forecasting/Phase2": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 6516,
+    "n_test": 1600,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.8651867671985023,
+      "sapbert": 0.8571703075475078,
+      "biolord": 0.8537914657780543,
+      "medcpt": 0.8660540293398633,
+      "pubmedbert": 0.866505887126172,
+      "qwen3": 0.8677545716103972
+    }
+  },
+  "serious-adverse-event-forecasting/Phase3": {
+    "task": "serious-adverse-event-forecasting",
+    "phase": "Phase3",
+    "metric": "ROC-AUC",
+    "n_train": 3895,
+    "n_test": 945,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.8793405172413793,
+      "sapbert": 0.886185344827586,
+      "biolord": 0.8985249999999999,
+      "medcpt": 0.8834008620689655,
+      "pubmedbert": 0.8789681034482758,
+      "qwen3": 0.8854103448275863
+    }
+  },
+  "mortality-event-prediction/Phase1": {
+    "task": "mortality-event-prediction",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 1595,
+    "n_test": 419,
+    "ctx": 1197,
+    "qry": 398,
+    "cells": {
+      "baseline": 0.9187142113482561,
+      "sapbert": 0.9306148418069291,
+      "biolord": 0.9203626583376714,
+      "medcpt": 0.9281190352247094,
+      "pubmedbert": 0.9188067557406443,
+      "qwen3": 0.9016513390016773
+    }
+  },
+  "mortality-event-prediction/Phase2": {
+    "task": "mortality-event-prediction",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 6516,
+    "n_test": 1600,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.8966382125844025,
+      "sapbert": 0.8883255407114674,
+      "biolord": 0.8994388368331959,
+      "medcpt": 0.8954427320953238,
+      "pubmedbert": 0.8969234351303559,
+      "qwen3": 0.8892029186148221
+    }
+  },
+  "mortality-event-prediction/Phase3": {
+    "task": "mortality-event-prediction",
+    "phase": "Phase3",
+    "metric": "ROC-AUC",
+    "n_train": 3895,
+    "n_test": 945,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.8723267846094528,
+      "sapbert": 0.8786071034674461,
+      "biolord": 0.8673614411377025,
+      "medcpt": 0.8837414703693408,
+      "pubmedbert": 0.8772804712929171,
+      "qwen3": 0.8747738134734538
+    }
+  },
+  "patient-dropout-event-forecasting/Phase1": {
+    "task": "patient-dropout-event-forecasting",
+    "phase": "Phase1",
+    "metric": "ROC-AUC",
+    "n_train": 3321,
+    "n_test": 883,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.7101563079924921,
+      "sapbert": 0.7187421130210707,
+      "biolord": 0.7145836205342467,
+      "medcpt": 0.7109659494597088,
+      "pubmedbert": 0.7009464374715008,
+      "qwen3": 0.7267346051473472
+    }
+  },
+  "patient-dropout-event-forecasting/Phase2": {
+    "task": "patient-dropout-event-forecasting",
+    "phase": "Phase2",
+    "metric": "ROC-AUC",
+    "n_train": 12608,
+    "n_test": 3162,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.7630897925653928,
+      "sapbert": 0.7736135301590437,
+      "biolord": 0.7684509514339964,
+      "medcpt": 0.7583194923889769,
+      "pubmedbert": 0.7620706875732262,
+      "qwen3": 0.7621902059981417
+    }
+  },
+  "patient-dropout-event-forecasting/Phase3": {
+    "task": "patient-dropout-event-forecasting",
+    "phase": "Phase3",
+    "metric": "ROC-AUC",
+    "n_train": 9129,
+    "n_test": 2332,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.831279200012621,
+      "sapbert": 0.8274649712535525,
+      "biolord": 0.8407311581742005,
+      "medcpt": 0.8432080179037067,
+      "pubmedbert": 0.8276477495284048,
+      "qwen3": 0.8178572796913277
+    }
+  },
+  "trial-duration-forecasting/Phase1": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase1",
+    "metric": "R\u00b2",
+    "n_train": 10424,
+    "n_test": 3016,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.4786229610443115,
+      "sapbert": 0.47390724420547486,
+      "biolord": 0.49226061105728147,
+      "medcpt": 0.47071313858032227,
+      "pubmedbert": 0.4872235536575317,
+      "qwen3": 0.4667212128639221
+    }
+  },
+  "trial-duration-forecasting/Phase2": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase2",
+    "metric": "R\u00b2",
+    "n_train": 10623,
+    "n_test": 2590,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.25573391914367677,
+      "sapbert": 0.2591602563858032,
+      "biolord": 0.26383295059204104,
+      "medcpt": 0.24438588619232177,
+      "pubmedbert": 0.2552505850791931,
+      "qwen3": 0.24663175344467164
+    }
+  },
+  "trial-duration-forecasting/Phase3": {
+    "task": "trial-duration-forecasting",
+    "phase": "Phase3",
+    "metric": "R\u00b2",
+    "n_train": 7406,
+    "n_test": 1698,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.22636550664901733,
+      "sapbert": 0.2503850221633911,
+      "biolord": 0.2786777377128601,
+      "medcpt": 0.25467554330825803,
+      "pubmedbert": 0.25389436483383176,
+      "qwen3": 0.26701143980026243
+    }
+  },
+  "trial-failure-reason-identification/Phase1": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase1",
+    "metric": "macro-F1",
+    "n_train": 3474,
+    "n_test": 842,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.33465292406624536,
+      "sapbert": 0.33074364735512596,
+      "biolord": 0.33033606701776685,
+      "medcpt": 0.32030954355602737,
+      "pubmedbert": 0.3258574724704947,
+      "qwen3": 0.31383748206445794
+    }
+  },
+  "trial-failure-reason-identification/Phase2": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase2",
+    "metric": "macro-F1",
+    "n_train": 7056,
+    "n_test": 1780,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.3438200407248922,
+      "sapbert": 0.3393910081692151,
+      "biolord": 0.3657457717959064,
+      "medcpt": 0.37336718396518614,
+      "pubmedbert": 0.3641231611228921,
+      "qwen3": 0.3632848880683765
+    }
+  },
+  "trial-failure-reason-identification/Phase3": {
+    "task": "trial-failure-reason-identification",
+    "phase": "Phase3",
+    "metric": "macro-F1",
+    "n_train": 3341,
+    "n_test": 815,
+    "ctx": 2000,
+    "qry": 500,
+    "cells": {
+      "baseline": 0.3493252672901478,
+      "sapbert": 0.3909171241369169,
+      "biolord": 0.38345418597745706,
+      "medcpt": 0.37309007786870074,
+      "pubmedbert": 0.3509101078033561,
+      "qwen3": 0.36962992736905165
+    }
+  }
+}
